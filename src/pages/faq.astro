@@ -1,0 +1,81 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PageHeader from '../components/PageHeader.astro';
+
+const faqs = [
+  {
+    question: 'When and where do I register?',
+    answer: 'Ticket holders may register for the conference beginning at 7:00 AM at the registration desk, located on the North side of the first floor by the main stairway.',
+  },
+  {
+    question: 'What if I\'m hungry?',
+    answer: 'A full breakfast will be available from 7:00 AM to 7:50 AM inside the East Ballroom. A buffet lunch will be offered at 11:30 AM. Afternoon refreshments will be provided at the 2:55 PM break.',
+  },
+  {
+    question: 'What about vegetarians or vegans?',
+    answer: 'If you prefer a vegetarian or vegan meal for lunch, please indicate so when you buy your ticket. We will have a separate breakfast and lunch buffet station with vegetarian and vegan options.',
+  },
+  {
+    question: 'How do I connect to Wi-Fi?',
+    answer: 'Connect to the network "WiFi@OSU". Open a browser and authenticate with your credentials. Detailed instructions will be provided at the conference.',
+  },
+  {
+    question: 'Are elevators available?',
+    answer: 'There are two sets of elevators available in addition to the stairs.',
+  },
+  {
+    question: 'Is there any information about building accessibility?',
+    answer: 'Attendees with questions about access can contact the Ohio Union for the accessibility contact person and latest disability entrances.',
+  },
+  {
+    question: 'Do you have any free stuff?',
+    answer: 'Plenty! Visit our passionate sponsors throughout the day. There are lots of prizes to win during the raffle starting at 5:15.',
+  },
+  {
+    question: 'Where can I get copies of the presentations?',
+    answer: 'Many past slide decks are available on Slideshare.net. We encourage all speakers to make their slide decks available there.',
+  },
+  {
+    question: 'How can I tell you about my experience?',
+    answer: 'We love feedback! Face-to-face works best. Find any Organizer or Volunteer. Alternately, scan the QR Code on your badge to leave session-specific feedback online.',
+  },
+  {
+    question: 'I have another question that is not covered by this FAQ.',
+    answer: 'Reach out to us via our Contact form, and we\'ll try to answer any additional questions you may have.',
+  },
+];
+---
+
+<Layout title="FAQ - QA or the Highway">
+  <main>
+    <PageHeader
+      title="Frequently Asked Questions"
+      description="Find answers to common questions about the conference."
+    />
+
+    <section class="py-8 px-4">
+      <div class="container mx-auto max-w-4xl">
+        <div class="space-y-6">
+          {faqs.map((faq) => (
+            <div class="bg-white rounded-lg shadow-lg p-6 border-l-4" style="border-left-color: var(--color-primary);">
+              <h3 class="text-xl font-bold mb-3 text-gray-900">{faq.question}</h3>
+              <p class="text-gray-700">{faq.answer}</p>
+            </div>
+          ))}
+        </div>
+
+        <div class="mt-12 text-center">
+          <p class="text-gray-600 mb-4">
+            Have a question not listed here?
+          </p>
+          <a
+            href="/contact"
+            class="inline-block btn-primary px-8 py-3 rounded-lg font-semibold transition"
+          >
+            Contact Us
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>

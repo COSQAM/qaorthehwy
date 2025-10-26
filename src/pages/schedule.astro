@@ -1,0 +1,39 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PageHeader from '../components/PageHeader.astro';
+import sessionizeData from '../data/sessionize.json';
+---
+
+<Layout title="Schedule - QA or the Highway">
+  <main>
+    <PageHeader
+      title="Conference Schedule"
+      description="Full day of sessions, workshops, and networking opportunities."
+    />
+
+    <section class="py-16 px-4">
+      <div class="container mx-auto max-w-6xl">
+        {sessionizeData.sessions.length > 0 ? (
+          <div class="space-y-8">
+            {sessionizeData.sessions.map((session: any) => (
+              <div class="bg-white rounded-lg shadow-lg p-6 border-l-4" style="border-left-color: var(--color-primary);">
+                <h3 class="text-2xl font-bold mb-2">{session.title}</h3>
+                {session.speakers && (
+                  <p class="text-gray-600 mb-4">
+                    {session.speakers.map((s: any) => s.name).join(', ')}
+                  </p>
+                )}
+                <p class="text-gray-700">{session.description}</p>
+              </div>
+            ))}
+          </div>
+        ) : (
+          <div class="text-center py-12">
+            <p class="text-xl text-gray-600 mb-4">Schedule coming soon!</p>
+            <p class="text-gray-500">We're working on an amazing lineup of sessions.</p>
+          </div>
+        )}
+      </div>
+    </section>
+  </main>
+</Layout>

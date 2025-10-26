@@ -1,0 +1,111 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #3148F6;
+  --color-primary-dark: #2039d4;
+  --color-accent: #ffc300;
+  --color-accent-dark: #e6b000;
+  --color-highlight: #1C4B8F;
+  --color-background: #000814;
+  --color-background-light: #E9E9E9;
+  --color-dark: #1C2127;
+  --font-sans: ui-sans-serif, system-ui, sans-serif;
+}
+
+body {
+  @apply font-sans antialiased;
+  background-color: var(--color-background);
+  color: #e5e7eb;
+}
+
+/* Typography utilities */
+h1, h2, h3 {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+h1 {
+  @apply text-4xl md:text-5xl lg:text-6xl;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+h2 {
+  @apply text-3xl md:text-4xl;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+/* Textured background utility */
+.bg-textured-light {
+  background-color: var(--color-background-light);
+  background-image: radial-gradient(#A7A7A7 0.5px, transparent 0.5px), radial-gradient(#A7A7A7 0.5px, var(--color-background-light) 0.5px);
+  background-size: 20px 20px;
+  background-position: 0 0, 10px 10px;
+}
+
+/* Section utilities */
+.section-light {
+  background-color: var(--color-background-light);
+  background-image: radial-gradient(#A7A7A7 0.5px, transparent 0.5px), radial-gradient(#A7A7A7 0.5px, var(--color-background-light) 0.5px);
+  background-size: 20px 20px;
+  background-position: 0 0, 10px 10px;
+  color: var(--color-dark);
+}
+
+.section-dark {
+  background-color: var(--color-background);
+  color: #e5e7eb;
+}
+
+.section-primary {
+  background-color: var(--color-primary);
+  color: #ffffff;
+}
+
+/* Glowing section utility */
+.glow-section {
+  position: relative;
+  background: radial-gradient(ellipse at center, rgba(49, 72, 246, 0.12) 0%, transparent 60%);
+}
+
+.glow-section-blue {
+  position: relative;
+  background: radial-gradient(ellipse at center, rgba(28, 75, 143, 0.15) 0%, transparent 60%);
+}
+
+.glow-section-top {
+  position: relative;
+  background: radial-gradient(ellipse at top, rgba(49, 72, 246, 0.12) 0%, transparent 50%);
+}
+
+/* Card with subtle glow */
+.glow-card {
+  background: linear-gradient(135deg, color-mix(in srgb, var(--color-primary) 8%, transparent) 0%, color-mix(in srgb, var(--color-highlight) 3%, transparent) 100%);
+  border: 1px solid color-mix(in srgb, var(--color-primary) 30%, transparent);
+  backdrop-filter: blur(10px);
+}
+
+/* Button utilities */
+.btn-primary {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-primary-dark);
+}
+
+/* Text color utilities */
+.text-primary {
+  color: var(--color-primary);
+}
+
+.text-dark {
+  color: var(--color-dark);
+}
+
+/* Gradient background utilities */
+.bg-gradient-primary {
+  background: linear-gradient(135deg, var(--color-primary) 0%, color-mix(in srgb, var(--color-primary) 80%, black) 100%);
+}

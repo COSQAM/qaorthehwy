@@ -1,0 +1,167 @@
+---
+import Logo from './Logo.astro';
+
+const mainNavItems = [
+  { name: 'Speakers', href: '/speakers' },
+  { name: 'Schedule', href: '/schedule' },
+  { name: 'Venue', href: '/venue' },
+];
+
+const dropdownItems = [
+  { name: 'FAQ', href: '/faq' },
+  { name: 'Committee', href: '/committee' },
+  { name: 'Contact', href: '/contact' },
+  { name: 'Archive', href: '/archive' },
+];
+
+const currentPath = Astro.url.pathname;
+---
+
+<nav id="navbar" class="relative sticky top-0 z-50 transition-all duration-300">
+  <div class="absolute inset-0 bg-textured-light -z-10"></div>
+  <div class="container mx-auto max-w-8xl px-6">
+    <div class="flex items-center justify-between h-16">
+      <!-- Logo/Brand -->
+      <div class="flex-shrink-0">
+        <a href="/" class="block hover:opacity-80 transition">
+          <Logo class="text-dark w-48 lg:w-68" />
+        </a>
+      </div>
+
+      <!-- Desktop Navigation -->
+      <div class="hidden md:flex items-center space-x-8">
+        {mainNavItems.map((item) => (
+          <a
+            href={item.href}
+            class={`text-sm font-medium tracking-wide transition ${
+              currentPath === item.href
+                ? 'text-primary font-semibold'
+                : 'text-dark hover:text-primary'
+            }`}
+          >
+            {item.name.toUpperCase()}
+          </a>
+        ))}
+
+        <!-- Dropdown -->
+        <div class="relative group">
+          <button
+            class="text-sm font-medium tracking-wide text-dark hover:text-primary transition flex items-center gap-1"
+          >
+            MORE
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          <div class="absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 border border-gray-100">
+            <div class="py-2">
+              {dropdownItems.map((item) => (
+                <a
+                  href={item.href}
+                  class="block px-4 py-2 text-sm text-dark hover:bg-gray-50 hover:text-primary transition"
+                >
+                  {item.name}
+                </a>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <a
+          href="#tickets"
+          class="btn-primary px-6 py-2.5 rounded-lg text-sm font-semibold transition tracking-wide"
+        >
+          GET TICKETS
+        </a>
+      </div>
+
+      <!-- Mobile menu button -->
+      <div class="md:hidden">
+        <button
+          id="mobile-menu-button"
+          type="button"
+          class="inline-flex items-center justify-center p-2 rounded-md text-dark hover:text-primary hover:bg-gray-50 transition"
+          aria-controls="mobile-menu"
+          aria-expanded="false"
+        >
+          <span class="sr-only">Open main menu</span>
+          <svg
+            class="block h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            aria-hidden="true"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile menu -->
+  <div class="md:hidden hidden bg-white border-t border-gray-200" id="mobile-menu">
+    <div class="px-4 pt-2 pb-3 space-y-1">
+      {mainNavItems.map((item) => (
+        <a
+          href={item.href}
+          class={`block px-3 py-2 rounded-md text-base font-medium transition ${
+            currentPath === item.href
+              ? 'btn-primary'
+              : 'text-dark hover:bg-gray-50 hover:text-primary'
+          }`}
+        >
+          {item.name}
+        </a>
+      ))}
+      <div class="border-t border-gray-200 mt-2 pt-2">
+        {dropdownItems.map((item) => (
+          <a
+            href={item.href}
+            class={`block px-3 py-2 rounded-md text-base font-medium transition ${
+              currentPath === item.href
+                ? 'btn-primary'
+                : 'text-dark hover:bg-gray-50 hover:text-primary'
+            }`}
+          >
+            {item.name}
+          </a>
+        ))}
+      </div>
+      <a
+        href="#tickets"
+        class="block btn-primary px-3 py-2 rounded-md text-base font-semibold transition text-center mt-2"
+      >
+        GET TICKETS
+      </a>
+    </div>
+  </div>
+</nav>
+
+<script>
+  // Mobile menu toggle
+  const menuButton = document.getElementById('mobile-menu-button');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  menuButton?.addEventListener('click', () => {
+    const isExpanded = menuButton.getAttribute('aria-expanded') === 'true';
+    menuButton.setAttribute('aria-expanded', String(!isExpanded));
+    mobileMenu?.classList.toggle('hidden');
+  });
+
+  // Add bottom border on scroll
+  const navbar = document.getElementById('navbar');
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 0) {
+      navbar?.classList.add('border-b', 'border-gray-300', 'shadow-sm');
+    } else {
+      navbar?.classList.remove('border-b', 'border-gray-300', 'shadow-sm');
+    }
+  });
+</script>

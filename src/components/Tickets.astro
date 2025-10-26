@@ -1,0 +1,56 @@
+---
+interface TicketTier {
+  name: string;
+  price: string;
+  available: boolean;
+  features: string[];
+}
+
+interface Props {
+  tiers: TicketTier[];
+}
+
+const { tiers } = Astro.props;
+---
+
+<section id="tickets" class="section-light py-24 px-6">
+  <div class="container mx-auto max-w-8xl">
+    <h2 class="text-5xl md:text-6xl font-bold text-center mb-20 tracking-tight">TICKETS</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-4xl mx-auto">
+      {tiers.map((tier) => (
+        <div class="bg-white rounded-2xl shadow-2xl p-10 border-2 border-white/20 hover:border-white transition-all hover:scale-105 transform duration-300">
+          <h3 class="text-3xl font-bold mb-4 text-dark uppercase tracking-wide">{tier.name}</h3>
+          <div class="text-5xl font-bold text-primary mb-8">{tier.price}</div>
+          <ul class="mb-10 space-y-4">
+            {tier.features.map((feature) => (
+              <li class="flex items-start">
+                <svg
+                  class="w-6 h-6 text-primary mr-3 mt-0.5 flex-shrink-0"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+                <span class="text-dark text-lg">{feature}</span>
+              </li>
+            ))}
+          </ul>
+          <button
+            class={`w-full py-4 px-8 rounded-xl text-lg font-bold transition transform ${
+              tier.available
+                ? 'btn-primary hover:scale-105 shadow-lg shadow-blue-500/30'
+                : 'bg-gray-300 text-gray-500 cursor-not-allowed'
+            }`}
+            disabled={!tier.available}
+          >
+            {tier.available ? 'BUY NOW' : 'SOLD OUT'}
+          </button>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

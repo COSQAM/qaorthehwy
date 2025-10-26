@@ -1,0 +1,48 @@
+name: Fetch Sessionize Data
+
+on:
+  schedule:
+    # Run daily at 2 AM UTC
+    - cron: '0 2 * * *'
+  workflow_dispatch: # Allow manual triggers
+  push:
+    branches:
+      - main
+    paths:
+      - '.github/workflows/fetch-sessionize-data.yml'
+
+jobs:
+  fetch-data:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Fetch Sessionize Data
+        env:
+          SESSIONIZE_EVENT_ID: ${{ secrets.SESSIONIZE_EVENT_ID }}
+        run: |
+          # Fetch all data from Sessionize API
+          curl -s "https://sessionize.com/api/v2/${SESSIONIZE_EVENT_ID}/view/All" \
+            -o src/data/sessionize.json
+
+          # Pretty print the JSON
+          cat src/data/sessionize.json | jq '.' > src/data/sessionize.tmp.json
+          mv src/data/sessionize.tmp.json src/data/sessionize.json
+
+      - name: Check for changes
+        id: git-check
+        run: |
+          git diff --exit-code src/data/sessionize.json || echo "changed=true" >> $GITHUB_OUTPUT
+
+      - name: Commit and push if changed
+        if: steps.git-check.outputs.changed == 'true'
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add src/data/sessionize.json
+          git commit -m "chore: update Sessionize data [skip ci]"
+          git push

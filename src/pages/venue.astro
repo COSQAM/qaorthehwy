@@ -1,0 +1,132 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PageHeader from '../components/PageHeader.astro';
+import { Image } from 'astro:assets';
+import firstFloorImg from '../assets/images/venue/first-floor.png';
+import secondFloorImg from '../assets/images/venue/second-floor.png';
+import thirdFloorImg from '../assets/images/venue/third-floor.png';
+---
+
+<Layout title="Venue - QA or the Highway">
+  <main>
+    <PageHeader
+      title="Venue"
+      description="Join us in Columbus, Ohio for an unforgettable conference experience."
+    />
+
+    <section class="py-8 px-4">
+      <div class="container mx-auto max-w-6xl">
+        <!-- Venue Description -->
+        <div class="bg-white rounded-lg shadow-lg p-8 mb-8 border-l-4" style="border-left-color: var(--color-primary);">
+          <h2 class="text-3xl font-bold mb-6 text-gray-900">The Ohio Union</h2>
+          <div class="space-y-4">
+            <p class="text-gray-700">
+              QA or the Highway will be held at <strong>The Ohio Union</strong>, a 318,000 square foot facility located on the Ohio State University campus. With 34 unique meeting and event spaces, The Ohio Union provides a modern and versatile environment for our conference.
+            </p>
+            <p class="text-gray-700">
+              Throughout the day, we'll provide breakfast, lunch, and snacks to keep you energized and focused on learning and networking.
+            </p>
+            <p class="text-gray-800 font-semibold mt-6">
+              The Ohio Union<br/>
+              1739 N High St<br/>
+              Columbus, OH 43210
+            </p>
+          </div>
+        </div>
+
+        <!-- Venue Images -->
+        <div class="bg-white rounded-lg shadow-lg p-8 mb-8 border-l-4" style="border-left-color: var(--color-primary);">
+          <h2 class="text-3xl font-bold mb-6 text-gray-900">The Venue</h2>
+          <div class="space-y-6">
+            <div>
+              <video
+                src="/ohio-union.mp4"
+                autoplay
+                loop
+                muted
+                playsinline
+                class="w-full rounded-lg"
+              >
+                Your browser does not support the video tag.
+              </video>
+            </div>
+            <div class="grid md:grid-cols-3 gap-4">
+              <div>
+                <h3 class="text-lg font-semibold mb-2 text-gray-900">First Floor</h3>
+                <Image src={firstFloorImg} alt="First Floor Plan" class="w-full rounded-lg" />
+              </div>
+              <div>
+                <h3 class="text-lg font-semibold mb-2 text-gray-900">Second Floor</h3>
+                <Image src={secondFloorImg} alt="Second Floor Plan" class="w-full rounded-lg" />
+              </div>
+              <div>
+                <h3 class="text-lg font-semibold mb-2 text-gray-900">Third Floor</h3>
+                <Image src={thirdFloorImg} alt="Third Floor Plan" class="w-full rounded-lg" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Parking -->
+        <div class="bg-white rounded-lg shadow-lg p-8 mb-8 border-l-4" style="border-left-color: var(--color-primary);">
+          <h2 class="text-3xl font-bold mb-6 text-gray-900">Parking</h2>
+          <div class="space-y-4">
+            <p class="text-gray-700">
+              <strong>South Ohio Union Parking Garage</strong>
+            </p>
+            <p class="text-gray-700">
+              Park in the South Ohio Union parking garage. When you enter the garage, take a parking ticket from the machine. When you leave, have your parking ticket validated at the registration desk before departing. Insert your validated ticket at the exit gate to leave without charge.
+            </p>
+            <p class="text-gray-700">
+              <strong>Important:</strong> You must validate your parking ticket at the registration desk before leaving the venue.
+            </p>
+          </div>
+        </div>
+
+        <!-- Getting There -->
+        <div class="bg-white rounded-lg shadow-lg p-8 mb-8 border-l-4" style="border-left-color: var(--color-primary);">
+          <h2 class="text-3xl font-bold mb-6 text-gray-900">Getting There</h2>
+          <div class="space-y-4">
+            <h3 class="text-xl font-semibold text-gray-900">By Air</h3>
+            <p class="text-gray-700">
+              <strong>John Glenn Columbus International Airport (CMH)</strong> is the nearest airport, located approximately 15 minutes from the venue.
+            </p>
+          </div>
+        </div>
+
+        <!-- Hotels -->
+        <div class="bg-white rounded-lg shadow-lg p-8 border-l-4" style="border-left-color: var(--color-primary);">
+          <h2 class="text-3xl font-bold mb-6 text-gray-900">Nearby Hotels</h2>
+          <div class="space-y-6">
+            <div class="pb-6 border-b border-gray-200">
+              <h3 class="text-xl font-semibold mb-2 text-gray-900">SpringHill Suites by Marriott</h3>
+              <p class="text-gray-700 mb-2">
+                <strong>Distance:</strong> 1.5 miles from venue
+              </p>
+              <p class="text-gray-700 mb-2">
+                <strong>Group Rate:</strong> $149 per night
+              </p>
+              <p class="text-gray-600">
+                Book using our group rate for the best pricing on your stay.
+              </p>
+            </div>
+
+            <div class="pb-6 border-b border-gray-200">
+              <h3 class="text-xl font-semibold mb-2 text-gray-900">The Blackwell Inn</h3>
+              <p class="text-gray-700">
+                <strong>Distance:</strong> 0.8 miles from venue
+              </p>
+            </div>
+
+            <div>
+              <h3 class="text-xl font-semibold mb-2 text-gray-900">Hilton Garden Inn</h3>
+              <p class="text-gray-700">
+                <strong>Distance:</strong> 2.8 miles from venue
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>

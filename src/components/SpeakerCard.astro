@@ -1,0 +1,29 @@
+---
+interface Props {
+  name: string;
+  tagLine?: string;
+  profilePicture?: string;
+  isKeynote?: boolean;
+}
+
+const { name, tagLine, profilePicture, isKeynote = false } = Astro.props;
+---
+
+<div class="bg-white rounded-xl shadow-xl overflow-hidden hover:shadow-2xl transition-all hover:scale-105 transform duration-300 border border-gray-100">
+  {profilePicture && (
+    <img
+      src={profilePicture}
+      alt={name}
+      class="w-full h-72 object-cover"
+    />
+  )}
+  <div class="p-8">
+    {isKeynote && (
+      <span class="inline-block btn-primary text-xs px-4 py-1.5 rounded-full mb-3 font-bold uppercase tracking-wide">
+        Keynote Speaker
+      </span>
+    )}
+    <h3 class="text-2xl font-bold mb-3 text-dark">{name}</h3>
+    {tagLine && <p class="text-gray-600 text-base leading-relaxed">{tagLine}</p>}
+  </div>
+</div>

@@ -1,16 +1,108 @@
 ---
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+import SpeakerCard from '../components/SpeakerCard.astro';
+import Tickets from '../components/Tickets.astro';
+import Sponsors from '../components/Sponsors.astro';
+import Footer from '../components/Footer.astro';
+import sessionizeData from '../data/sessionize.json';
 
+// Sample data - will be replaced with Sessionize API data
+const conferenceData = {
+  date: 'June 12, 2026',
+  venue: 'The Ohio Union',
+  location: 'Columbus, OH',
+  sessionsCount: '32 Sessions',
+  description: 'Join us for a day of insightful talks and networking with industry leaders in software quality.',
+  attendees: '400+',
+};
+
+const ticketTiers = [
+  {
+    name: 'Early Bird',
+    price: '$299',
+    available: true,
+    features: [
+      'Access to all talks and sessions',
+      'Breakfast and lunch included',
+      'Conference t-shirt',
+      'Raffle entry',
+      'Networking opportunities',
+    ],
+  },
+  {
+    name: 'Full Price',
+    price: '$399',
+    available: true,
+    features: [
+      'Access to all talks and sessions',
+      'Breakfast and lunch included',
+      'Conference t-shirt',
+      'Raffle entry',
+      'Networking opportunities',
+    ],
+  },
+];
+
+// Keynote speakers from Sessionize data
+const keynoteSpeakers = sessionizeData.speakers
+  .filter((speaker: any) => speaker.isTopSpeaker)
+  .slice(0, 2);
+
+// All speakers from Sessionize
+const allSpeakers = sessionizeData.speakers;
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout title="QA or the Highway - Quality Engineering Conference">
+  <Hero
+    date={conferenceData.date}
+    location={conferenceData.location}
+    venue={conferenceData.venue}
+    description={conferenceData.description}
+    attendees={conferenceData.attendees}
+    videoSrc="/hero-video.mp4"
+  />
+
+  <!-- Keynote Speakers Preview -->
+  {keynoteSpeakers.length > 0 && (
+    <section id="keynotes" class="section-light py-24 px-6">
+      <div class="container mx-auto max-w-8xl">
+        <h2 class="text-5xl md:text-6xl font-bold text-center mb-20 tracking-tight">KEYNOTE SPEAKERS</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl mx-auto">
+          {keynoteSpeakers.map((speaker: any) => (
+            <SpeakerCard
+              name={speaker.fullName}
+              tagLine={speaker.tagLine}
+              profilePicture={speaker.profilePicture}
+              isKeynote={true}
+            />
+          ))}
+        </div>
+        <div class="text-center mt-16">
+          <a
+            href="/speakers"
+            class="inline-block btn-primary px-10 py-4 rounded-lg text-lg font-semibold transition shadow-lg shadow-blue-500/20"
+          >
+            VIEW ALL SPEAKERS
+          </a>
+        </div>
+      </div>
+    </section>
+  )}
+
+  <!-- Tickets Section -->
+  <Tickets tiers={ticketTiers} />
+
+  <!-- Sponsors Section -->
+  <Sponsors
+    platinum={[]}
+    gold={[]}
+    silver={[]}
+  />
+
+  <!-- Footer -->
+  <Footer
+    slackLink="#"
+    feedbackLink="#"
+  />
+</Layout>

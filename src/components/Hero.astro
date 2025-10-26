@@ -1,0 +1,75 @@
+---
+interface Props {
+  date: string;
+  location: string;
+  venue: string;
+  description: string;
+  attendees: string;
+  videoSrc?: string;
+}
+
+const { date, location, venue, attendees, videoSrc } = Astro.props;
+---
+
+<section class="relative text-dark overflow-hidden h-[800px]">
+  <div class="absolute inset-0 bg-textured-light -z-10"></div>
+  <div class="container mx-auto max-w-8xl px-6 py-12 lg:py-0">
+    <div class="flex flex-col lg:flex-row gap-8 lg:gap-12 lg:items-center lg:min-h-[800px]">
+      <!-- Left: Text Content -->
+      <div class="w-full lg:w-[50%] text-left space-y-8">
+        <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-none">
+          THE MIDWEST'S LARGEST<br /><span class="text-primary">SOFTWARE QUALITY</span><br />CONFERENCE
+        </h1>
+
+        <!-- Conference Stats -->
+        <div class="flex flex-wrap items-center gap-8 py-6">
+          <div class="text-center">
+            <div class="text-m md:text-xl font-bold">{date}</div>
+          </div>
+          <div class="w-px h-20 bg-primary"></div>
+          <div class="text-center">
+            <div class="text-m md:text-xl font-bold">{venue}</div>
+            <div class="text-m md:text-xl font-bold">{location}</div>
+          </div>
+          <div class="hidden sm:block w-px h-20 bg-primary"></div>
+          <div class="hidden sm:block text-center">
+            <div class="text-m md:text-xl font-bold">{attendees}</div>
+            <div class="text-m md:text-xl font-bold">Attendees</div>
+          </div>
+        </div>
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a
+            href="#tickets"
+            class="btn-primary px-10 py-4 rounded-lg text-lg font-semibold transition text-center shadow-lg shadow-blue-500/20"
+          >
+            GET TICKETS
+          </a>
+          <a
+            href="#schedule"
+            class="border-2 border-primary text-primary px-10 py-4 rounded-lg text-lg font-semibold hover:bg-primary/10 transition text-center"
+            style="border-color: var(--color-primary);"
+          >
+            VIEW SCHEDULE
+          </a>
+        </div>
+      </div>
+
+      <!-- Right: Video -->
+      {videoSrc && (
+        <div class="w-full lg:w-[50%]">
+          <div class="relative h-[400px] md:h-[500px] lg:h-[780px] rounded-2xl overflow-hidden">
+            <video
+              autoplay
+              loop
+              muted
+              playsinline
+              class="w-full h-full object-cover"
+            >
+              <source src={videoSrc} type="video/mp4" />
+            </video>
+          </div>
+        </div>
+      )}
+    </div>
+  </div>
+</section>
