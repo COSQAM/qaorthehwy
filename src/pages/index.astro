@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import Hero from '../components/Hero.astro';
 import SpeakerCard from '../components/SpeakerCard.astro';
+import SpeakerCarousel from '../components/SpeakerCarousel';
 import Tickets from '../components/Tickets.astro';
 import Sponsors from '../components/Sponsors.astro';
 import Footer from '../components/Footer.astro';
@@ -49,6 +50,10 @@ const keynoteSpeakers = sessionizeData.speakers
   .filter((speaker: any) => speaker.isTopSpeaker)
   .slice(0, 2);
 
+// Non-keynote speakers for carousel
+const nonKeynoteSpeakers = sessionizeData.speakers
+  .filter((speaker: any) => !speaker.isTopSpeaker);
+
 // All speakers from Sessionize
 const allSpeakers = sessionizeData.speakers;
 ---
@@ -66,7 +71,7 @@ const allSpeakers = sessionizeData.speakers;
   <!-- Keynote Speakers Preview -->
   {keynoteSpeakers.length > 0 && (
     <section id="keynotes" class="section-light py-24 px-6">
-      <div class="container mx-auto max-w-8xl">
+      <div class="container mx-auto max-w-3xl">
         <h2 class="text-5xl md:text-6xl font-bold text-center mb-20 tracking-tight">KEYNOTE SPEAKERS</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl mx-auto">
           {keynoteSpeakers.map((speaker: any) => (
@@ -74,18 +79,20 @@ const allSpeakers = sessionizeData.speakers;
               name={speaker.fullName}
               tagLine={speaker.tagLine}
               profilePicture={speaker.profilePicture}
-              isKeynote={true}
             />
           ))}
         </div>
-        <div class="text-center mt-16">
-          <a
-            href="/speakers"
-            class="inline-block btn-primary px-10 py-4 rounded-lg text-lg font-semibold transition shadow-lg shadow-blue-500/20"
-          >
-            VIEW ALL SPEAKERS
-          </a>
-        </div>
+
+      </div>
+    </section>
+  )}
+
+  <!-- Speaker Carousel -->
+  {nonKeynoteSpeakers.length > 0 && (
+    <section id="speakers-carousel" class="section-light py-8 px-6">
+      <div class="container mx-auto max-w-7xl">
+        <h2 class="text-5xl md:text-6xl font-bold text-center mb-20 tracking-tight">SESSION SPEAKERS</h2>
+        <SpeakerCarousel client:only="react" speakers={nonKeynoteSpeakers} />
       </div>
     </section>
   )}

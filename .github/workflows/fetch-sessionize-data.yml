@@ -2,8 +2,8 @@ name: Fetch Sessionize Data
 
 on:
   schedule:
-    # Run daily at 2 AM UTC
-    - cron: '0 2 * * *'
+    # Run weekly at 12:00 AM EST on Sunday (5:00 AM UTC on Sunday)
+    - cron: '0 5 * * 0'
   workflow_dispatch: # Allow manual triggers
   push:
     branches:
@@ -24,14 +24,7 @@ jobs:
       - name: Fetch Sessionize Data
         env:
           SESSIONIZE_EVENT_ID: ${{ secrets.SESSIONIZE_EVENT_ID }}
-        run: |
-          # Fetch all data from Sessionize API
-          curl -s "https://sessionize.com/api/v2/${SESSIONIZE_EVENT_ID}/view/All" \
-            -o src/data/sessionize.json
-
-          # Pretty print the JSON
-          cat src/data/sessionize.json | jq '.' > src/data/sessionize.tmp.json
-          mv src/data/sessionize.tmp.json src/data/sessionize.json
+        run: node scripts/fetch-sessionize.js
 
       - name: Check for changes
         id: git-check
