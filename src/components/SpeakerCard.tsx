@@ -21,9 +21,11 @@ export default function SpeakerCard({
   links = [],
   speakerSlug
 }: SpeakerCardProps) {
+  const base = import.meta.env.BASE_URL;
+
   return (
     <div className="bg-white rounded-xl shadow-xl overflow-hidden hover:shadow-2xl transition-all hover:scale-105 transform duration-300 border border-gray-100">
-      <a href={speakerSlug ? `/speakers/${speakerSlug}` : '#'} className="block">
+      <a href={speakerSlug ? `${base}/speakers/${speakerSlug}` : '#'} className="block">
         {profilePicture && (
           <img
             src={profilePicture}
@@ -38,7 +40,7 @@ export default function SpeakerCard({
             Keynote Speaker
           </span>
         )}
-        <a href={speakerSlug ? `/speakers/${speakerSlug}` : '#'} className="block">
+        <a href={speakerSlug ? `${base}/speakers/${speakerSlug}` : '#'} className="block">
           <h3 className="text-2xl font-bold mb-3 text-dark hover:text-primary transition-colors">{name}</h3>
         </a>
         {tagLine && <p className="text-gray-600 text-base leading-relaxed mb-4">{tagLine}</p>}
