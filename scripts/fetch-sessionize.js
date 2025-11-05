@@ -2,7 +2,7 @@
 import { readFileSync, writeFileSync } from 'fs';
 import { execSync } from 'child_process';
 
-// Load .env file if it exists
+// Load .env file if it exists (for local development)
 try {
   const envContent = readFileSync('.env', 'utf-8');
   envContent.split('\n').forEach(line => {
@@ -16,8 +16,8 @@ try {
     }
   });
 } catch (err) {
-  console.error('No .env file found. Please create one from .env.example');
-  process.exit(1);
+  // .env file not found - this is okay in CI/CD environments
+  console.log('No .env file found, using environment variables');
 }
 
 const eventId = process.env.SESSIONIZE_EVENT_ID;
