@@ -189,7 +189,7 @@ git push
 ### Updating Sessionize Data
 
 The GitHub Action automatically fetches new Sessionize data:
-- Daily at 2 AM UTC
+- Run weekly at 12:00 AM EST on Sunday (5:00 AM UTC on Sunday)
 - On every push to main
 - Manually via GitHub Actions tab → "Fetch Sessionize Data" → "Run workflow"
 
