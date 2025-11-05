@@ -4,7 +4,13 @@ import SpeakerCard from '../components/SpeakerCard.astro';
 import PageHeader from '../components/PageHeader.astro';
 import sessionizeData from '../data/sessionize.json';
 
-const allSpeakers = sessionizeData.speakers;
+const allSpeakers = sessionizeData.speakers.sort((a: any, b: any) => {
+  // Sort keynotes first
+  if (a.isTopSpeaker && !b.isTopSpeaker) return -1;
+  if (!a.isTopSpeaker && b.isTopSpeaker) return 1;
+  // Then alphabetically by full name
+  return a.fullName.localeCompare(b.fullName);
+});
 ---
 
 <Layout title="Speakers - QA or the Highway">
@@ -18,13 +24,19 @@ const allSpeakers = sessionizeData.speakers;
       <div class="container mx-auto max-w-6xl">
         {allSpeakers.length > 0 ? (
           <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8">
-            {allSpeakers.map((speaker: any) => (
-              <SpeakerCard
-                name={speaker.fullName}
-                tagLine={speaker.tagLine}
-                profilePicture={speaker.profilePicture}
-              />
-            ))}
+            {allSpeakers.map((speaker: any) => {
+              const slug = `${speaker.firstName.toLowerCase()}-${speaker.lastName.toLowerCase()}`;
+              return (
+                <SpeakerCard
+                  name={speaker.fullName}
+                  tagLine={speaker.tagLine}
+                  profilePicture={speaker.profilePicture}
+                  links={speaker.links}
+                  speakerSlug={slug}
+                  isKeynote={speaker.isTopSpeaker}
+                />
+              );
+            })}
           </div>
         ) : (
           <div class="text-center py-12">
