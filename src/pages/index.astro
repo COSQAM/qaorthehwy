@@ -8,7 +8,6 @@ import Sponsors from '../components/Sponsors.astro';
 import Footer from '../components/Footer.astro';
 import sessionizeData from '../data/sessionize.json';
 
-// Sample data - will be replaced with Sessionize API data
 const conferenceData = {
   date: 'June 12, 2026',
   venue: 'The Ohio Union',
@@ -18,32 +17,6 @@ const conferenceData = {
   attendees: '400+',
 };
 
-const ticketTiers = [
-  {
-    name: 'Early Bird',
-    price: '$299',
-    available: true,
-    features: [
-      'Access to all talks and sessions',
-      'Breakfast and lunch included',
-      'Conference t-shirt',
-      'Raffle entry',
-      'Networking opportunities',
-    ],
-  },
-  {
-    name: 'Full Price',
-    price: '$399',
-    available: true,
-    features: [
-      'Access to all talks and sessions',
-      'Breakfast and lunch included',
-      'Conference t-shirt',
-      'Raffle entry',
-      'Networking opportunities',
-    ],
-  },
-];
 
 // Keynote speakers from Sessionize data
 const keynoteSpeakers = sessionizeData.speakers
@@ -98,7 +71,7 @@ const allSpeakers = sessionizeData.speakers;
   )}
 
   <!-- Tickets Section -->
-  <Tickets tiers={ticketTiers} />
+  <Tickets />
 
   <!-- Sponsors Section -->
   <Sponsors
