@@ -2,6 +2,10 @@
 import Layout from '../layouts/Layout.astro';
 import PageHeader from '../components/PageHeader.astro';
 import sessionizeData from '../data/sessionize.json';
+import { getSchedulePhaseConfig } from '../config/schedule';
+
+// Get current schedule phase configuration
+const schedulePhase = getSchedulePhaseConfig();
 
 // Create lookup maps for speakers and rooms
 const speakerMap = new Map(sessionizeData.speakers.map(s => [s.id, s]));
@@ -38,7 +42,7 @@ function formatTime(dateString: string) {
 
     <section class="py-16 px-4">
       <div class="container mx-auto max-w-7xl">
-        {sessionizeData.sessions.length > 0 ? (
+        {schedulePhase.showSchedule && sessionizeData.sessions.length > 0 ? (
           <div class="space-y-12">
             {sortedTimeSlots.map(([timeKey, sessions]) => {
               const [startsAt, endsAt] = timeKey.split('|');
@@ -127,8 +131,8 @@ function formatTime(dateString: string) {
           </div>
         ) : (
           <div class="text-center py-12">
-            <p class="text-xl text-gray-600 mb-4">Schedule coming soon!</p>
-            <p class="text-gray-500">We're working on an amazing lineup of sessions.</p>
+            <p class="text-xl text-gray-600 mb-4">{schedulePhase.message?.title || 'Schedule coming soon!'}</p>
+            <p class="text-gray-500">{schedulePhase.message?.subtitle || "We're working on an amazing lineup of sessions."}</p>
           </div>
         )}
       </div>

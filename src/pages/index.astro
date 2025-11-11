@@ -7,6 +7,7 @@ import Tickets from '../components/Tickets.astro';
 import Sponsors from '../components/Sponsors.astro';
 import Footer from '../components/Footer.astro';
 import sessionizeData from '../data/sessionize.json';
+import { getSpeakerPhaseConfig } from '../config/speakers';
 
 const conferenceData = {
   date: 'June 12, 2026',
@@ -17,6 +18,8 @@ const conferenceData = {
   attendees: '400+',
 };
 
+// Get current speaker phase configuration
+const speakerPhase = getSpeakerPhaseConfig();
 
 // Keynote speakers from Sessionize data
 const keynoteSpeakers = sessionizeData.speakers
@@ -42,7 +45,7 @@ const allSpeakers = sessionizeData.speakers;
   />
 
   <!-- Keynote Speakers Preview -->
-  {keynoteSpeakers.length > 0 && (
+  {speakerPhase.keynotesSection.visible && keynoteSpeakers.length > 0 && (
     <section id="keynotes" class="section-light py-24 px-6">
       <div class="container mx-auto max-w-3xl">
         <h2 class="text-5xl md:text-6xl font-bold text-center mb-20 tracking-tight">KEYNOTE SPEAKERS</h2>
@@ -61,7 +64,7 @@ const allSpeakers = sessionizeData.speakers;
   )}
 
   <!-- Speaker Carousel -->
-  {nonKeynoteSpeakers.length > 0 && (
+  {speakerPhase.sessionSpeakersCarousel.visible && nonKeynoteSpeakers.length > 0 && (
     <section id="speakers-carousel" class="section-light py-8 px-6">
       <div class="container mx-auto max-w-7xl">
         <h2 class="text-5xl md:text-6xl font-bold text-center mb-20 tracking-tight">SESSION SPEAKERS</h2>
