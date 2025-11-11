@@ -1,21 +1,22 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Hero from '../components/Hero.astro';
-import SpeakerCard from '../components/SpeakerCard.astro';
-import SpeakerCarousel from '../components/SpeakerCarousel';
-import Tickets from '../components/Tickets.astro';
-import Sponsors from '../components/Sponsors.astro';
-import Footer from '../components/Footer.astro';
-import sessionizeData from '../data/sessionize.json';
-import { getSpeakerPhaseConfig } from '../config/speakers';
+import Layout from "../layouts/Layout.astro";
+import Hero from "../components/Hero.astro";
+import SpeakerCard from "../components/SpeakerCard.astro";
+import SpeakerCarousel from "../components/SpeakerCarousel";
+import Tickets from "../components/Tickets.astro";
+import Sponsors from "../components/Sponsors.astro";
+import Footer from "../components/Footer.astro";
+import sessionizeData from "../data/sessionize.json";
+import { getSpeakerPhaseConfig } from "../config/speakers";
 
 const conferenceData = {
-  date: 'June 12, 2026',
-  venue: 'The Ohio Union',
-  location: 'Columbus, OH',
-  sessionsCount: '32 Sessions',
-  description: 'Join us for a day of insightful talks and networking with industry leaders in software quality.',
-  attendees: '400+',
+  date: "June 12, 2026",
+  venue: "The Ohio Union",
+  location: "Columbus, OH",
+  sessionsCount: "32 Sessions",
+  description:
+    "Join us for a day of insightful talks and networking with industry leaders in software quality.",
+  attendees: "400+",
 };
 
 // Get current speaker phase configuration
@@ -27,8 +28,9 @@ const keynoteSpeakers = sessionizeData.speakers
   .slice(0, 2);
 
 // Non-keynote speakers for carousel
-const nonKeynoteSpeakers = sessionizeData.speakers
-  .filter((speaker: any) => !speaker.isTopSpeaker);
+const nonKeynoteSpeakers = sessionizeData.speakers.filter(
+  (speaker: any) => !speaker.isTopSpeaker,
+);
 
 // All speakers from Sessionize
 const allSpeakers = sessionizeData.speakers;
@@ -45,47 +47,103 @@ const allSpeakers = sessionizeData.speakers;
   />
 
   <!-- Keynote Speakers Preview -->
-  {speakerPhase.keynotesSection.visible && keynoteSpeakers.length > 0 && (
-    <section id="keynotes" class="section-light py-24 px-6">
-      <div class="container mx-auto max-w-3xl">
-        <h2 class="text-5xl md:text-6xl font-bold text-center mb-20 tracking-tight">KEYNOTE SPEAKERS</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl mx-auto">
-          {keynoteSpeakers.map((speaker: any) => (
-            <SpeakerCard
-              name={speaker.fullName}
-              tagLine={speaker.tagLine}
-              profilePicture={speaker.profilePicture}
-            />
-          ))}
+  {
+    speakerPhase.keynotesSection.visible && keynoteSpeakers.length > 0 && (
+      <section id="keynotes" class="section-light py-24 px-6">
+        <div class="container mx-auto max-w-3xl">
+          <h2 class="text-5xl md:text-6xl font-bold text-center mb-20 tracking-tight">
+            KEYNOTE SPEAKERS
+          </h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl mx-auto">
+            {keynoteSpeakers.map((speaker: any) => (
+              <SpeakerCard
+                name={speaker.fullName}
+                tagLine={speaker.tagLine}
+                profilePicture={speaker.profilePicture}
+              />
+            ))}
+          </div>
         </div>
-
-      </div>
-    </section>
-  )}
+      </section>
+    )
+  }
 
   <!-- Speaker Carousel -->
-  {speakerPhase.sessionSpeakersCarousel.visible && nonKeynoteSpeakers.length > 0 && (
-    <section id="speakers-carousel" class="section-light py-8 px-6">
-      <div class="container mx-auto max-w-7xl">
-        <h2 class="text-5xl md:text-6xl font-bold text-center mb-20 tracking-tight">SESSION SPEAKERS</h2>
-        <SpeakerCarousel client:only="react" speakers={nonKeynoteSpeakers} />
-      </div>
-    </section>
-  )}
+  {
+    speakerPhase.sessionSpeakersCarousel.visible &&
+      nonKeynoteSpeakers.length > 0 && (
+        <section id="speakers-carousel" class="section-light py-8 px-6">
+          <div class="container mx-auto max-w-7xl">
+            <h2 class="text-5xl md:text-6xl font-bold text-center mb-20 tracking-tight">
+              SESSION SPEAKERS
+            </h2>
+            <SpeakerCarousel
+              client:only="react"
+              speakers={nonKeynoteSpeakers}
+            />
+          </div>
+        </section>
+      )
+  }
 
   <!-- Tickets Section -->
   <Tickets />
 
   <!-- Sponsors Section -->
   <Sponsors
-    platinum={[]}
-    gold={[]}
-    silver={[]}
+    platinum={[
+      {
+        name: "Applitools",
+        logo: "src/assets/images/sponsors/applitools.webp",
+        website: "https://applitools.com/",
+      },
+      {
+        name: "Aries",
+        logo: "src/assets/images/sponsors/aries.webp",
+        website: "https://www.aries.com/",
+      },
+    ]}
+    gold={[
+      {
+        name: "Boundless",
+        logo: "src/assets/images/sponsors/boundless.webp",
+        website: "https://www.boundless.com/",
+      },
+      {
+        name: "Brooksource",
+        logo: "src/assets/images/sponsors/brooksource.webp",
+        website: "https://www.brooksource.com/",
+      },
+      {
+        name: "Boundless",
+        logo: "src/assets/images/sponsors/boundless.webp",
+        website: "https://www.boundless.com/",
+      },
+    ]}
+    silver={[
+      {
+        name: "BrowserStack",
+        logo: "src/assets/images/sponsors/browserstack.webp",
+        website: "https://www.browserstack.com/",
+      },
+      {
+        name: "Capgemini",
+        logo: "src/assets/images/sponsors/capgemini.webp",
+        website: "https://www.capgemini.com/",
+      },
+      {
+        name: "BrowserStack",
+        logo: "src/assets/images/sponsors/browserstack.webp",
+        website: "https://www.browserstack.com/",
+      },
+      {
+        name: "Capgemini",
+        logo: "src/assets/images/sponsors/capgemini.webp",
+        website: "https://www.capgemini.com/",
+      },
+    ]}
   />
 
   <!-- Footer -->
-  <Footer
-    slackLink="#"
-    feedbackLink="#"
-  />
+  <Footer slackLink="#" feedbackLink="#" />
 </Layout>
