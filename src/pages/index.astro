@@ -3,6 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import Hero from "../components/Hero.astro";
 import SpeakerCard from "../components/SpeakerCard.astro";
 import SpeakerCarousel from "../components/SpeakerCarousel";
+import WhyAttend from "../components/WhyAttend.astro";
 import Tickets from "../components/Tickets.astro";
 import Sponsors from "../components/Sponsors.astro";
 import Footer from "../components/Footer.astro";
@@ -85,6 +86,9 @@ const allSpeakers = sessionizeData.speakers;
         </section>
       )
   }
+
+  <!-- Why Attend Section -->
+  <WhyAttend />
 
   <!-- Tickets Section -->
   <Tickets />

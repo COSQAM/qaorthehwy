@@ -1,0 +1,74 @@
+---
+import image1 from "../assets/images/why-attend/20250627_123240.jpg";
+import image2 from "../assets/images/why-attend/20250627_130803.jpg";
+import image3 from "../assets/images/why-attend/IMG_7045.jpg";
+import image4 from "../assets/images/why-attend/IMG_5551.png";
+import image5 from "../assets/images/why-attend/IMG_5552.jpg";
+
+const reasons = [
+  {
+    heading: "Learn From Experts Solving Real Problems",
+    description: "Our speakers are practitioners—QA leads debugging production issues, SDETs refactoring test suites, engineering managers building quality cultures, industry experts sharing hard-won insights, and all of them sharing what actually worked (and what spectacularly didn't) on stage. Every session focuses on real experiences and practical lessons you can actually apply.",
+    image: image2,
+  },
+  {
+    heading: "Breakthroughs Come From Conversations And Connections",
+    description: "This isn't a conference where you sit and listen for eight hours. It's where you meet the tester two rows over who solved the exact problem you're facing. It's where a casual hallway conversation turns into a mentorship that lasts years. It's where you realize you're not the only one wrestling with flaky tests, shifting requirements, or that one vendor integration that makes no sense.",
+    image: image5,
+  },
+  {
+    heading: "Ideas You Can Use Next Week",
+    description: "You'll leave with ideas you can use next week. We focus on the practical; how teams are really using AI in testing, what collaboration between QA and dev actually looks like when it works, and how to grow your skills no matter where you are in your career. Whether you're writing your first test script or leading a quality organization, there's something here that will make your work better.",
+    image: image4,
+  },
+  {
+    heading: "A Community Beyond the Event",
+    description: "You'll be part of a community that lasts beyond the event. COSQAM has been connecting Columbus-area testers for years through meetups, mentorship, and genuine friendships across companies. QA or the Highway is that community at its best—open, inclusive, and built on the belief that everyone has something to teach and something to learn.",
+    image: image3,
+  },
+  {
+    heading: "And Honestly? It's Just A Great Day",
+    description: "Great conversations. Smart people who get what you do. Coffee. More coffee. And snacks. The kind of welcoming, down-to-earth atmosphere where you can ask the questions you've been afraid to ask. The kind of day you'll tell your team about on Monday.",
+    image: image1,
+  },
+];
+---
+
+<section id="why-attend" class="section-light pt-24 px-6">
+  <div class="container mx-auto max-w-7xl">
+    <h2 class="text-5xl md:text-6xl font-bold text-center mb-8 tracking-tight">
+      WHY SHOULD YOU ATTEND?
+    </h2>
+
+    <div class="space-y-20">
+      {
+        reasons.map((reason, index) => {
+          const isReversed = index % 2 === 1;
+          return (
+            <div
+              class={`flex flex-col ${isReversed ? "lg:flex-row-reverse" : "lg:flex-row"} gap-12 items-center`}
+            >
+              <div class="lg:w-1/2">
+                <div class="bg-white rounded-2xl shadow-xl p-8 h-[400px] flex items-center justify-center border-2 border-gray-100 overflow-hidden">
+                  <img
+                    src={reason.image.src}
+                    alt={reason.heading}
+                    class="w-full h-full object-cover rounded-xl"
+                  />
+                </div>
+              </div>
+              <div class="lg:w-1/2 space-y-4">
+                <h3 class="text-3xl md:text-4xl font-bold text-dark leading-tight">
+                  {reason.heading}
+                </h3>
+                <p class="text-lg text-gray-700 leading-relaxed">
+                  {reason.description}
+                </p>
+              </div>
+            </div>
+          );
+        })
+      }
+    </div>
+  </div>
+</section>
