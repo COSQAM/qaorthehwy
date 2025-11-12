@@ -1,28 +1,14 @@
 ---
-interface Sponsor {
-  name: string;
-  logo: string;
-  website?: string;
-}
-
-interface Props {
-  platinum?: Sponsor[];
-  gold?: Sponsor[];
-  silver?: Sponsor[];
-  lunch?: Sponsor[];
-  snack?: Sponsor[];
-  tshirt?: Sponsor[];
-}
-
-const { platinum = [], gold = [], silver = [], lunch = [], snack = [], tshirt = [] } = Astro.props;
+import { Image } from 'astro:assets';
+import { sponsorConfig } from '../config/sponsors';
 
 const tiers = [
-  { title: 'Platinum Sponsors', sponsors: platinum, width: 'w-[70%] md:w-[33%]' },
-  { title: 'Gold Sponsors', sponsors: gold, width: 'w-[45%] md:w-[28%]' },
-  { title: 'Silver Sponsors', sponsors: silver, width: 'w-[45%] md:w-[22%]' },
-  { title: 'Lunch Sponsors', sponsors: lunch, width: 'w-[45%] md:w-[22%]' },
-  { title: 'Snack Sponsors', sponsors: snack, width: 'w-[45%] md:w-[22%]' },
-  { title: 'T-Shirt Sponsors', sponsors: tshirt, width: 'w-[45%] md:w-[22%]' },
+  { title: 'Platinum Sponsors', sponsors: sponsorConfig.platinum, width: 'w-[70%] md:w-[33%]' },
+  { title: 'Gold Sponsors', sponsors: sponsorConfig.gold, width: 'w-[45%] md:w-[28%]' },
+  { title: 'Silver Sponsors', sponsors: sponsorConfig.silver, width: 'w-[45%] md:w-[22%]' },
+  { title: 'Lunch Sponsors', sponsors: sponsorConfig.lunch, width: 'w-[45%] md:w-[22%]' },
+  { title: 'Snack Sponsors', sponsors: sponsorConfig.snack, width: 'w-[45%] md:w-[22%]' },
+  { title: 'T-Shirt Sponsors', sponsors: sponsorConfig.tshirt, width: 'w-[45%] md:w-[22%]' },
 ].filter(tier => tier.sponsors.length > 0);
 ---
 
@@ -36,7 +22,7 @@ const tiers = [
           {tier.sponsors.map((sponsor) => (
             sponsor.website ? (
               <a href={sponsor.website} target="_blank" rel="noopener noreferrer" class={`flex items-center justify-center p-8 bg-white rounded-xl shadow-lg hover:shadow-xl transition-all hover:scale-105 transform duration-300 border border-gray-100 ${tier.width}`}>
-                <img
+                <Image
                   src={sponsor.logo}
                   alt={sponsor.name}
                   class="max-h-28 w-auto"
@@ -44,7 +30,7 @@ const tiers = [
               </a>
             ) : (
               <div class={`flex items-center justify-center p-8 bg-white rounded-xl shadow-lg hover:shadow-xl transition-all hover:scale-105 transform duration-300 border border-gray-100 ${tier.width}`}>
-                <img
+                <Image
                   src={sponsor.logo}
                   alt={sponsor.name}
                   class="max-h-28 w-auto"
