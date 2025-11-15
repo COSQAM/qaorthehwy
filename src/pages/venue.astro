@@ -1,10 +1,10 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import PageHeader from '../components/PageHeader.astro';
-import { Image } from 'astro:assets';
-import firstFloorImg from '../assets/images/venue/first-floor.png';
-import secondFloorImg from '../assets/images/venue/second-floor.png';
-import thirdFloorImg from '../assets/images/venue/third-floor.png';
+import Layout from "../layouts/Layout.astro";
+import PageHeader from "../components/PageHeader.astro";
+import { Image } from "astro:assets";
+import firstFloorImg from "../assets/images/venue/first-floor.png";
+import secondFloorImg from "../assets/images/venue/second-floor.png";
+import thirdFloorImg from "../assets/images/venue/third-floor.png";
 ---
 
 <Layout title="Venue - QA or the Highway">
@@ -17,25 +17,48 @@ import thirdFloorImg from '../assets/images/venue/third-floor.png';
     <section class="py-8 px-4">
       <div class="container mx-auto max-w-6xl">
         <!-- Venue Description -->
-        <div class="bg-white rounded-lg shadow-lg p-8 mb-8 border-l-4" style="border-left-color: var(--color-primary);">
+        <div
+          class="bg-white rounded-lg shadow-lg p-8 mb-8 border-l-4"
+          style="border-left-color: var(--color-primary);"
+        >
           <h2 class="text-3xl font-bold mb-6 text-gray-900">The Ohio Union</h2>
-          <div class="space-y-4">
-            <p class="text-gray-700">
-              QA or the Highway will be held at <strong>The Ohio Union</strong>, a 318,000 square foot facility located on the Ohio State University campus. With 34 unique meeting and event spaces, The Ohio Union provides a modern and versatile environment for our conference.
-            </p>
-            <p class="text-gray-700">
-              Throughout the day, we'll provide breakfast, lunch, and snacks to keep you energized and focused on learning and networking.
-            </p>
-            <p class="text-gray-800 font-semibold mt-6">
-              The Ohio Union<br/>
-              1739 N High St<br/>
-              Columbus, OH 43210
-            </p>
+          <div class="grid md:grid-cols-2 gap-6">
+            <div class="space-y-4">
+              <p class="text-gray-700">
+                QA or the Highway will be held at <strong>The Ohio Union</strong
+                >, a 318,000 square foot facility located on the Ohio State
+                University campus. With 34 unique meeting and event spaces, The
+                Ohio Union provides a modern and versatile environment for our
+                conference.
+              </p>
+              <p class="text-gray-700">
+                Throughout the day, we'll provide breakfast, lunch, and snacks
+                to keep you energized and focused on learning and networking.
+              </p>
+              <p class="text-gray-800 font-semibold mt-6">
+                The Ohio Union<br />
+                1739 N High St<br />
+                Columbus, OH 43210
+              </p>
+            </div>
+            <div class="h-[400px] rounded-lg overflow-hidden">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3056.4731073509515!2d-83.01086034837715!3d39.997878588827895!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88388eb8c5837241%3A0x29e24cc55fefd423!2sOhio%20Union!5e0!3m2!1sen!2sus!4v1665514617425!5m2!1sen!2sus"
+                width="100%"
+                height="100%"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
           </div>
         </div>
 
         <!-- Venue Images -->
-        <div class="bg-white rounded-lg shadow-lg p-8 mb-8 border-l-4" style="border-left-color: var(--color-primary);">
+        <div
+          class="bg-white rounded-lg shadow-lg p-8 mb-8 border-l-4"
+          style="border-left-color: var(--color-primary);"
+        >
           <h2 class="text-3xl font-bold mb-6 text-gray-900">The Venue</h2>
           <div class="space-y-6">
             <div>
@@ -52,77 +75,184 @@ import thirdFloorImg from '../assets/images/venue/third-floor.png';
             </div>
             <div class="grid md:grid-cols-3 gap-4">
               <div>
-                <h3 class="text-lg font-semibold mb-2 text-gray-900">First Floor</h3>
-                <Image src={firstFloorImg} alt="First Floor Plan" class="w-full rounded-lg" />
+                <h3 class="text-lg font-semibold mb-2 text-gray-900">
+                  First Floor
+                </h3>
+                <Image
+                  src={firstFloorImg}
+                  alt="First Floor Plan"
+                  class="w-full rounded-lg"
+                />
               </div>
               <div>
-                <h3 class="text-lg font-semibold mb-2 text-gray-900">Second Floor</h3>
-                <Image src={secondFloorImg} alt="Second Floor Plan" class="w-full rounded-lg" />
+                <h3 class="text-lg font-semibold mb-2 text-gray-900">
+                  Second Floor
+                </h3>
+                <Image
+                  src={secondFloorImg}
+                  alt="Second Floor Plan"
+                  class="w-full rounded-lg"
+                />
               </div>
               <div>
-                <h3 class="text-lg font-semibold mb-2 text-gray-900">Third Floor</h3>
-                <Image src={thirdFloorImg} alt="Third Floor Plan" class="w-full rounded-lg" />
+                <h3 class="text-lg font-semibold mb-2 text-gray-900">
+                  Third Floor
+                </h3>
+                <Image
+                  src={thirdFloorImg}
+                  alt="Third Floor Plan"
+                  class="w-full rounded-lg"
+                />
               </div>
             </div>
           </div>
         </div>
 
         <!-- Parking -->
-        <div class="bg-white rounded-lg shadow-lg p-8 mb-8 border-l-4" style="border-left-color: var(--color-primary);">
+        <div
+          class="bg-white rounded-lg shadow-lg p-8 mb-8 border-l-4"
+          style="border-left-color: var(--color-primary);"
+        >
           <h2 class="text-3xl font-bold mb-6 text-gray-900">Parking</h2>
-          <div class="space-y-4">
-            <p class="text-gray-700">
-              <strong>South Ohio Union Parking Garage</strong>
-            </p>
-            <p class="text-gray-700">
-              Park in the South Ohio Union parking garage. When you enter the garage, take a parking ticket from the machine. When you leave, have your parking ticket validated at the registration desk before departing. Insert your validated ticket at the exit gate to leave without charge.
-            </p>
-            <p class="text-gray-700">
-              <strong>Important:</strong> You must validate your parking ticket at the registration desk before leaving the venue.
-            </p>
+          <div class="grid md:grid-cols-2 gap-6">
+            <div class="space-y-4">
+              <p class="text-gray-700">
+                <strong>South Ohio Union Parking Garage</strong>
+              </p>
+              <p class="text-gray-700">
+                Park in the South Ohio Union parking garage. When you enter the
+                garage, take a parking ticket from the machine. When you leave,
+                have your parking ticket validated at the registration desk
+                before departing. Insert your validated ticket at the exit gate
+                to leave without charge.
+              </p>
+              <p class="text-gray-700">
+                <strong>Important:</strong> You must validate your parking ticket
+                at the registration desk before leaving the venue.
+              </p>
+            </div>
+            <div class="h-[400px] rounded-lg overflow-hidden">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1640.443805156314!2d-83.00890542512437!3d39.997750204153256!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x45c9ae82bfe978ce!2sOhio%20Union%20South%20Garage!5e0!3m2!1sen!2sus!4v1665515987150!5m2!1sen!2sus"
+                width="100%"
+                height="100%"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
           </div>
         </div>
 
         <!-- Getting There -->
-        <div class="bg-white rounded-lg shadow-lg p-8 mb-8 border-l-4" style="border-left-color: var(--color-primary);">
+        <div
+          class="bg-white rounded-lg shadow-lg p-8 mb-8 border-l-4"
+          style="border-left-color: var(--color-primary);"
+        >
           <h2 class="text-3xl font-bold mb-6 text-gray-900">Getting There</h2>
-          <div class="space-y-4">
-            <h3 class="text-xl font-semibold text-gray-900">By Air</h3>
-            <p class="text-gray-700">
-              <strong>John Glenn Columbus International Airport (CMH)</strong> is the nearest airport, located approximately 15 minutes from the venue.
-            </p>
+          <div class="grid md:grid-cols-2 gap-6">
+            <div class="space-y-4">
+              <h3 class="text-xl font-semibold text-gray-900">By Air</h3>
+              <p class="text-gray-700">
+                <strong>John Glenn Columbus International Airport (CMH)</strong> is the nearest airport, located approximately 15 minutes from the venue. The airport is well-connected with direct flights from major hubs across the United States. Ground transportation options including rental cars, taxis, and rideshare services are readily available at the airport.
+              </p>
+              <h3 class="text-xl font-semibold text-gray-900 pt-8">By Rideshare</h3>
+              <p class="text-gray-700">
+                Uber and Lyft operate throughout Columbus and are reliable options for getting to the venue. Rides from the airport typically take 15-20 minutes and cost $20-30, depending on traffic and time of day.
+              </p>
+            </div>
+            <div class="h-[400px] rounded-lg overflow-hidden">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4962.639062314657!2d-82.8871767!3d39.9999399!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x883862113489cee3%3A0xa07d02c8c11064c1!2sJohn%20Glenn%20Columbus%20International%20Airport!5e1!3m2!1sen!2sus!4v1763065542445!5m2!1sen!2sus"
+                width="100%"
+                height="100%"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
           </div>
         </div>
 
         <!-- Hotels -->
-        <div class="bg-white rounded-lg shadow-lg p-8 border-l-4" style="border-left-color: var(--color-primary);">
+        <div
+          class="bg-white rounded-lg shadow-lg p-8 border-l-4"
+          style="border-left-color: var(--color-primary);"
+        >
           <h2 class="text-3xl font-bold mb-6 text-gray-900">Nearby Hotels</h2>
-          <div class="space-y-6">
-            <div class="pb-6 border-b border-gray-200">
-              <h3 class="text-xl font-semibold mb-2 text-gray-900">SpringHill Suites by Marriott</h3>
-              <p class="text-gray-700 mb-2">
+
+          <!-- SpringHill Suites -->
+          <div class="grid md:grid-cols-2 gap-6 mb-8 pb-8 border-b border-gray-200">
+            <div class="space-y-4">
+              <h3 class="text-xl font-semibold mb-2 text-gray-900">
+                SpringHill Suites by Marriott
+              </h3>
+              <p class="text-gray-700">
+                This hotel is a great and safe walk through Ohio State's campus to the Ohio Union. Also, it is conveniently located by The Ohio State University. Just minutes to Downtown Columbus and other Columbus attractions such as the Nationwide Arena District, Short North, Huntington Park, COSI, and German Village.
+              </p>
+              <p class="text-gray-700">
                 <strong>Distance:</strong> 1.5 miles from venue
               </p>
-              <p class="text-gray-700 mb-2">
-                <strong>Group Rate:</strong> $149 per night
-              </p>
-              <p class="text-gray-600">
-                Book using our group rate for the best pricing on your stay.
-              </p>
             </div>
+            <div class="h-[400px] rounded-lg overflow-hidden">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3056.8746108070845!2d-83.02856388461704!3d39.98890737941711!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88388ef032010203%3A0x73b8944335921fbd!2sSpringHill%20Suites%20by%20Marriott%20Columbus%20OSU!5e0!3m2!1sen!2sus!4v1665517226610!5m2!1sen!2sus"
+                width="100%"
+                height="100%"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+          </div>
 
-            <div class="pb-6 border-b border-gray-200">
-              <h3 class="text-xl font-semibold mb-2 text-gray-900">The Blackwell Inn</h3>
+          <!-- The Blackwell Inn -->
+          <div class="grid md:grid-cols-2 gap-6 mb-8 pb-8 border-b border-gray-200">
+            <div class="space-y-4">
+              <h3 class="text-xl font-semibold mb-2 text-gray-900">
+                The Blackwell Inn
+              </h3>
+              <p class="text-gray-700">
+                Located 0.8 miles from the Ohio Union, this hotel is a great and safe walk through Ohio State's campus to the Ohio Union and right accross the street from the Ohio Stadium (the horseshoe). The Blackwell Inn and Pfahl Conference Center is located in University District. The area's natural beauty can be seen at Chadwick Arboretum & Learning Gardens, while Billy Ireland Cartoon Library and Museum and Wexner Center for the Arts are cultural highlights.
+              </p>
               <p class="text-gray-700">
                 <strong>Distance:</strong> 0.8 miles from venue
               </p>
             </div>
+            <div class="h-[400px] rounded-lg overflow-hidden">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3056.165269855282!2d-83.01892018391231!3d40.00475578851412!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88388e97af90fd3d%3A0xe43dbd69e093c2c!2sThe%20Blackwell%20Inn%20%26%20Pfahl%20Conference%20Center!5e0!3m2!1sen!2sus!4v1665517681174!5m2!1sen!2sus"
+                width="100%"
+                height="100%"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+          </div>
 
-            <div>
-              <h3 class="text-xl font-semibold mb-2 text-gray-900">Hilton Garden Inn</h3>
+          <!-- Hilton Garden Inn -->
+          <div class="grid md:grid-cols-2 gap-6">
+            <div class="space-y-4">
+              <h3 class="text-xl font-semibold mb-2 text-gray-900">
+                Hilton Garden Inn
+              </h3>
+              <p class="text-gray-700">
+                This hotel has shopping and restaurants close by along with sporting and entertainment venues. Suburbs of Upper Arlington, Grandview and Clintonville are located within two miles of the hotel.
+              </p>
               <p class="text-gray-700">
                 <strong>Distance:</strong> 2.8 miles from venue
               </p>
+            </div>
+            <div class="h-[400px] rounded-lg overflow-hidden">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3055.18665243653!2d-83.02954926427311!3d40.02661192135342!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88388c2560a8c93f%3A0x964a5d09816f59a8!2sHilton%20Garden%20Inn%20Columbus-University%20Area!5e0!3m2!1sen!2sus!4v1665517800813!5m2!1sen!2sus"
+                width="100%"
+                height="100%"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
           </div>
         </div>
