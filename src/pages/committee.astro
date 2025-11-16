@@ -1,20 +1,57 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import PageHeader from '../components/PageHeader.astro';
+import Layout from "../layouts/Layout.astro";
+import PageHeader from "../components/PageHeader.astro";
+import SpeakerCard from "../components/SpeakerCard.astro";
+import AnnaHeiermannImage from "../assets/images/committee/anna-heiermann.jpeg";
+import JaredKisteImage from "../assets/images/committee/jared-kiste.jpeg";
+import JennaDavisImage from "../assets/images/committee/jenna-davis.jpeg";
+import JoeBealeImage from "../assets/images/committee/joe-beale.jpeg";
+import KrishnaBandarupalliImage from "../assets/images/committee/krishna-bandarupalli.jpeg";
+import RyanQuellhorstImage from "../assets/images/committee/ryan-quellhorst.png";
+import DasaradharamGaddeImage from "../assets/images/committee/dasaradharam-gadde.jpeg";
+import RobertFornalImage from "../assets/images/committee/robert-fornal.jpeg";
 
 const committeeMembers = [
-  // Add your committee members here
-  // Example:
-  // {
-  //   name: 'John Doe',
-  //   role: 'Conference Chair',
-  //   bio: 'Brief bio...',
-  //   image: '/images/committee/john-doe.jpg',
-  //   social: {
-  //     twitter: 'https://twitter.com/johndoe',
-  //     linkedin: 'https://linkedin.com/in/johndoe',
-  //   }
-  // },
+  {
+    name: "Joe Beale",
+    tagLine: "President",
+    profilePicture: JoeBealeImage.src,
+  },
+  {
+    name: "Ryan Quellhorst",
+    tagLine: "Vice President",
+    profilePicture: RyanQuellhorstImage.src,
+  },
+    {
+    name: "Jared Kiste",
+    tagLine: "Treasurer",
+    profilePicture: JaredKisteImage.src,
+  },
+  {
+    name: "Jenna Davis",
+    tagLine: "Secretary",
+    profilePicture: JennaDavisImage.src,
+  },
+  {
+    name: "Anna Heiermann",
+    tagLine: "Board Member",
+    profilePicture: AnnaHeiermannImage.src,
+  },
+  {
+    name: "Krishna Bandarupalli",
+    tagLine: "Board Member",
+    profilePicture: KrishnaBandarupalliImage.src,
+  },
+  {
+    name: "Dasaradharam Gadde",
+    tagLine: "Board Member",
+    profilePicture: DasaradharamGaddeImage.src,
+  },
+  {
+    name: "Robert Fornal",
+    tagLine: "Board Member",
+    profilePicture: RobertFornalImage.src,
+  }
 ];
 ---
 
@@ -27,55 +64,28 @@ const committeeMembers = [
 
     <section class="py-16 px-4">
       <div class="container mx-auto max-w-6xl">
-        {committeeMembers.length > 0 ? (
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {committeeMembers.map((member: any) => (
-              <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                {member.image && (
-                  <img
-                    src={member.image}
-                    alt={member.name}
-                    class="w-full h-64 object-cover"
-                  />
-                )}
-                <div class="p-6">
-                  <h3 class="text-xl font-bold mb-2">{member.name}</h3>
-                  <p class="text-primary font-semibold mb-3">{member.role}</p>
-                  <p class="text-gray-700 mb-4">{member.bio}</p>
-                  {member.social && (
-                    <div class="flex gap-3">
-                      {member.social.twitter && (
-                        <a
-                          href={member.social.twitter}
-                          class="text-gray-600 hover:text-primary transition"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          Twitter
-                        </a>
-                      )}
-                      {member.social.linkedin && (
-                        <a
-                          href={member.social.linkedin}
-                          class="text-gray-600 hover:text-primary transition"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          LinkedIn
-                        </a>
-                      )}
-                    </div>
-                  )}
-                </div>
-              </div>
-            ))}
-          </div>
-        ) : (
-          <div class="text-center py-12">
-            <p class="text-xl text-gray-600 mb-4">Committee members will be announced soon!</p>
-            <p class="text-gray-500">We're assembling an amazing team to bring you this conference.</p>
-          </div>
-        )}
+        {
+          committeeMembers.length > 0 ? (
+            <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8">
+              {committeeMembers.map((member) => (
+                <SpeakerCard
+                  name={member.name}
+                  tagLine={member.tagLine}
+                  profilePicture={member.profilePicture}
+                />
+              ))}
+            </div>
+          ) : (
+            <div class="text-center py-12">
+              <p class="text-xl text-gray-600 mb-4">
+                Committee members will be announced soon!
+              </p>
+              <p class="text-gray-500">
+                We're assembling an amazing team to bring you this conference.
+              </p>
+            </div>
+          )
+        }
       </div>
     </section>
   </main>
