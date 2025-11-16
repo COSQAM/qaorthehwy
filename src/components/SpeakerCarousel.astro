@@ -1,0 +1,60 @@
+---
+import SpeakerCard from './SpeakerCard.astro';
+
+interface Link {
+  title: string;
+  url: string;
+  linkType: string;
+}
+
+interface Speaker {
+  id: string;
+  fullName: string;
+  tagLine: string;
+  profilePicture: string;
+  isTopSpeaker?: boolean;
+  links?: Link[];
+}
+
+interface Props {
+  speakers: Speaker[];
+}
+
+const { speakers } = Astro.props;
+---
+
+<div class="speaker-carousel">
+  {speakers.map((speaker) => {
+    const slug = speaker.fullName.toLowerCase().replace(/\s+/g, '-');
+    return (
+      <div class="carousel-cell w-full sm:w-1/2 lg:w-1/4 px-4">
+        <SpeakerCard
+          name={speaker.fullName}
+          tagLine={speaker.tagLine}
+          profilePicture={speaker.profilePicture}
+          speakerSlug={slug}
+        />
+      </div>
+    );
+  })}
+</div>
+
+<script>
+  import Flickity from 'flickity';
+  import 'flickity/css/flickity.css';
+
+  const carousel = document.querySelector('.speaker-carousel') as HTMLElement;
+
+  if (carousel) {
+    new Flickity(carousel, {
+      cellAlign: 'left',
+      contain: false,
+      wrapAround: true,
+      autoPlay: 3000,
+      pauseAutoPlayOnHover: true,
+      pageDots: true,
+      prevNextButtons: false,
+      freeScroll: true,
+    });
+  }
+</script>

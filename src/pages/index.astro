@@ -2,7 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import Hero from "../components/Hero.astro";
 import SpeakerCard from "../components/SpeakerCard.astro";
-import SpeakerCarousel from "../components/SpeakerCarousel";
+import SpeakerCarousel from "../components/SpeakerCarousel.astro";
 import WhyAttend from "../components/WhyAttend.astro";
 import Tickets from "../components/Tickets.astro";
 import Sponsors from "../components/Sponsors.astro";
@@ -78,10 +78,7 @@ const allSpeakers = sessionizeData.speakers;
             <h2 class="text-5xl md:text-6xl font-bold text-center mb-20 tracking-tight">
               SESSION SPEAKERS
             </h2>
-            <SpeakerCarousel
-              client:only="react"
-              speakers={nonKeynoteSpeakers}
-            />
+            <SpeakerCarousel speakers={nonKeynoteSpeakers} />
           </div>
         </section>
       )
