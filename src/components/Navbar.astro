@@ -1,5 +1,6 @@
 ---
 import Logo from './Logo.astro';
+import { givebutterCampaign } from "../config/tickets";
 
 const base = import.meta.env.BASE_URL;
 
@@ -69,12 +70,15 @@ const currentPath = Astro.url.pathname;
           </div>
         </div>
 
-        <a
-          href="#tickets"
-          class="btn-primary px-6 py-2.5 rounded-lg text-sm font-semibold transition tracking-wide"
-        >
-          GET TICKETS
-        </a>
+        <givebutter-button
+          campaign={givebutterCampaign}
+          label="GET TICKETS"
+          background-color="#3148F6"
+          label-color="#FFFFFF"
+          border-radius="8"
+          drop-shadow="false"
+          icon="none"
+        ></givebutter-button>
       </div>
 
       <!-- Mobile menu button -->
@@ -135,12 +139,17 @@ const currentPath = Astro.url.pathname;
           </a>
         ))}
       </div>
-      <a
-        href="#tickets"
-        class="block btn-primary px-3 py-2 rounded-md text-base font-semibold transition text-center mt-2"
-      >
-        GET TICKETS
-      </a>
+      <div class="mt-2 flex justify-center">
+        <givebutter-button
+          campaign={givebutterCampaign}
+          label="GET TICKETS"
+          background-color="#3148F6"
+          label-color="#FFFFFF"
+          border-radius="6"
+          drop-shadow="false"
+          icon="none"
+        ></givebutter-button>
+      </div>
     </div>
   </div>
 </nav>
@@ -166,4 +175,28 @@ const currentPath = Astro.url.pathname;
       navbar?.classList.remove('border-b', 'border-gray-300', 'shadow-sm');
     }
   });
+
+  // Style navbar givebutter buttons
+  const styleNavbarButtons = () => {
+    const navbarEl = document.getElementById('navbar');
+    if (!navbarEl) return;
+
+    navbarEl.querySelectorAll('givebutter-button').forEach(gb => {
+      let button = gb.shadowRoot
+        ? gb.shadowRoot.querySelector('button[slot="invoker"]')
+        : gb.querySelector('button[slot="invoker"]');
+
+      if (button) {
+        button.style.setProperty('padding', '0.5rem 1.5rem', 'important');
+        button.style.setProperty('font-size', '0.875rem', 'important');
+        button.style.setProperty('font-weight', '500', 'important');
+        button.style.setProperty('height', 'auto', 'important');
+        button.style.setProperty('min-height', 'auto', 'important');
+        button.classList.remove('h-4');
+      }
+    });
+  };
+
+  setTimeout(styleNavbarButtons, 100);
+  setTimeout(styleNavbarButtons, 500);
 </script>

@@ -1,4 +1,6 @@
 ---
+import { givebutterCampaign } from "../config/tickets";
+
 interface Props {
   date: string;
   location: string;
@@ -11,7 +13,37 @@ interface Props {
 const { date, location, venue, attendees, videoSrc } = Astro.props;
 ---
 
-<section class="relative text-dark overflow-hidden h-[800px]">
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const styleHeroButton = () => {
+      const heroSection = document.querySelector('.hero-section');
+      if (!heroSection) return;
+
+      heroSection.querySelectorAll('givebutter-button').forEach(gb => {
+        let button = gb.shadowRoot
+          ? gb.shadowRoot.querySelector('button[slot="invoker"]')
+          : gb.querySelector('button[slot="invoker"]');
+
+        if (button) {
+          button.style.setProperty('width', '100%', 'important');
+          button.style.setProperty('min-width', '100%', 'important');
+          button.style.setProperty('max-width', '100%', 'important');
+          button.style.setProperty('padding', '1rem 2.5rem', 'important');
+          button.style.setProperty('font-size', '1.125rem', 'important');
+          button.style.setProperty('font-weight', '600', 'important');
+          button.style.setProperty('height', 'auto', 'important');
+          button.style.setProperty('min-height', 'auto', 'important');
+          button.classList.remove('h-4', 'w-fit');
+        }
+      });
+    };
+
+    setTimeout(styleHeroButton, 100);
+    setTimeout(styleHeroButton, 500);
+  });
+</script>
+
+<section class="hero-section relative text-dark overflow-hidden h-[800px]">
   <div class="absolute inset-0 bg-textured-light -z-10"></div>
   <div class="container mx-auto max-w-8xl px-6 py-12 lg:py-0">
     <div class="flex flex-col lg:flex-row gap-8 lg:gap-12 lg:items-center lg:min-h-[800px]">
@@ -37,20 +69,16 @@ const { date, location, venue, attendees, videoSrc } = Astro.props;
             <div class="text-m md:text-xl font-bold">Attendees</div>
           </div>
         </div>
-        <div class="flex flex-col sm:flex-row gap-4">
-          <a
-            href="#tickets"
-            class="btn-primary px-10 py-4 rounded-lg text-lg font-semibold transition text-center shadow-lg shadow-blue-500/20"
-          >
-            GET TICKETS
-          </a>
-          <a
-            href="#schedule"
-            class="border-2 border-primary text-primary px-10 py-4 rounded-lg text-lg font-semibold hover:bg-primary/10 transition text-center"
-            style="border-color: var(--color-primary);"
-          >
-            VIEW SCHEDULE
-          </a>
+        <div class="w-full max-w-md">
+          <givebutter-button
+            campaign={givebutterCampaign}
+            label="GET TICKETS"
+            background-color="#3148F6"
+            label-color="#FFFFFF"
+            border-radius="8"
+            drop-shadow="true"
+            icon="none"
+          ></givebutter-button>
         </div>
       </div>
 

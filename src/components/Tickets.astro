@@ -1,5 +1,5 @@
 ---
-import { getActiveTiers } from "../config/tickets";
+import { getActiveTiers, givebutterCampaign } from "../config/tickets";
 import type { TicketStyle } from "../config/tickets";
 
 interface TicketTier {
@@ -47,6 +47,43 @@ function getButtonClasses(style: TicketStyle, enabled: boolean): string {
   }
 }
 ---
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const styleGivebutterButton = () => {
+      const ticketsSection = document.querySelector('#tickets');
+      if (!ticketsSection) return;
+
+      ticketsSection.querySelectorAll('givebutter-button').forEach(gb => {
+        let button = gb.shadowRoot
+          ? gb.shadowRoot.querySelector('button[slot="invoker"]')
+          : gb.querySelector('button[slot="invoker"]');
+
+        if (button) {
+          button.style.setProperty('width', '100%', 'important');
+          button.style.setProperty('min-width', '100%', 'important');
+          button.style.setProperty('max-width', '100%', 'important');
+          button.style.setProperty('padding', '1rem 2rem', 'important');
+          button.style.setProperty('font-size', '1.125rem', 'important');
+          button.style.setProperty('font-weight', '700', 'important');
+          button.style.setProperty('height', 'auto', 'important');
+          button.style.setProperty('min-height', 'auto', 'important');
+          button.classList.remove('w-fit', 'h-4');
+        }
+      });
+    };
+
+    setTimeout(styleGivebutterButton, 100);
+    setTimeout(styleGivebutterButton, 500);
+    setTimeout(styleGivebutterButton, 1000);
+
+    const observer = new MutationObserver(styleGivebutterButton);
+    const ticketsSection = document.querySelector('#tickets');
+    if (ticketsSection) {
+      observer.observe(ticketsSection, { childList: true, subtree: true });
+    }
+  });
+</script>
 
 <section id="tickets" class="section-light py-24 px-6">
   <div class="container mx-auto max-w-8xl">
@@ -97,12 +134,26 @@ function getButtonClasses(style: TicketStyle, enabled: boolean): string {
                 </li>
               ))}
             </ul>
-            <button
-              class={getButtonClasses(tier.style, tier.enabled)}
-              disabled={!tier.enabled}
-            >
-              {tier.enabled ? "BUY NOW" : "COMING SOON"}
-            </button>
+            {tier.enabled ? (
+              <div class="w-full">
+                <givebutter-button
+                  campaign={givebutterCampaign}
+                  label="BUY NOW"
+                  background-color="#3148F6"
+                  label-color="#FFFFFF"
+                  border-radius="12"
+                  drop-shadow="true"
+                  icon="none"
+                ></givebutter-button>
+              </div>
+            ) : (
+              <button
+                class="w-full py-4 px-8 rounded-xl text-lg font-bold bg-gray-300 text-gray-500 cursor-not-allowed"
+                disabled
+              >
+                COMING SOON
+              </button>
+            )}
           </div>
         ))
       }
