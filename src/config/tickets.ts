@@ -35,6 +35,9 @@ const features = [
   'Parking covered with ticket',
 ];
 
+// Givebutter campaign configuration
+export const givebutterCampaign = '7ZPS6Z';
+
 // Main ticket configuration
 export const ticketConfig: TicketConfig = {
   // ⚡ FEATURE FLAG: Change this to switch ticket states
