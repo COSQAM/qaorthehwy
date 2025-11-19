@@ -7,8 +7,13 @@ import WhyAttend from "../components/WhyAttend.astro";
 import Tickets from "../components/Tickets.astro";
 import Sponsors from "../components/Sponsors.astro";
 import Footer from "../components/Footer.astro";
+import AnnouncementBanner from "../components/AnnouncementBanner.astro";
 import sessionizeData from "../data/sessionize.json";
 import { getSpeakerPhaseConfig } from "../config/speakers";
+import {
+  getCallForSpeakersConfig,
+  getFeedbackConfig,
+} from "../config/announcements";
 
 const conferenceData = {
   date: "June 12, 2026",
@@ -22,6 +27,10 @@ const conferenceData = {
 
 // Get current speaker phase configuration
 const speakerPhase = getSpeakerPhaseConfig();
+
+// Get announcement banner configurations
+const cfpConfig = getCallForSpeakersConfig();
+const feedbackConfig = getFeedbackConfig();
 
 // Keynote speakers from Sessionize data
 const keynoteSpeakers = sessionizeData.speakers
@@ -46,6 +55,35 @@ const allSpeakers = sessionizeData.speakers;
     attendees={conferenceData.attendees}
     videoSrc={`${import.meta.env.BASE_URL}/hero-video.mp4`}
   />
+
+  <!-- Feedback Banner -->
+  {
+    feedbackConfig.enabled && (
+      <AnnouncementBanner
+        title={feedbackConfig.title}
+        description={feedbackConfig.description}
+        ctaText={feedbackConfig.ctaText}
+        ctaUrl={feedbackConfig.ctaUrl}
+        variant={feedbackConfig.variant}
+        openInNewTab={feedbackConfig.openInNewTab}
+      />
+    )
+  }
+
+  <!-- Call for Speakers Banner -->
+  {
+    cfpConfig.enabled && (
+      <AnnouncementBanner
+        title={cfpConfig.title}
+        description={cfpConfig.description}
+        ctaText={cfpConfig.ctaText}
+        ctaUrl={cfpConfig.ctaUrl}
+        deadline={cfpConfig.deadline}
+        variant={cfpConfig.variant}
+        openInNewTab={cfpConfig.openInNewTab}
+      />
+    )
+  }
 
   <!-- Keynote Speakers Preview -->
   {
