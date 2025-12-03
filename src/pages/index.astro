@@ -53,7 +53,7 @@ const allSpeakers = sessionizeData.speakers;
     venue={conferenceData.venue}
     description={conferenceData.description}
     attendees={conferenceData.attendees}
-    videoSrc={`${import.meta.env.BASE_URL}/hero-video.mp4`}
+    videoSrc={`${import.meta.env.BASE_URL}/hero-video.webm`}
   />
 
   <!-- Feedback Banner -->
@@ -64,7 +64,6 @@ const allSpeakers = sessionizeData.speakers;
         description={feedbackConfig.description}
         ctaText={feedbackConfig.ctaText}
         ctaUrl={feedbackConfig.ctaUrl}
-        variant={feedbackConfig.variant}
         openInNewTab={feedbackConfig.openInNewTab}
       />
     )
@@ -79,12 +78,10 @@ const allSpeakers = sessionizeData.speakers;
         ctaText={cfpConfig.ctaText}
         ctaUrl={cfpConfig.ctaUrl}
         deadline={cfpConfig.deadline}
-        variant={cfpConfig.variant}
         openInNewTab={cfpConfig.openInNewTab}
       />
     )
   }
-
   <!-- Keynote Speakers Preview -->
   {
     speakerPhase.keynotesSection.visible && keynoteSpeakers.length > 0 && (

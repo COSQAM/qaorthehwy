@@ -93,7 +93,8 @@ const { date, location, venue, attendees, videoSrc } = Astro.props;
               playsinline
               class="w-full h-full object-cover"
             >
-              <source src={videoSrc} type="video/mp4" />
+              <source src={videoSrc} type="video/webm" />
+              <source src={videoSrc.replace('.webm', '.mp4')} type="video/mp4" />
             </video>
           </div>
         </div>

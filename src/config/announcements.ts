@@ -8,7 +8,6 @@ export interface AnnouncementBannerConfig {
   ctaText: string;
   ctaUrl: string;
   deadline?: string;
-  variant?: "prominent" | "subtle";
   openInNewTab?: boolean;
 }
 
