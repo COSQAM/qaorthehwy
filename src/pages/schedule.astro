@@ -65,7 +65,7 @@ function formatTime(dateString: string) {
                       const speakerSlug = speaker
                         ? `${speaker.firstName.toLowerCase()}-${speaker.lastName.toLowerCase()}`
                         : null;
-                      const speakerUrl = speakerSlug ? `${base}/speakers/${speakerSlug}` : '#';
+                      const speakerUrl = speakerSlug ? `${base}speakers/${speakerSlug}` : '#';
                       
                       // Service sessions (like breaks, lunch, registration) - display differently
                       if (session.isServiceSession) {
