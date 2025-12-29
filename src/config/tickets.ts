@@ -51,7 +51,7 @@ export const ticketConfig: TicketConfig = {
       name: 'Early Bird',
       price: '$99',
       features,
-      deadline: 'Ends March 1st, 2026', // Update this date as needed
+      deadline: 'Ends May 15, 2026', // Update this date as needed
     },
     fullPrice: {
       id: 'fullPrice',

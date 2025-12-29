@@ -22,57 +22,9 @@ export interface SponsorTiers {
 }
 
 export const sponsorConfig: SponsorTiers = {
-  platinum: [
-    {
-      name: "Applitools",
-      logo: applitools,
-      website: "https://applitools.com/",
-    },
-    {
-      name: "Aries",
-      logo: aries,
-      website: "https://www.aries.com/",
-    },
-  ],
-  gold: [
-    {
-      name: "Boundless",
-      logo: boundless,
-      website: "https://www.boundless.com/",
-    },
-    {
-      name: "Brooksource",
-      logo: brooksource,
-      website: "https://www.brooksource.com/",
-    },
-    {
-      name: "Boundless",
-      logo: boundless,
-      website: "https://www.boundless.com/",
-    },
-  ],
-  silver: [
-    {
-      name: "BrowserStack",
-      logo: browserstack,
-      website: "https://www.browserstack.com/",
-    },
-    {
-      name: "Capgemini",
-      logo: capgemini,
-      website: "https://www.capgemini.com/",
-    },
-    {
-      name: "BrowserStack",
-      logo: browserstack,
-      website: "https://www.browserstack.com/",
-    },
-    {
-      name: "Capgemini",
-      logo: capgemini,
-      website: "https://www.capgemini.com/",
-    },
-  ],
+  platinum: [],
+  gold: [],
+  silver: [],
   lunch: [],
   snack: [],
   tshirt: [],

@@ -6,7 +6,6 @@ import SpeakerCarousel from "../components/SpeakerCarousel.astro";
 import WhyAttend from "../components/WhyAttend.astro";
 import Tickets from "../components/Tickets.astro";
 import Sponsors from "../components/Sponsors.astro";
-import Footer from "../components/Footer.astro";
 import AnnouncementBanner from "../components/AnnouncementBanner.astro";
 import sessionizeData from "../data/sessionize.json";
 import { getSpeakerPhaseConfig } from "../config/speakers";
@@ -127,7 +126,4 @@ const allSpeakers = sessionizeData.speakers;
 
   <!-- Sponsors Section -->
   <Sponsors />
-
-  <!-- Footer -->
-  <Footer slackLink="#" feedbackLink="#" />
 </Layout>

@@ -1,54 +1,21 @@
 ---
-interface Props {
-  slackLink?: string;
-  feedbackLink?: string;
-}
+import { socialConfig } from '../config/social';
 
-const { slackLink, feedbackLink } = Astro.props;
 const currentYear = new Date().getFullYear();
 ---
 
-<footer class="relative text-white py-16 px-6 border-t" style="background-color: var(--color-dark); border-color: color-mix(in srgb, var(--color-primary) 20%, transparent);">
-  <div class="absolute inset-0" style="background: radial-gradient(ellipse at bottom, rgba(49, 72, 246, 0.05) 0%, transparent 60%);"></div>
-  <div class="container mx-auto max-w-8xl relative z-10">
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
-      <div>
-        <h3 class="text-xl font-bold mb-4 text-white tracking-tight">QA OR THE HIGHWAY</h3>
-        <p class="text-gray-400 leading-relaxed">
-          A conference dedicated to quality engineering professionals.
-        </p>
-      </div>
-      <div>
-        <h4 class="text-lg font-semibold mb-4 uppercase tracking-wide">Quick Links</h4>
-        <ul class="space-y-3">
-          <li><a href="#speakers" class="text-gray-400 hover:text-primary transition">Speakers</a></li>
-          <li><a href="#schedule" class="text-gray-400 hover:text-primary transition">Schedule</a></li>
-          <li><a href="#tickets" class="text-gray-400 hover:text-primary transition">Tickets</a></li>
-          <li><a href="#sponsors" class="text-gray-400 hover:text-primary transition">Sponsors</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4 class="text-lg font-semibold mb-4 uppercase tracking-wide">Connect</h4>
-        <ul class="space-y-3">
-          {slackLink && (
-            <li>
-              <a href={slackLink} class="text-gray-400 hover:text-primary transition">
-                Join us on Slack
-              </a>
-            </li>
-          )}
-          {feedbackLink && (
-            <li>
-              <a href={feedbackLink} class="text-gray-400 hover:text-primary transition">
-                Leave Feedback
-              </a>
-            </li>
-          )}
-        </ul>
-      </div>
-    </div>
-    <div class="border-t border-gray-800 pt-8 text-center text-gray-500">
-      <p>&copy; {currentYear} QA or the Highway. All rights reserved.</p>
+<footer class="section-light py-12 px-6">
+  <div class="container mx-auto max-w-8xl">
+    <div class="flex flex-col items-center gap-4 text-center">
+      {socialConfig.slackUrl && (
+        <a href={socialConfig.slackUrl} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-dark hover:text-primary transition font-medium">
+          <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M5.042 15.165a2.528 2.528 0 0 1-2.52 2.523A2.528 2.528 0 0 1 0 15.165a2.527 2.527 0 0 1 2.522-2.52h2.52v2.52zM6.313 15.165a2.527 2.527 0 0 1 2.521-2.52 2.527 2.527 0 0 1 2.521 2.52v6.313A2.528 2.528 0 0 1 8.834 24a2.528 2.528 0 0 1-2.521-2.522v-6.313zM8.834 5.042a2.528 2.528 0 0 1-2.521-2.52A2.528 2.528 0 0 1 8.834 0a2.528 2.528 0 0 1 2.521 2.522v2.52H8.834zM8.834 6.313a2.528 2.528 0 0 1 2.521 2.521 2.528 2.528 0 0 1-2.521 2.521H2.522A2.528 2.528 0 0 1 0 8.834a2.528 2.528 0 0 1 2.522-2.521h6.312zM18.956 8.834a2.528 2.528 0 0 1 2.522-2.521A2.528 2.528 0 0 1 24 8.834a2.528 2.528 0 0 1-2.522 2.521h-2.522V8.834zM17.688 8.834a2.528 2.528 0 0 1-2.523 2.521 2.527 2.527 0 0 1-2.52-2.521V2.522A2.527 2.527 0 0 1 15.165 0a2.528 2.528 0 0 1 2.523 2.522v6.312zM15.165 18.956a2.528 2.528 0 0 1 2.523 2.522A2.528 2.528 0 0 1 15.165 24a2.527 2.527 0 0 1-2.52-2.522v-2.522h2.52zM15.165 17.688a2.527 2.527 0 0 1-2.52-2.523 2.526 2.526 0 0 1 2.52-2.52h6.313A2.527 2.527 0 0 1 24 15.165a2.528 2.528 0 0 1-2.522 2.523h-6.313z"/>
+          </svg>
+          Join us on Slack
+        </a>
+      )}
+      <p class="text-gray-600">&copy; {currentYear} QA or the Highway. All rights reserved.</p>
     </div>
   </div>
 </footer>
