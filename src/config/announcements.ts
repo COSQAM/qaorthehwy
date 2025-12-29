@@ -24,7 +24,7 @@ export const announcementConfig: AnnouncementConfig = {
     description:
       "Never spoken at a conference before? Start here. This community is welcoming, supportive, and eager to hear your story. Experienced speakers we'd love to have you back, too. Real experiences and honest insights—we're here to learn from each other.",
     ctaText: "Submit Your Proposal",
-    ctaUrl: "https://sessionize.com/qaorthehwy",
+    ctaUrl: "https://sessionize.com/qa-or-the-highway-2026/",
     deadline: "Deadline: March 15, 2026",
     openInNewTab: true,
   },
