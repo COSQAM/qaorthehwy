@@ -7,12 +7,6 @@
       "question": "Session Summary",
       "questionType": "Long_Text",
       "sort": 0
-    },
-    {
-      "id": 113027,
-      "question": "Is there a second speaker?",
-      "questionType": "Checkbox",
-      "sort": 1
     }
   ],
   "categories": [],
