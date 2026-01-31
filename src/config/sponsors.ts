@@ -1,10 +1,6 @@
 // Sponsor configuration
 import applitools from "../assets/images/sponsors/applitools.webp";
-import aries from "../assets/images/sponsors/aries.webp";
-import boundless from "../assets/images/sponsors/boundless.webp";
-import brooksource from "../assets/images/sponsors/brooksource.webp";
-import browserstack from "../assets/images/sponsors/browserstack.webp";
-import capgemini from "../assets/images/sponsors/capgemini.webp";
+import testmuiai from "../assets/images/sponsors/testmuai.png";
 
 export interface Sponsor {
   name: string;
@@ -23,7 +19,16 @@ export interface SponsorTiers {
 
 export const sponsorConfig: SponsorTiers = {
   platinum: [],
-  gold: [],
+  gold: [{
+    name: "Applitools",
+    logo: applitools,
+    website: "https://applitools.com/",
+  },
+  {
+    name: "TestMu AI",
+    logo: testmuiai,
+    website: "https://www.testmuai.com/",
+  }],
   silver: [],
   lunch: [],
   snack: [],
