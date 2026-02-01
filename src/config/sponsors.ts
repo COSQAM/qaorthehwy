@@ -1,6 +1,7 @@
 // Sponsor configuration
 import applitools from "../assets/images/sponsors/applitools.webp";
 import testmuiai from "../assets/images/sponsors/testmuai.png";
+import browserstack from "../assets/images/sponsors/browserstack.webp";
 
 export interface Sponsor {
   name: string;
@@ -20,9 +21,9 @@ export interface SponsorTiers {
 export const sponsorConfig: SponsorTiers = {
   platinum: [],
   gold: [{
-    name: "Applitools",
-    logo: applitools,
-    website: "https://applitools.com/",
+    name: "Browserstack",
+    logo: browserstack,
+    website: "https://www.browserstack.com/",
   },
   {
     name: "TestMu AI",
