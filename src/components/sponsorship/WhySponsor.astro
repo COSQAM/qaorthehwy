@@ -1,0 +1,187 @@
+---
+import type { Demographics } from '../../config/sponsorship';
+
+interface Props {
+  demographics: Demographics;
+}
+
+const { demographics } = Astro.props;
+
+const valueProps = [
+  {
+    title: 'Qualified Audience',
+    stat: '400+',
+    statLabel: 'Attendees',
+    description: 'Reach decision-makers and practitioners from Fortune 500 companies and innovative startups.',
+    highlight: '85% influence or make purchasing decisions',
+  },
+  {
+    title: 'Brand Visibility',
+    stat: '10,000+',
+    statLabel: 'Social Impressions',
+    description: 'Maximum exposure through booth placement, logo visibility, social media, and speaking opportunities.',
+    highlight: 'Multi-channel brand presence',
+  },
+  {
+    title: 'Direct Engagement',
+    stat: '100+',
+    statLabel: 'Booth Conversations',
+    description: 'Face-to-face interactions in a focused, professional environment.',
+    highlight: 'Average per sponsor',
+  }
+];
+---
+
+<section class="py-24 px-6">
+  <div class="container mx-auto max-w-7xl">
+    <h2 class="text-5xl md:text-6xl font-bold text-center mb-4 tracking-tight text-dark">
+      WHY SPONSOR QA OR THE HIGHWAY?
+    </h2>
+    <p class="text-center text-xl text-gray-700 mb-16 max-w-3xl mx-auto">
+      Connect with {demographics.expectedAttendees}+ quality engineering professionals and showcase your brand at the Midwest's premier software quality conference.
+    </p>
+
+    <!-- Value Props Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-20">
+      {valueProps.map((prop) => (
+        <div class="rounded-xl p-8 bg-white border-2 border-gray-100 shadow-lg transition-all hover:scale-105 hover:shadow-xl">
+          <div class="text-5xl font-bold text-primary mb-2">{prop.stat}</div>
+          <div class="text-sm text-primary uppercase tracking-wide font-bold mb-4">
+            {prop.statLabel}
+          </div>
+          <h3 class="text-xl font-bold mb-3 text-dark">{prop.title}</h3>
+          <p class="text-gray-600 text-sm mb-3 leading-relaxed">
+            {prop.description}
+          </p>
+          <div class="text-xs text-primary font-semibold italic">
+            {prop.highlight}
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <!-- Demographics Section -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
+      <!-- Job Titles Distribution -->
+      <div class="bg-white rounded-2xl p-8 shadow-xl">
+        <h3 class="text-2xl md:text-3xl font-bold text-dark mb-6 uppercase tracking-wide">
+          Who Attends
+        </h3>
+        <p class="text-gray-600 mb-8">
+          Connect with quality engineering professionals across all experience levels and specializations.
+        </p>
+        {demographics.jobTitles.map((job) => (
+          <div class="mb-6">
+            <div class="flex justify-between mb-2">
+              <span class="text-dark font-semibold text-sm md:text-base">
+                {job.title}
+              </span>
+              <span class="text-primary font-bold text-sm md:text-base">
+                {job.percentage}%
+              </span>
+            </div>
+            <div class="w-full bg-gray-200 rounded-full h-3">
+              <div
+                class="bg-primary h-3 rounded-full transition-all duration-1000 ease-out"
+                style={`width: ${job.percentage}%`}
+              ></div>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <!-- Company Sizes & Industries -->
+      <div class="space-y-8">
+        <!-- Company Sizes -->
+        <div class="bg-white rounded-2xl p-8 shadow-xl">
+          <h3 class="text-2xl md:text-3xl font-bold text-dark mb-6 uppercase tracking-wide">
+            Company Sizes
+          </h3>
+          <p class="text-gray-600 mb-8">
+            From enterprise organizations to innovative startups.
+          </p>
+          {demographics.companySizes.map((company) => (
+            <div class="mb-6">
+              <div class="flex justify-between mb-2">
+                <span class="text-dark font-semibold text-sm md:text-base">
+                  {company.range}
+                </span>
+                <span class="text-primary font-bold text-sm md:text-base">
+                  {company.percentage}%
+                </span>
+              </div>
+              <div class="w-full bg-gray-200 rounded-full h-3">
+                <div
+                  class="bg-accent h-3 rounded-full transition-all duration-1000 ease-out"
+                  style={`width: ${company.percentage}%`}
+                ></div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <!-- Industries -->
+        <div class="bg-white rounded-2xl p-8 shadow-xl">
+          <h3 class="text-2xl md:text-3xl font-bold text-dark mb-6 uppercase tracking-wide">
+            Industries Represented
+          </h3>
+          <div class="flex flex-wrap gap-3">
+            {demographics.industries.map((industry) => (
+              <span class="bg-gray-100 text-dark px-4 py-2 rounded-full text-sm font-semibold border border-gray-200">
+                {industry}
+              </span>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Companies Represented in 2025 -->
+    <div class="bg-white rounded-2xl p-8 md:p-12 shadow-xl">
+      <h3 class="text-2xl md:text-3xl font-bold text-dark mb-4 text-center uppercase tracking-wide">
+        Join Leading Organizations
+      </h3>
+      <p class="text-gray-600 mb-10 text-center max-w-2xl mx-auto">
+        QA or the Highway 2025 brought together professionals from top companies across the nation. Be part of this elite community in 2026.
+      </p>
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+        {[
+          'Nationwide',
+          'IGS Energy',
+          'Ohio JFS',
+          'Ohio BWC',
+          'Chipotle',
+          'OCLC',
+          'Ramsey Solutions',
+          'R+L Carriers',
+          'City of Columbus',
+          'Foundation Software',
+          'Elsevier',
+          'Grange Insurance',
+          'Infor',
+          'Republic Bank',
+          'Encova',
+          'Sweetwater',
+          'Henny Penny',
+          'Covetrus',
+          'ADM',
+          'J.M. Smucker',
+          'Federal Reserve',
+          'Ohio EPA',
+          'Ohio DODD',
+          'OHSERS',
+          'NATL'
+        ].map((company) => (
+          <div class="bg-gray-100 rounded-lg p-4 text-center border border-gray-200 hover:border-primary hover:shadow-md transition-all">
+            <span class="text-dark font-semibold text-sm">
+              {company}
+            </span>
+          </div>
+        ))}
+      </div>
+      <p class="text-center text-sm text-gray-500 mt-8 italic">
+        ...and many more innovative companies
+      </p>
+    </div>
+  </div>
+</section>
