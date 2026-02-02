@@ -1,0 +1,125 @@
+---
+import type { SponsorshipBenefit } from '../../config/sponsorship';
+
+interface Props {
+  benefits: SponsorshipBenefit[];
+}
+
+const { benefits } = Astro.props;
+---
+
+<section class="py-20 px-6">
+  <div class="container mx-auto max-w-5xl">
+    <h2 class="text-4xl md:text-5xl font-bold text-center mb-4 tracking-tight text-dark">
+      SPONSORSHIP BENEFITS EXPLAINED
+    </h2>
+    <p class="text-center text-lg text-gray-600 mb-12 max-w-2xl mx-auto">
+      Learn more about what each sponsorship benefit includes and how it helps your brand connect with attendees.
+    </p>
+
+    <div class="space-y-4">
+      {benefits.map((benefit, index) => (
+        <div class="benefit-accordion-item bg-white rounded-xl shadow-lg border-2 border-gray-100 overflow-hidden transition-all hover:shadow-xl">
+          <button
+            class="benefit-accordion-header w-full text-left p-6 flex items-center justify-between transition-colors hover:bg-gray-50"
+            data-benefit={index}
+            aria-expanded="false"
+          >
+            <h3 class="text-xl font-bold text-dark uppercase tracking-wide flex items-center gap-3">
+              <span class="flex-shrink-0 w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center text-sm font-bold">
+                {index + 1}
+              </span>
+              {benefit.category}
+            </h3>
+            <svg
+              class="benefit-chevron w-6 h-6 text-primary transition-transform flex-shrink-0"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M19 9l-7 7-7-7"
+              />
+            </svg>
+          </button>
+          <div class="benefit-accordion-content hidden">
+            <div class="p-6 pt-0 border-t-2 border-gray-100">
+              <ul class="space-y-3">
+                {benefit.items.map((item) => (
+                  <li class="flex items-start">
+                    <svg
+                      class="w-5 h-5 text-primary mr-3 mt-0.5 flex-shrink-0"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                        clip-rule="evenodd"
+                      />
+                    </svg>
+                    <span class="text-gray-700 text-sm md:text-base leading-relaxed">
+                      {item}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<script>
+  // Benefits accordion toggle functionality
+  document.querySelectorAll('.benefit-accordion-header').forEach((header) => {
+    header.addEventListener('click', () => {
+      const content = header.nextElementSibling as HTMLElement;
+      const chevron = header.querySelector('.benefit-chevron') as HTMLElement;
+      const isExpanded = header.getAttribute('aria-expanded') === 'true';
+
+      // Close other accordions (optional - remove this block for allow multiple open)
+      document.querySelectorAll('.benefit-accordion-header').forEach((otherHeader) => {
+        if (otherHeader !== header && otherHeader.getAttribute('aria-expanded') === 'true') {
+          const otherContent = otherHeader.nextElementSibling as HTMLElement;
+          const otherChevron = otherHeader.querySelector('.benefit-chevron') as HTMLElement;
+
+          otherHeader.setAttribute('aria-expanded', 'false');
+          otherContent.classList.add('hidden');
+          if (otherChevron) {
+            otherChevron.style.transform = 'rotate(0deg)';
+          }
+        }
+      });
+
+      // Toggle current accordion
+      header.setAttribute('aria-expanded', (!isExpanded).toString());
+      content.classList.toggle('hidden');
+
+      // Rotate chevron
+      if (content.classList.contains('hidden')) {
+        chevron.style.transform = 'rotate(0deg)';
+      } else {
+        chevron.style.transform = 'rotate(180deg)';
+      }
+    });
+  });
+</script>
+
+<style>
+  .benefit-accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+  }
+
+  .benefit-accordion-content:not(.hidden) {
+    max-height: 800px;
+    transition: max-height 0.5s ease-in;
+  }
+</style>

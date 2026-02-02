@@ -1,0 +1,101 @@
+---
+import type { Resource } from '../../config/sponsorship';
+
+interface Props {
+  resources: Resource[];
+}
+
+const { resources } = Astro.props;
+---
+
+<section class="py-20 px-6">
+  <div class="container mx-auto max-w-5xl">
+    <h2 class="text-4xl md:text-5xl font-bold text-center mb-4 tracking-tight text-dark">
+      SPONSORSHIP RESOURCES
+    </h2>
+    <p class="text-center text-lg text-gray-600 mb-12 max-w-2xl mx-auto">
+      Download comprehensive materials to learn more about sponsorship opportunities and share with your team.
+    </p>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      {resources.map((resource) => (
+        <a
+          href={resource.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="bg-white rounded-xl p-8 shadow-lg hover:shadow-2xl transition-all hover:scale-105 border-2 border-gray-100 hover:border-primary flex items-start gap-6 group"
+        >
+          <div class="flex-shrink-0">
+            {resource.type === 'pdf' ? (
+              <svg
+                class="w-12 h-12 text-primary group-hover:scale-110 transition-transform"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4zm2 6a1 1 0 011-1h6a1 1 0 110 2H7a1 1 0 01-1-1zm1 3a1 1 0 100 2h6a1 1 0 100-2H7z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            ) : (
+              <svg
+                class="w-12 h-12 text-primary group-hover:scale-110 transition-transform"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z"
+                />
+                <path
+                  d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z"
+                />
+              </svg>
+            )}
+          </div>
+          <div class="flex-1">
+            <h3 class="text-xl font-bold text-dark mb-2 group-hover:text-primary transition-colors">
+              {resource.title}
+            </h3>
+            <p class="text-gray-600 text-sm md:text-base mb-3 leading-relaxed">
+              {resource.description}
+            </p>
+            {resource.fileSize && (
+              <div class="flex items-center gap-2 text-xs text-gray-500">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                  <path
+                    fill-rule="evenodd"
+                    d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+                <span>{resource.fileSize}</span>
+              </div>
+            )}
+          </div>
+          <div class="flex-shrink-0">
+            <svg
+              class="w-6 h-6 text-gray-400 group-hover:text-primary group-hover:translate-x-1 transition-all"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9 5l7 7-7 7"
+              />
+            </svg>
+          </div>
+        </a>
+      ))}
+    </div>
+
+    <div class="mt-12 text-center">
+      <p class="text-gray-600 text-sm">
+        Need something else? <a href="#sponsorship-form" class="text-primary font-semibold hover:underline">Contact us</a> and we'll be happy to help.
+      </p>
+    </div>
+  </div>
+</section>

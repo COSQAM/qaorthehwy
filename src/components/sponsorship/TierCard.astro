@@ -1,0 +1,106 @@
+---
+import type { SponsorshipTier } from '../../config/sponsorship';
+
+interface Props {
+  tier: SponsorshipTier;
+}
+
+const { tier } = Astro.props;
+
+const formattedPrice = typeof tier.price === 'number'
+  ? `$${tier.price.toLocaleString()}`
+  : tier.price;
+
+const cardClasses = tier.featured
+  ? "bg-white rounded-2xl shadow-2xl p-8 md:p-10 border-2 border-primary ring-2 ring-primary/20 transition-all transform duration-300 hover:scale-105"
+  : "bg-white rounded-2xl shadow-lg p-8 md:p-10 border-2 border-gray-100 transition-all transform duration-300 hover:shadow-2xl hover:scale-105";
+---
+
+<div class={cardClasses}>
+  <div class="flex items-start justify-between mb-6">
+    <div class="flex-1">
+      <h3 class="text-2xl md:text-3xl font-bold text-dark uppercase tracking-wide mb-2">
+        {tier.name}
+      </h3>
+      <div class="text-4xl md:text-5xl font-bold text-primary mb-2">
+        {formattedPrice}
+      </div>
+      <p class="text-sm md:text-base text-gray-600 font-semibold">
+        {tier.tagline}
+      </p>
+    </div>
+    {tier.featured && (
+      <div class="flex flex-col items-end gap-2">
+        <span class="bg-accent text-dark px-3 py-1 rounded-full text-xs md:text-sm font-bold uppercase whitespace-nowrap">
+          Most Popular
+        </span>
+      </div>
+    )}
+  </div>
+
+  <p class="text-gray-700 text-sm md:text-base mb-6 leading-relaxed">
+    {tier.description}
+  </p>
+
+  <div class="mb-8">
+    <h4 class="text-sm font-bold text-dark uppercase tracking-wide mb-4">
+      Key Benefits:
+    </h4>
+    <ul class="space-y-3">
+      {tier.highlights.map((highlight) => (
+        <li class="flex items-start">
+          <svg
+            class="w-5 h-5 text-primary mr-3 mt-0.5 flex-shrink-0"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+              clip-rule="evenodd"
+            />
+          </svg>
+          <span class="text-dark text-sm md:text-base">{highlight}</span>
+        </li>
+      ))}
+    </ul>
+  </div>
+
+  <button
+    class="w-full py-4 px-8 rounded-xl text-lg font-bold btn-primary shadow-lg shadow-blue-500/30 transition transform hover:scale-105 scroll-to-form-btn"
+    data-tier={tier.id}
+  >
+    Learn More
+  </button>
+</div>
+
+<script>
+  // Smooth scroll to form when tier card CTA is clicked
+  document.querySelectorAll('.scroll-to-form-btn').forEach((btn) => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const button = e.currentTarget as HTMLElement;
+      const tierId = button.dataset.tier;
+
+      // Scroll to form
+      const formSection = document.getElementById('sponsorship-form');
+      if (formSection) {
+        formSection.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start',
+        });
+
+        // Pre-select tier checkbox after scroll
+        setTimeout(() => {
+          const checkbox = document.querySelector(
+            `input[name="tier_${tierId}"]`
+          ) as HTMLInputElement;
+          if (checkbox) {
+            checkbox.checked = true;
+            checkbox.focus();
+          }
+        }, 800);
+      }
+    });
+  });
+</script>
