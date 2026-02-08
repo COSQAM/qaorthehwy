@@ -19,16 +19,12 @@ interface BenefitRow {
 
 const benefitRows: BenefitRow[] = [
   {
-    label: 'Booth Space',
-    values: tiers.map((t) => t.benefits.boothSize || t.benefits.boothLocation || '-'),
+    label: 'Booth Location',
+    values: tiers.map((t) => t.benefits.boothLocation || '-'),
   },
   {
-    label: 'Lunch Passes',
-    values: tiers.map((t) => t.benefits.lunchPasses || 0),
-  },
-  {
-    label: 'Parking Passes',
-    values: tiers.map((t) => t.benefits.parkingPasses || 0),
+    label: 'Booth Size',
+    values: tiers.map((t) => t.benefits.boothSize || '-'),
   },
   {
     label: 'Website Logo',
@@ -41,8 +37,12 @@ const benefitRows: BenefitRow[] = [
     ),
   },
   {
-    label: 'Social Media',
-    values: tiers.map((t) => t.benefits.socialMediaPosts || '-'),
+    label: 'Dedicated Social Media Post',
+    values: tiers.map(() => true),
+  },
+    {
+    label: '50% Off T-Shirt Sponsorship',
+    values: tiers.map((t) => ['platinum', 'gold'].includes(t.id)),
   },
   {
     label: 'Speaking Opportunity',
@@ -51,10 +51,6 @@ const benefitRows: BenefitRow[] = [
   {
     label: 'Keynote Sponsorship',
     values: tiers.map((t) => t.benefits.keynoteSponsorship || false),
-  },
-  {
-    label: 'Named Sponsorship',
-    values: tiers.map((t) => t.benefits.namedSponsorship || '-'),
   },
 ];
 ---
@@ -98,11 +94,11 @@ const benefitRows: BenefitRow[] = [
         </thead>
         <tbody>
           {benefitRows.map((row, rowIndex) => (
-            <tr class={`border-b border-gray-100 hover:bg-gray-50 transition-colors ${rowIndex % 2 === 0 ? 'bg-white' : 'bg-gray-50/50'}`}>
+            <tr class={`border-b border-gray-100 ${rowIndex % 2 === 0 ? 'bg-white' : 'bg-gray-50/50'}`}>
               <td class="p-4 font-semibold text-dark">{row.label}</td>
               {row.values.map((value, colIndex) => (
                 <td
-                  class={`p-4 text-center tier-cell transition-all ${tiers[colIndex].featured ? 'bg-blue-50/30' : ''}`}
+                  class={`p-4 text-center ${tiers[colIndex].featured ? 'bg-blue-50/30' : ''}`}
                   data-tier={tiers[colIndex].id}
                 >
                   {typeof value === 'boolean' ? (
@@ -255,35 +251,11 @@ const benefitRows: BenefitRow[] = [
     });
   });
 
-  // Desktop column hover highlighting
-  document.querySelectorAll('.tier-header').forEach((header, colIndex) => {
-    const tierId = (header as HTMLElement).dataset.tier;
-
-    header.addEventListener('mouseenter', () => {
-      // Highlight all cells in this column
-      document.querySelectorAll(`[data-tier="${tierId}"]`).forEach((cell) => {
-        cell.classList.add('highlighted-column');
-      });
-    });
-
-    header.addEventListener('mouseleave', () => {
-      // Remove highlight from all cells
-      document.querySelectorAll('.highlighted-column').forEach((cell) => {
-        cell.classList.remove('highlighted-column');
-      });
-    });
-  });
 </script>
 
 <style>
   .comparison-table thead {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-
-  .highlighted-column {
-    background-color: rgba(49, 72, 246, 0.05) !important;
-    transform: scale(1.02);
-    transition: all 0.2s ease;
   }
 
   .tier-accordion-content {

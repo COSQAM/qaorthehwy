@@ -55,7 +55,7 @@ export interface Resource {
   title: string;
   description: string;
   url: string;
-  type: 'pdf' | 'link';
+  type: 'pdf' | 'link' | 'signing';
   fileSize?: string;
 }
 
@@ -79,16 +79,16 @@ const sponsorshipTiers: SponsorshipTier[] = [
     color: '#E5E4E2',
     benefits: {
       boothLocation: 'Premium location by keynote/lunch entrance',
-      boothSize: "10' x 10' booth space with 6' banquet table",
+      boothSize: "10' x 10' booth space with 8' banquet table",
       lunchPasses: 2,
-      parkingPasses: 4,
+      parkingPasses: 2,
       logoPlacement: [
         'Featured prominently on website',
         'Conference handouts and printed materials',
         'Social media campaign',
         'Logo featured on lunch presentation',
       ],
-      socialMediaPosts: '4+ dedicated posts',
+      socialMediaPosts: 'Dedicated social media post',
       guaranteedSpeakingSlot: true,
       keynoteSponsorship: true,
       specialBenefits: [
@@ -97,7 +97,6 @@ const sponsorshipTiers: SponsorshipTier[] = [
         'VIP networking opportunities',
       ],
       discounts: [
-        '50% off Lunch Sponsor tier',
         '50% off T-Shirt Sponsor tier',
       ],
     },
@@ -106,7 +105,8 @@ const sponsorshipTiers: SponsorshipTier[] = [
       'Guaranteed speaking opportunity',
       'Keynote co-sponsorship',
       'Featured logo on all marketing',
-      '4+ social media posts',
+      'Dedicated social media post',
+      '50% off T-Shirt Sponsorship',
     ],
   },
   {
@@ -119,16 +119,16 @@ const sponsorshipTiers: SponsorshipTier[] = [
     color: '#FFD700',
     benefits: {
       boothLocation: 'Centrally located booth placement',
-      boothSize: "10' x 10' booth space with 6' banquet table",
+      boothSize: "10' x 10' booth space with 8' banquet table",
       lunchPasses: 2,
-      parkingPasses: 3,
+      parkingPasses: 2,
       logoPlacement: [
         'Large logo on website',
         'Conference handouts and printed materials',
         'Social media campaign',
         'Logo featured on lunch presentation',
       ],
-      socialMediaPosts: '2-3 dedicated posts',
+      socialMediaPosts: 'Dedicated social media post',
       guaranteedSpeakingSlot: true,
       keynoteSponsorship: false,
       specialBenefits: [
@@ -137,7 +137,6 @@ const sponsorshipTiers: SponsorshipTier[] = [
         'Invitation to speaker dinner',
       ],
       discounts: [
-        '50% off Lunch Sponsor tier',
         '50% off T-Shirt Sponsor tier',
       ],
     },
@@ -145,8 +144,8 @@ const sponsorshipTiers: SponsorshipTier[] = [
       'Centrally located booth',
       'Guaranteed speaking slot',
       'Logo on all marketing materials',
-      '2-3 social media posts',
-      '50% off additional sponsorships',
+      'Dedicated social media post',
+      '50% off T-Shirt Sponsorship',
     ],
   },
   {
@@ -157,8 +156,8 @@ const sponsorshipTiers: SponsorshipTier[] = [
     description: 'Entry-level booth placement with logo visibility on website, materials, and social media to connect with attendees.',
     color: '#C0C0C0',
     benefits: {
-      boothLocation: 'Entry-level booth placement',
-      boothSize: "6' x 6' booth space with table",
+      boothLocation: 'Standard booth placement',
+      boothSize: "10' x 10' booth space with 8' banquet table",
       lunchPasses: 2,
       parkingPasses: 2,
       logoPlacement: [
@@ -166,14 +165,14 @@ const sponsorshipTiers: SponsorshipTier[] = [
         'Conference handouts and printed materials',
         'Social media mentions',
       ],
-      socialMediaPosts: '1-2 posts',
+      socialMediaPosts: 'Dedicated social media post',
       guaranteedSpeakingSlot: false,
       keynoteSponsorship: false,
     },
     highlights: [
       'Conference booth space',
       'Logo on website and materials',
-      'Social media mentions',
+      'Dedicated social media post',
       'Lunch and parking passes',
       'Access to 400+ attendees',
     ],
@@ -187,14 +186,12 @@ const sponsorshipTiers: SponsorshipTier[] = [
     color: '#FF6B6B',
     benefits: {
       namedSponsorship: 'Exclusive Lunch Sponsorship',
-      lunchPasses: 4,
-      parkingPasses: 4,
       logoPlacement: [
         'Medium logo on website',
         'Sponsor signage in lunch area',
         'PowerPoint loop during lunch',
       ],
-      socialMediaPosts: '1-2 posts',
+      socialMediaPosts: 'Dedicated social media post',
       specialBenefits: [
         'PowerPoint presentation loop on all screens during lunch break',
         'Prominent signage in lunch area',
@@ -205,7 +202,7 @@ const sponsorshipTiers: SponsorshipTier[] = [
       'PowerPoint loop during lunch',
       'Prominent lunch room signage',
       'Captive audience of 400+ attendees',
-      '4 lunch and parking passes',
+      'Dedicated social media post',
       'Logo on website and social',
     ],
   },
@@ -218,13 +215,11 @@ const sponsorshipTiers: SponsorshipTier[] = [
     color: '#4ECDC4',
     benefits: {
       namedSponsorship: 'Exclusive T-Shirt Sponsorship',
-      lunchPasses: 2,
-      parkingPasses: 2,
       logoPlacement: [
         'Small logo on website',
         'Large logo on back of conference t-shirt',
       ],
-      socialMediaPosts: '1 post',
+      socialMediaPosts: 'Dedicated social media post',
       specialBenefits: [
         'Your logo featured on back of ALL conference t-shirts',
         'Extended brand visibility as attendees wear shirts after event',
@@ -236,7 +231,7 @@ const sponsorshipTiers: SponsorshipTier[] = [
       'Extended visibility beyond event',
       'Worn by 400+ attendees',
       'Logo on website',
-      '2 lunch and parking passes',
+      'Dedicated social media post',
     ],
   },
   {
@@ -248,13 +243,11 @@ const sponsorshipTiers: SponsorshipTier[] = [
     color: '#95E1D3',
     benefits: {
       namedSponsorship: 'Exclusive Snack Sponsorship',
-      lunchPasses: 1,
-      parkingPasses: 1,
       logoPlacement: [
         'Small logo on website',
         'Color logo on snack signage',
       ],
-      socialMediaPosts: '1 post',
+      socialMediaPosts: 'Dedicated social media post',
       specialBenefits: [
         'Prominent signage outside snack room',
         'High visibility during all breaks',
@@ -266,7 +259,7 @@ const sponsorshipTiers: SponsorshipTier[] = [
       'High visibility during breaks',
       'Affordable entry point',
       'Logo on website',
-      'Lunch and parking pass',
+      'Dedicated social media post',
     ],
   },
   {
@@ -284,7 +277,7 @@ const sponsorshipTiers: SponsorshipTier[] = [
         'Small logo on website',
         'Your company logo on ALL conference lanyards',
       ],
-      socialMediaPosts: '1 post',
+      socialMediaPosts: 'Dedicated social media post',
       specialBenefits: [
         'You provide custom lanyards with your logo',
         'Worn by every single attendee all day',
@@ -307,10 +300,10 @@ const demographics: Demographics = {
   expectedAttendees: 400,
   jobTitles: [
     { title: 'QA Engineers / Test Automation Engineers', percentage: 45 },
-    { title: 'Engineering Managers / Directors', percentage: 25 },
-    { title: 'SDETs / QA Developers', percentage: 15 },
-    { title: 'DevOps / QA Leads', percentage: 10 },
-    { title: 'Consultants / Students', percentage: 5 },
+    { title: 'QA Leads', percentage: 25 },
+    { title: 'Software Engineers', percentage: 15 },
+    { title: 'Engineering Managers / Directors', percentage: 10 },
+    { title: 'DevOps Engineers', percentage: 5 },
   ],
   companySizes: [
     { range: 'Enterprise (1000+ employees)', percentage: 40 },
@@ -355,7 +348,7 @@ const faqs: FAQ[] = [
   {
     question: 'What booth materials and setup should I plan for?',
     answer:
-      'You\'ll receive one 10\' booth with one 6\' banquet table (booth size varies by tier). Electrical is available upon request. Your entire display must fit within the booth area and comply with local fire regulations. Setup times will be confirmed approximately 1 week before the conference.',
+      'You\'ll receive one 10\' booth with one 8\' banquet table. Electrical is available upon request. Your entire display must fit within the booth area and comply with local fire regulations. Setup times will be confirmed approximately 1 week before the conference.',
   },
   {
     question: 'When do I need to submit my logo and marketing materials?',
@@ -387,18 +380,24 @@ const faqs: FAQ[] = [
 // Downloadable Resources
 const resources: Resource[] = [
   {
-    title: 'Sponsorship Prospectus 2026',
-    description: 'Comprehensive overview of all sponsorship tiers, benefits, and conference details',
-    url: '/sponsorship/SPONSORSHIP_2026.pdf',
-    type: 'pdf',
-    fileSize: '2.3 MB',
+    title: 'Sign Sponsorship Agreement Online',
+    description: 'Review and sign the sponsorship agreement digitally — no printing or scanning required',
+    url: 'https://docuseal.com/d/f4ZJWynaiufZo3',
+    type: 'signing',
   },
   {
-    title: 'Sponsor Agreement Template',
-    description: 'Review our standard sponsorship agreement terms and conditions',
-    url: '/sponsorship/Sponsor_Agreement_2026.pdf',
+    title: 'Sponsorship Prospectus 2026',
+    description: 'Comprehensive overview of all sponsorship tiers, benefits, and conference details',
+    url: '/sponsorship/Sponsorship-Prospectus-2026.pdf',
     type: 'pdf',
-    fileSize: '1.1 MB',
+    fileSize: '714 KB',
+  },
+  {
+    title: 'Sponsor Agreement PDF',
+    description: 'Review our standard sponsorship agreement terms and conditions',
+    url: '/sponsorship/Sponsor-Agreement-2026.pdf',
+    type: 'pdf',
+    fileSize: '107 KB',
   },
 ];
 
@@ -411,18 +410,16 @@ const benefitCategories: SponsorshipBenefit[] = [
       'All booths are strategically placed to ensure attendee visibility during breaks',
       'Setup and breakdown times provided approximately 1 week before the conference',
       'Electrical outlets available upon request at no additional charge',
-      'One 6\' banquet table included with all booth sponsorships',
+      'One 8\' banquet table included with all booth sponsorships',
     ],
   },
   {
     category: 'Brand Visibility & Marketing',
     items: [
-      'Logo placement on conference website with link to your company (live 3+ months before event)',
-      'Inclusion in email newsletter campaigns sent to 2,000+ subscribers',
+      'Logo placement on conference website with link to your company',
       'Logo on printed conference materials (programs, handouts, signage)',
-      'Dedicated social media posts on LinkedIn, Twitter, and Slack community',
-      'Logo featured during lunch presentation (Platinum & Gold sponsors)',
-      'Press release and media mentions for top-tier sponsors',
+      'Dedicated social media posts LinkedIn to our professional community',
+      'Logo featured during lunch presentation (Platinum & Gold sponsors)'
     ],
   },
   {
@@ -440,10 +437,10 @@ const benefitCategories: SponsorshipBenefit[] = [
     category: 'Attendee Access & Networking',
     items: [
       'Direct face-to-face engagement with 400+ quality professionals',
-      '85% of attendees influence or make purchasing decisions',
+      'A majority of attendees influence or make purchasing decisions',
       'Attendees include QA Engineers, Test Automation Engineers, Engineering Managers, and SDETs',
       'Full-day access to attendees during sessions, breaks, and lunch',
-      'Lunch and parking passes for your booth staff (varies by tier)',
+      'Lunch and parking passes for your booth staff',
       'Opportunity to collect leads and business cards throughout the event',
     ],
   },
@@ -452,7 +449,7 @@ const benefitCategories: SponsorshipBenefit[] = [
     items: [
       'Ability to include promotional materials in attendee swag bags',
       'Co-marketing opportunities with COSQAM before and after event',
-      'Platinum/Gold sponsors: 50% discount on Lunch and T-Shirt sponsorships',
+      'Platinum/Gold sponsors: 50% discount on T-Shirt sponsorship',
       'Early access to conference schedule and speaker lineup',
       'Recognition during opening and closing remarks',
       'Post-event recap and sponsor thank you communications',
