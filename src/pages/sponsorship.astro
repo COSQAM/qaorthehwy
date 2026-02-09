@@ -8,7 +8,13 @@ import BenefitsAccordion from '../components/sponsorship/BenefitsAccordion.astro
 import DownloadResources from '../components/sponsorship/DownloadResources.astro';
 import SponsorshipFAQ from '../components/sponsorship/SponsorshipFAQ.astro';
 import SponsorshipForm from '../components/sponsorship/SponsorshipForm.astro';
+import SponsorshipImageBreak from '../components/sponsorship/SponsorshipImageBreak.astro';
 import { sponsorshipConfig } from '../config/sponsorship';
+
+import sponsorEngagementImage from '../assets/images/why-attend/IMG_5552.jpg';
+import sponsorNetworkingImage from '../assets/images/why-attend/20250627_122349.jpg';
+import sponsorSpeakingImage from '../assets/images/why-attend/20250627_130803.jpg';
+import sponsorBoothImage from '../assets/images/why-attend/20250627_123240.jpg';
 
 const { tiers, demographics, faqs, resources, benefitCategories } = sponsorshipConfig;
 ---
@@ -23,6 +29,14 @@ const { tiers, demographics, faqs, resources, benefitCategories } = sponsorshipC
 
     <!-- Why Sponsor Section -->
     <WhySponsor demographics={demographics} />
+
+    <!-- Image Break 1: Brand Visibility -->
+    <SponsorshipImageBreak
+      image={sponsorEngagementImage}
+      alt="Packed keynote hall at QA or the Highway conference"
+      heading="Your Brand, Front and Center"
+      description="Imagine your company's name on the screens as hundreds of quality professionals watch the keynote. Sponsoring QA or the Highway puts your brand directly in front of the decision-makers, engineers, and leaders who shape how software quality is done across the Midwest."
+    />
 
     <!-- Tier Overview Cards -->
     <section class="py-24 px-6">
@@ -63,14 +77,40 @@ const { tiers, demographics, faqs, resources, benefitCategories } = sponsorshipC
     <!-- Interactive Comparison Table -->
     <TierComparison tiers={tiers.filter(t => ['platinum', 'gold', 'silver'].includes(t.id))} />
 
+    <!-- Image Break 2: Networking -->
+    <SponsorshipImageBreak
+      image={sponsorNetworkingImage}
+      alt="Community gathering and networking at QA or the Highway"
+      heading="More Than a Logo on a Website"
+      description="Sponsorship at QA or the Highway means real conversations with real people. Our intimate conference format creates natural opportunities for face-to-face engagement that larger events simply cannot match. Your team will build relationships that extend well beyond the conference day."
+      reversed
+    />
+
     <!-- Benefits Breakdown Accordion -->
     <BenefitsAccordion benefits={benefitCategories} />
 
     <!-- Download Resources -->
     <DownloadResources resources={resources} />
 
+    <!-- Image Break 3: Thought Leadership -->
+    <SponsorshipImageBreak
+      image={sponsorSpeakingImage}
+      alt="Speaker presenting at QA or the Highway conference"
+      heading="Establish Your Thought Leadership"
+      description="Platinum and Gold sponsors get guaranteed speaking opportunities to share your expertise with a highly engaged audience. Whether it's a keynote spotlight or a track session, your team can demonstrate the innovation happening at your company while connecting with potential collaborators and hires."
+    />
+
     <!-- FAQ Section -->
     <SponsorshipFAQ faqs={faqs} />
+
+    <!-- Image Break 4: Community -->
+    <SponsorshipImageBreak
+      image={sponsorBoothImage}
+      alt="Enthusiastic attendees at a sponsor booth"
+      heading="Join the Companies Making It Happen"
+      description="Our sponsors don't just support the event — they become part of the community. From booth conversations that turn into partnerships to the lasting brand recognition that comes from powering a beloved conference, sponsoring QA or the Highway is an investment in the quality engineering community and your company's place in it."
+      reversed
+    />
 
     <!-- Sponsorship Inquiry Form -->
     <SponsorshipForm />
