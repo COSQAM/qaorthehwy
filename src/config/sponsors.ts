@@ -2,6 +2,7 @@
 import applitools from "../assets/images/sponsors/applitools.webp";
 import testmuiai from "../assets/images/sponsors/testmuai.png";
 import browserstack from "../assets/images/sponsors/browserstack.webp";
+import parasoft from "../assets/images/sponsors/parasoft.png"
 
 export interface Sponsor {
   name: string;
@@ -29,6 +30,11 @@ export const sponsorConfig: SponsorTiers = {
     name: "TestMu AI",
     logo: testmuiai,
     website: "https://www.testmuai.com/",
+  },
+  {
+    name: "Parasoft",
+    logo: parasoft,
+    website: "https://www.parasoft.com/",
   }],
   silver: [],
   lunch: [],
