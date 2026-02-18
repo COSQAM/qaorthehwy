@@ -1,8 +1,8 @@
 // Sponsor configuration
-import applitools from "../assets/images/sponsors/applitools.webp";
 import testmuiai from "../assets/images/sponsors/testmuai.png";
 import browserstack from "../assets/images/sponsors/browserstack.webp";
 import parasoft from "../assets/images/sponsors/parasoft.png"
+import leapwork from "../assets/images/sponsors/leapwork.svg"
 
 export interface Sponsor {
   name: string;
@@ -20,7 +20,11 @@ export interface SponsorTiers {
 }
 
 export const sponsorConfig: SponsorTiers = {
-  platinum: [],
+  platinum: [{
+    name: "Leapwork",
+    logo: leapwork,
+    website: "https://www.leapwork.com/",
+  }],
   gold: [{
     name: "Browserstack",
     logo: browserstack,
