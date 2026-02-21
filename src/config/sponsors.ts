@@ -3,6 +3,7 @@ import testmuiai from "../assets/images/sponsors/testmuai.png";
 import browserstack from "../assets/images/sponsors/browserstack.webp";
 import parasoft from "../assets/images/sponsors/parasoft.png"
 import leapwork from "../assets/images/sponsors/leapwork.svg"
+import qtgroup from "../assets/images/sponsors/qtgroup.png"
 
 export interface Sponsor {
   name: string;
@@ -40,7 +41,11 @@ export const sponsorConfig: SponsorTiers = {
     logo: parasoft,
     website: "https://www.parasoft.com/",
   }],
-  silver: [],
+  silver: [{
+    name: "Qt Group",
+    logo: qtgroup,
+    website: "https://www.qt.io/",
+  }],
   lunch: [],
   snack: [],
   tshirt: [],
