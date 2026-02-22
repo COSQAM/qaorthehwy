@@ -7,7 +7,9 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "fetch:sessionize": "node scripts/fetch-sessionize.js"
+    "fetch:sessionize": "node scripts/fetch-sessionize.js",
+    "test": "vitest run",
+    "test:watch": "vitest"
   },
   "dependencies": {
     "@astrojs/react": "^4.4.0",
@@ -21,6 +23,7 @@
     "tailwindcss": "^4.1.14"
   },
   "devDependencies": {
-    "@types/flickity": "^2.2.11"
+    "@types/flickity": "^2.2.11",
+    "vitest": "^4.0.18"
   }
 }
