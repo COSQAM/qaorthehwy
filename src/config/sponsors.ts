@@ -4,6 +4,7 @@ import browserstack from "../assets/images/sponsors/browserstack.webp";
 import parasoft from "../assets/images/sponsors/parasoft.png"
 import leapwork from "../assets/images/sponsors/leapwork.svg"
 import qtgroup from "../assets/images/sponsors/qtgroup.png"
+import checkpoint from "../assets/images/sponsors/checkpoint.png"
 
 export interface Sponsor {
   name: string;
@@ -35,6 +36,11 @@ export const sponsorConfig: SponsorTiers = {
     name: "TestMu AI",
     logo: testmuiai,
     website: "https://www.testmuai.com/",
+  },
+  {
+    name: "Checkpoint Technologies",
+    logo: checkpoint,
+    website: "https://checkpointech.com/"
   },
   {
     name: "Parasoft",

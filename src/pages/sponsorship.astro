@@ -15,6 +15,7 @@ import sponsorEngagementImage from '../assets/images/why-attend/IMG_5552.jpg';
 import sponsorNetworkingImage from '../assets/images/why-attend/20250627_122349.jpg';
 import sponsorSpeakingImage from '../assets/images/why-attend/20250627_130803.jpg';
 import sponsorBoothImage from '../assets/images/why-attend/20250627_123240.jpg';
+import tshirtMockupImage from '../assets/images/tshirt/mock-with-logos.png';
 
 const { tiers, demographics, faqs, resources, benefitCategories } = sponsorshipConfig;
 ---
@@ -73,6 +74,15 @@ const { tiers, demographics, faqs, resources, benefitCategories } = sponsorshipC
         </div>
       </div>
     </section>
+
+    <!-- Image Break: T-Shirt Sponsorship -->
+    <SponsorshipImageBreak
+      image={tshirtMockupImage}
+      alt="QA or the Highway 2026 t-shirt mockup showing front design and back with sponsor logos"
+      heading="Your Logo on Every Attendee"
+      description="T-shirt sponsors get their logo printed on the back of the official conference tee — worn by 400+ attendees on conference day and beyond. It's one of the most visible and lasting sponsorship opportunities we offer."
+      expandable
+    />
 
     <!-- Interactive Comparison Table -->
     <TierComparison tiers={tiers.filter(t => ['platinum', 'gold', 'silver'].includes(t.id))} />
