@@ -5,6 +5,7 @@ import {
   getFeaturedTiers,
   getBoothSponsorships,
   getNamedSponsorships,
+  getSoldOutTiers,
 } from '../sponsorship';
 
 describe('getTierById', () => {
@@ -75,6 +76,46 @@ describe('getNamedSponsorships', () => {
     named.forEach((tier) => {
       expect(tier.benefits.namedSponsorship).toBeDefined();
     });
+  });
+});
+
+describe('soldOut', () => {
+  it('tiers default to not sold out', () => {
+    sponsorshipConfig.tiers.forEach((tier) => {
+      expect(tier.soldOut).toBeFalsy();
+    });
+  });
+
+  it('getSoldOutTiers returns empty array when no tiers are sold out', () => {
+    const soldOut = getSoldOutTiers();
+    expect(soldOut).toHaveLength(0);
+  });
+
+  it('sold-out tiers are still returned by getTierById', () => {
+    // Even if a tier were sold out, getTierById should still find it
+    const tier = getTierById('lanyard');
+    expect(tier).toBeDefined();
+    expect(tier!.id).toBe('lanyard');
+  });
+
+  it('sold-out tiers are still returned by getBoothSponsorships', () => {
+    const booths = getBoothSponsorships();
+    expect(booths.length).toBeGreaterThan(0);
+    // All booth tiers should be present regardless of soldOut status
+    const ids = booths.map((t) => t.id);
+    expect(ids).toContain('platinum');
+    expect(ids).toContain('gold');
+    expect(ids).toContain('silver');
+  });
+
+  it('sold-out tiers are still returned by getNamedSponsorships', () => {
+    const named = getNamedSponsorships();
+    expect(named.length).toBeGreaterThan(0);
+    const ids = named.map((t) => t.id);
+    expect(ids).toContain('lunch');
+    expect(ids).toContain('tshirt');
+    expect(ids).toContain('snack');
+    expect(ids).toContain('lanyard');
   });
 });
 

@@ -12,6 +12,7 @@ export interface SponsorshipTier {
   tagline: string;
   description: string;
   featured?: boolean;
+  soldOut?: boolean;
   color?: string;
   benefits: {
     boothLocation?: string;
@@ -269,6 +270,7 @@ const sponsorshipTiers: SponsorshipTier[] = [
     tagline: 'All-Day Brand Exposure',
     description: 'Provide conference lanyards with your company logo, worn by every attendee throughout the entire event.',
     color: '#FFA502',
+    soldOut: true,
     benefits: {
       namedSponsorship: 'Exclusive Lanyard Sponsorship',
       lunchPasses: 1,
@@ -488,4 +490,9 @@ export function getNamedSponsorships(): SponsorshipTier[] {
   return sponsorshipConfig.tiers.filter((tier) =>
     ['lunch', 'tshirt', 'snack', 'lanyard'].includes(tier.id)
   );
+}
+
+// Helper function to get sold-out tiers
+export function getSoldOutTiers(): SponsorshipTier[] {
+  return sponsorshipConfig.tiers.filter((tier) => tier.soldOut);
 }

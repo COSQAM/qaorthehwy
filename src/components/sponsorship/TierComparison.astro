@@ -88,6 +88,11 @@ const benefitRows: BenefitRow[] = [
                     Most Popular
                   </div>
                 )}
+                {tier.soldOut && (
+                  <div class="text-xs mt-1 bg-red-600 text-white px-2 py-1 rounded-full inline-block">
+                    Sold Out
+                  </div>
+                )}
               </th>
             ))}
           </tr>
@@ -161,6 +166,11 @@ const benefitRows: BenefitRow[] = [
               {tier.featured && (
                 <span class="text-xs bg-accent text-dark px-2 py-1 rounded-full inline-block mt-2">
                   Most Popular
+                </span>
+              )}
+              {tier.soldOut && (
+                <span class="text-xs bg-red-600 text-white px-2 py-1 rounded-full inline-block mt-2">
+                  Sold Out
                 </span>
               )}
             </div>
