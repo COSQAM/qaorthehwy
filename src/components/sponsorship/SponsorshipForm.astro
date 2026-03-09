@@ -90,7 +90,7 @@ const tiers = sponsorshipConfig.tiers;
           <p class="text-sm text-gray-600 mb-4">Select all that apply</p>
           <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
             {tiers.map((tier) => (
-              <label class={`flex items-start group ${tier.soldOut ? 'opacity-50 cursor-not-allowed' : 'cursor-pointer'}`}>
+              <label class={`flex items-start group ${tier.soldOut ? 'opacity-75 cursor-not-allowed' : 'cursor-pointer'}`}>
                 <input
                   type="checkbox"
                   name={`tier_${tier.id}`}

@@ -5,7 +5,6 @@ import {
   getFeaturedTiers,
   getBoothSponsorships,
   getNamedSponsorships,
-  getSoldOutTiers,
 } from '../sponsorship';
 
 describe('getTierById', () => {
@@ -80,28 +79,30 @@ describe('getNamedSponsorships', () => {
 });
 
 describe('soldOut', () => {
-  it('tiers default to not sold out', () => {
-    sponsorshipConfig.tiers.forEach((tier) => {
-      expect(tier.soldOut).toBeFalsy();
-    });
+  it('only lanyard tier is sold out', () => {
+    const soldOut = sponsorshipConfig.tiers.filter((t) => t.soldOut);
+    expect(soldOut).toHaveLength(1);
+    expect(soldOut[0].id).toBe('lanyard');
   });
 
-  it('getSoldOutTiers returns empty array when no tiers are sold out', () => {
-    const soldOut = getSoldOutTiers();
-    expect(soldOut).toHaveLength(0);
+  it('non-sold-out tiers default to falsy', () => {
+    sponsorshipConfig.tiers
+      .filter((t) => t.id !== 'lanyard')
+      .forEach((tier) => {
+        expect(tier.soldOut).toBeFalsy();
+      });
   });
 
   it('sold-out tiers are still returned by getTierById', () => {
-    // Even if a tier were sold out, getTierById should still find it
     const tier = getTierById('lanyard');
     expect(tier).toBeDefined();
     expect(tier!.id).toBe('lanyard');
+    expect(tier!.soldOut).toBe(true);
   });
 
   it('sold-out tiers are still returned by getBoothSponsorships', () => {
     const booths = getBoothSponsorships();
     expect(booths.length).toBeGreaterThan(0);
-    // All booth tiers should be present regardless of soldOut status
     const ids = booths.map((t) => t.id);
     expect(ids).toContain('platinum');
     expect(ids).toContain('gold');

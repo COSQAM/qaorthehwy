@@ -375,7 +375,7 @@ const faqs: FAQ[] = [
   {
     question: 'Can I bring my own food or promotional items to the event?',
     answer:
-      'You may bring promotional items, swag, and branded materials to distribute at your booth. However, outside food and beverages are not permitted. Snack and lunch selections are controlled by the conference committee to ensure venue compliance and attendee dietary needs.',
+      'You may bring promotional items, swag, and branded materials to distribute at your booth. Small candy and like items are premitted however, larger outside food and beverages (sandwhiches, coffee, canned soda) are not permitted. Snack and lunch selections are controlled by the conference committee to ensure venue compliance and attendee dietary needs.',
   },
 ];
 
@@ -492,7 +492,3 @@ export function getNamedSponsorships(): SponsorshipTier[] {
   );
 }
 
-// Helper function to get sold-out tiers
-export function getSoldOutTiers(): SponsorshipTier[] {
-  return sponsorshipConfig.tiers.filter((tier) => tier.soldOut);
-}
