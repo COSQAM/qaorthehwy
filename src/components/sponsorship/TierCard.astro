@@ -14,9 +14,11 @@ const formattedPrice = typeof tier.price === 'number'
 const cardClasses = tier.featured
   ? "bg-white rounded-2xl shadow-2xl p-8 md:p-10 border-2 border-primary ring-2 ring-primary/20 transition-all transform duration-300 hover:scale-105"
   : "bg-white rounded-2xl shadow-lg p-8 md:p-10 border-2 border-gray-100 transition-all transform duration-300 hover:shadow-2xl hover:scale-105";
+
+const soldOutClasses = tier.soldOut ? "opacity-75 grayscale" : "";
 ---
 
-<div class={`${cardClasses} flex flex-col h-full`}>
+<div class={`${cardClasses} ${soldOutClasses} flex flex-col h-full relative`}>
   <div class="flex items-start justify-between mb-6">
     <div class="flex-1">
       <h3 class="text-2xl md:text-3xl font-bold text-dark uppercase tracking-wide mb-2">
@@ -29,13 +31,18 @@ const cardClasses = tier.featured
         {tier.tagline}
       </p>
     </div>
-    {tier.featured && (
-      <div class="flex flex-col items-end gap-2">
+    <div class="flex flex-col items-end gap-2">
+      {tier.featured && (
         <span class="bg-accent text-dark px-3 py-1 rounded-full text-xs md:text-sm font-bold uppercase whitespace-nowrap">
           Most Popular
         </span>
-      </div>
-    )}
+      )}
+      {tier.soldOut && (
+        <span class="bg-red-600 text-white px-3 py-1 rounded-full text-xs md:text-sm font-bold uppercase whitespace-nowrap">
+          Sold Out
+        </span>
+      )}
+    </div>
   </div>
 
   <p class="text-gray-700 text-sm md:text-base mb-6 leading-relaxed">
@@ -66,12 +73,21 @@ const cardClasses = tier.featured
     </ul>
   </div>
 
-  <button
-    class="mt-auto w-full py-4 px-8 rounded-xl text-lg font-bold btn-primary shadow-lg shadow-blue-500/30 transition transform hover:scale-105 scroll-to-form-btn"
-    data-tier={tier.id}
-  >
-    Learn More
-  </button>
+  {tier.soldOut ? (
+    <button
+      class="mt-auto w-full py-4 px-8 rounded-xl text-lg font-bold bg-gray-400 text-white cursor-not-allowed"
+      disabled
+    >
+      Sold Out
+    </button>
+  ) : (
+    <button
+      class="mt-auto w-full py-4 px-8 rounded-xl text-lg font-bold btn-primary shadow-lg shadow-blue-500/30 transition transform hover:scale-105 scroll-to-form-btn"
+      data-tier={tier.id}
+    >
+      Learn More
+    </button>
+  )}
 </div>
 
 <script>
@@ -90,12 +106,12 @@ const cardClasses = tier.featured
           block: 'start',
         });
 
-        // Pre-select tier checkbox after scroll
+        // Pre-select tier checkbox after scroll (skip if disabled/sold-out)
         setTimeout(() => {
           const checkbox = document.querySelector(
             `input[name="tier_${tierId}"]`
           ) as HTMLInputElement;
-          if (checkbox) {
+          if (checkbox && !checkbox.disabled) {
             checkbox.checked = true;
             checkbox.focus();
           }

@@ -12,6 +12,7 @@ export interface SponsorshipTier {
   tagline: string;
   description: string;
   featured?: boolean;
+  soldOut?: boolean;
   color?: string;
   benefits: {
     boothLocation?: string;
@@ -269,6 +270,7 @@ const sponsorshipTiers: SponsorshipTier[] = [
     tagline: 'All-Day Brand Exposure',
     description: 'Provide conference lanyards with your company logo, worn by every attendee throughout the entire event.',
     color: '#FFA502',
+    soldOut: true,
     benefits: {
       namedSponsorship: 'Exclusive Lanyard Sponsorship',
       lunchPasses: 1,
@@ -373,7 +375,7 @@ const faqs: FAQ[] = [
   {
     question: 'Can I bring my own food or promotional items to the event?',
     answer:
-      'You may bring promotional items, swag, and branded materials to distribute at your booth. However, outside food and beverages are not permitted. Snack and lunch selections are controlled by the conference committee to ensure venue compliance and attendee dietary needs.',
+      'You may bring promotional items, swag, and branded materials to distribute at your booth. Small candy and like items are premitted however, larger outside food and beverages (sandwhiches, coffee, canned soda) are not permitted. Snack and lunch selections are controlled by the conference committee to ensure venue compliance and attendee dietary needs.',
   },
 ];
 
@@ -489,3 +491,4 @@ export function getNamedSponsorships(): SponsorshipTier[] {
     ['lunch', 'tshirt', 'snack', 'lanyard'].includes(tier.id)
   );
 }
+
