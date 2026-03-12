@@ -6,6 +6,7 @@ import leapwork from "../assets/images/sponsors/leapwork.svg"
 import qtgroup from "../assets/images/sponsors/qtgroup.png"
 import checkpoint from "../assets/images/sponsors/checkpoint.png"
 import contextqa from "../assets/images/sponsors/contextqa.png"
+import lighthouse from "../assets/images/sponsors/lighthouse.png"
 
 export interface Sponsor {
   name: string;
@@ -54,6 +55,11 @@ export const sponsorConfig: SponsorTiers = {
     name: "Parasoft",
     logo: parasoft,
     website: "https://www.parasoft.com/",
+  },
+  {
+    name: "Lighthouse Technologies",
+    logo: lighthouse,
+    website: "https://lighthousetechnologies.com/",
   }],
   silver: [{
     name: "Qt Group",
