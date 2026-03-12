@@ -13,19 +13,12 @@ export interface SponsorshipTier {
   description: string;
   featured?: boolean;
   soldOut?: boolean;
-  color?: string;
   benefits: {
     boothLocation?: string;
     boothSize?: string;
-    lunchPasses?: number;
-    parkingPasses?: number;
     logoPlacement: string[];
-    socialMediaPosts?: string;
     guaranteedSpeakingSlot?: boolean;
     keynoteSponsorship?: boolean;
-    namedSponsorship?: string;
-    specialBenefits?: string[];
-    discounts?: string[];
   };
   highlights: string[]; // Top 3-5 key benefits for the tier card
 }
@@ -77,29 +70,18 @@ const sponsorshipTiers: SponsorshipTier[] = [
     tagline: 'Maximum Visibility & Impact',
     description: 'Premium booth location, guaranteed speaking opportunity, and keynote sponsorship for maximum brand exposure.',
     featured: true,
-    color: '#E5E4E2',
+    soldOut: true,
     benefits: {
       boothLocation: 'Premium location by keynote/lunch entrance',
       boothSize: "10' x 10' booth space with 8' banquet table",
-      lunchPasses: 2,
-      parkingPasses: 2,
       logoPlacement: [
         'Featured prominently on website',
         'Conference handouts and printed materials',
         'Social media campaign',
         'Logo featured on lunch presentation',
       ],
-      socialMediaPosts: 'Dedicated social media post',
       guaranteedSpeakingSlot: true,
       keynoteSponsorship: true,
-      specialBenefits: [
-        'Premium booth in high-traffic location near keynote and lunch entrance',
-        'Introduction during opening remarks',
-        'VIP networking opportunities',
-      ],
-      discounts: [
-        '50% off T-Shirt Sponsor tier',
-      ],
     },
     highlights: [
       'Premium booth by keynote/lunch entrance',
@@ -117,29 +99,17 @@ const sponsorshipTiers: SponsorshipTier[] = [
     tagline: 'High Visibility & Engagement',
     description: 'Centrally located booth with speaking opportunity and extensive brand visibility across all conference materials.',
     featured: true,
-    color: '#FFD700',
     benefits: {
       boothLocation: 'Centrally located booth placement',
       boothSize: "10' x 10' booth space with 8' banquet table",
-      lunchPasses: 2,
-      parkingPasses: 2,
       logoPlacement: [
         'Large logo on website',
         'Conference handouts and printed materials',
         'Social media campaign',
         'Logo featured on lunch presentation',
       ],
-      socialMediaPosts: 'Dedicated social media post',
       guaranteedSpeakingSlot: true,
       keynoteSponsorship: false,
-      specialBenefits: [
-        'Central booth location ensuring high foot traffic',
-        'Speaking slot in track session',
-        'Invitation to speaker dinner',
-      ],
-      discounts: [
-        '50% off T-Shirt Sponsor tier',
-      ],
     },
     highlights: [
       'Centrally located booth',
@@ -155,18 +125,14 @@ const sponsorshipTiers: SponsorshipTier[] = [
     price: 1500,
     tagline: 'Essential Conference Presence',
     description: 'Entry-level booth placement with logo visibility on website, materials, and social media to connect with attendees.',
-    color: '#C0C0C0',
     benefits: {
       boothLocation: 'Standard booth placement',
       boothSize: "10' x 10' booth space with 8' banquet table",
-      lunchPasses: 2,
-      parkingPasses: 2,
       logoPlacement: [
         'Medium logo on website',
         'Conference handouts and printed materials',
         'Social media mentions',
       ],
-      socialMediaPosts: 'Dedicated social media post',
       guaranteedSpeakingSlot: false,
       keynoteSponsorship: false,
     },
@@ -184,19 +150,11 @@ const sponsorshipTiers: SponsorshipTier[] = [
     price: 1500,
     tagline: 'Captive Audience During Lunch',
     description: 'PowerPoint loop on conference screens in lunch room during the lunch break, ensuring high visibility.',
-    color: '#FF6B6B',
     benefits: {
-      namedSponsorship: 'Exclusive Lunch Sponsorship',
       logoPlacement: [
         'Medium logo on website',
         'Sponsor signage in lunch area',
         'PowerPoint loop during lunch',
-      ],
-      socialMediaPosts: 'Dedicated social media post',
-      specialBenefits: [
-        'PowerPoint presentation loop on all screens during lunch break',
-        'Prominent signage in lunch area',
-        'Captive audience of 400+ attendees during meal',
       ],
     },
     highlights: [
@@ -213,18 +171,10 @@ const sponsorshipTiers: SponsorshipTier[] = [
     price: 1000,
     tagline: 'Long-Lasting Brand Impression',
     description: 'Your logo on the back of conference t-shirts worn by all attendees during and after the event.',
-    color: '#4ECDC4',
     benefits: {
-      namedSponsorship: 'Exclusive T-Shirt Sponsorship',
       logoPlacement: [
         'Small logo on website',
         'Large logo on back of conference t-shirt',
-      ],
-      socialMediaPosts: 'Dedicated social media post',
-      specialBenefits: [
-        'Your logo featured on back of ALL conference t-shirts',
-        'Extended brand visibility as attendees wear shirts after event',
-        'Logo seen by attendees, their colleagues, and community',
       ],
     },
     highlights: [
@@ -241,18 +191,10 @@ const sponsorshipTiers: SponsorshipTier[] = [
     price: 500,
     tagline: 'Affordable High-Traffic Visibility',
     description: 'Color logo on snack signage outside the snack room, capturing attendees during breaks.',
-    color: '#95E1D3',
     benefits: {
-      namedSponsorship: 'Exclusive Snack Sponsorship',
       logoPlacement: [
         'Small logo on website',
         'Color logo on snack signage',
-      ],
-      socialMediaPosts: 'Dedicated social media post',
-      specialBenefits: [
-        'Prominent signage outside snack room',
-        'High visibility during all breaks',
-        'Affordable entry-level sponsorship',
       ],
     },
     highlights: [
@@ -269,22 +211,11 @@ const sponsorshipTiers: SponsorshipTier[] = [
     price: 'Ask',
     tagline: 'All-Day Brand Exposure',
     description: 'Provide conference lanyards with your company logo, worn by every attendee throughout the entire event.',
-    color: '#FFA502',
     soldOut: true,
     benefits: {
-      namedSponsorship: 'Exclusive Lanyard Sponsorship',
-      lunchPasses: 1,
-      parkingPasses: 1,
       logoPlacement: [
         'Small logo on website',
         'Your company logo on ALL conference lanyards',
-      ],
-      socialMediaPosts: 'Dedicated social media post',
-      specialBenefits: [
-        'You provide custom lanyards with your logo',
-        'Worn by every single attendee all day',
-        'Constant visibility and brand recognition',
-        'Lanyards kept as conference memorabilia',
       ],
     },
     highlights: [
@@ -468,27 +399,4 @@ export const sponsorshipConfig: SponsorshipConfig = {
   benefitCategories,
 };
 
-// Helper function to get a specific tier by ID
-export function getTierById(id: string): SponsorshipTier | undefined {
-  return sponsorshipConfig.tiers.find((tier) => tier.id === id);
-}
-
-// Helper function to get featured tiers
-export function getFeaturedTiers(): SponsorshipTier[] {
-  return sponsorshipConfig.tiers.filter((tier) => tier.featured);
-}
-
-// Helper function to get booth sponsorships (Platinum, Gold, Silver)
-export function getBoothSponsorships(): SponsorshipTier[] {
-  return sponsorshipConfig.tiers.filter((tier) =>
-    ['platinum', 'gold', 'silver'].includes(tier.id)
-  );
-}
-
-// Helper function to get named sponsorships (Lunch, T-Shirt, Snack, Lanyard)
-export function getNamedSponsorships(): SponsorshipTier[] {
-  return sponsorshipConfig.tiers.filter((tier) =>
-    ['lunch', 'tshirt', 'snack', 'lanyard'].includes(tier.id)
-  );
-}
 
