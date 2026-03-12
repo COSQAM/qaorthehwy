@@ -99,7 +99,7 @@ const sponsorshipTiers: SponsorshipTier[] = [
     tagline: 'High Visibility & Engagement',
     description: 'Centrally located booth with speaking opportunity and extensive brand visibility across all conference materials.',
     featured: true,
-    soldOut: true,
+    soldOut: false,
     benefits: {
       boothLocation: 'Centrally located booth placement',
       boothSize: "10' x 10' booth space with 8' banquet table",
