@@ -5,6 +5,7 @@ import parasoft from "../assets/images/sponsors/parasoft.png"
 import leapwork from "../assets/images/sponsors/leapwork.svg"
 import qtgroup from "../assets/images/sponsors/qtgroup.png"
 import checkpoint from "../assets/images/sponsors/checkpoint.png"
+import contextqa from "../assets/images/sponsors/contextqa.png"
 
 export interface Sponsor {
   name: string;
@@ -26,7 +27,14 @@ export const sponsorConfig: SponsorTiers = {
     name: "Leapwork",
     logo: leapwork,
     website: "https://www.leapwork.com/",
-  }],
+  },
+  {
+    name: "Context QA",
+    logo: contextqa,
+    website: "https://www.contextqa.com/",
+
+  }
+  ],
   gold: [{
     name: "Browserstack",
     logo: browserstack,
