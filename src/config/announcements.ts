@@ -19,7 +19,7 @@ interface AnnouncementConfig {
 export const announcementConfig: AnnouncementConfig = {
   callForSpeakers: {
     // Toggle to show/hide the Call for Speakers banner
-    enabled: true,
+    enabled: false,
     title: "CALL FOR SPEAKERS",
     description:
       "Never spoken at a conference before? Start here. This community is welcoming, supportive, and eager to hear your story. Experienced speakers we'd love to have you back, too. Real experiences and honest insights—we're here to learn from each other.",
