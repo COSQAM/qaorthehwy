@@ -95,6 +95,9 @@ const allSpeakers = sessionizeData.speakers;
                 name={speaker.fullName}
                 tagLine={speaker.tagLine}
                 profilePicture={speaker.profilePicture}
+                isKeynote={true}
+                links={speaker.links}
+                speakerSlug={`${speaker.firstName.toLowerCase()}-${speaker.lastName.toLowerCase()}`}
               />
             ))}
           </div>
