@@ -7,6 +7,7 @@ import qtgroup from "../assets/images/sponsors/qtgroup.png"
 import checkpoint from "../assets/images/sponsors/checkpoint.png"
 import contextqa from "../assets/images/sponsors/contextqa.png"
 import lighthouse from "../assets/images/sponsors/lighthouse.png"
+import engenious from "../assets/images/sponsors/engenious.svg"
 
 export interface Sponsor {
   name: string;
@@ -60,6 +61,11 @@ export const sponsorConfig: SponsorTiers = {
     name: "Lighthouse Technologies",
     logo: lighthouse,
     website: "https://lighthousetechnologies.com/",
+  },
+  {
+    name: "Engenious University",
+    logo: engenious,
+    website: "https://university.engenious.io/",
   }],
   silver: [{
     name: "Qt Group",
