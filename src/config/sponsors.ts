@@ -8,6 +8,7 @@ import checkpoint from "../assets/images/sponsors/checkpoint.png"
 import contextqa from "../assets/images/sponsors/contextqa.png"
 import lighthouse from "../assets/images/sponsors/lighthouse.png"
 import engenious from "../assets/images/sponsors/engenious.svg"
+import abstracta from "../assets/images/sponsors/abstracta.png"
 
 export interface Sponsor {
   name: string;
@@ -66,7 +67,13 @@ export const sponsorConfig: SponsorTiers = {
     name: "Engenious University",
     logo: engenious,
     website: "https://university.engenious.io/",
-  }],
+  },
+  {
+    name: "Abstracta",
+    logo: abstracta,
+    website: "https://www.abstracta.us/",
+  }
+  ],
   silver: [{
     name: "Qt Group",
     logo: qtgroup,
@@ -74,5 +81,9 @@ export const sponsorConfig: SponsorTiers = {
   }],
   lunch: [],
   snack: [],
-  tshirt: [],
+  tshirt: [{
+    name: "Abstracta",
+    logo: abstracta,
+    website: "https://www.abstracta.com/",
+  }],
 };
