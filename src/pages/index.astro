@@ -9,6 +9,7 @@ import Sponsors from "../components/Sponsors.astro";
 import AnnouncementBanner from "../components/AnnouncementBanner.astro";
 import sessionizeData from "../data/sessionize.json";
 import { getSpeakerPhaseConfig } from "../config/speakers";
+import { speakerSlug } from "../lib/speakers";
 import {
   getCallForSpeakersConfig,
   getFeedbackConfig,
@@ -97,7 +98,7 @@ const allSpeakers = sessionizeData.speakers;
                 profilePicture={speaker.profilePicture}
                 isKeynote={true}
                 links={speaker.links}
-                speakerSlug={`${speaker.firstName.toLowerCase()}-${speaker.lastName.toLowerCase()}`}
+                speakerSlug={speakerSlug(speaker)}
               />
             ))}
           </div>

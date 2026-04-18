@@ -21,7 +21,7 @@ const base = import.meta.env.BASE_URL;
 ---
 
 <div
-  class="bg-white rounded-xl shadow-xl overflow-hidden hover:shadow-2xl transition-all hover:scale-105 transform duration-300 border border-gray-100 cursor-pointer relative"
+  class="bg-white rounded-xl shadow-xl overflow-hidden hover:shadow-2xl transition-all hover:scale-105 transform duration-300 border border-gray-100 cursor-pointer relative h-full flex flex-col"
   data-href={speakerSlug ? `${base}speakers/${speakerSlug}` : undefined}
 >
   {profilePicture && (
@@ -31,16 +31,16 @@ const base = import.meta.env.BASE_URL;
       class="w-full h-72 object-cover object-top"
     />
   )}
-  <div class="p-8">
+  <div class="p-8 flex-1 flex flex-col">
     {isKeynote && (
-      <span class="inline-block btn-primary text-xs px-4 py-1.5 rounded-full mb-3 font-bold uppercase tracking-wide">
+      <span class="inline-block btn-primary text-xs px-4 py-1.5 rounded-full mb-3 font-bold uppercase tracking-wide self-start">
         Keynote Speaker
       </span>
     )}
     <h3 class="text-2xl font-bold mb-3 text-dark">{name}</h3>
-    {tagLine && <p class="text-gray-600 text-base leading-relaxed mb-4">{tagLine}</p>}
+    {tagLine && <p class="text-gray-600 text-base leading-relaxed mb-4 line-clamp-2">{tagLine}</p>}
     {links.length > 0 && (
-      <div class="flex gap-3 mt-4 relative z-10">
+      <div class="flex gap-3 mt-auto pt-4 relative z-10">
         {links.map((link) => (
           <SocialLink url={link.url} linkType={link.linkType} speakerName={name} />
         ))}

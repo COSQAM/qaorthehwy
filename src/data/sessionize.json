@@ -1,6 +1,156 @@
 {
   "sessions": [
     {
+      "id": "1175077",
+      "title": "AI Testing Isn't One Thing (And Treating It Like It Is Will Bite You)",
+      "description": "Your team shipped an AI feature. Congrats. Now someone asks: how do we test this?\r\n\r\nYou write a test. The output changes. You run it again. Different output. You consider a career in farming.\r\n\r\nHere's the thing nobody tells you upfront: testing AI-powered software isn't one discipline, it's two. And the moment you try to apply one strategy to both, you're in trouble.\r\n\r\nThis talk breaks down the Two-Track Testing Model that every QA engineer building on AI needs to understand. There's the deterministic side, your traditional test pyramid covering infrastructure, routing, logic, and guardrails, and there's the AI evaluation side, where outputs are non-deterministic, pass/fail doesn't exist, and you need a completely different mental model to even know what \"quality\" means.\r\n\r\nWe'll walk through how these two tracks diverge, when they converge, and what it takes to get quality signals from both. You'll leave with a practical framework: the Three Pillars of AI Evaluation (human eval, deterministic checks, and LLM-as-judge), a benchmark-first approach to designing your eval strategy, and a clear picture of how maturity stage changes what you should be testing and how.\r\n\r\nThe fundamentals of our craft haven't changed. The pesticide paradox still applies. Risk-based thinking still applies. You still can't test everything. But the tools, vocabulary, and decision-making are genuinely new, and it's worth getting oriented before you're neck-deep in a chatbot that nobody can evaluate with any confidence.\r\n\r\nThis is the talk I wish existed when I started.",
+      "startsAt": null,
+      "endsAt": null,
+      "isServiceSession": false,
+      "isPlenumSession": false,
+      "speakers": [
+        "a168013e-bb21-4097-ad0b-b7b9118dd449"
+      ],
+      "categoryItems": [],
+      "questionAnswers": [
+        {
+          "questionId": 111854,
+          "answerValue": "If you've ever shipped an AI feature and had no idea how to test it, you're not alone. This talk cuts through the noise with one core idea: AI testing isn't one thing, it's two. You'll walk away with a practical two-track framework that grounds AI evaluation in the QE fundamentals you already know."
+        }
+      ],
+      "roomId": null,
+      "liveUrl": null,
+      "recordingUrl": null,
+      "status": "Accepted",
+      "isInformed": true,
+      "isConfirmed": true
+    },
+    {
+      "id": "1172552",
+      "title": "Awesome Web Testing with Playwright and AI",
+      "description": "Everybody gets frustrated when web apps are broken, but testing them thoroughly doesn't need to be a chore. [Playwright](https://playwright.dev/) together with AI makes testing web apps fun! Playwright offers a slew of nifty features like automatic waiting, mobile emulation, and network interception. Plus, with isolated browser contexts, Playwright tests can set up *much* faster than traditional Web UI tests.\r\n\r\nIn this tutorial, we will automate concise yet robust web app tests for \"BuggyBoard\", a bug tracking web app with Playwright in TypeScript. And we will expedite our test development with the superpowers of AI. Specifically, we will cover:\r\n\r\n1. How to add Playwright to a project\r\n2. How to explore an app with AI assistance and Playwright's MCP\r\n3. How to generate Playwright test code\r\n4. How to context engineer scalable automation patterns\r\n5. How Playwright compares to other browser automation tools like Selenium and Cypress\r\n\r\nBy the end of this session, you'll be empowered to test modern web apps with modern web test tools. You'll also have an example project to be the foundation for your future tests.\r\n\r\n---\r\n\r\nThis year, I am revamping my Playwright content to include AI assisted coding techniques, like using context engineering, agentic analysis, and Playwright's MCP servers.",
+      "startsAt": null,
+      "endsAt": null,
+      "isServiceSession": false,
+      "isPlenumSession": false,
+      "speakers": [
+        "3ec8847f-9f1e-46dd-8b2f-c9d38767f42b"
+      ],
+      "categoryItems": [],
+      "questionAnswers": [
+        {
+          "questionId": 111854,
+          "answerValue": "Everybody gets frustrated when web apps are broken, but testing them thoroughly doesn't need to be a chore. [Playwright](https://playwright.dev/) together with AI makes testing web apps fun! Playwright offers a slew of nifty features like automatic waiting, mobile emulation, and network interception. Plus, with isolated browser contexts, Playwright tests can set up *much* faster than traditional Web UI tests.\r\n\r\nIn this tutorial, we will automate concise yet robust web app tests for \"BuggyBoard\", a bug tracking web app with Playwright in TypeScript. And we will expedite our test development with the superpowers of AI. Specifically, we will cover:\r\n\r\n1. How to add Playwright to a project\r\n2. How to explore an app with AI assistance and Playwright's MCP\r\n3. How to generate Playwright test code\r\n4. How to context engineer scalable automation patterns\r\n5. How Playwright compares to other browser automation tools like Selenium and Cypress\r\n\r\nBy the end of this session, you'll be empowered to test modern web apps with modern web test tools. You'll also have an example project to be the foundation for your future tests."
+        }
+      ],
+      "roomId": null,
+      "liveUrl": null,
+      "recordingUrl": null,
+      "status": "Accepted",
+      "isInformed": true,
+      "isConfirmed": true
+    },
+    {
+      "id": "1134196",
+      "title": "Being Nimble - The next step in Agile Testing Optimization",
+      "description": "We’ll examine how playbooks drive collaboration by ensuring the right stakeholders engage at the right moments throughout the SDLC by turning “who’s in the room” from a variable into a strategic advantage. You’ll learn practical approaches to building playbooks that support nimble pivots without sacrificing quality.\r\nWe’ll also address the reality that every Agile framework has tradeoffs. Rather than debating methodologies, this session focuses on quick diagnostic techniques to identify friction points and practical adjustments that help teams operate more efficiently within their chosen approach.\r\nAttendees will leave with actionable strategies to strengthen team collaboration,  unlock efficiency gains and critical capabilities when adaptability matters most.",
+      "startsAt": null,
+      "endsAt": null,
+      "isServiceSession": false,
+      "isPlenumSession": false,
+      "speakers": [
+        "ef31d301-079f-49d7-8f3f-e049e5396132"
+      ],
+      "categoryItems": [],
+      "questionAnswers": [
+        {
+          "questionId": 111854,
+          "answerValue": "In today’s rapidly changing environment, teams need to pivot quickly while maintaining quality delivery. This talk explores two often-underutilized levers for team optimization: well-crafted playbooks and tactical Agile tuning."
+        }
+      ],
+      "roomId": null,
+      "liveUrl": null,
+      "recordingUrl": null,
+      "status": "Accepted",
+      "isInformed": true,
+      "isConfirmed": true
+    },
+    {
+      "id": "1171618",
+      "title": "Collaborate on Your LEGO(R) Vision",
+      "description": "LEGO(R) sets are fun to build, but who has ever attempted to build a complete set without looking at the instructions? In this meeting, attendees will form teams and attempt to build a LEGO(R) set without instructions. Only one person from each team will be able to view the finished product before the team starts building. That person must share their vision with the team, who will attempt to build the LEGO(R) set as close to the instructions as possible without peeking. \r\n\r\nEach group will learn different approaches to collaborate on product development during the meeting to build a set according to a customer's needs. The activity highlights the two Quality Gaps of product development: (1) the gap between what we set out to build and the finished product; and (2) the gap between what customers expect and the finished product. Our goal is to close the two Quality Gaps so we deliver a product on-time & on-budget that customers will love.",
+      "startsAt": null,
+      "endsAt": null,
+      "isServiceSession": false,
+      "isPlenumSession": false,
+      "speakers": [
+        "da1f3c6b-ce55-48df-824c-c6f681f77f8c"
+      ],
+      "categoryItems": [],
+      "questionAnswers": [
+        {
+          "questionId": 111854,
+          "answerValue": "As part of this session, all in attendance will receive a LEGO Classic Building Kit (available in red, green, blue, yellow, or white). I will be providing all the LEGO Creator kits to be used in the session.\r\n\r\n*NOTE: This is a one hour session and I will require tables.\r\n\r\nThe learning outcomes are:\r\n*Teams will learn collaboration techniques to build & test with limited information\r\n*Attendees will learn to approach testing from the perspective of customer needs rather than strict requirements\r\n*Attendees will learn how to question assumptions by breaking down requirements before testing begins\r\n*BONUS: attendees will receive LEGO(R) sets of their own to take home"
+        }
+      ],
+      "roomId": null,
+      "liveUrl": null,
+      "recordingUrl": null,
+      "status": "Accepted",
+      "isInformed": true,
+      "isConfirmed": true
+    },
+    {
+      "id": "1167680",
+      "title": "Decision Records: Understanding Why Those Decisions Were Made!",
+      "description": "Ever stared at a complex system and thought, \"Wait, why was that decision made?!” We’ve all been there – lost in a maze of logic, struggling to track down the root cause of a problem. Decision Records offer a brilliant way to finally unlock that understanding. They’re like having a detailed, searchable log of every decision in your applications – from architectural style to authentication to service discovery and containerization. By capturing these decisions, you build more maintainable, auditable, and, frankly, less frustrating systems. In this session, you will learn how decision records solve problems and will be given ideas of templates that you can implement in your projects today! Let’s ditch the guesswork and start documenting the why – because truly understanding your systems is the key to unlocking its full potential!",
+      "startsAt": null,
+      "endsAt": null,
+      "isServiceSession": false,
+      "isPlenumSession": false,
+      "speakers": [
+        "9bde9de9-7bcb-4077-8087-47bf492a1344"
+      ],
+      "categoryItems": [],
+      "questionAnswers": [
+        {
+          "questionId": 111854,
+          "answerValue": "Ever stared at a complex system and thought, \"Wait, why was that decision made?!” We’ve all been there – lost in a maze of logic, struggling to track down the root cause of a problem. Decision Records offer a brilliant way to finally unlock that understanding. They’re like having a detailed, searchable log of every decision in your applications – from architectural style to authentication to service discovery and containerization. By capturing these decisions, you build more maintainable, auditable, and, frankly, less frustrating systems. In this session, you will learn how decision records solve problems and will be given ideas of templates that you can implement in your projects today! Let’s ditch the guesswork and start documenting the why – because truly understanding your systems is the key to unlocking its full potential!"
+        }
+      ],
+      "roomId": null,
+      "liveUrl": null,
+      "recordingUrl": null,
+      "status": "Accepted",
+      "isInformed": true,
+      "isConfirmed": true
+    },
+    {
+      "id": "1178160",
+      "title": "Deploying and Testing Ephemeral Environments",
+      "description": "Merging code that hasn't been fully tested is one of the biggest reasons teams experience missed release dates and flaky test suites. Why? Merging code often means other developers start their new work based on the newly merged code, changes are queued up for the next release, and the code quickly becomes coupled to other changes. The result is often code freezes, failing test runs, late night release \"parties\", and painful go / no-go meetings where you get pinned between postponing the release or shipping with bugs.\r\n\r\nDeploying to and testing ephemeral environments gives your team the ability to know for certain that the new features are implemented correctly *before committing those features to the release* and *before other developers start depending on the new code*. This approach is more important than ever when working with AI-generated code.\r\n\r\nIn this session, we will cover,\r\n- What ephemeral environments are and why they are so important\r\n- Branching strategies for proper test code management\r\n- Configuring your CI/CD pipeline to automatically deploy feature branches\r\n- How to run end-to-end tests on ephemeral environments\r\n- Strategies for managing databases and test data in ephemeral environments\r\n- Leveraging ephemeral environments to protect your company from AI risks\r\n\r\nKey Takeaways\r\n- Understand the architecture and tooling options for ephemeral environment workflows\r\n- Configure your CI/CD pipeline to deploy and test feature branches in isolation\r\n- Establish quality gates to protect your team from starting with broken code\r\n- Apply these practices to validate AI-generated code before it impacts your team",
+      "startsAt": null,
+      "endsAt": null,
+      "isServiceSession": false,
+      "isPlenumSession": false,
+      "speakers": [
+        "141a6bda-8059-49f3-b207-eeaf29a19808"
+      ],
+      "categoryItems": [],
+      "questionAnswers": [
+        {
+          "questionId": 111854,
+          "answerValue": "This session covers how deploying and testing ephemeral environments lets teams verify new features work correctly\r\nbefore other developers build on top of them, which is especially critical with AI-generated code. \r\n\r\nAttendees will walk away with tips on how to set up CI/CD pipelines to automatically deploy and test feature branches in isolation, establish quality gates, and protect their team from shipping broken code."
+        }
+      ],
+      "roomId": null,
+      "liveUrl": null,
+      "recordingUrl": null,
+      "status": "Accepted",
+      "isInformed": true,
+      "isConfirmed": true
+    },
+    {
       "id": "1152189",
       "title": "Ensuring Software Quality in the world of AI Developers",
       "description": "Like it or not, AI agents can now turn a loosely written paragraph of requirements into a pull request that looks production-ready in minutes. That’s impressive — and horrifying. When code is being generated faster than humans can fully internalize it, QA becomes the last line of defense between “seems fine” and a 2 a.m. incident caused by a misunderstood requirement or a bad database migration.\r\n\r\nIn this session, we’ll explore how quality practices must evolve in a world where teams treat AI agents like new junior developers. We’ll talk about strengthening test plans so they validate intent instead of just implementation, expanding automated coverage to catch AI-specific failure modes, and partnering closely with developers whose familiarity with the generated code may be thinner than in years past. We’ll look at redefining code and feature review processes, improving requirement clarity to reduce ambiguity before it becomes defects, documenting our new vibe coded enterprise systems, and adding guardrails so AI-authored changes can’t slip past quality gates unchecked.\r\n\r\nBy the end, you’ll have a clear understanding of the new risks AI introduces — and practical strategies to help your team move fast without letting AI-generated pull requests quietly YOLO their way into prod.",
@@ -16,6 +166,232 @@
         {
           "questionId": 111854,
           "answerValue": "AI agents can now generate production-ready pull requests in minutes — which means quality teams are facing new risks at unprecedented speed. This session explores how QA must evolve when AI becomes a junior developer on the team: strengthening test plans to validate intent, expanding automation to catch AI-specific failure modes, tightening review processes, and adding guardrails that protect production systems. Attendees will leave with practical strategies to help their teams move fast without letting vibe-coded changes quietly slip into prod."
+        }
+      ],
+      "roomId": null,
+      "liveUrl": null,
+      "recordingUrl": null,
+      "status": "Accepted",
+      "isInformed": true,
+      "isConfirmed": true
+    },
+    {
+      "id": "1185386",
+      "title": "From API Contracts to UI Confidence: AI-Driven Quality in CI/CD",
+      "description": "In modern distributed architectures, the most disruptive defects are often the ones that live in the gaps between services. Contract violations—schema drift, breaking API changes, and consumer-provider mismatches—frequently bypass traditional test suites, only to cause catastrophic failures in the UI or downstream services after deployment.\r\n\r\nThis session provides a technical blueprint for bridging the gap between API reliability and UI confidence. We will walk through a practical implementation of containerized CI/CD pipelines that utilize oasdiff and Docker to detect breaking changes before they hit production.\r\n\r\nKey technical takeaways include:\r\n\r\nAutomating the \"Contract-to-UI\" Link: How to ensure UI automation remains stable by catching underlying API shifts early.\r\n\r\nAI-Driven Testing with Schemathesis: Using AI to derive edge cases and boundary tests directly from OpenAPI specs to increase coverage without manual script bloating.\r\n\r\nIntelligent Triage: Implementing AI-assisted failure analysis to interpret pipeline logs and provide plain-language explanations for complex integration failures.\r\n\r\nSecuring the Pipeline: A critical look at security-conscious AI adoption, focusing on data residency and sandboxed execution using enterprise-bounded platforms like Azure OpenAI or AWS Bedrock.",
+      "startsAt": null,
+      "endsAt": null,
+      "isServiceSession": false,
+      "isPlenumSession": false,
+      "speakers": [
+        "a62f1aa4-7ec6-4452-b5e5-317e7bf588dd",
+        "937ea6f9-3f4d-41f1-87b3-94fd1535f86f"
+      ],
+      "categoryItems": [],
+      "questionAnswers": [
+        {
+          "questionId": 111854,
+          "answerValue": "Stop letting \"minor\" API changes break your entire UI. In a world of microservices and rapid deployments, traditional testing often misses the subtle schema drifts that cause the most headaches.\r\n\r\nThis session will deep dive into building a resilient, AI-enhanced CI/CD pipeline. We’ll explore how to move beyond basic integration tests by combining API contract testing with AI-driven automation. You’ll learn how to use tools like oasdiff and Schemathesis to catch breaking changes early, and how to leverage AI for rapid failure triage—all while keeping your architectural data secure.\r\n"
+        }
+      ],
+      "roomId": null,
+      "liveUrl": null,
+      "recordingUrl": null,
+      "status": "Accepted",
+      "isInformed": true,
+      "isConfirmed": false
+    },
+    {
+      "id": "1113140",
+      "title": "From Quality Metrics to Quality Mindset: Building Teams That Own Outcomes",
+      "description": "Software teams often rely on metrics, dashboards, and defined processes to guide quality efforts. While these tools provide important visibility, they don’t automatically create ownership, accountability, or better outcomes. In many cases, teams learn to optimize for the numbers rather than the intent behind them.\r\nThis session explores how quality outcomes are shaped less by tools and processes and more by leadership behaviors and team mindset. Drawing from experience in software testing and people leadership, the talk examines how well-meaning management practices can unintentionally reinforce “check-the-box” behavior, and what leaders can do differently to build teams that truly own quality.\r\n\r\nParticipants will explore:\r\n\r\nWhy quality challenges are often rooted in leadership and communication gaps.\r\nHow metrics can shift from helpful signals to counterproductive targets.\r\nCommon ways leaders unintentionally discourage ownership.\r\nPractical leadership behaviors that promote clarity, accountability, and proactive thinking\r\n\r\nRather than introducing new frameworks or methodologies, this session focuses on small, intentional leadership shifts that can have an outsized impact on team behavior. Attendees will leave with actionable ideas they can apply immediately to move teams from compliance-driven execution to shared ownership of outcomes.",
+      "startsAt": null,
+      "endsAt": null,
+      "isServiceSession": false,
+      "isPlenumSession": false,
+      "speakers": [
+        "f2cfff77-e663-4744-bed6-24d17faa8756"
+      ],
+      "categoryItems": [],
+      "questionAnswers": [
+        {
+          "questionId": 111854,
+          "answerValue": "Quality metrics don’t create quality, people do.  This session explores how leadership behaviors influence team ownership and outcomes, and why even well-intentioned metrics can lead to “check-the-box” behavior.  Attendees will learn practical ways to shift from compliance-driven quality to a mindset where teams take true ownership of their work."
+        }
+      ],
+      "roomId": null,
+      "liveUrl": null,
+      "recordingUrl": null,
+      "status": "Accepted",
+      "isInformed": true,
+      "isConfirmed": true
+    },
+    {
+      "id": "1181951",
+      "title": "How to create a QA or the Highway talk",
+      "description": "This session is aimed at the person who is interested in presenting at a conference like QA or the Highway but needs practical help building their first talk. \r\nUsing examples, suggestions and group feedback, the participant will leave with a step-by-step playbook for what they need to do in order to submit their proposed talk next year. ",
+      "startsAt": null,
+      "endsAt": null,
+      "isServiceSession": false,
+      "isPlenumSession": false,
+      "speakers": [
+        "c00ade17-a3ef-48da-89ce-32be7bf634db"
+      ],
+      "categoryItems": [],
+      "questionAnswers": [
+        {
+          "questionId": 111854,
+          "answerValue": "Have you an idea, suggestion or thought for a QA or the Highway talk but are not sure what to do with it? In this session we'll take that spark and help turn it into a talk you can present. "
+        }
+      ],
+      "roomId": null,
+      "liveUrl": null,
+      "recordingUrl": null,
+      "status": "Accepted",
+      "isInformed": true,
+      "isConfirmed": true
+    },
+    {
+      "id": "1175500",
+      "title": "Layoff to Launch",
+      "description": "Losing a job can feel like a dead end, but what if its the start of your ever big chapter ? session covers strategies for turning layoffs and reorgs in to career comebacks, leverage your network, upskill, and pivot in to new opportunities. if you are navigating a layoff or looking to future-proof your career, this session will equip you with practical tools to turn roadblocks in to launchpads. ",
+      "startsAt": null,
+      "endsAt": null,
+      "isServiceSession": false,
+      "isPlenumSession": false,
+      "speakers": [
+        "eeed5814-e7b4-4cf9-8edf-30a531ec0ed1"
+      ],
+      "categoryItems": [],
+      "questionAnswers": [
+        {
+          "questionId": 111854,
+          "answerValue": "Turning Career roadblocks in to comebacks."
+        }
+      ],
+      "roomId": null,
+      "liveUrl": null,
+      "recordingUrl": null,
+      "status": "Accepted",
+      "isInformed": true,
+      "isConfirmed": true
+    },
+    {
+      "id": "1172042",
+      "title": "Playwright+MCP Server+Claude: a powerful trio",
+      "description": "We’ve all heard the hype about Playwright. And the hype about MCP Servers. And even more hype about Claude Code. Now you get to see what all the hype is about. During this session we are going to wire up Claude Code to a Playwright MCP Server in a Playwright test automation project. Then use Claude Code to travel around the web, mapping out pages as it goes. We might even be able to get Claude to create some tests. Will Claude hallucinate? Probably. Will Claude create a bunch of duplicate tests? Probably. Will Claude create a production-ready test automation framework in the short amount of time we have for this session? We’ll find out.",
+      "startsAt": null,
+      "endsAt": null,
+      "isServiceSession": false,
+      "isPlenumSession": false,
+      "speakers": [
+        "da4286dd-d1cd-42c2-a4b2-f3273bee6f26"
+      ],
+      "categoryItems": [],
+      "questionAnswers": [
+        {
+          "questionId": 111854,
+          "answerValue": "We’ve all heard the hype about Playwright. And the hype about MCP Servers. And even more hype about Claude Code. Now you get to see what all the hype is about. During this session we are going to wire up Claude Code to a Playwright MCP Server in a Playwright test automation project. Then use Claude Code to travel around the web, mapping out pages as it goes. We might even be able to get Claude to create some tests. Will Claude hallucinate? Probably. Will Claude create a bunch of duplicate tests? Probably. Will Claude create a production-ready test automation framework in the short amount of time we have for this session? We’ll find out."
+        }
+      ],
+      "roomId": null,
+      "liveUrl": null,
+      "recordingUrl": null,
+      "status": "Accepted",
+      "isInformed": true,
+      "isConfirmed": false
+    },
+    {
+      "id": "1174416",
+      "title": "Rolling the Dice",
+      "description": "One of the hardest challenges in Quality Assurance is deciding when a release is ready. All software has bugs, but was that strange behavior you observed in testing just a fluke, or a sign of something catastrophic?\r\n\r\nThis talk introduces a practical risk assessment framework built around “rolling the dice” on quality. Each situation is modeled as a die, and each potential outcome as one of its faces. This mental model helps attendees visualize uncertainty, understand the range of possibilities, and evaluate the stability of their releases. \r\n\r\nAttendees will learn to identify sources of chaos in their products and focus their testing efforts on high-impact risks, removing negative outcomes from their dice and increasing the odds of a successful release. ",
+      "startsAt": null,
+      "endsAt": null,
+      "isServiceSession": false,
+      "isPlenumSession": false,
+      "speakers": [
+        "5c56e952-8b5b-42c1-b5f1-cae5651483f2"
+      ],
+      "categoryItems": [],
+      "questionAnswers": [
+        {
+          "questionId": 111854,
+          "answerValue": "Shipping software is always a gamble! Was that strange behavior you observed in testing just a fluke, or a sign of something catastrophic?\r\n\r\nIn this session, we’ll explore a practical framework for understanding release risk using a simple metaphor: rolling the dice. By mapping scenarios to probabilities and outcomes, you’ll gain a structured way to reason about uncertainty and prioritize testing efforts.\r\n\r\nYou’ll leave with practical tools to identify high-impact risks, reduce instability, and shift the odds toward a successful launch."
+        }
+      ],
+      "roomId": null,
+      "liveUrl": null,
+      "recordingUrl": null,
+      "status": "Accepted",
+      "isInformed": true,
+      "isConfirmed": true
+    },
+    {
+      "id": "1113292",
+      "title": "Taming the Beast: Testing Non-Deterministic AI Systems with Confidence",
+      "description": "For decades, software testing has relied on a comforting assumption: given the same input, systems should produce the same output. AI-enabled systems break that assumption entirely. Large language models and other AI components generate responses that can vary in structure, tone, and content while still appearing “correct”. \r\n\r\nIn this session, we’ll explore why traditional testing strategies struggle with non-deterministic AI behavior and where they quietly fail. Using real-world examples such as AI chatbots and resume-screening systems, we’ll walk through practical techniques for validating AI outputs without relying on brittle, deterministic assertions. Topics include input variation strategies, semantic similarity analysis, bias detection, and using LLMs responsibly as automated evaluators (aka “LLM-as-a-Judge”). \r\n\r\nAttendees will leave with a clear mental model for testing AI-based systems, concrete patterns they can apply immediately, and guidance on balancing automation, human judgment, and risk. If you’re responsible for the quality of AI-driven features, this talk will help you move from uncertainty to confidence!",
+      "startsAt": null,
+      "endsAt": null,
+      "isServiceSession": false,
+      "isPlenumSession": false,
+      "speakers": [
+        "accac3e4-7691-420c-97d7-fa693c70dc76"
+      ],
+      "categoryItems": [],
+      "questionAnswers": [
+        {
+          "questionId": 111854,
+          "answerValue": "For decades, software testing has relied on a comforting assumption: given the same input, systems should produce the same output. AI-enabled systems break that assumption entirely. Large language models and other AI components generate responses that can vary in structure, tone, and content while still appearing “correct”. \r\n\r\nIn this session, we’ll explore why traditional testing strategies struggle with non-deterministic AI behavior and where they quietly fail. Using real-world examples such as AI chatbots and resume-screening systems, we’ll walk through practical techniques for validating AI outputs without relying on brittle, deterministic assertions. Topics include input variation strategies, semantic similarity analysis, bias detection, and using LLMs responsibly as automated evaluators (aka “LLM-as-a-Judge”). \r\n\r\nAttendees will leave with a clear mental model for testing AI-based systems, concrete patterns they can apply immediately, and guidance on balancing automation, human judgment, and risk. If you’re responsible for the quality of AI-driven features, this talk will help you move from uncertainty to confidence!"
+        }
+      ],
+      "roomId": null,
+      "liveUrl": null,
+      "recordingUrl": null,
+      "status": "Accepted",
+      "isInformed": true,
+      "isConfirmed": true
+    },
+    {
+      "id": "1182968",
+      "title": "Testing the Untestable: A Practical Guide to LLM Quality Assurance",
+      "description": "Your entire QA career has been a lie. Okay, not entirely but everything you know about testing breaks down when the system under test is an LLM.\r\nSame input, different output. No spec to test against. \"Correct\" is subjective. Welcome to AI testing, where assert_equals goes to die.\r\nBut here's the thing: AI still needs QA. It needs it MORE than deterministic systems because the failure modes are weirder, harder to detect, and way more embarrassing when they hit production.\r\nIn this talk, I'll share the AI QA Playbook, a practical framework for testing systems that don't behave the same way twice.\r\nThe five testing pillars you need:\r\n\r\nAccuracy Testing: Building golden datasets when \"correct\" is fuzzy\r\nBias Testing: Counterfactual test design that catches discrimination\r\nHallucination Testing: Detecting confident nonsense before users do\r\nSecurity Testing: Prompt injection, jailbreaks, and data leakage\r\nRegression Testing: What does \"regression\" even mean for AI?\r\n\r\nWhat makes this different:\r\n\r\nReal test data examples, not theory\r\nMetrics that actually work for non-deterministic systems\r\nCI/CD integration patterns\r\nTools you can use today (including my open-source contributions)\r\n\r\nI've spent the last two years figuring out how to do QA for systems that refuse to be predictable. This talk is the playbook I wish existed when I started.",
+      "startsAt": null,
+      "endsAt": null,
+      "isServiceSession": false,
+      "isPlenumSession": false,
+      "speakers": [
+        "620d785b-3e5c-4c81-bee7-5d1be217853b"
+      ],
+      "categoryItems": [],
+      "questionAnswers": [
+        {
+          "questionId": 111854,
+          "answerValue": "Your entire QA career has been a lie. Okay, not entirely but everything you know about testing breaks down when the system under test is an LLM.\r\nSame input, different output. No spec to test against. \"Correct\" is subjective. Welcome to AI testing, where assert_equals goes to die.\r\nBut here's the thing: AI still needs QA. It needs it MORE than deterministic systems because the failure modes are weirder, harder to detect, and way more embarrassing when they hit production.\r\nIn this talk, I'll share the AI QA Playbook, a practical framework for testing systems that don't behave the same way twice.\r\nThe five testing pillars you need:\r\n\r\nAccuracy Testing: Building golden datasets when \"correct\" is fuzzy\r\nBias Testing: Counterfactual test design that catches discrimination\r\nHallucination Testing: Detecting confident nonsense before users do\r\nSecurity Testing: Prompt injection, jailbreaks, and data leakage\r\nRegression Testing: What does \"regression\" even mean for AI?\r\n\r\nWhat makes this different:\r\n\r\nReal test data examples, not theory\r\nMetrics that actually work for non-deterministic systems\r\nCI/CD integration patterns\r\nTools you can use today (including my open-source contributions)\r\n\r\nI've spent the last two years figuring out how to do QA for systems that refuse to be predictable. This talk is the playbook I wish existed when I started."
+        }
+      ],
+      "roomId": null,
+      "liveUrl": null,
+      "recordingUrl": null,
+      "status": "Accepted",
+      "isInformed": true,
+      "isConfirmed": true
+    },
+    {
+      "id": "1174838",
+      "title": "Testing without Ai - How I learned to stop worrying and love QA",
+      "description": "Ai has gone from a curiosity to a \"must have\" technology in less than 4 years and (I grudgingly admit) has gotten significantly better over that time.  We better understand it's capabilities and limitations.  But there is still a lot of hype and anxiety and misconceptions about Ai.\r\n\r\nI will talk about how I went from a technical leadership role developing test automation to a 10x engineer with Ai, to becoming obsolete, redundant, unemployed.  I'll talk about the hardships and stress affected me, the cold hard realities of Ai, and why I believe whatever the end state of Ai adoption, we're going to need more testers and better QA, not less.\r\n\r\nThis is a difficult transition period, but I see cause for optimism.\r\n\r\nI'll talk about what Ai can and cannot do well, what Ai should and should not do, how to help non-technical leadership know the difference, and how you can improve the quality of life and the quality of software with or without Ai.\r\n\r\nP.S. I'm currently working in a position where Ai is forbidden and QA is very important.",
+      "startsAt": null,
+      "endsAt": null,
+      "isServiceSession": false,
+      "isPlenumSession": false,
+      "speakers": [
+        "e7bf64bc-101c-494f-9f51-4bb47552afeb"
+      ],
+      "categoryItems": [],
+      "questionAnswers": [
+        {
+          "questionId": 111854,
+          "answerValue": "Ai has become nearly ubiquitous. You can't live without it -- or so we are told. You will left behind if you don't adopt it. You will be replaced by Ai in 6 months -- we've heard for 2 years now. I don't think so.\r\n\r\nI make the case why the Ai apocalypse isn't nearly as worrying as you think. And what you can do to survive in the wasteland of terminator robots and omniscient supercomputers. And why there is reason for optimism."
         }
       ],
       "roomId": null,
@@ -48,10 +424,746 @@
       "recordingUrl": null,
       "status": "Accepted",
       "isInformed": true,
+      "isConfirmed": true
+    },
+    {
+      "id": "1119014",
+      "title": "The Gumshoe Protocol",
+      "description": "It was a dark and stormy night, the kind of night you expect a P0 defect, when the Teams call interrupted my dinner of Cup of Noodles. It was the VP of Customer Success “we have a customer facing problem. We need you and the Gumshoe Team on the case”.\r\n\r\nRoot cause analysis (RCA) is a critical skill for everyone, however, most professionals have never had the opportunity to identify the root cause of a defect before needing to do so in a critical situation. Effective RCA requires all stakeholders to think critically and use their best judgement on the often limited information available. In this workshop, participants will role-play through a real-life scenario and interact with logs, users, and other stakeholders to figure out the root cause before coming together to brainstorm on how we could have prevented the incident. \r\n\r\nJoin the Gumshoe Team of developers, QAs, product professionals, customer support, and project managers to crack the case. ",
+      "startsAt": null,
+      "endsAt": null,
+      "isServiceSession": false,
+      "isPlenumSession": false,
+      "speakers": [
+        "e540d0fc-6d3b-4e34-8e34-ed56e72a5e5f",
+        "97b29c15-84f0-4899-97b8-57ed6d8e390b"
+      ],
+      "categoryItems": [],
+      "questionAnswers": [
+        {
+          "questionId": 111854,
+          "answerValue": "It was a dark and stormy night, the kind of night you expect a P0 defect, when the Teams call interrupted my dinner of Cup of Noodles. It was the VP of Customer Success “we have a customer facing problem. We need you and the Gumshoe Team on the case”.\r\n\r\nRoot cause analysis (RCA) is a critical skill for everyone, however, most professionals have never had the opportunity to identify the root cause of a defect before needing to do so in a critical situation. Effective RCA requires all stakeholders to think critically and use their best judgement on the often limited information available. In this workshop, participants will role-play through a real-life scenario and interact with logs, users, and other stakeholders to figure out the root cause before coming together to brainstorm on how we could have prevented the incident. \r\n\r\nJoin the Gumshoe Team of developers, QAs, product professionals, customer support, and project managers to crack the case. "
+        }
+      ],
+      "roomId": null,
+      "liveUrl": null,
+      "recordingUrl": null,
+      "status": "Accepted",
+      "isInformed": true,
+      "isConfirmed": true
+    },
+    {
+      "id": "1174294",
+      "title": "The Human Advantage: Making Better QA Decisions with AI in the Loop",
+      "description": "As AI becomes a key player in our tools and workflows, testing and testers need to evolve the strategies since the quality still depends on human judgment. This session focuses on the tester’s mindset and the strategies to follow in their personal + professional lives that help QA engineers make better decisions, communicate risk clearly, and build trust in what they deliver\r\n\r\nThis is a practical, human-centered talk on how to become a stronger Quality Assurance professional in an AI-accelerated environment without becoming overly dependent on tools. Focusing on the human aspect of the QA, we’ll explore the mental models and habits that separate “someone who runs tests” from “someone who owns quality.”\r\n\r\nThe key takeaways include - \r\nUsing AI as a test helper, expanding ideas, help debug and write reports, prompt pattens to generate better scenarios\r\nQA mindset shifts for stronger testing - risk-based thinking, systems thinking, and skepticism without becoming adversarial.\r\nCommunication strategies that make QAs more human\r\nPersonal growth strategies that anyone can follow to build confidence and to be resilient \r\nA set of repeatable daily/weekly habits (checklists, journaling prompts, review routines) to build stronger intuition and consistency.\r\n\r\nThis session will be beneficial for Quality Assurance professions in all levels, if you are wondering how the QA roles evolve with AI in the mix, this session is for you. \r\n\r\n\r\n\r\n\r\n\r\n",
+      "startsAt": null,
+      "endsAt": null,
+      "isServiceSession": false,
+      "isPlenumSession": false,
+      "speakers": [
+        "0bc9c4c9-6a57-410a-9928-58c4b8d3e2ba"
+      ],
+      "categoryItems": [],
+      "questionAnswers": [
+        {
+          "questionId": 111854,
+          "answerValue": "As AI becomes a key player in our tools and workflows, testing and testers must evolve—because quality still depends on human judgment. This session focuses on the tester’s mindset and the personal and professional strategies that help QA engineers make better decisions, communicate risk clearly, and build trust in what they deliver. It’s a practical, human-centered talk on becoming a stronger QA professional in an AI-accelerated environment without becoming overly dependent on tools. We’ll cover using AI as a test helper (prompt patterns for better scenarios, debugging, reports), mindset shifts (risk-based/system thinking, healthy skepticism), communication strategies, resilience and confidence-building, and repeatable habits (checklists, journaling, review routines). Skills to focus on. this talk is suitable for all QA levels."
+        }
+      ],
+      "roomId": null,
+      "liveUrl": null,
+      "recordingUrl": null,
+      "status": "Accepted",
+      "isInformed": true,
+      "isConfirmed": true
+    },
+    {
+      "id": "1178124",
+      "title": "The Judgment Gap: Why AI Adoption Without Verification Is Worse Than No AI At All",
+      "description": "Your organization adopted AI. Congratulations — so did everyone else. But here's what the data actually shows: in a pre-registered experiment with 758 consultants, Harvard and BCG found that AI made good work 40% better and bad work 19 percentage points *worse* than working without AI at all. The tool that amplifies expertise also amplifies poor judgment — and the boundary between the two is invisible without training.\r\n\r\nThis isn't a theoretical risk. In our own survey of 571 professionals, 93.9% use AI frequently — but 69.4% spend zero time on advanced capabilities. Microsoft's 300,000-person Copilot rollout found the same pattern: broad adoption clustered at the simplest features, with a measurable productivity dip from weeks 3 through 10 as initial excitement collided with real-world complexity.\r\n\r\nAdoption isn't the hard part anymore. Judgment is.\r\n\r\nIn this session, you'll learn:\r\n- How to identify whether a task falls inside or outside AI's reliability boundary — and why getting this wrong is catastrophic\r\n- A practical verification framework that catches AI failures *before* they reach your clients or production systems\r\n- Why the \"adoption valley\" kills most AI initiatives, and the specific practices that get teams through it\r\n- How to build team-level habits that make AI output trustworthy by default, not by accident\r\n\r\nYou'll leave with concrete processes you can implement Monday morning to close the gap between \"we use AI\" and \"we use AI well.\"",
+      "startsAt": null,
+      "endsAt": null,
+      "isServiceSession": false,
+      "isPlenumSession": false,
+      "speakers": [
+        "d101b2c4-cdb8-4c5e-9c56-86e045b0b2d0"
+      ],
+      "categoryItems": [],
+      "questionAnswers": [
+        {
+          "questionId": 111854,
+          "answerValue": "Your organization adopted AI. So did everyone else. But a pre-registered Harvard/BCG study of 758 consultants found that AI made good work 40% better — and bad work 19 percentage points worse than no AI at all. The tool that amplifies expertise also amplifies poor judgment. And the boundary between the two is invisible without training.\r\n\r\nAdoption isn't the hard part anymore. Judgment is.\r\n\r\nIn this session you'll learn how to identify whether a task falls inside or outside AI's reliability boundary, a practical verification framework that catches failures before they reach clients or production, and the specific practices that get teams through the adoption valley — the measurable productivity dip Microsoft documented across 300,000 Copilot users in weeks 3 through 10.\r\n\r\nYou'll leave with concrete processes you can implement Monday morning to close the gap between \"we use AI\" and \"we use AI well.\""
+        }
+      ],
+      "roomId": null,
+      "liveUrl": null,
+      "recordingUrl": null,
+      "status": "Accepted",
+      "isInformed": true,
+      "isConfirmed": true
+    },
+    {
+      "id": "1129517",
+      "title": "The Quality Horizon: Modern Best Practices and the Art of Constant Adaptation",
+      "description": "When I started my career twenty years ago, software quality basically meant \"no bugs,\" and testing meant executing a finite set of cases. Since then, I’ve watched the concept evolve alongside significant shifts in technology and industry practices.\r\n\r\nBecause these changes have been largely additive, we face an ever-expanding horizon of what \"good\" software looks like.\r\nIn this talk, I offer a definition of modern software quality that incorporates the many expectations accumulated from technological and process trends such as Agile, automated testing, cloud hosting, DevOps, and AI. Drawing on my own painful experiences with neglecting or misunderstanding the evolving dimensions of quality, I’ll share examples of what effective practices can look like.\r\n\r\nTo help you assess how you and your team are doing with respect to this laundry list of things to be responsible for, we will break them down into four key pillars:\r\n- User Value: Building the Right Thing (strategic alignment, risk assessment, measurable impact)\r\n- Product Health: Testing the Things We Can Predict (enabling and executing solid testing strategies)\r\n- Operational Health: Dealing with the Unexpected (observability, recovery, non-derministic behaviour)\r\n- Sustainability: Holistic Stewardship (security, cost, performance, accessibility, maintainability)\r\n\r\nWe’ll cover a series of questions to help you explore and audit each area, followed by a set of prompts to help you determine where the next quality evolution is likely to come from in your context.\r\n\r\nWhile the field may have been simpler when I began, the constant transformation is what has kept it exciting. Fortunately, today it’s easier than ever to learn a new skill that can bring more value to your users and your business. As a final thought, I hope to leave you with the realization that the most important software quality strategy is the willingness to adapt, evolve, and stay curious in an ever-changing landscape.",
+      "startsAt": null,
+      "endsAt": null,
+      "isServiceSession": false,
+      "isPlenumSession": false,
+      "speakers": [
+        "fc04e924-6a1d-4494-8592-1d3e2dde0d3d"
+      ],
+      "categoryItems": [],
+      "questionAnswers": [
+        {
+          "questionId": 111854,
+          "answerValue": "Software quality is not a finite destination, but a moving target influenced by ongoing technological and process shifts (think Agile, DevOps, AI, and more). This talk explores how these trends have created an ever-expanding horizon of responsibility for software teams. I will present a holistic definition of quality that balances predictable testing with operational resilience and long-term sustainability. By describing quality in terms of four strategic pillars, I offer a roadmap for teams to audit their current quality practices and move toward a culture of continuous adaptation and curiosity."
+        }
+      ],
+      "roomId": null,
+      "liveUrl": null,
+      "recordingUrl": null,
+      "status": "Accepted",
+      "isInformed": true,
+      "isConfirmed": true
+    },
+    {
+      "id": "1176192",
+      "title": "The Race to the Top… When Do You Stop?",
+      "description": "In many QA organizations, career growth is often equated with becoming a people manager. But what happens when your strengths — and passions — lie elsewhere?\r\nIn this session, we'll share a tale of two testers, metaphorically climbing QA Everest. Using our experiences and lessons learned to help you navigate the decision, \"do I want to manage or do I want to keep testing?\"\r\n\r\nWe'll each share some of our personal journey from QA individual contributor to manager and back again. While you can value the opportunity to lead, you may ultimately realize that the parts of the role that energize you most are mentoring testers, improving quality practices, staying hands-on with testing, and supporting projects through strong organization and communication — not the people-management aspects like performance reviews, HR responsibilities, or navigating formal management structures.\r\n\r\nThis session challenges the idea that you have to keep climbing the mountain toward higher base camps, including management. Instead, it reframes the individual contributor role as a powerful, intentional career choice that brings deep value to teams. We'll discuss the decision points and key characteristics to help you determine where you want to stop on your journey up QA Everest. Then, we'll outline ways QA individuals can advocate for themselves, define success beyond titles, and continue to grow their influence without managing people.\r\n\r\nWhether you’re a tester questioning your next career move, a people manager considering a change, or a leader looking to better support IC career paths, this talk will offer validation, clarity, and practical takeaways.",
+      "startsAt": null,
+      "endsAt": null,
+      "isServiceSession": false,
+      "isPlenumSession": false,
+      "speakers": [
+        "fe60844a-68a5-4edd-8d5b-44d892977bcd",
+        "be614ae7-9376-41e9-9c0d-bc3df923be71"
+      ],
+      "categoryItems": [],
+      "questionAnswers": [
+        {
+          "questionId": 111854,
+          "answerValue": "In many QA organizations, career growth is often equated with becoming a people manager. But what happens when your strengths — and passions — lie elsewhere?\r\nIn this session, we'll share a tale of two testers, metaphorically climbing QA Everest. Using our experiences and lessons learned to help you navigate the decision, \"do I want to manage or do I want to keep testing?\"\r\n\r\nWe'll each share some of our personal journey from QA individual contributor to manager and back again. While you can value the opportunity to lead, you may ultimately realize that the parts of the role that energize you most are mentoring testers, improving quality practices, staying hands-on with testing, and supporting projects through strong organization and communication — not the people-management aspects like performance reviews, HR responsibilities, or navigating formal management structures.\r\n\r\nThis session challenges the idea that you have to keep climbing the mountain toward higher base camps, including management. Instead, it reframes the individual contributor role as a powerful, intentional career choice that brings deep value to teams. We'll discuss the decision points and key characteristics to help you determine where you want to stop on your journey up QA Everest. Then, we'll outline ways QA individuals can advocate for themselves, define success beyond titles, and continue to grow their influence without managing people.\r\n\r\nWhether you’re a tester questioning your next career move, a people manager considering a change, or a leader looking to better support IC career paths, this talk will offer validation, clarity, and practical takeaways."
+        }
+      ],
+      "roomId": null,
+      "liveUrl": null,
+      "recordingUrl": null,
+      "status": "Accepted",
+      "isInformed": true,
+      "isConfirmed": true
+    },
+    {
+      "id": "1168645",
+      "title": "The RRQI Method: Turning \"Go/No-Go\" Decisions into Data-Driven Science",
+      "description": "Release decisions are rarely as objective as we’d like them to be. We sit in “Go/No-Go” meetings asking if we’re ready, but the answers tend to lean on gut feelings, pass rate snapshots, or wishful thinking rather than actual readiness. That was the problem we kept running into: too much activity, not enough clarity. So we built the Release Readiness Quality Index (RRQI): a practical framework that turns progress into a score, not a guess. By combining three weighted factors—Coverage Confidence (how well we tested the right things), Execution Confidence (how stable those tests were), and Defect Risk (how serious the remaining bugs are)—we created a 0-100 scale to track readiness like a trend, not a binary call.\r\n\r\nIn this session, I’ll break down how the RRQI works, share the formulas we used, and show how it helped us spot risk earlier, align teams faster, and make our release decisions easier to defend. You’ll leave with everything you need to build your own version—so your next Go/No-Go can actually feel like a real decision, not a leap of faith.\r\n\r\nKey Takeaways:\r\n1. Eliminate Subjectivity: Replace \"gut feelings\" with a composite score (0-100) based on coverage, execution, and risk.\r\n2. Trend Analysis: Learn to track readiness as a progressive trend relative to your deadline rather than a static snapshot.\r\n3. Risk Quantification: Apply weighted formulas to prioritize residual risk over simple bug counts.",
+      "startsAt": null,
+      "endsAt": null,
+      "isServiceSession": false,
+      "isPlenumSession": false,
+      "speakers": [
+        "49bdd184-05d7-4dc4-a2bb-ed46db78ee5c"
+      ],
+      "categoryItems": [],
+      "questionAnswers": [
+        {
+          "questionId": 111854,
+          "answerValue": "Release decisions are rarely as objective as we’d like them to be. We sit in “Go/No-Go” meetings asking if we’re ready, but the answers tend to lean on gut feelings, pass rate snapshots, or wishful thinking rather than actual readiness. That was the problem we kept running into: too much activity, not enough clarity. So we built the Release Readiness Quality Index (RRQI): a practical framework that turns progress into a score, not a guess. By combining three weighted factors—Coverage Confidence (how well we tested the right things), Execution Confidence (how stable those tests were), and Defect Risk (how serious the remaining bugs are)—we created a 0-100 scale to track readiness like a trend, not a binary call.\r\n\r\nIn this session, I’ll break down how the RRQI works, share the formulas we used, and show how it helped us spot risk earlier, align teams faster, and make our release decisions easier to defend. You’ll leave with everything you need to build your own version—so your next Go/No-Go can actually feel like a real decision, not a leap of faith."
+        }
+      ],
+      "roomId": null,
+      "liveUrl": null,
+      "recordingUrl": null,
+      "status": "Accepted",
+      "isInformed": true,
       "isConfirmed": false
+    },
+    {
+      "id": "1183766",
+      "title": "Turbocharge Your Playwright: Capabilities You're Probably Not Using",
+      "description": "Most teams use Playwright to open a browser and click through flows. But Playwright can do so much more — mock APIs, persist authentication, inject custom headers for distributed tracing, and more. In this talk, Kevin goes beyond the basics and explores the capabilities that separate a good Playwright suite from a great one. You'll leave with techniques you can add to your suite the same week.\r\n\r\nThis is not a \"getting started with Playwright\" talk. It's for teams that are already running Playwright tests and want to unlock capabilities they didn't know they had. I'll cover things like persisting authentication state across tests, mocking API responses to isolate your UI layer, injecting traceparent headers for distributed tracing, and intercepting network traffic — all features built into the library that most teams never touch. The goal is to get the audience thinking like testers when they read Playwright's API, spotting features that solve real testing problems rather than just following tutorials.",
+      "startsAt": null,
+      "endsAt": null,
+      "isServiceSession": false,
+      "isPlenumSession": false,
+      "speakers": [
+        "30314dcc-99f8-488f-9102-56330d4137aa"
+      ],
+      "categoryItems": [],
+      "questionAnswers": [
+        {
+          "questionId": 111854,
+          "answerValue": "Most teams use Playwright to open a browser and click through flows. But Playwright can do so much more — mock APIs, persist authentication, inject custom headers for distributed tracing, and more. In this talk, Kevin goes beyond the basics and explores the capabilities that separate a good Playwright suite from a great one. You'll leave with techniques you can add to your suite the same week."
+        }
+      ],
+      "roomId": null,
+      "liveUrl": null,
+      "recordingUrl": null,
+      "status": "Accepted",
+      "isInformed": true,
+      "isConfirmed": true
+    },
+    {
+      "id": "1147079",
+      "title": "Verify, Then Trust: Human Judgement in the Age of Generative AI",
+      "description": "Generative AI is rapidly becoming part of how modern organizations write, evaluate, and make decisions — from drafting content and summarizing data to supporting technical workflows.\r\n\r\nAs these systems become more fluent and convincing, the real challenge is no longer whether AI can produce outputs quickly, but whether humans maintain the skills of verification, discernment, and accountability alongside it.\r\n\r\nVerify, Then Trust offers a grounded, human-centered framework for navigating AI without panic, blind faith, or outsourcing our thinking. This session explores why trust must be earned through validation, especially in environments where accuracy, clarity, and responsibility matter.\r\n\r\nRather than positioning AI as a threat or a replacement, this talk reframes it as a powerful tool that still requires human oversight. Attendees will learn practical habits for staying mentally present, asking better questions, and building norms that keep human judgment meaningfully in the loop.\r\n\r\nThis session is designed for technology professionals, leaders, and teams adapting to AI-enabled work who want to move forward with confidence — without losing critical thinking or responsibility in the process.\r\n\r\nKey themes include:\r\n* Speed vs. correctness in AI-generated outputs\r\n* Why verification is becoming a core professional skill\r\n* The risk of automation complacency\r\n* Practical ways to keep humans accountable and engaged",
+      "startsAt": null,
+      "endsAt": null,
+      "isServiceSession": false,
+      "isPlenumSession": false,
+      "speakers": [
+        "c261415b-ec1a-42ca-bfb7-b5875db38294"
+      ],
+      "categoryItems": [],
+      "questionAnswers": [
+        {
+          "questionId": 111854,
+          "answerValue": "AI tools are moving fast — but trust still requires verification.\r\n\r\nIn this session, Verify, Then Trust explores how professionals can use generative AI effectively while maintaining the essential human skills of critical thinking, judgment, and accountability. Rather than positioning AI as a threat or a replacement, this talk reframes it as a powerful tool that still requires human oversight. \r\n\r\nAttendees will learn practical habits for staying mentally present, asking better questions, and building norms that keep human judgment meaningfully in the loop."
+        }
+      ],
+      "roomId": null,
+      "liveUrl": null,
+      "recordingUrl": null,
+      "status": "Accepted",
+      "isInformed": true,
+      "isConfirmed": true
+    },
+    {
+      "id": "1155732",
+      "title": "What is Your Working Genius?",
+      "description": "The working genius model is a productivity model developed by Patrick Lencioni with the goal of accomplishing a simple concept: bringing more joy and fulfillment at work! When you and your team understand where your geniuses are and how to (and when not to) use them, it can improve meetings, reduce burnout, and dramatically reduce turbulence in getting projects done. In this session we will review the 6 types of working geniuses and how they bring projects from ideation to implementation. We will discover the hidden cause of burnout and how to keep meetings, including our agile ceremonies, more focused and more productive as a whole, all with the goal of improving your life and team culture, both in and outside of work. (that's right… ALL projects!)",
+      "startsAt": null,
+      "endsAt": null,
+      "isServiceSession": false,
+      "isPlenumSession": false,
+      "speakers": [
+        "7949d43a-8944-4575-bad6-61b90c7c75a4"
+      ],
+      "categoryItems": [],
+      "questionAnswers": [
+        {
+          "questionId": 111854,
+          "answerValue": "The working genius model is a productivity model developed by Patrick Lencioni with the goal of accomplishing a simple concept: bringing more joy and fulfillment at work! When you and your team understand where your geniuses are and how to (and when not to) use them, it can improve meetings, reduce burnout, and dramatically reduce turbulence in getting projects done. In this session we will review the 6 types of working geniuses and how they bring projects from ideation to implementation. We will discover the hidden cause of burnout and how to keep meetings, including our agile ceremonies, more focused and more productive as a whole, all with the goal of improving your life and team culture, both in and outside of work. (that's right… ALL projects!)"
+        }
+      ],
+      "roomId": null,
+      "liveUrl": null,
+      "recordingUrl": null,
+      "status": "Accepted",
+      "isInformed": true,
+      "isConfirmed": true
     }
   ],
   "speakers": [
+    {
+      "id": "e7bf64bc-101c-494f-9f51-4bb47552afeb",
+      "firstName": "Aaron",
+      "lastName": "Evans",
+      "bio": "I'm a software tester that loves to break things.  But I also like fixing broken processes.  I live in Montana and work remotely from a yurt (like a big round test with a wooden frame).",
+      "tagLine": "Software tester & QA strategy consultant",
+      "profilePicture": "https://sessionize.com/image/ab37-400o400o1-T6DgN5nkjGPmw6iLMQsoyL.png",
+      "isTopSpeaker": false,
+      "links": [
+        {
+          "title": "X (Twitter)",
+          "url": "https://x.com/oneshore",
+          "linkType": "Twitter"
+        },
+        {
+          "title": "LinkedIn",
+          "url": "https://linkedin.com/in/aaronevans",
+          "linkType": "LinkedIn"
+        },
+        {
+          "title": "Blog",
+          "url": "https://fijiaaron.wordpress.com",
+          "linkType": "Blog"
+        },
+        {
+          "title": "Company Website",
+          "url": "https://one-shore.com",
+          "linkType": "Company_Website"
+        }
+      ],
+      "sessions": [
+        1174838
+      ],
+      "fullName": "Aaron Evans",
+      "categoryItems": [],
+      "questionAnswers": []
+    },
+    {
+      "id": "fe60844a-68a5-4edd-8d5b-44d892977bcd",
+      "firstName": "Alexa",
+      "lastName": "Beach",
+      "bio": "Alexa has over 10+ years of experience in advocating for quality throughout various projects. She is passionate about not only testing functionality, but also testing from the perspective of the end-user. Because of her strong belief that testing should be approached as early in the process as possible, she engages in quality advocacy at every stage of the project, from designing the user interface to uncovering and documenting business requirements. Please don’t throw something over the wall at her. \r\n\nWhen she is not working, Alexa enjoys spending time with her family at their lake place or a nearby local winery. If you don’t find her there, she is probably at home snuggled up with her pup and a cup of coffee.",
+      "tagLine": "Sr. Quality Assurance Analyst for Sweetwater",
+      "profilePicture": "https://sessionize.com/image/6166-400o400o1-P6y6vFmZNoBoYX2h9iU56H.jpg",
+      "isTopSpeaker": false,
+      "links": [
+        {
+          "title": "LinkedIn",
+          "url": "https://www.linkedin.com/in/alexa-beach-3152b012b/",
+          "linkType": "LinkedIn"
+        }
+      ],
+      "sessions": [
+        1176192
+      ],
+      "fullName": "Alexa Beach",
+      "categoryItems": [],
+      "questionAnswers": []
+    },
+    {
+      "id": "3ec8847f-9f1e-46dd-8b2f-c9d38767f42b",
+      "firstName": "Andrew",
+      "lastName": "Knight",
+      "bio": "Andrew Knight is the \"Automation Panda\" - a software engineering leader who builds solutions for software testing problems. Over the past decade, he has designed and built robust test automation projects from the ground up that can run thousands of tests continuously. He is the author of the upcoming book \"The Way To Test Software\" from Manning Publications, and he is also the lead developer for Boa Constrictor, the .NET Screenplay Pattern. Andy currently works full-time as the Lead Software Engineer in Test for PrecisionLender at Q2. Read his tech blog at AutomationPanda.com, and follow him on Twitter at @AutomationPanda.",
+      "tagLine": "The Automation Panda",
+      "profilePicture": "https://sessionize.com/image/12b1-400o400o1-V8GU8AXMHvou5cgo7d1Ugn.jpg",
+      "isTopSpeaker": false,
+      "links": [
+        {
+          "title": "X (Twitter)",
+          "url": "https://twitter.com/AutomationPanda",
+          "linkType": "Twitter"
+        },
+        {
+          "title": "LinkedIn",
+          "url": "https://www.linkedin.com/in/andrew-leland-knight/",
+          "linkType": "LinkedIn"
+        },
+        {
+          "title": "Blog",
+          "url": "https://automationpanda.com/",
+          "linkType": "Blog"
+        },
+        {
+          "title": "Company Website",
+          "url": "https://applitools.com/",
+          "linkType": "Company_Website"
+        }
+      ],
+      "sessions": [
+        1172552
+      ],
+      "fullName": "Andrew Knight",
+      "categoryItems": [],
+      "questionAnswers": []
+    },
+    {
+      "id": "c261415b-ec1a-42ca-bfb7-b5875db38294",
+      "firstName": "Ashley René",
+      "lastName": "Casey",
+      "bio": "Ashley René is a speaker, strategist, and founder of Presence Over Pixels, a St. Louis–based company helping people take back control of their time, focus, and relationships in a tech-dominated world. With a background in corporate leadership and a passion for human connection, Ashley René teaches professionals how to set boundaries with their devices, stay present in high-demand environments, and lead with intention - online and off. Her work lives at the intersection of wellness, leadership, and digital culture, offering practical tools for anyone looking to thrive without burning out. When she's not leading workshops or speaking on stages, Ashley René is performing with her band, Bourbon Jury, and actively engaged in the local arts scene of St Louis.\r\n",
+      "tagLine": "Founder, Presence Over Pixels",
+      "profilePicture": "https://sessionize.com/image/b52a-400o400o1-sh6zyP1jkd3aumZtAdSxNw.jpg",
+      "isTopSpeaker": false,
+      "links": [
+        {
+          "title": "LinkedIn",
+          "url": "https://www.linkedin.com/in/ashleyrenecasey/",
+          "linkType": "LinkedIn"
+        },
+        {
+          "title": "Instagram",
+          "url": "https://www.instagram.com/ashleyrenecasey/",
+          "linkType": "Instagram"
+        },
+        {
+          "title": "Blog",
+          "url": "https://presenceoverpixels.com/blog",
+          "linkType": "Blog"
+        },
+        {
+          "title": "Company Website",
+          "url": "https://presenceoverpixels.com/",
+          "linkType": "Company_Website"
+        }
+      ],
+      "sessions": [
+        1147079
+      ],
+      "fullName": "Ashley René Casey",
+      "categoryItems": [],
+      "questionAnswers": []
+    },
+    {
+      "id": "f2cfff77-e663-4744-bed6-24d17faa8756",
+      "firstName": "Barbara",
+      "lastName": "Deaton",
+      "bio": "I am a Senior Manager of Software Development at SAS, where I lead a cross-functional team spanning development and testing with heavy collaboration with R&D teams across the globe. In 1994 I began my career as an intern test engineer at DataDirect, testing ODBC drivers and OLE DB providers, where I continued upon graduation. I graduated with a B.S. in Mathematics and Computer Science from Meredith College in 1997, I joined SAS in 1999 as a development tester. Over the years, I have grown in leadership roles—first managing testing teams, then directing development, DevOps, and testing groups. My career reflects a deep commitment to software quality, team growth, and delivering impactful products.",
+      "tagLine": "SAS Institute, Sr. Software Manager",
+      "profilePicture": "https://sessionize.com/image/290b-400o400o1-Gje8jisSvG8AhNp8U1PR9y.jpg",
+      "isTopSpeaker": false,
+      "links": [
+        {
+          "title": "LinkedIn",
+          "url": "https://www.linkedin.com/in/barbara-deaton-b96291a2/",
+          "linkType": "LinkedIn"
+        }
+      ],
+      "sessions": [
+        1113140
+      ],
+      "fullName": "Barbara Deaton",
+      "categoryItems": [],
+      "questionAnswers": []
+    },
+    {
+      "id": "141a6bda-8059-49f3-b207-eeaf29a19808",
+      "firstName": "Chris",
+      "lastName": "Harbert",
+      "bio": "Chris Harbert is an industry executive, international conference speaker, host of the Developers Who Test podcast, MBA, and Founder & CEO of Testery: the easiest way to scale open-source tests. His love of software test automation started nearly twenty years ago when he was a developer doing test-driven development at a company that was early to adopt Agile practices. Today he shares this knowledge and experience with others so we can ship better quality software faster and have more fun doing it.",
+      "tagLine": "CEO of Testery, International Speaker, & Podcast Host",
+      "profilePicture": "https://sessionize.com/image/51c5-400o400o1-aWFW8f7VZop8rxdxkQ4RpG.jpg",
+      "isTopSpeaker": false,
+      "links": [
+        {
+          "title": "X (Twitter)",
+          "url": "https://twitter.com/chrisharbert",
+          "linkType": "Twitter"
+        },
+        {
+          "title": "LinkedIn",
+          "url": "https://www.linkedin.com/in/christopherharbert/",
+          "linkType": "LinkedIn"
+        },
+        {
+          "title": "Blog",
+          "url": "https://chrisharbert.com/speaking",
+          "linkType": "Blog"
+        },
+        {
+          "title": "Company Website",
+          "url": "https://testery.com",
+          "linkType": "Company_Website"
+        }
+      ],
+      "sessions": [
+        1178160
+      ],
+      "fullName": "Chris Harbert",
+      "categoryItems": [],
+      "questionAnswers": []
+    },
+    {
+      "id": "c00ade17-a3ef-48da-89ce-32be7bf634db",
+      "firstName": "David",
+      "lastName": "Leslie",
+      "bio": "David Leslie is a Lead Software Engineer in Test at Flight Safety International with a testing career that stretches back to the age of the CompuServe CD-ROM. He's navigated QA challenges across mobile apps and middleware systems at companies ranging from AOL, OCLC and Express to early-stage startups, picking up a PMP certification and plenty of testing horror stories along the way. When he's not testing software, he flies drones (FAA Part 107 certified), serves as an Aerospace Education Officer with the U.S. Civil Air Patrol, and studies the intersection of technology and education at the University of Alabama's New College LifeTrack.",
+      "tagLine": "Lead Software Engineer in Test at FlightSafety International",
+      "profilePicture": "https://sessionize.com/image/9bba-400o400o1-QJdmj3XFM7TvYvG6mqE8Sd.png",
+      "isTopSpeaker": false,
+      "links": [
+        {
+          "title": "X (Twitter)",
+          "url": "https://x.com/davidwleslie",
+          "linkType": "Twitter"
+        },
+        {
+          "title": "LinkedIn",
+          "url": "https://www.linkedin.com/in/davidwleslie",
+          "linkType": "LinkedIn"
+        }
+      ],
+      "sessions": [
+        1181951
+      ],
+      "fullName": "David Leslie",
+      "categoryItems": [],
+      "questionAnswers": []
+    },
+    {
+      "id": "be614ae7-9376-41e9-9c0d-bc3df923be71",
+      "firstName": "Emma",
+      "lastName": "Clouse",
+      "bio": "Emma studied philosophy and psychology, developing her skills in formal logic and analytics. After earning her Masters in Philosophy, she found that the skills she'd developed were well suited to working in software development. She worked at Epic Systems in Quality Assurance before becoming a Team Lead, responsible for project managing releases of software in the Radiology and Gastroenterology applications, while growing new leaders in the company. She returned to Sweetwater Sound as a QA Tester helping to develop their approach to testing a legacy application. Now, still at Sweetwater, she is a QA Manager invested in growing the QA team responsible for testing many of the internal facing applications.",
+      "tagLine": "Quality Assurance Manager for Sweetwater Sound",
+      "profilePicture": "https://sessionize.com/image/63f5-400o400o1-7Svf4SKfQCeTdSAh5J9tDz.jpg",
+      "isTopSpeaker": false,
+      "links": [
+        {
+          "title": "LinkedIn",
+          "url": "https://www.linkedin.com/in/emma-rae-clouse/",
+          "linkType": "LinkedIn"
+        }
+      ],
+      "sessions": [
+        1176192
+      ],
+      "fullName": "Emma Clouse",
+      "categoryItems": [],
+      "questionAnswers": []
+    },
+    {
+      "id": "e540d0fc-6d3b-4e34-8e34-ed56e72a5e5f",
+      "firstName": "Jenna",
+      "lastName": "Charlton",
+      "bio": "Jenna is a software tester and developer advocate at BrowserStack who’s been professionally proving things are broken (with love) for over a decade. They’ve graced the stages of dev and test conferences, where they talk about risk-based testing, accessibility (because tech should work for literally everyone), and building agile teams that actually like working together. They’re also known for coaching and cheerleading the next generation of testers—because who else is going to keep the bugs in line? Off the clock, Jenna swaps bug hunts for mosh pits at punk rock shows and high-flying chaos at pro wrestling events with their husband, Bob. They’re also a frequent traveler, though their most important role is “human caretaker” to three feline overlords: Maka, Milton, and Excalipurr.",
+      "tagLine": "Developer Advocate at BrowserStack",
+      "profilePicture": "https://sessionize.com/image/bff8-400o400o1-BEF9PjkDbUwwGp6FBbMFEf.jpg",
+      "isTopSpeaker": false,
+      "links": [
+        {
+          "title": "LinkedIn",
+          "url": "https://www.linkedin.com/in/jbcharlton/",
+          "linkType": "LinkedIn"
+        },
+        {
+          "title": "Blog",
+          "url": "https://theywrestletest.com",
+          "linkType": "Blog"
+        }
+      ],
+      "sessions": [
+        1119014
+      ],
+      "fullName": "Jenna Charlton",
+      "categoryItems": [],
+      "questionAnswers": []
+    },
+    {
+      "id": "97b29c15-84f0-4899-97b8-57ed6d8e390b",
+      "firstName": "Jenny",
+      "lastName": "Bramble",
+      "bio": "Jenny ended up in engineering leadership after coming up through support and devops, cutting her teeth on that interesting role that acts as the 'translator' between customer requests from support and the development team.  Her love of support and the human side of problems lets her find a sweet spot between empathy for the user and empathy for her team.  She's done testing, support, or human interfacing for most of her career.  She finds herself happiest when she's making an impact on other people--whether it's helping find issues in applications, leading scrum, speaking at events, or just grabbing coffee and chatting.  ",
+      "tagLine": "Empathetic Engineering Leader and Quality Advocate",
+      "profilePicture": "https://sessionize.com/image/a581-400o400o1-MfuKPHQxBAyrHdJAU6bDmn.png",
+      "isTopSpeaker": false,
+      "links": [
+        {
+          "title": "X (Twitter)",
+          "url": "http://twitter.com/jennydoesthings",
+          "linkType": "Twitter"
+        },
+        {
+          "title": "LinkedIn",
+          "url": "https://www.linkedin.com/in/jennybramble",
+          "linkType": "LinkedIn"
+        },
+        {
+          "title": "Blog",
+          "url": "http://jennydoesthings.com",
+          "linkType": "Blog"
+        }
+      ],
+      "sessions": [
+        1119014
+      ],
+      "fullName": "Jenny Bramble",
+      "categoryItems": [],
+      "questionAnswers": []
+    },
+    {
+      "id": "49bdd184-05d7-4dc4-a2bb-ed46db78ee5c",
+      "firstName": "Joel",
+      "lastName": "Montvelisky",
+      "bio": "Joel Montvelisky is PractiTest’s Co-Founder and Chief Product Officer (CPO).\r\n\r\nJoel has been part of the testing and QA world since 1997, working as a tester, QA Manager and Director, and Consultant for companies across the globe. During this time he was guiding changes in testing from legacy to modern-day approaches. Joel is a Forbes Council member (https://www.forbes.com/sites/forbestechcouncil/2020/12/16/the-new-role-of-the-software-quality-architect/?sh=3ae54ed94500), a blogger, and a lecturer.\r\n\r\nJoel is the founder and Chair of the OnlineTestConf (http://www.onlinetestconf.com/), the co-founder of the State of Testing (http://qablog.practitest.com/state-of-testing/) survey and report. These “for the community” initiatives are a representation of his belief in sharing knowledge and making it available to as many people as possible.\r\n\r\nJoel is a seasoned conference speaker worldwide, among them the STAR Conferences, STPCon, JaSST, TestLeadership Conf, CAST, QA&Test, and more.",
+      "tagLine": "PractiTest Co-Founder and CPO",
+      "profilePicture": "https://sessionize.com/image/ea6c-400o400o1-VrzALKnuCnyhThVZJau3DT.jpg",
+      "isTopSpeaker": false,
+      "links": [
+        {
+          "title": "X (Twitter)",
+          "url": "https://x.com/joelmonte",
+          "linkType": "Twitter"
+        },
+        {
+          "title": "LinkedIn",
+          "url": "https://www.linkedin.com/in/joelm3/",
+          "linkType": "LinkedIn"
+        },
+        {
+          "title": "Company Website",
+          "url": "https://www.practitest.com/",
+          "linkType": "Company_Website"
+        }
+      ],
+      "sessions": [
+        1168645
+      ],
+      "fullName": "Joel Montvelisky",
+      "categoryItems": [],
+      "questionAnswers": []
+    },
+    {
+      "id": "a168013e-bb21-4097-ad0b-b7b9118dd449",
+      "firstName": "Joel",
+      "lastName": "Wilson",
+      "bio": "Joel Wilson is a Quality Engineering leader at Ramsey Solutions, where he leads a team of seven Software Engineers in Test embedded across multiple product squads. For the past 18 months, he's been deep in the world of LLM evaluation, building frameworks and defining best practices for AI products, including benchmarks, LLM-as-judge tooling, red teaming, and drift monitoring. He's a CS grad who's been in software quality for over a decade, and his obsession is keeping QE fundamentals at the center of modern AI testing and making these concepts accessible to engineers who didn't sign up to become AI researchers.",
+      "tagLine": "Quality Engineering Leader, Ramsey Solutions | Writing about testing and AI on Medium",
+      "profilePicture": "https://sessionize.com/image/b23e-400o400o1-SNJL1YsHrZPLQKBDFXtUTK.jpg",
+      "isTopSpeaker": false,
+      "links": [
+        {
+          "title": "LinkedIn",
+          "url": "https://www.linkedin.com/in/joel-r-wilson/",
+          "linkType": "LinkedIn"
+        },
+        {
+          "title": "Blog",
+          "url": "https://medium.com/@joel.wilson117",
+          "linkType": "Blog"
+        }
+      ],
+      "sessions": [
+        1175077
+      ],
+      "fullName": "Joel Wilson",
+      "categoryItems": [],
+      "questionAnswers": []
+    },
+    {
+      "id": "30314dcc-99f8-488f-9102-56330d4137aa",
+      "firstName": "Kevin",
+      "lastName": "Roe",
+      "bio": "Kevin has been in quality engineering since 2012, spending the last 14 years building test automation frameworks and finding better ways to help teams ship with confidence. He currently works as a Senior SDET  at Ramsey Solutions, where he focuses on test automation infrastructure, tooling, and helping his team level up. Outside of work, he teaches coding camps for middle and high school students and tinkers with drones, 3D printers, and spends time with his family and at his church.",
+      "tagLine": "Senior SDET, Ramsey Solutions",
+      "profilePicture": "https://sessionize.com/image/5a57-400o400o1-GpqcDNt2uAEDNrjLdfmX1y.png",
+      "isTopSpeaker": false,
+      "links": [
+        {
+          "title": "LinkedIn",
+          "url": "https://www.linkedin.com/in/kroe761/",
+          "linkType": "LinkedIn"
+        }
+      ],
+      "sessions": [
+        1183766
+      ],
+      "fullName": "Kevin Roe",
+      "categoryItems": [],
+      "questionAnswers": []
+    },
+    {
+      "id": "0bc9c4c9-6a57-410a-9928-58c4b8d3e2ba",
+      "firstName": "Krishna",
+      "lastName": "Bandarupalli",
+      "bio": "Krishna Bandarupalli is a dynamic QA Team Lead at Encova Insurance, spearheading comprehensive Manual, Automation, and Performance testing services within the organization. With an extensive career spanning over 9 years in the Quality Assurance industry, Krishna has evolved from a proficient Manual Tester to an adept Automation specialist.\r\n\r\nKrishna's expertise encompasses diverse sectors, including retail and insurance domains, where he has seamlessly navigated through both legacy and modern applications. His passion lies in the meticulous identification of defects and the strategic automation of applications to enhance efficiency and reliability.\r\n\r\nBeyond the professional realm, Krishna finds joy in his role as a devoted parent to two children, actively engaging in quality family time. During his leisure, he immerses himself in the world of audio programs, DIY activities and nurtures a flourishing vegetable garden during the spring and summer seasons.\r\n\r\nKrishna's commitment to excellence and his multifaceted interests make him a valuable asset both in and out of the testing arena.",
+      "tagLine": "QA Team Lead at Encova Insurance",
+      "profilePicture": "https://sessionize.com/image/2fb5-400o400o1-fGkmA477DhCfbDo75xyr5u.jpg",
+      "isTopSpeaker": false,
+      "links": [
+        {
+          "title": "LinkedIn",
+          "url": "https://www.linkedin.com/in/krishna-chaitanya-bandarupalli-a1038436/",
+          "linkType": "LinkedIn"
+        },
+        {
+          "title": "Company Website",
+          "url": "https://www.encova.com/",
+          "linkType": "Company_Website"
+        }
+      ],
+      "sessions": [
+        1174294
+      ],
+      "fullName": "Krishna Bandarupalli",
+      "categoryItems": [],
+      "questionAnswers": []
+    },
+    {
+      "id": "7949d43a-8944-4575-bad6-61b90c7c75a4",
+      "firstName": "Kyle",
+      "lastName": "Jenkins",
+      "bio": "Kyle Jenkins is driven to help you ease the pain of work, whether it’s technology bleeding resources or trouble working with a team of people.  As a full stack developer, public speaker, and principal consultant with Improving, a global software development consulting and training company, he integrates into teams to provide quality software solutions and into the IT and Agile community to improve processes and teamwork. On the side, he is an avid video gamer, and loves correlating the challenges and learnings from video games to the world of work.",
+      "tagLine": "Trust Changes Everything",
+      "profilePicture": "https://sessionize.com/image/6c8e-400o400o1-fLkrnrZ1fd3PXZLwJEvj6T.jpg",
+      "isTopSpeaker": false,
+      "links": [
+        {
+          "title": "X (Twitter)",
+          "url": "https://twitter.com/kjenkinsdev",
+          "linkType": "Twitter"
+        },
+        {
+          "title": "LinkedIn",
+          "url": "https://www.linkedin.com/in/kyle-jenkins",
+          "linkType": "LinkedIn"
+        },
+        {
+          "title": "Blog",
+          "url": "https://kylfrost.com",
+          "linkType": "Blog"
+        },
+        {
+          "title": "Company Website",
+          "url": "https://www.improving.com/",
+          "linkType": "Company_Website"
+        }
+      ],
+      "sessions": [
+        1155732
+      ],
+      "fullName": "Kyle Jenkins",
+      "categoryItems": [],
+      "questionAnswers": []
+    },
+    {
+      "id": "accac3e4-7691-420c-97d7-fa693c70dc76",
+      "firstName": "Lee",
+      "lastName": "Barnes",
+      "bio": "I have over 30 years of experience in the Software Quality Engineering field. I have been involved in the implementation of test automation and performance engineering solutions in hundreds of environments across a wide array of industries. Most recently, I’ve been involved with augmenting Quality Engineering processes with AI.\r\n\r\nI regularly speak at industry conferences including QA or the Highway, DevOpsDays, STAREast, Targeting Quality, and Innovate QA",
+      "tagLine": "Chief Quality Officer, Forte Group",
+      "profilePicture": "https://sessionize.com/image/332a-400o400o1-KrzQLfb76C2fmHVVwurZ7C.jpg",
+      "isTopSpeaker": false,
+      "links": [
+        {
+          "title": "X (Twitter)",
+          "url": "https://twitter.com/USI_LeeBarnes",
+          "linkType": "Twitter"
+        },
+        {
+          "title": "LinkedIn",
+          "url": "https://www.linkedin.com/in/leebarnes/",
+          "linkType": "LinkedIn"
+        },
+        {
+          "title": "Company Website",
+          "url": "https://fortegrp.com/",
+          "linkType": "Company_Website"
+        }
+      ],
+      "sessions": [
+        1113292
+      ],
+      "fullName": "Lee Barnes",
+      "categoryItems": [],
+      "questionAnswers": []
+    },
+    {
+      "id": "da4286dd-d1cd-42c2-a4b2-f3273bee6f26",
+      "firstName": "Matthew",
+      "lastName": "Eakin",
+      "bio": "With over 20 years of technical, leadership and planning experience, Matt brings a unique, thorough and comprehensive perspective to every assignment. His extensive expertise around all aspects of the SDLC combined with development skills has helped him to be an effective Agile Testing practitioner and coach. Matt talks extensively on Gherkin Scripting and is in high-demand as a BDD (Behavior-Driven Development)/ATDD (Acceptance Test Driven Development) coach.",
+      "tagLine": "Putting the S in Quality",
+      "profilePicture": "https://sessionize.com/image/cc0a-400o400o1-dd-d1cd-42c2-a4b2-f3273bee6f26.f1e40383-c5f2-48c5-905b-2110f3099ab8.jpg",
+      "isTopSpeaker": false,
+      "links": [
+        {
+          "title": "X (Twitter)",
+          "url": "https://twitter.com/MatthewEakin",
+          "linkType": "Twitter"
+        },
+        {
+          "title": "LinkedIn",
+          "url": "https://www.linkedin.com/in/matthew-eakin-34568ba/",
+          "linkType": "LinkedIn"
+        },
+        {
+          "title": "Company Website",
+          "url": "https://www.flightsafety.com/",
+          "linkType": "Company_Website"
+        }
+      ],
+      "sessions": [
+        1172042
+      ],
+      "fullName": "Matthew Eakin",
+      "categoryItems": [],
+      "questionAnswers": []
+    },
     {
       "id": "17c299ee-d9fd-4020-b499-2837b2b3a2bf",
       "firstName": "Matthew-Hope",
@@ -90,6 +1202,162 @@
       "questionAnswers": []
     },
     {
+      "id": "ef31d301-079f-49d7-8f3f-e049e5396132",
+      "firstName": "Melissa",
+      "lastName": "Tondi",
+      "bio": "Melissa is a Quality Engineering  leader with experience in technology operations and a deep focus on AI enablement. A longtime contributor to the technology community through speaking and writing, Melissa focuses on practical approaches to quality strategy, emerging technology adoption, and building collaborative frameworks that help teams deliver efficiently in rapidly changing environments.",
+      "tagLine": "Principal Consultant at Disrupt Testing ",
+      "profilePicture": "https://sessionize.com/image/b63d-400o400o1-hYMhxx3t664gX1bpRAZESp.jpg",
+      "isTopSpeaker": false,
+      "links": [
+        {
+          "title": "LinkedIn",
+          "url": "https://www.linkedin.com/in/melissa-tondi-186551?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+          "linkType": "LinkedIn"
+        }
+      ],
+      "sessions": [
+        1134196
+      ],
+      "fullName": "Melissa Tondi",
+      "categoryItems": [],
+      "questionAnswers": []
+    },
+    {
+      "id": "a62f1aa4-7ec6-4452-b5e5-317e7bf588dd",
+      "firstName": "Mohini",
+      "lastName": "Agarwal",
+      "bio": "Mohini Agarwal is a QA and Quality Engineering professional with over 12 years of experience in automation testing, CI/CD pipelines, and API-driven systems. She is passionate about building reliable testing strategies and exploring how AI can enhance modern software quality practices.",
+      "tagLine": "Senior Software Test Engineer",
+      "profilePicture": "https://sessionize.com/image/be99-400o400o1-DPsgyVLPfKGbbboK9HwxPZ.png",
+      "isTopSpeaker": false,
+      "links": [],
+      "sessions": [
+        1185386
+      ],
+      "fullName": "Mohini Agarwal",
+      "categoryItems": [],
+      "questionAnswers": []
+    },
+    {
+      "id": "5c56e952-8b5b-42c1-b5f1-cae5651483f2",
+      "firstName": "Paul",
+      "lastName": "Turchinetz",
+      "bio": "Paul Turchinetz is a software engineer and tester with a decade of experience as an SDET. He has a passion for automating everything he can, and investigating everything he can't. Paul is passionate about the art of bridging gaps - whether that’s in code, processes, or collaboration.",
+      "tagLine": "Software Engineer and Tester",
+      "profilePicture": "https://sessionize.com/image/834f-400o400o1-Vr53RAceuUokjgh8bT5TCf.jpg",
+      "isTopSpeaker": false,
+      "links": [],
+      "sessions": [
+        1174416
+      ],
+      "fullName": "Paul Turchinetz",
+      "categoryItems": [],
+      "questionAnswers": []
+    },
+    {
+      "id": "937ea6f9-3f4d-41f1-87b3-94fd1535f86f",
+      "firstName": "Rachana",
+      "lastName": "Menon",
+      "bio": "Rachana Menon is a Test Engineer passionate about building reliable and scalable automation systems. She has hands-on experience building scalable test frameworks, integrating schema validation, and running automated test pipelines.\r\nHer journey in testing has been driven by solving real-world challenges—especially around flaky tests, catching breaking changes early in distributed systems.She is particularly interested in practical applications of AI in testing and modern automation strategies.\r\n\r\nAs a first-time conference speaker, Rachana brings a fresh, real-world perspective from the field, sharing lessons learned from implementing automation in fast-paced engineering environments.",
+      "tagLine": "Senior Software Test Engineer",
+      "profilePicture": "https://sessionize.com/image/23cb-400o400o1-WjsGqfZNzCtpZYfHbEbge9.jpg",
+      "isTopSpeaker": false,
+      "links": [],
+      "sessions": [
+        1185386
+      ],
+      "fullName": "Rachana Menon",
+      "categoryItems": [],
+      "questionAnswers": []
+    },
+    {
+      "id": "eeed5814-e7b4-4cf9-8edf-30a531ec0ed1",
+      "firstName": "Ram",
+      "lastName": "Gadde",
+      "bio": "Dasaradha(RAM) Gadde is a IT QA Leader who has been in IT industry for over 24 years with extensive experience in Enterprise End to End product quality and Automation. He Led End to End Testing for Companies like DBI Inc (a.k.a DSW Inc), eClinicalWorks, and various clients for TCS.  He is certified Scrum Master from Scrum alliance, Advanced Test Manager from ISTQB and Oracle Certified Associate. He lives in Delaware, OH with his wife and 2 lovely daughters.",
+      "tagLine": "QA Manager from DBI inc aka DSW",
+      "profilePicture": "https://sessionize.com/image/7d4f-400o400o1-aViadm3816aTar4t7GtGRA.jpg",
+      "isTopSpeaker": false,
+      "links": [
+        {
+          "title": "LinkedIn",
+          "url": "https://www.linkedin.com/in/dasaradha-ram-gadde-5224529/",
+          "linkType": "LinkedIn"
+        }
+      ],
+      "sessions": [
+        1175500
+      ],
+      "fullName": "Ram Gadde",
+      "categoryItems": [],
+      "questionAnswers": []
+    },
+    {
+      "id": "9bde9de9-7bcb-4077-8087-47bf492a1344",
+      "firstName": "Sarah",
+      "lastName": "Dutkiewicz",
+      "bio": "Sadukie is a tech polyglot who brings code to life and helps others unlock their potential through teaching and mentorship. As a seasoned software architect with a sharp eye for user experience, she makes it easy for developers to pick up new tools and hit the ground running. When technical roadblocks pop up, she’s the one who clears the path—breaking down complex ideas and helping teams communicate more effectively. A natural connector and strong community advocate, Sadukie loves bringing people together across the tech world. Whether she’s mentoring, speaking, or juggling life as a full-time mom, her mission stays the same: to make tech more approachable and spark confidence in every coder’s journey.",
+      "tagLine": "Wife, mom, techie - 100% me, unapologetically",
+      "profilePicture": "https://sessionize.com/image/0465-400o400o1-TXtgxZcFsZvPoJgfgiEU74.jpg",
+      "isTopSpeaker": false,
+      "links": [
+        {
+          "title": "LinkedIn",
+          "url": "https://linkedin.com/in/sadukie",
+          "linkType": "LinkedIn"
+        },
+        {
+          "title": "Blog",
+          "url": "https://sadukie.com",
+          "linkType": "Blog"
+        }
+      ],
+      "sessions": [
+        1167680
+      ],
+      "fullName": "Sarah Dutkiewicz",
+      "categoryItems": [],
+      "questionAnswers": []
+    },
+    {
+      "id": "620d785b-3e5c-4c81-bee7-5d1be217853b",
+      "firstName": "Tanvi",
+      "lastName": "Mittal",
+      "bio": "Tanvi Mittal is a Test Automation Lead at a leading US bank and the founder of Log Miner QA, an AI-driven quality engineering tool that converts production logs into actionable test intelligence. She is also the founder of When2Vibe, a web application focused on smart community-based scheduling and social coordination.\r\n\r\nA recognized voice in modern testing and AI-powered quality practices, she is a Keynote Speaker at WCSC 2026 and a featured speaker at WITCON. She is an IEEE Senior Member and serves as the Cincinnati Chapter Lead for BrowserStack, driving community learning and professional development in software quality and automation.\r\n\r\nShe actively mentors and advises professionals and founders, and builds community through HerNextTech, a platform supporting women in tech with practical AI learning, leadership growth, and career guidance.",
+      "tagLine": "US Bank Corp , Test Autumation Lead",
+      "profilePicture": "https://sessionize.com/image/e30f-400o400o1-G2ZohdnjB9CwigqkJCKSCa.jpg",
+      "isTopSpeaker": false,
+      "links": [
+        {
+          "title": "LinkedIn",
+          "url": "https://www.linkedin.com/in/tanvi-mittal-7305091a/",
+          "linkType": "LinkedIn"
+        },
+        {
+          "title": "Instagram",
+          "url": "https://www.instagram.com/hernexttech/",
+          "linkType": "Instagram"
+        },
+        {
+          "title": "Blog",
+          "url": "https://medium.com/@tanvimittalQA",
+          "linkType": "Blog"
+        },
+        {
+          "title": "Company Website",
+          "url": "https://hernexttech.netlify.app/",
+          "linkType": "Company_Website"
+        }
+      ],
+      "sessions": [
+        1182968
+      ],
+      "fullName": "Tanvi Mittal",
+      "categoryItems": [],
+      "questionAnswers": []
+    },
+    {
       "id": "eb3131d6-d052-4c8a-92a7-50308659bff1",
       "firstName": "Tatyana",
       "lastName": "Arbouzova",
@@ -113,6 +1381,122 @@
         1152668
       ],
       "fullName": "Tatyana Arbouzova",
+      "categoryItems": [],
+      "questionAnswers": []
+    },
+    {
+      "id": "da1f3c6b-ce55-48df-824c-c6f681f77f8c",
+      "firstName": "Thomas",
+      "lastName": "Haver",
+      "bio": "Thomas is presently serving as a Master Software Engineer. He leads a team of testers, ops engineers, and production support analysts in the adoption of DevOps practices. Previously, he led the enterprise automation support of 73 applications at Huntington National Bank that encompassed testing, metrics & reporting, and data management. Thomas has a background in Physics & Biophysics, with over a decade spent in research science studying fluorescence spectroscopy and microscopy before joining IT.",
+      "tagLine": "Master Software Engineer ",
+      "profilePicture": "https://sessionize.com/image/14f1-400o400o1-6b-ce55-48df-824c-c6f681f77f8c.9e79a9ba-4763-4404-a3db-cccd558f6a08.jpg",
+      "isTopSpeaker": false,
+      "links": [
+        {
+          "title": "X (Twitter)",
+          "url": "https://twitter.com/cogsfun",
+          "linkType": "Twitter"
+        },
+        {
+          "title": "LinkedIn",
+          "url": "https://www.linkedin.com/in/thomas-haver/",
+          "linkType": "LinkedIn"
+        },
+        {
+          "title": "Blog",
+          "url": "https://red-green-refactor.com/",
+          "linkType": "Blog"
+        },
+        {
+          "title": "Company Website",
+          "url": "https://www3.mtb.com/",
+          "linkType": "Company_Website"
+        }
+      ],
+      "sessions": [
+        1171618
+      ],
+      "fullName": "Thomas Haver",
+      "categoryItems": [],
+      "questionAnswers": []
+    },
+    {
+      "id": "d101b2c4-cdb8-4c5e-9c56-86e045b0b2d0",
+      "firstName": "Tim",
+      "lastName": "Rayburn",
+      "bio": "Tim Rayburn is a Vice President of Consulting with Improving Enterprises, a software and project management consulting company in Dallas, TX. He is a passionate advocate of apprenticeship and mentorship in corporate environments. He has been awarded the Microsoft MVP in recognition of his expertise and community leadership 11 times. He is also a conference organizer, an author, and can be found speaking across the nation on agile processes, software design, and career management. He lives in the North Dallas area with his amazing wife Kate and their loyal dogs Dresden and Radagast.",
+      "tagLine": "Vice President of Consulting at Improving",
+      "profilePicture": "https://sessionize.com/image/fd69-400o400o1-nSZeUH9qRx5dW12LNBcUyt.jpg",
+      "isTopSpeaker": false,
+      "links": [
+        {
+          "title": "X (Twitter)",
+          "url": "https://twitter.com/trayburn",
+          "linkType": "Twitter"
+        },
+        {
+          "title": "LinkedIn",
+          "url": "https://www.linkedin.com/in/trayburn/",
+          "linkType": "LinkedIn"
+        },
+        {
+          "title": "Instagram",
+          "url": "https://www.instagram.com/trayburn",
+          "linkType": "Instagram"
+        },
+        {
+          "title": "Blog",
+          "url": "http://timrayburn.net/",
+          "linkType": "Blog"
+        },
+        {
+          "title": "Company Website",
+          "url": "https://improving.com/",
+          "linkType": "Company_Website"
+        }
+      ],
+      "sessions": [
+        1178124
+      ],
+      "fullName": "Tim Rayburn",
+      "categoryItems": [],
+      "questionAnswers": []
+    },
+    {
+      "id": "fc04e924-6a1d-4494-8592-1d3e2dde0d3d",
+      "firstName": "Tina",
+      "lastName": "Fletcher",
+      "bio": "Tina Fletcher is an Engineering leader who brings a software quality-focused mindset to the teams and projects she leads. She’s also a Director on the KWSQA Board, an occasional conference speaker, and a bit obsessed with her vegetable garden. Find her online at https://www.tinafletcher.ca/.",
+      "tagLine": "Head of Engineering at Primal",
+      "profilePicture": "https://sessionize.com/image/0c46-400o400o1-s6uRkhXtyevYnG1PfruNLm.jpg",
+      "isTopSpeaker": false,
+      "links": [
+        {
+          "title": "X (Twitter)",
+          "url": "https://x.com/fletchertinam",
+          "linkType": "Twitter"
+        },
+        {
+          "title": "LinkedIn",
+          "url": "https://www.linkedin.com/in/tina-fletcher-5b99a21/",
+          "linkType": "LinkedIn"
+        },
+        {
+          "title": "Blog",
+          "url": "https://www.tinafletcher.ca/",
+          "linkType": "Blog"
+        },
+        {
+          "title": "Company Website",
+          "url": "https://www.primal.com/",
+          "linkType": "Company_Website"
+        }
+      ],
+      "sessions": [
+        1129517
+      ],
+      "fullName": "Tina Fletcher",
       "categoryItems": [],
       "questionAnswers": []
     }
