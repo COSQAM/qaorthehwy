@@ -1,8 +1,11 @@
+export function isValidDate(dateString: string | null | undefined): boolean {
+  if (!dateString) return false;
+  return !isNaN(new Date(dateString).getTime());
+}
+
 export function formatTime(dateString: string | null | undefined) {
-  if (!dateString) return null;
-  const date = new Date(dateString);
-  if (isNaN(date.getTime())) return null;
-  return date.toLocaleString("en-US", {
+  if (!isValidDate(dateString)) return null;
+  return new Date(dateString!).toLocaleString("en-US", {
     hour: "numeric",
     minute: "2-digit",
     hour12: true,

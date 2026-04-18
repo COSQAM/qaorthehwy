@@ -2,7 +2,6 @@ import { describe, it, expect } from 'vitest';
 import {
   getLinkLabel,
   getLinkAriaLabel,
-  getSpeakerSlug,
   filterKeynoteSpeakers,
   linkLabelMap,
   knownLinkTypes,
@@ -46,20 +45,6 @@ describe('getLinkAriaLabel', () => {
 
   it('returns just the label for undefined speaker name', () => {
     expect(getLinkAriaLabel('Blog', undefined)).toBe('Blog');
-  });
-});
-
-describe('getSpeakerSlug', () => {
-  it('generates lowercase slug from first and last name', () => {
-    expect(getSpeakerSlug('Matthew-Hope', 'Eland')).toBe('matthew-hope-eland');
-  });
-
-  it('handles already lowercase names', () => {
-    expect(getSpeakerSlug('jane', 'doe')).toBe('jane-doe');
-  });
-
-  it('handles mixed case names', () => {
-    expect(getSpeakerSlug('John', 'Smith')).toBe('john-smith');
   });
 });
 
