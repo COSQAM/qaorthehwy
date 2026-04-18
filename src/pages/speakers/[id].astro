@@ -1,6 +1,6 @@
 ---
 import Layout from "../../layouts/Layout.astro";
-import SocialLink from "../../components/SocialLink.astro";
+import SpeakerProfileCard from "../../components/SpeakerProfileCard.astro";
 import sessionizeData from "../../data/sessionize.json";
 import { renderDescription } from "../../lib/markdown";
 import { formatSessionTime } from "../../lib/sessions";
@@ -14,7 +14,7 @@ type Session = {
   description?: string;
   startsAt: string | null;
   endsAt: string | null;
-  roomId: number;
+  roomId: number | null;
   speakers: string[];
 };
 
@@ -42,31 +42,26 @@ export function getStaticPaths() {
 }
 
 const { speaker } = Astro.props as { speaker: Speaker };
+const speakers = sessionizeData.speakers as Speaker[];
+const rooms = sessionizeData.rooms as Room[];
 
-// Get speaker's sessions
-const speakerSessions = (sessionizeData.sessions as unknown as Session[]).filter(
+const speakerSessions = (sessionizeData.sessions as Session[]).filter(
   (session) => session.speakers.includes(speaker.id),
 );
 
-// Resolve co-speakers (unique, excluding the current speaker)
-const speakerById = new Map(
-  (sessionizeData.speakers as Speaker[]).map((s) => [s.id, s]),
-);
 const coSpeakers = getCoSpeakerIds(speakerSessions, speaker.id)
-  .map((id) => speakerById.get(id))
+  .map((id) => speakers.find((s) => s.id === id))
   .filter((s): s is Speaker => Boolean(s));
 
-function getRoomName(roomId: number) {
-  const rooms = sessionizeData.rooms as Room[];
-  const room = rooms.find((r) => r.id === roomId);
-  return room ? room.name : "TBA";
+function getRoomName(roomId: number | null) {
+  if (roomId == null) return "TBA";
+  return rooms.find((r) => r.id === roomId)?.name ?? "TBA";
 }
 ---
 
 <Layout title={`${speaker.fullName} - QA or the Highway`}>
   <main class="py-16 px-4">
     <div class="container mx-auto max-w-6xl">
-      <!-- Back Button -->
       <button
         onclick="history.back()"
         class="inline-flex items-center border-2 border-primary text-primary px-6 py-2 rounded-lg font-semibold hover:bg-primary/10 transition mb-8 cursor-pointer"
@@ -87,103 +82,25 @@ function getRoomName(roomId: number) {
         Back
       </button>
 
-      <!-- Speaker Profile Section -->
-      <div class="grid md:grid-cols-[320px_1fr] gap-8 mb-12">
-        <!-- Speaker Image Card -->
-        <div class="bg-white rounded-xl shadow-xl overflow-hidden h-fit">
-          {
-            speaker.profilePicture && (
-              <img
-                src={speaker.profilePicture}
-                alt={speaker.fullName}
-                class="w-full aspect-square object-cover object-top"
-              />
-            )
-          }
-        </div>
+      <SpeakerProfileCard
+        fullName={speaker.fullName}
+        bio={speaker.bio}
+        tagLine={speaker.tagLine}
+        profilePicture={speaker.profilePicture}
+        links={speaker.links}
+      />
 
-        <!-- Speaker Info Card -->
-        <div class="bg-white rounded-xl shadow-xl overflow-hidden p-8 md:p-12 h-fit">
-          <h1 class="text-4xl font-bold mb-3 text-dark">
-            {speaker.fullName}
-          </h1>
-          {
-            speaker.tagLine && (
-              <p class="text-xl text-gray-600 mb-6 font-medium">
-                {speaker.tagLine}
-              </p>
-            )
-          }
-          {
-            speaker.bio && (
-              <div class="mb-6">
-                <h4 class="text-lg font-semibold mb-2 text-dark">About</h4>
-                <p class="text-gray-700 leading-relaxed">{speaker.bio}</p>
-              </div>
-            )
-          }
-          {
-            speaker.links && speaker.links.length > 0 && (
-              <div>
-                <h4 class="text-lg font-semibold mb-3 text-dark">Connect</h4>
-                <div class="flex flex-wrap gap-4">
-                  {speaker.links.map((link) => (
-                    <SocialLink url={link.url} linkType={link.linkType} showLabel speakerName={speaker.fullName} />
-                  ))}
-                </div>
-              </div>
-            )
-          }
-        </div>
-      </div>
-
-      <!-- Co-Speaker Profile(s) -->
       {coSpeakers.map((co) => (
-        <div class="grid md:grid-cols-[320px_1fr] gap-8 mb-12">
-          <a
-            href={`${base}speakers/${speakerSlug(co)}`}
-            class="bg-white rounded-xl shadow-xl overflow-hidden h-fit block hover:shadow-2xl transition-shadow"
-          >
-            {co.profilePicture && (
-              <img
-                src={co.profilePicture}
-                alt={co.fullName}
-                class="w-full aspect-square object-cover object-top"
-              />
-            )}
-          </a>
-
-          <div class="bg-white rounded-xl shadow-xl overflow-hidden p-8 md:p-12 h-fit">
-            <a
-              href={`${base}speakers/${speakerSlug(co)}`}
-              class="inline-block hover:text-primary transition-colors"
-            >
-              <h1 class="text-4xl font-bold mb-3 text-dark">{co.fullName}</h1>
-            </a>
-            {co.tagLine && (
-              <p class="text-xl text-gray-600 mb-6 font-medium">{co.tagLine}</p>
-            )}
-            {co.bio && (
-              <div class="mb-6">
-                <h4 class="text-lg font-semibold mb-2 text-dark">About</h4>
-                <p class="text-gray-700 leading-relaxed">{co.bio}</p>
-              </div>
-            )}
-            {co.links && co.links.length > 0 && (
-              <div>
-                <h4 class="text-lg font-semibold mb-3 text-dark">Connect</h4>
-                <div class="flex flex-wrap gap-4">
-                  {co.links.map((link) => (
-                    <SocialLink url={link.url} linkType={link.linkType} showLabel speakerName={co.fullName} />
-                  ))}
-                </div>
-              </div>
-            )}
-          </div>
-        </div>
+        <SpeakerProfileCard
+          fullName={co.fullName}
+          bio={co.bio}
+          tagLine={co.tagLine}
+          profilePicture={co.profilePicture}
+          links={co.links}
+          href={`${base}speakers/${speakerSlug(co)}`}
+        />
       ))}
 
-      <!-- Sessions Section -->
 
       { speakerSessions.length > 0 ? (
           <div class="space-y-6">

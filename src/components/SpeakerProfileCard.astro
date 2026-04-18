@@ -1,0 +1,74 @@
+---
+import SocialLink from './SocialLink.astro';
+
+interface Link {
+  url: string;
+  linkType: string;
+  title: string;
+}
+
+interface Props {
+  fullName: string;
+  bio?: string;
+  tagLine?: string;
+  profilePicture?: string;
+  links?: Link[];
+  href?: string;
+}
+
+const { fullName, bio, tagLine, profilePicture, links = [], href } = Astro.props;
+---
+
+<div class="grid md:grid-cols-[320px_1fr] gap-8 mb-12">
+  {href ? (
+    <a
+      href={href}
+      class="bg-white rounded-xl shadow-xl overflow-hidden h-fit block hover:shadow-2xl transition-shadow"
+    >
+      {profilePicture && (
+        <img
+          src={profilePicture}
+          alt={fullName}
+          class="w-full aspect-square object-cover object-top"
+        />
+      )}
+    </a>
+  ) : (
+    <div class="bg-white rounded-xl shadow-xl overflow-hidden h-fit">
+      {profilePicture && (
+        <img
+          src={profilePicture}
+          alt={fullName}
+          class="w-full aspect-square object-cover object-top"
+        />
+      )}
+    </div>
+  )}
+
+  <div class="bg-white rounded-xl shadow-xl overflow-hidden p-8 md:p-12 h-fit">
+    {href ? (
+      <a href={href} class="inline-block hover:text-primary transition-colors">
+        <h1 class="text-4xl font-bold mb-3 text-dark">{fullName}</h1>
+      </a>
+    ) : (
+      <h1 class="text-4xl font-bold mb-3 text-dark">{fullName}</h1>
+    )}
+    {tagLine && <p class="text-xl text-gray-600 mb-6 font-medium">{tagLine}</p>}
+    {bio && (
+      <div class="mb-6">
+        <h4 class="text-lg font-semibold mb-2 text-dark">About</h4>
+        <p class="text-gray-700 leading-relaxed">{bio}</p>
+      </div>
+    )}
+    {links.length > 0 && (
+      <div>
+        <h4 class="text-lg font-semibold mb-3 text-dark">Connect</h4>
+        <div class="flex flex-wrap gap-4">
+          {links.map((link) => (
+            <SocialLink url={link.url} linkType={link.linkType} showLabel speakerName={fullName} />
+          ))}
+        </div>
+      </div>
+    )}
+  </div>
+</div>

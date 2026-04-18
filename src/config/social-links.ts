@@ -20,11 +20,6 @@ export function getLinkAriaLabel(linkType: string, speakerName?: string): string
   return speakerName ? `${speakerName}'s ${label}` : label;
 }
 
-/** Generate a speaker slug from first and last name */
-export function getSpeakerSlug(firstName: string, lastName: string): string {
-  return `${firstName.toLowerCase()}-${lastName.toLowerCase()}`;
-}
-
 /** Filter keynote speakers from a list of speakers */
 export function filterKeynoteSpeakers(speakers: Array<{ isTopSpeaker: boolean }>): typeof speakers {
   return speakers.filter((s) => s.isTopSpeaker);
