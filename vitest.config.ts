@@ -6,7 +6,10 @@ const imageStub = path.resolve(__dirname, 'src/config/__tests__/stubs/image-stub
 export default defineConfig({
   test: {
     environment: 'node',
-    include: ['src/config/__tests__/**/*.test.ts'],
+    include: [
+      'src/**/__tests__/**/*.test.ts',
+      'scripts/**/__tests__/**/*.test.{js,mjs,ts}',
+    ],
   },
   plugins: [
     {

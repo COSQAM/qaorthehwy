@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 import { readFileSync, writeFileSync } from 'fs';
 import { execSync } from 'child_process';
+import { normalizeLineTerminators } from './sanitize.mjs';
 
 // Load .env file if it exists (for local development)
 try {
@@ -66,8 +67,11 @@ try {
 
   console.log(`✓ Found ${allJson.sessions.length} total sessions (${serviceSessions.length} service sessions)`);
 
+  // Speakers pasting from word processors can introduce LS/PS/NEL/VT/FF. Normalize to \n.
+  const sanitized = normalizeLineTerminators(allJson);
+
   // Save merged data
-  writeFileSync('src/data/sessionize.json', JSON.stringify(allJson, null, 2));
+  writeFileSync('src/data/sessionize.json', JSON.stringify(sanitized, null, 2));
 
   console.log('✓ Sessionize data updated successfully!');
 } catch (err) {

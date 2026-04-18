@@ -1,5 +1,6 @@
 ---
 import SpeakerCard from './SpeakerCard.astro';
+import { speakerSlug } from '../lib/speakers';
 
 interface Link {
   title: string;
@@ -9,6 +10,8 @@ interface Link {
 
 interface Speaker {
   id: string;
+  firstName: string;
+  lastName: string;
   fullName: string;
   tagLine: string;
   profilePicture: string;
@@ -24,28 +27,56 @@ const { speakers } = Astro.props;
 ---
 
 <div class="speaker-carousel">
-  {speakers.map((speaker) => {
-    const slug = speaker.fullName.toLowerCase().replace(/\s+/g, '-');
-    return (
-      <div class="carousel-cell w-full sm:w-1/2 lg:w-1/4 px-4">
-        <SpeakerCard
-          name={speaker.fullName}
-          tagLine={speaker.tagLine}
-          profilePicture={speaker.profilePicture}
-          speakerSlug={slug}
-        />
-      </div>
-    );
-  })}
+  {speakers.map((speaker) => (
+    <div class="carousel-cell w-full sm:w-1/2 lg:w-1/4 px-4">
+      <SpeakerCard
+        name={speaker.fullName}
+        tagLine={speaker.tagLine}
+        profilePicture={speaker.profilePicture}
+        links={speaker.links}
+        speakerSlug={speakerSlug(speaker)}
+      />
+    </div>
+  ))}
 </div>
+
+<style is:global>
+  .speaker-carousel .carousel-cell {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .speaker-carousel .carousel-cell > * {
+    flex: 1;
+  }
+  /* Let hover scale + drop shadow extend vertically without being clipped.
+     overflow-x: clip still contains Flickity's horizontal scrolling. */
+  .speaker-carousel .flickity-viewport {
+    overflow-x: clip;
+    overflow-y: visible;
+  }
+  .speaker-carousel .flickity-page-dots {
+    bottom: -50px;
+  }
+  .speaker-carousel {
+    margin-bottom: 50px;
+  }
+</style>
 
 <script>
   import Flickity from 'flickity';
-  import 'flickity/css/flickity.css';
 
   const carousel = document.querySelector('.speaker-carousel') as HTMLElement;
 
   if (carousel) {
+    // Shuffle cells on each load so visitors see a different speaker order.
+    const cells = Array.from(carousel.children);
+    for (let i = cells.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [cells[i], cells[j]] = [cells[j], cells[i]];
+    }
+    for (const cell of cells) carousel.appendChild(cell);
+
     new Flickity(carousel, {
       cellAlign: 'left',
       contain: false,

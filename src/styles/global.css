@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import "flickity/css/flickity.css";
 
 @theme {
   --color-primary: #3148F6;

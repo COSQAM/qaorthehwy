@@ -2,15 +2,25 @@
 import Layout from "../../layouts/Layout.astro";
 import SocialLink from "../../components/SocialLink.astro";
 import sessionizeData from "../../data/sessionize.json";
+import { renderDescription } from "../../lib/markdown";
+import { formatSessionTime } from "../../lib/sessions";
+import { speakerSlug, getCoSpeakerIds } from "../../lib/speakers";
+
+const base = import.meta.env.BASE_URL;
 
 type Session = {
   id: string;
   title: string;
   description?: string;
-  startsAt: string;
-  endsAt: string;
+  startsAt: string | null;
+  endsAt: string | null;
   roomId: number;
   speakers: string[];
+};
+
+type Room = {
+  id: number;
+  name: string;
 };
 
 type Speaker = {
@@ -25,35 +35,31 @@ type Speaker = {
 };
 
 export function getStaticPaths() {
-  return sessionizeData.speakers.map((speaker) => {
-    const slug = `${speaker.firstName.toLowerCase()}-${speaker.lastName.toLowerCase()}`;
-    return {
-      params: { id: slug },
-      props: { speaker },
-    };
-  });
+  return sessionizeData.speakers.map((speaker) => ({
+    params: { id: speakerSlug(speaker) },
+    props: { speaker },
+  }));
 }
 
 const { speaker } = Astro.props as { speaker: Speaker };
 
 // Get speaker's sessions
-const speakerSessions = (sessionizeData.sessions as Session[]).filter((session) =>
-  session.speakers.includes(speaker.id),
+const speakerSessions = (sessionizeData.sessions as unknown as Session[]).filter(
+  (session) => session.speakers.includes(speaker.id),
 );
 
-// Helper function to get room name
-function getRoomName(roomId: number) {
-  const room = sessionizeData.rooms.find((r) => r.id === roomId);
-  return room ? room.name : "TBA";
-}
+// Resolve co-speakers (unique, excluding the current speaker)
+const speakerById = new Map(
+  (sessionizeData.speakers as Speaker[]).map((s) => [s.id, s]),
+);
+const coSpeakers = getCoSpeakerIds(speakerSessions, speaker.id)
+  .map((id) => speakerById.get(id))
+  .filter((s): s is Speaker => Boolean(s));
 
-function formatTime(dateString: string) {
-  const date = new Date(dateString);
-  return date.toLocaleString("en-US", {
-    hour: "numeric",
-    minute: "2-digit",
-    hour12: true,
-  });
+function getRoomName(roomId: number) {
+  const rooms = sessionizeData.rooms as Room[];
+  const room = rooms.find((r) => r.id === roomId);
+  return room ? room.name : "TBA";
 }
 ---
 
@@ -131,6 +137,52 @@ function formatTime(dateString: string) {
         </div>
       </div>
 
+      <!-- Co-Speaker Profile(s) -->
+      {coSpeakers.map((co) => (
+        <div class="grid md:grid-cols-[320px_1fr] gap-8 mb-12">
+          <a
+            href={`${base}speakers/${speakerSlug(co)}`}
+            class="bg-white rounded-xl shadow-xl overflow-hidden h-fit block hover:shadow-2xl transition-shadow"
+          >
+            {co.profilePicture && (
+              <img
+                src={co.profilePicture}
+                alt={co.fullName}
+                class="w-full aspect-square object-cover object-top"
+              />
+            )}
+          </a>
+
+          <div class="bg-white rounded-xl shadow-xl overflow-hidden p-8 md:p-12 h-fit">
+            <a
+              href={`${base}speakers/${speakerSlug(co)}`}
+              class="inline-block hover:text-primary transition-colors"
+            >
+              <h1 class="text-4xl font-bold mb-3 text-dark">{co.fullName}</h1>
+            </a>
+            {co.tagLine && (
+              <p class="text-xl text-gray-600 mb-6 font-medium">{co.tagLine}</p>
+            )}
+            {co.bio && (
+              <div class="mb-6">
+                <h4 class="text-lg font-semibold mb-2 text-dark">About</h4>
+                <p class="text-gray-700 leading-relaxed">{co.bio}</p>
+              </div>
+            )}
+            {co.links && co.links.length > 0 && (
+              <div>
+                <h4 class="text-lg font-semibold mb-3 text-dark">Connect</h4>
+                <div class="flex flex-wrap gap-4">
+                  {co.links.map((link) => (
+                    <SocialLink url={link.url} linkType={link.linkType} showLabel speakerName={co.fullName} />
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
+        </div>
+      ))}
+
       <!-- Sessions Section -->
 
       { speakerSessions.length > 0 ? (
@@ -159,8 +211,7 @@ function formatTime(dateString: string) {
                     <div>
                       <div class="font-semibold text-dark">Time</div>
                       <div class="text-gray-600">
-                        {formatTime(session.startsAt)} -{" "}
-                        {formatTime(session.endsAt)}
+                        {formatSessionTime(session.startsAt, session.endsAt)}
                       </div>
                     </div>
                   </div>
@@ -199,9 +250,10 @@ function formatTime(dateString: string) {
                     <h4 class="font-semibold text-lg mb-2 text-dark">
                       Description
                     </h4>
-                    <p class="text-gray-700 leading-relaxed">
-                      {session.description}
-                    </p>
+                    <div
+                      class="session-description text-gray-700 leading-relaxed"
+                      set:html={renderDescription(session.description)}
+                    />
                   </div>
                 )}
               </div>
@@ -216,3 +268,87 @@ function formatTime(dateString: string) {
     </div>
   </main>
 </Layout>
+
+<style is:global>
+  .session-description {
+    line-height: 1.8;
+  }
+  .session-description p,
+  .session-description ul,
+  .session-description ol,
+  .session-description blockquote,
+  .session-description pre,
+  .session-description hr,
+  .session-description h1,
+  .session-description h2,
+  .session-description h3,
+  .session-description h4 {
+    margin-top: 0;
+    margin-bottom: 1.5em;
+  }
+  .session-description > *:last-child {
+    margin-bottom: 0;
+  }
+  .session-description a {
+    color: var(--color-primary);
+    text-decoration: underline;
+  }
+  .session-description a:hover {
+    text-decoration: none;
+  }
+  .session-description strong {
+    font-weight: 600;
+    color: #111827;
+  }
+  .session-description em {
+    font-style: italic;
+  }
+  .session-description code {
+    background: #f3f4f6;
+    padding: 0.125rem 0.375rem;
+    border-radius: 0.25rem;
+    font-size: 0.9em;
+  }
+  .session-description pre {
+    background: #f3f4f6;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    overflow-x: auto;
+  }
+  .session-description pre code {
+    background: transparent;
+    padding: 0;
+  }
+  .session-description ul,
+  .session-description ol {
+    padding-left: 1.5rem;
+  }
+  .session-description ul {
+    list-style: disc;
+  }
+  .session-description ol {
+    list-style: decimal;
+  }
+  .session-description li + li {
+    margin-top: 0.25rem;
+  }
+  .session-description hr {
+    border: 0;
+    border-top: 1px solid #e5e7eb;
+    margin: 1.5rem 0;
+  }
+  .session-description blockquote {
+    border-left: 3px solid var(--color-primary);
+    padding-left: 1rem;
+    color: #4b5563;
+    font-style: italic;
+  }
+  .session-description h1,
+  .session-description h2,
+  .session-description h3,
+  .session-description h4 {
+    font-weight: 600;
+    color: #111827;
+    margin-top: 1.25rem;
+  }
+</style>

@@ -4,6 +4,7 @@ import SpeakerCard from '../components/SpeakerCard.astro';
 import PageHeader from '../components/PageHeader.astro';
 import sessionizeData from '../data/sessionize.json';
 import { getSpeakerPhaseConfig } from '../config/speakers';
+import { speakerSlug } from '../lib/speakers';
 
 // Get current speaker phase configuration
 const speakerPhase = getSpeakerPhaseConfig();
@@ -31,21 +32,30 @@ const displaySpeakers = speakerPhase.sessionSpeakersCarousel.visible
 
     <section class="py-16 px-4">
       <div class="container mx-auto max-w-6xl">
+        {speakerPhase.speakersPageBanner && displaySpeakers.length > 0 && (
+          <div class="text-center mb-12 bg-blue-50 rounded-lg p-6 border border-blue-200">
+            <p class="text-xl font-semibold text-blue-800">
+              {speakerPhase.speakersPageBanner.title}
+            </p>
+            {speakerPhase.speakersPageBanner.subtitle && (
+              <p class="text-blue-600 mt-1">
+                {speakerPhase.speakersPageBanner.subtitle}
+              </p>
+            )}
+          </div>
+        )}
         {displaySpeakers.length > 0 ? (
           <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8">
-            {displaySpeakers.map((speaker: any) => {
-              const slug = `${speaker.firstName.toLowerCase()}-${speaker.lastName.toLowerCase()}`;
-              return (
-                <SpeakerCard
-                  name={speaker.fullName}
-                  tagLine={speaker.tagLine}
-                  profilePicture={speaker.profilePicture}
-                  links={speaker.links}
-                  speakerSlug={slug}
-                  isKeynote={speaker.isTopSpeaker}
-                />
-              );
-            })}
+            {displaySpeakers.map((speaker: any) => (
+              <SpeakerCard
+                name={speaker.fullName}
+                tagLine={speaker.tagLine}
+                profilePicture={speaker.profilePicture}
+                links={speaker.links}
+                speakerSlug={speakerSlug(speaker)}
+                isKeynote={speaker.isTopSpeaker}
+              />
+            ))}
           </div>
         ) : (
           <div class="text-center py-12">
