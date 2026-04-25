@@ -252,6 +252,32 @@
       "isConfirmed": true
     },
     {
+      "id": "1217153",
+      "title": "If AI is Writing the Code, Who’s Guarding the Quality? ",
+      "description": "AI is helping teams rapidly transform the software development lifecycle—from requirements and design to coding and testing. While AI tools offer faster delivery and greater productivity, they also introduce new and often overlooked quality risks. \r\nWithout the right processes and culture in place, AI can amplify existing challenges—leading to increased rework, wasted resources, team burnout, and a loss of trust in delivery outcomes. \r\nIn this interactive session, Jeff Van Fleet and Scott Boyd break down how AI is reshaping the SDLC, where it can introduce hidden risks, and how QA teams can mitigate those risks. \r\nYou’ll assess where your team sits on an AI maturity model, see what the data show about how teams like yours are performing at each stage, and leave with concrete next steps — not theory, but something you can act on tomorrow: \r\nHow AI is impacting each phase of the SDLC—and where it creates the most risk  \r\nThe most common quality issues introduced by AI-generated code  \r\nHow to build reciprocal feedback loops where your team’s domain expertise ensures outputs are repeatable, high-quality, and continuously improved upon by both humans and AI ",
+      "startsAt": null,
+      "endsAt": null,
+      "isServiceSession": false,
+      "isPlenumSession": false,
+      "speakers": [
+        "f41ce9eb-dc5e-4fa1-b45b-db16965582b9",
+        "877ff616-7fb1-4485-982c-771550afc798"
+      ],
+      "categoryItems": [],
+      "questionAnswers": [
+        {
+          "questionId": 111854,
+          "answerValue": "AI is helping teams rapidly transform the software development lifecycle—from requirements and design to coding and testing. While AI tools offer faster delivery and greater productivity, they also introduce new and often overlooked quality risks. \r\nWithout the right processes and culture in place, AI can amplify existing challenges—leading to increased rework, wasted resources, team burnout, and a loss of trust in delivery outcomes. \r\nIn this interactive session, Jeff Van Fleet and Scott Boyd break down how AI is reshaping the SDLC, where it can introduce hidden risks, and how QA teams can mitigate those risks. \r\nYou’ll assess where your team sits on an AI maturity model, see what the data show about how teams like yours are performing at each stage, and leave with concrete next steps — not theory, but something you can act on tomorrow: \r\nHow AI is impacting each phase of the SDLC—and where it creates the most risk  \r\nThe most common quality issues introduced by AI-generated code  \r\nHow to build reciprocal feedback loops where your team’s domain expertise ensures outputs are repeatable, high-quality, and continuously improved upon by both humans and AI "
+        }
+      ],
+      "roomId": null,
+      "liveUrl": null,
+      "recordingUrl": null,
+      "status": "Accepted",
+      "isInformed": true,
+      "isConfirmed": false
+    },
+    {
       "id": "1175500",
       "title": "Layoff to Launch",
       "description": "Losing a job can feel like a dead end, but what if its the start of your ever big chapter ? session covers strategies for turning layoffs and reorgs in to career comebacks, leverage your network, upskill, and pivot in to new opportunities. if you are navigating a layoff or looking to future-proof your career, this session will equip you with practical tools to turn roadblocks in to launchpads. ",
@@ -275,6 +301,31 @@
       "status": "Accepted",
       "isInformed": true,
       "isConfirmed": true
+    },
+    {
+      "id": "1145022",
+      "title": "Making Migrations Safer and Cheaper with AI-powered Testing",
+      "description": "Migrating legacy systems, such as COBOL-based applications to modern technologies are more feasible today thanks to development copilots that accelerate work and reduce costs (Github Copilot, Cursor, etc). However, testing remains a significant hurdle, especially when documentation is missing or outdated (which is the most common scenario), making it hard to verify that the new system behaves the same as the old one. This talk presents a two-track approach designed to help QA teams tackle this challenge in migrations in a more sustainable way: first, a static understanding of the system through code-derived diagrams and second, a dynamic understanding via observability (being able to ask in natural language to the system what’s happening in the backend), acting as a testing copilot.\r\n\r\nA core contribution of the session is the integration of open-source tools we developed for AI agents that assist testers (https://github.com/abstracta/tero) and a set of examples used to demonstrate with practical demos. To elaborate, the static track uses code-derived diagrams (state machines, flow diagrams, and sequence diagrams) generated directly from the codebase to illuminate system behavior without relying on outdated documentation. In addition, the dynamic track introduces observability as a copilot for testers, enabling real-time visibility into backend behavior in production-like conditions and helping testers validate that changes preserve intended behavior even in the absence of perfect docs.\r\n\r\nThe talk emphasizes AI as a friendly ally for testers across roles, not just developers, and avoids overpromising metrics. While formal metrics are still in progress, early signals suggest that this approach can enable more feasible migration projects by optimizing the testing part. As part of the process, we need a validation stage that will combine expert reviews of generated artifacts (diagrams and observability outputs) with cross-checks by peers to ensure coherence and usefulness. \r\n\r\nContribution to the audience\r\nThis talk offers a practical, replicable view on how to address legacy migrations from a QA lens powered by AI, without relying on complete or up-to-date documentation. It promotes an “AI as ally” narrative that fosters collaboration among testers, developers, and stakeholders, and it establishes a clear pathway aiming to reduce costs and delivery times while safeguarding quality and behavioral verification.\r\n\r\nNotes for reviewers\r\nTarget audience: QA managers, test leads, engineering managers, VPs and DevOps leaders involved in migrations.\r\n",
+      "startsAt": null,
+      "endsAt": null,
+      "isServiceSession": false,
+      "isPlenumSession": false,
+      "speakers": [
+        "c21afc82-a118-4469-861a-356a80673ef4"
+      ],
+      "categoryItems": [],
+      "questionAnswers": [
+        {
+          "questionId": 111854,
+          "answerValue": "Migrating legacy systems, such as COBOL-based applications, to modern technologies is more feasible today thanks to development copilots that accelerate work and reduce costs. However, testing remains one of the biggest hurdles, especially when documentation is missing or outdated, making it difficult to verify that the new system behaves like the original.\r\n\r\nThis talk presents two complementary approaches to tackle this problem: a static understanding of the system through code-derived diagrams, and a dynamic understanding through observability, acting as a testing copilot. We introduce open-source tools we built to support AI agents that assist testers, and we demonstrate their use through practical examples and live demos.\r\n\r\nAlthough we are still collecting metrics, early results indicate more viable migration projects and tangible benefits from applying AI to testing. This session reframes AI as a friendly ally for testers—not just developers—supporting legacy migrations where documentation is scarce, obsolete, or absent.\r\n"
+        }
+      ],
+      "roomId": null,
+      "liveUrl": null,
+      "recordingUrl": null,
+      "status": "Accepted",
+      "isInformed": true,
+      "isConfirmed": false
     },
     {
       "id": "1172042",
@@ -652,6 +703,32 @@
       "status": "Accepted",
       "isInformed": true,
       "isConfirmed": true
+    },
+    {
+      "id": "1217166",
+      "title": "When Regression Testing Holds You Hostage",
+      "description": "Is your release cadence for long-lived software bogging down? It’s rarely the result of bad decisions—it’s the cost of success. As systems evolve, they accumulate features, behaviors, and user expectations that make change increasingly complex. In these environments, regressions are not anomalies but a structural reality. Regression testing emerges as the system’s immune response, preserving trust as complexity grows. Over time, however, ever-expanding regression suites slow feedback cycles and unintentionally anchor release velocity.\r\n \r\nThis talk explores test impact analysis (TIA) as a governance model for scaled QA automation. By correlating tests to actual code coverage and using change data to determine impact, TIA introduces precision and policy into regression execution. Instead of relying on blanket “run everything” strategies, teams can make informed, repeatable decisions about what to test, when, and why. Attendees will see how this approach transforms regression testing from a blunt instrument into a sustainable, scalable quality strategy for complex systems.\r\n \r\n You'll learn how to:\r\n \r\n* Recognize why complexity, regressions, and expanding regression suites are inevitable outcomes of successful, long-lived software—and why they demand intentional governance.\r\n* Understand regression gravity as a systemic force that constrains release frequency, feedback loops, and automation scalability.\r\n* Apply test impact analysis principles as a governance mechanism to control regression growth, optimize execution, and maintain confidence at scale.",
+      "startsAt": null,
+      "endsAt": null,
+      "isServiceSession": false,
+      "isPlenumSession": false,
+      "speakers": [
+        "b95160c7-6d7c-4d98-9843-66691f2a29f0",
+        "779cc5b9-3221-446b-8882-405edd5dbe0b"
+      ],
+      "categoryItems": [],
+      "questionAnswers": [
+        {
+          "questionId": 111854,
+          "answerValue": "Is your release cadence for long-lived software bogging down? It’s rarely the result of bad decisions—it’s the cost of success. As systems evolve, they accumulate features, behaviors, and user expectations that make change increasingly complex. In these environments, regressions are not anomalies but a structural reality. Regression testing emerges as the system’s immune response, preserving trust as complexity grows. Over time, however, ever-expanding regression suites slow feedback cycles and unintentionally anchor release velocity.\r\n \r\nThis talk explores test impact analysis (TIA) as a governance model for scaled QA automation. By correlating tests to actual code coverage and using change data to determine impact, TIA introduces precision and policy into regression execution. Instead of relying on blanket “run everything” strategies, teams can make informed, repeatable decisions about what to test, when, and why. Attendees will see how this approach transforms regression testing from a blunt instrument into a sustainable, scalable quality strategy for complex systems.\r\n \r\n You'll learn how to:\r\n \r\n* Recognize why complexity, regressions, and expanding regression suites are inevitable outcomes of successful, long-lived software—and why they demand intentional governance.\r\n* Understand regression gravity as a systemic force that constrains release frequency, feedback loops, and automation scalability.\r\n* Apply test impact analysis principles as a governance mechanism to control regression growth, optimize execution, and maintain confidence at scale."
+        }
+      ],
+      "roomId": null,
+      "liveUrl": null,
+      "recordingUrl": null,
+      "status": "Accepted",
+      "isInformed": true,
+      "isConfirmed": false
     }
   ],
   "speakers": [
@@ -875,6 +952,33 @@
       "questionAnswers": []
     },
     {
+      "id": "b95160c7-6d7c-4d98-9843-66691f2a29f0",
+      "firstName": "David",
+      "lastName": "Vano",
+      "bio": " As Parasoft's CRO, Dave drives the overall strategy, vision, and execution of all customer-facing activities worldwide. He ensures that Parasoft is a dedicated partner in helping its customers deliver high-quality solutions faster and with less risk. Dave has more than 30 years of experience in technology, starting as a Cryptologic Technician in the U.S. Navy. Prior to joining Parasoft, Dave held a variety of senior go-to-market leadership positions with Micro Focus, NetIQ Corporation, and BMC Software. Dave retired from the U.S. Navy with over 20 years of service both in active duty and as a reservist. He holds a bachelor’s degree from Excelsior College.\r\n",
+      "tagLine": "Chief Revenue Officer, Parasoft Corporation",
+      "profilePicture": "https://sessionize.com/image/537e-400o400o1-BSjvHaVJp3XHMnRWecn3SL.png",
+      "isTopSpeaker": false,
+      "links": [
+        {
+          "title": "LinkedIn",
+          "url": "https://www.linkedin.com/in/djvano/",
+          "linkType": "LinkedIn"
+        },
+        {
+          "title": "Company Website",
+          "url": "http://www.parasoft.com",
+          "linkType": "Company_Website"
+        }
+      ],
+      "sessions": [
+        1217166
+      ],
+      "fullName": "David Vano",
+      "categoryItems": [],
+      "questionAnswers": []
+    },
+    {
       "id": "be614ae7-9376-41e9-9c0d-bc3df923be71",
       "firstName": "Emma",
       "lastName": "Clouse",
@@ -893,6 +997,70 @@
         1176192
       ],
       "fullName": "Emma Clouse",
+      "categoryItems": [],
+      "questionAnswers": []
+    },
+    {
+      "id": "c21afc82-a118-4469-861a-356a80673ef4",
+      "firstName": "Federico",
+      "lastName": "Toledo",
+      "bio": "Driven by the challenge of making a positive impact through quality software, Federico Toledo boasts 18 years in the IT field. He's the co-founder and Chief Quality Officer of Abstracta (https://abstracta.us/), a global tech company dedicated to creating impactful software solutions, focusing on testing, innovation and development.\r\n\r\nFederico holds a degree in Computer Engineering from the Universidad de la República in Uruguay, a Ph.D.in Computer Science from the Universidad de Castilla-La Mancha in Spain, and is also a proud graduate of the Stanford + LBAN SLEI program in 2021. A renowned speaker and author, he also hosts the \"Quality Sense” podcast and its namesake conference, showcasing his unparalleled commitment to software excellence.",
+      "tagLine": "Co-founder and Chief Quality Officer at Abstracta",
+      "profilePicture": "https://sessionize.com/image/9453-400o400o1-LkzjetosFpZEy2YzMyzoXn.png",
+      "isTopSpeaker": false,
+      "links": [
+        {
+          "title": "X (Twitter)",
+          "url": "https://twitter.com/fltoledo",
+          "linkType": "Twitter"
+        },
+        {
+          "title": "LinkedIn",
+          "url": "https://www.linkedin.com/in/federicotoledo/",
+          "linkType": "LinkedIn"
+        },
+        {
+          "title": "Blog",
+          "url": "https://www.federico-toledo.com/",
+          "linkType": "Blog"
+        },
+        {
+          "title": "Company Website",
+          "url": "https://abstracta.us/",
+          "linkType": "Company_Website"
+        }
+      ],
+      "sessions": [
+        1145022
+      ],
+      "fullName": "Federico Toledo",
+      "categoryItems": [],
+      "questionAnswers": []
+    },
+    {
+      "id": "f41ce9eb-dc5e-4fa1-b45b-db16965582b9",
+      "firstName": "Jeff",
+      "lastName": "Van Fleet",
+      "bio": "Co-author of The Coach and the Geek: Building a Kick Butt Culture. After spending 17 years managing, developing, and deploying complex software/hardware systems for both commercial and Department of Defense (DoD) applications, Jeff founded Lighthouse Technologies in 2000. Their mission is to empower software teams to improve productivity and quality while improving work/life balance. Armed with a deep knowledge of culture building and motivational leadership tactics and a wealth of expertise in software engineering and quality assurance, he’s both a hands-on company leader and the primary architect of Lighthouse’s celebrated workplace culture. When not at work, Jeff loves spending time with his family, baking bread, cheering for Penn State, and hiking.",
+      "tagLine": "President & CEO | Lighthouse Technologies",
+      "profilePicture": "https://sessionize.com/image/6d42-400o400o1-nv4j9s6nYWvBAWGs9iVbNL.jpg",
+      "isTopSpeaker": false,
+      "links": [
+        {
+          "title": "LinkedIn",
+          "url": "https://www.linkedin.com/in/jeff-van-fleet-381ba4/",
+          "linkType": "LinkedIn"
+        },
+        {
+          "title": "Company Website",
+          "url": "https://lighthousetechnologies.com/",
+          "linkType": "Company_Website"
+        }
+      ],
+      "sessions": [
+        1217153
+      ],
+      "fullName": "Jeff Van Fleet",
       "categoryItems": [],
       "questionAnswers": []
     },
@@ -1321,6 +1489,33 @@
       "questionAnswers": []
     },
     {
+      "id": "877ff616-7fb1-4485-982c-771550afc798",
+      "firstName": "Scott",
+      "lastName": "Boyd",
+      "bio": "After more than 25 years leading large-scale digital transformation — most notably at Capgemini, serving Fortune 500 clients across financial services, insurance, healthcare, and retail — Scott joined Lighthouse Technologies as Chief Operating Officer to help enterprises solve their most complex business and technology challenges. A U.S. Army veteran, Scott brings the same discipline and commitment to his work that he learned in uniform. He is both a hands-on delivery leader and a genuine partner to the clients and teams he serves. Outside of work, Scott enjoys spending time with his family, cheering on Ohio State, diving into research, chasing the perfect photograph, volunteering with Veterans Associations and the Mid-Ohio Food Collective, and pursuing a lifelong passion for learning.",
+      "tagLine": "Chief Operating Officer | Lighthouse Technologies",
+      "profilePicture": "https://sessionize.com/image/4046-400o400o1-V1h9tNSo4nah7Li3u4ReXY.jpg",
+      "isTopSpeaker": false,
+      "links": [
+        {
+          "title": "LinkedIn",
+          "url": "https://www.linkedin.com/in/scottallenboyd",
+          "linkType": "LinkedIn"
+        },
+        {
+          "title": "Company Website",
+          "url": "https://lighthousetechnologies.com",
+          "linkType": "Company_Website"
+        }
+      ],
+      "sessions": [
+        1217153
+      ],
+      "fullName": "Scott Boyd",
+      "categoryItems": [],
+      "questionAnswers": []
+    },
+    {
       "id": "620d785b-3e5c-4c81-bee7-5d1be217853b",
       "firstName": "Tanvi",
       "lastName": "Mittal",
@@ -1497,6 +1692,38 @@
         1129517
       ],
       "fullName": "Tina Fletcher",
+      "categoryItems": [],
+      "questionAnswers": []
+    },
+    {
+      "id": "779cc5b9-3221-446b-8882-405edd5dbe0b",
+      "firstName": "Wilhelm",
+      "lastName": "Haaker",
+      "bio": "Wilhelm Haaker, director of solution engineering at Parasoft, manages a global team of solution engineers dedicated to Parasoft’s web and cloud solutions. His team helps organizations modernize their software development and testing processes and optimize test automation for Agile transformation, API first, and cloud migration initiatives.",
+      "tagLine": "Director, Solution Engineering at Parasoft",
+      "profilePicture": "https://sessionize.com/image/7574-400o400o1-hZGr2WkHDpTRQU5haGCYyR.jpg",
+      "isTopSpeaker": false,
+      "links": [
+        {
+          "title": "LinkedIn",
+          "url": "https://www.linkedin.com/in/wilhelmhaaker/",
+          "linkType": "LinkedIn"
+        },
+        {
+          "title": "Blog",
+          "url": "https://www.parasoft.com/blog/authors/wilhelm-haaker/",
+          "linkType": "Blog"
+        },
+        {
+          "title": "Company Website",
+          "url": "https://www.parasoft.com/",
+          "linkType": "Company_Website"
+        }
+      ],
+      "sessions": [
+        1217166
+      ],
+      "fullName": "Wilhelm Haaker",
       "categoryItems": [],
       "questionAnswers": []
     }

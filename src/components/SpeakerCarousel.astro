@@ -40,6 +40,10 @@ const { speakers } = Astro.props;
   ))}
 </div>
 
+<div class="speaker-carousel-progress md:hidden mx-4 mt-8 h-1 overflow-hidden rounded-full bg-white/10">
+  <div class="speaker-carousel-progress-bar h-full rounded-full bg-[var(--color-accent)] transition-[width] duration-150" style="width: 0%"></div>
+</div>
+
 <style is:global>
   .speaker-carousel .carousel-cell {
     min-height: 100%;
@@ -55,8 +59,13 @@ const { speakers } = Astro.props;
     overflow-x: clip;
     overflow-y: visible;
   }
-  .speaker-carousel .flickity-page-dots {
-    bottom: -50px;
+  .speaker-carousel .flickity-prev-next-button {
+    display: none;
+  }
+  @media (min-width: 768px) {
+    .speaker-carousel .flickity-prev-next-button {
+      display: block;
+    }
   }
 </style>
 
@@ -74,15 +83,23 @@ const { speakers } = Astro.props;
     }
     for (const cell of cells) carousel.appendChild(cell);
 
-    new Flickity(carousel, {
+    const flkty = new Flickity(carousel, {
       cellAlign: 'left',
       contain: false,
       wrapAround: true,
       autoPlay: 3000,
       pauseAutoPlayOnHover: true,
-      pageDots: true,
-      prevNextButtons: false,
+      pageDots: false,
+      prevNextButtons: true,
       freeScroll: true,
     });
+
+    const progressBar = document.querySelector('.speaker-carousel-progress-bar') as HTMLElement | null;
+    if (progressBar) {
+      flkty.on('scroll', (progress: number) => {
+        const clamped = Math.max(0, Math.min(1, progress));
+        progressBar.style.width = `${clamped * 100}%`;
+      });
+    }
   }
 </script>
