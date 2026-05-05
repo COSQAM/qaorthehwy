@@ -1,6 +1,31 @@
 {
   "sessions": [
     {
+      "id": "1187097",
+      "title": "AI Testing Hackathon Workshop",
+      "description": "Break the AI Agent RAG Application in 4 Hours - Find the failures before real users ever see them.",
+      "startsAt": null,
+      "endsAt": null,
+      "isServiceSession": false,
+      "isPlenumSession": false,
+      "speakers": [
+        "7a4da457-4a7c-4f69-9645-5474c9cd0401"
+      ],
+      "categoryItems": [],
+      "questionAnswers": [
+        {
+          "questionId": 111854,
+          "answerValue": "This practical hackathon gives students the chance to work like real AI testers. In teams, participants will use Agenta.ai to test the WeOptimize AI system, uncover reliability and safety issues, and present the most important findings to judges.\r\nThis event goes beyond basic prompting. It focuses on one of the most valuable emerging skills in tech: evaluating whether AI applications are trustworthy, safe, and ready for production."
+        }
+      ],
+      "roomId": null,
+      "liveUrl": null,
+      "recordingUrl": null,
+      "status": "Accepted",
+      "isInformed": true,
+      "isConfirmed": false
+    },
+    {
       "id": "1175077",
       "title": "AI Testing Isn't One Thing (And Treating It Like It Is Will Bite You)",
       "description": "Your team shipped an AI feature. Congrats. Now someone asks: how do we test this?\r\n\r\nYou write a test. The output changes. You run it again. Different output. You consider a career in farming.\r\n\r\nHere's the thing nobody tells you upfront: testing AI-powered software isn't one discipline, it's two. And the moment you try to apply one strategy to both, you're in trouble.\r\n\r\nThis talk breaks down the Two-Track Testing Model that every QA engineer building on AI needs to understand. There's the deterministic side, your traditional test pyramid covering infrastructure, routing, logic, and guardrails, and there's the AI evaluation side, where outputs are non-deterministic, pass/fail doesn't exist, and you need a completely different mental model to even know what \"quality\" means.\r\n\r\nWe'll walk through how these two tracks diverge, when they converge, and what it takes to get quality signals from both. You'll leave with a practical framework: the Three Pillars of AI Evaluation (human eval, deterministic checks, and LLM-as-judge), a benchmark-first approach to designing your eval strategy, and a clear picture of how maturity stage changes what you should be testing and how.\r\n\r\nThe fundamentals of our craft haven't changed. The pesticide paradox still applies. Risk-based thinking still applies. You still can't test everything. But the tools, vocabulary, and decision-making are genuinely new, and it's worth getting oriented before you're neck-deep in a chatbot that nobody can evaluate with any confidence.\r\n\r\nThis is the talk I wish existed when I started.",
@@ -199,7 +224,7 @@
       "recordingUrl": null,
       "status": "Accepted",
       "isInformed": true,
-      "isConfirmed": false
+      "isConfirmed": true
     },
     {
       "id": "1113140",
@@ -293,6 +318,31 @@
         {
           "questionId": 111854,
           "answerValue": "Turning Career roadblocks in to comebacks."
+        }
+      ],
+      "roomId": null,
+      "liveUrl": null,
+      "recordingUrl": null,
+      "status": "Accepted",
+      "isInformed": true,
+      "isConfirmed": true
+    },
+    {
+      "id": "1130073",
+      "title": "Life after Tech: Rebuilding your Career in the Post-Tech Economy",
+      "description": "An interactive workshop let by a veteran tech industry employee and certified career coach.\r\n\r\nIn this session, we'll:\r\n- Identify your strongest tech skills and how they are transferable to other industries and roles\r\n- Identify what you hope to get out of your relationship with your work\r\n- Identify your target industries and roles and how you might capture them\r\n\r\nAttendees will leave with a plan for what to do now, next and later as they embark on a journey toward their personal  \"Career Nirvana\"\r\n\r\nThis workshop can be run in either 1 hour or 2 hours, the 2 hour version is more in depth and hands-on. \r\n\r\nSpeaker profile: https://docs.google.com/document/d/1cW-RW9_0qRlaDh8MREHUOSmdLPqvnJRoSusQ1lZ1NAM/edit?usp=sharing",
+      "startsAt": null,
+      "endsAt": null,
+      "isServiceSession": false,
+      "isPlenumSession": false,
+      "speakers": [
+        "f227437b-faf5-48cf-81a9-1cfe0d51f7bc"
+      ],
+      "categoryItems": [],
+      "questionAnswers": [
+        {
+          "questionId": 111854,
+          "answerValue": "The tech industry is imploding. More and more of us are competing for fewer and fewer jobs, jobs that are less lucrative, more boring, more stressful, and even more toxic. On top of all of this, jobs that once permitted us to contribute something positive to the world now routinely ask us to ignore our moral compass. It’s time we all take a hard look at the work we are doing, how it’s serving us and our communities, and decide what we’d like to be doing instead.\r\n\r\nIn this interactive session, a long-time tech worker and certified career coach will guide you through the steps necessary to find your path to a new and rewarding career. We’ll identify our strongest and most transferable skills, uncover what we really hope to get out of our relationship with our work, and then look for new careers in different industries that match our abilities and desires.\r\n\r\nYou’ll leave with a clear plan of action for your “Life after Tech”"
         }
       ],
       "roomId": null,
@@ -603,31 +653,6 @@
       "status": "Accepted",
       "isInformed": true,
       "isConfirmed": true
-    },
-    {
-      "id": "1168645",
-      "title": "The RRQI Method: Turning \"Go/No-Go\" Decisions into Data-Driven Science",
-      "description": "Release decisions are rarely as objective as we’d like them to be. We sit in “Go/No-Go” meetings asking if we’re ready, but the answers tend to lean on gut feelings, pass rate snapshots, or wishful thinking rather than actual readiness. That was the problem we kept running into: too much activity, not enough clarity. So we built the Release Readiness Quality Index (RRQI): a practical framework that turns progress into a score, not a guess. By combining three weighted factors—Coverage Confidence (how well we tested the right things), Execution Confidence (how stable those tests were), and Defect Risk (how serious the remaining bugs are)—we created a 0-100 scale to track readiness like a trend, not a binary call.\r\n\r\nIn this session, I’ll break down how the RRQI works, share the formulas we used, and show how it helped us spot risk earlier, align teams faster, and make our release decisions easier to defend. You’ll leave with everything you need to build your own version—so your next Go/No-Go can actually feel like a real decision, not a leap of faith.\r\n\r\nKey Takeaways:\r\n1. Eliminate Subjectivity: Replace \"gut feelings\" with a composite score (0-100) based on coverage, execution, and risk.\r\n2. Trend Analysis: Learn to track readiness as a progressive trend relative to your deadline rather than a static snapshot.\r\n3. Risk Quantification: Apply weighted formulas to prioritize residual risk over simple bug counts.",
-      "startsAt": null,
-      "endsAt": null,
-      "isServiceSession": false,
-      "isPlenumSession": false,
-      "speakers": [
-        "49bdd184-05d7-4dc4-a2bb-ed46db78ee5c"
-      ],
-      "categoryItems": [],
-      "questionAnswers": [
-        {
-          "questionId": 111854,
-          "answerValue": "Release decisions are rarely as objective as we’d like them to be. We sit in “Go/No-Go” meetings asking if we’re ready, but the answers tend to lean on gut feelings, pass rate snapshots, or wishful thinking rather than actual readiness. That was the problem we kept running into: too much activity, not enough clarity. So we built the Release Readiness Quality Index (RRQI): a practical framework that turns progress into a score, not a guess. By combining three weighted factors—Coverage Confidence (how well we tested the right things), Execution Confidence (how stable those tests were), and Defect Risk (how serious the remaining bugs are)—we created a 0-100 scale to track readiness like a trend, not a binary call.\r\n\r\nIn this session, I’ll break down how the RRQI works, share the formulas we used, and show how it helped us spot risk earlier, align teams faster, and make our release decisions easier to defend. You’ll leave with everything you need to build your own version—so your next Go/No-Go can actually feel like a real decision, not a leap of faith."
-        }
-      ],
-      "roomId": null,
-      "liveUrl": null,
-      "recordingUrl": null,
-      "status": "Accepted",
-      "isInformed": true,
-      "isConfirmed": false
     },
     {
       "id": "1183766",
@@ -1038,6 +1063,38 @@
       "questionAnswers": []
     },
     {
+      "id": "7a4da457-4a7c-4f69-9645-5474c9cd0401",
+      "firstName": "Igor",
+      "lastName": "Dorovskikh",
+      "bio": "CEO and Founder of Mobile Consulting startup Engenious.io with clients like Apple and Grammarly behind the belt.\r\nAlmost a decade in teaching mobile testing and test automation with a focus on native solutions such as XCUITest and Espresso, emphasizing scaling test automation to the enterprise level. \r\nWorked in silicon valleys’ fortune 500 companies such as Expedia and Barnes &  Noble while being a  crucial driver behind mobile release management, QA process, and Mobile DevOps. \r\n",
+      "tagLine": "Engenious, CEO and Founder",
+      "profilePicture": "https://sessionize.com/image/5d80-400o400o1-WRMCCP9C1oYqv6pQ3UHrpA.jpg",
+      "isTopSpeaker": false,
+      "links": [
+        {
+          "title": "LinkedIn",
+          "url": "https://www.linkedin.com/in/igordorovskikh/",
+          "linkType": "LinkedIn"
+        },
+        {
+          "title": "Blog",
+          "url": "https://engenious.io/posts",
+          "linkType": "Blog"
+        },
+        {
+          "title": "Company Website",
+          "url": "https://engenious.io/",
+          "linkType": "Company_Website"
+        }
+      ],
+      "sessions": [
+        1187097
+      ],
+      "fullName": "Igor Dorovskikh",
+      "categoryItems": [],
+      "questionAnswers": []
+    },
+    {
       "id": "f41ce9eb-dc5e-4fa1-b45b-db16965582b9",
       "firstName": "Jeff",
       "lastName": "Van Fleet",
@@ -1124,38 +1181,6 @@
       "questionAnswers": []
     },
     {
-      "id": "49bdd184-05d7-4dc4-a2bb-ed46db78ee5c",
-      "firstName": "Joel",
-      "lastName": "Montvelisky",
-      "bio": "Joel Montvelisky is PractiTest’s Co-Founder and Chief Product Officer (CPO).\r\n\r\nJoel has been part of the testing and QA world since 1997, working as a tester, QA Manager and Director, and Consultant for companies across the globe. During this time he was guiding changes in testing from legacy to modern-day approaches. Joel is a Forbes Council member (https://www.forbes.com/sites/forbestechcouncil/2020/12/16/the-new-role-of-the-software-quality-architect/?sh=3ae54ed94500), a blogger, and a lecturer.\r\n\r\nJoel is the founder and Chair of the OnlineTestConf (http://www.onlinetestconf.com/), the co-founder of the State of Testing (http://qablog.practitest.com/state-of-testing/) survey and report. These “for the community” initiatives are a representation of his belief in sharing knowledge and making it available to as many people as possible.\r\n\r\nJoel is a seasoned conference speaker worldwide, among them the STAR Conferences, STPCon, JaSST, TestLeadership Conf, CAST, QA&Test, and more.",
-      "tagLine": "PractiTest Co-Founder and CPO",
-      "profilePicture": "https://sessionize.com/image/ea6c-400o400o1-VrzALKnuCnyhThVZJau3DT.jpg",
-      "isTopSpeaker": false,
-      "links": [
-        {
-          "title": "X (Twitter)",
-          "url": "https://x.com/joelmonte",
-          "linkType": "Twitter"
-        },
-        {
-          "title": "LinkedIn",
-          "url": "https://www.linkedin.com/in/joelm3/",
-          "linkType": "LinkedIn"
-        },
-        {
-          "title": "Company Website",
-          "url": "https://www.practitest.com/",
-          "linkType": "Company_Website"
-        }
-      ],
-      "sessions": [
-        1168645
-      ],
-      "fullName": "Joel Montvelisky",
-      "categoryItems": [],
-      "questionAnswers": []
-    },
-    {
       "id": "a168013e-bb21-4097-ad0b-b7b9118dd449",
       "firstName": "Joel",
       "lastName": "Wilson",
@@ -1188,7 +1213,7 @@
       "lastName": "Roe",
       "bio": "Kevin has been in quality engineering since 2012, spending the last 14 years building test automation frameworks and finding better ways to help teams ship with confidence. He currently works as a Senior SDET  at Ramsey Solutions, where he focuses on test automation infrastructure, tooling, and helping his team level up. Outside of work, he teaches coding camps for middle and high school students and tinkers with drones, 3D printers, and spends time with his family and at his church.",
       "tagLine": "Senior SDET, Ramsey Solutions",
-      "profilePicture": "https://sessionize.com/image/5a57-400o400o1-GpqcDNt2uAEDNrjLdfmX1y.png",
+      "profilePicture": "https://sessionize.com/image/2704-400o400o1-Q4y4PjaVLPzC7tpQXHLQEH.jpg",
       "isTopSpeaker": false,
       "links": [
         {
@@ -1404,6 +1429,38 @@
         1185386
       ],
       "fullName": "Mohini Agarwal",
+      "categoryItems": [],
+      "questionAnswers": []
+    },
+    {
+      "id": "f227437b-faf5-48cf-81a9-1cfe0d51f7bc",
+      "firstName": "Nicole",
+      "lastName": "Derr",
+      "bio": "Nicole Derr is an agile coach turned community changemaker. She partners with leaders to build resilient, long-lasting organizations that contribute positively to their communities. Together they grow companies through innovative products and scalable, cooperative, people-first business practices. Improved business outcomes are the natural result.\r\n\r\nNicole has extensive experience with organizations of all sizes, from 1 to 20,000 employees, and in a broad range of industries, from tech, manufacturing, and finance, to non-profit, public service, and academia. She has worked throughout the midwest, the United States and beyond, but her favorite engagements are with small organizations making an impact in their local community. While Nicole’s focus is executives and leaders, she has worked with team members at all levels and across the entire organization.",
+      "tagLine": "Recovering Agile Coach | Resilient Organizations, Thriving Communities",
+      "profilePicture": "https://sessionize.com/image/bed8-400o400o1-aC4nVqQVr4FAPkmM7X6xAk.jpg",
+      "isTopSpeaker": false,
+      "links": [
+        {
+          "title": "LinkedIn",
+          "url": "https://www.linkedin.com/in/nicolederr/",
+          "linkType": "LinkedIn"
+        },
+        {
+          "title": "Blog",
+          "url": "https://nicolederr.com/blog-2/",
+          "linkType": "Blog"
+        },
+        {
+          "title": "Company Website",
+          "url": "https://nicolederr.com/",
+          "linkType": "Company_Website"
+        }
+      ],
+      "sessions": [
+        1130073
+      ],
+      "fullName": "Nicole Derr",
       "categoryItems": [],
       "questionAnswers": []
     },
