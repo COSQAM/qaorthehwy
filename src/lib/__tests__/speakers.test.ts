@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { speakerSlug, getCoSpeakerIds } from '../speakers';
+import { speakerSlug, getCoSpeakerIds, isSpeakerConfirmed } from '../speakers';
 
 describe('speakerSlug', () => {
   it('lowercases first and last name joined by a dash', () => {
@@ -69,5 +69,62 @@ describe('getCoSpeakerIds', () => {
       'beta',
     );
     expect(ids.sort()).toEqual(['alpha', 'gamma']);
+  });
+});
+
+describe('isSpeakerConfirmed', () => {
+  it('returns true when the speaker has no sessions (preserves visibility for unscheduled keynotes)', () => {
+    expect(isSpeakerConfirmed('alpha', [])).toBe(true);
+    expect(
+      isSpeakerConfirmed('alpha', [{ speakers: ['beta'], isConfirmed: false }]),
+    ).toBe(true);
+  });
+
+  it('returns true when the speaker has one confirmed session', () => {
+    expect(
+      isSpeakerConfirmed('alpha', [
+        { speakers: ['alpha'], isConfirmed: true },
+      ]),
+    ).toBe(true);
+  });
+
+  it('returns true when isConfirmed is missing on the speaker session', () => {
+    // Treat absent flag as confirmed, matching isSessionConfirmed.
+    expect(isSpeakerConfirmed('alpha', [{ speakers: ['alpha'] }])).toBe(true);
+  });
+
+  it('returns false when the speaker has only one unconfirmed session', () => {
+    expect(
+      isSpeakerConfirmed('alpha', [
+        { speakers: ['alpha'], isConfirmed: false },
+      ]),
+    ).toBe(false);
+  });
+
+  it('returns true when the speaker has a mix of confirmed and unconfirmed sessions', () => {
+    expect(
+      isSpeakerConfirmed('alpha', [
+        { speakers: ['alpha'], isConfirmed: false },
+        { speakers: ['alpha'], isConfirmed: true },
+      ]),
+    ).toBe(true);
+  });
+
+  it('returns false when the speaker has multiple sessions all unconfirmed', () => {
+    expect(
+      isSpeakerConfirmed('alpha', [
+        { speakers: ['alpha'], isConfirmed: false },
+        { speakers: ['alpha', 'beta'], isConfirmed: false },
+      ]),
+    ).toBe(false);
+  });
+
+  it('ignores sessions belonging only to other speakers', () => {
+    expect(
+      isSpeakerConfirmed('alpha', [
+        { speakers: ['beta'], isConfirmed: false },
+        { speakers: ['alpha'], isConfirmed: true },
+      ]),
+    ).toBe(true);
   });
 });

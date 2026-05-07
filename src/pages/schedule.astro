@@ -4,7 +4,7 @@ import PageHeader from '../components/PageHeader.astro';
 import sessionizeData from '../data/sessionize.json';
 import { getSchedulePhaseConfig } from '../config/schedule';
 import { speakerSlug } from '../lib/speakers';
-import { formatTime, isValidDate } from '../lib/sessions';
+import { formatTime, isValidDate, isSessionConfirmed } from '../lib/sessions';
 
 // Base URL for assets
 const base = import.meta.env.BASE_URL;
@@ -19,10 +19,13 @@ const roomMap = new Map(sessionizeData.rooms.map(r => [r.id, r]));
 // Check if times should be shown
 const showTimes = schedulePhase.showTimes;
 
+// Hide unconfirmed sessions (Sessionize sets isConfirmed=false until the speaker confirms)
+const baseSessions = sessionizeData.sessions.filter(isSessionConfirmed);
+
 // Filter out service sessions when times are TBD (they only make sense with a timeline)
 const displaySessions = showTimes
-  ? sessionizeData.sessions
-  : sessionizeData.sessions.filter((s: any) => !s.isServiceSession);
+  ? baseSessions
+  : baseSessions.filter((s: any) => !s.isServiceSession);
 
 // Group all sessions (including service sessions) by time slot
 const sessionsByTime = new Map();

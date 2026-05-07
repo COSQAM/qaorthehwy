@@ -4,12 +4,17 @@ import SpeakerCard from '../components/SpeakerCard.astro';
 import PageHeader from '../components/PageHeader.astro';
 import sessionizeData from '../data/sessionize.json';
 import { getSpeakerPhaseConfig } from '../config/speakers';
-import { speakerSlug } from '../lib/speakers';
+import { speakerSlug, isSpeakerConfirmed } from '../lib/speakers';
 
 // Get current speaker phase configuration
 const speakerPhase = getSpeakerPhaseConfig();
 
-const allSpeakers = sessionizeData.speakers.sort((a: any, b: any) => {
+// Hide speakers whose only sessions are unconfirmed in Sessionize
+const confirmedSpeakers = sessionizeData.speakers.filter((s: any) =>
+  isSpeakerConfirmed(s.id, sessionizeData.sessions),
+);
+
+const allSpeakers = confirmedSpeakers.sort((a: any, b: any) => {
   // Sort keynotes first
   if (a.isTopSpeaker && !b.isTopSpeaker) return -1;
   if (!a.isTopSpeaker && b.isTopSpeaker) return 1;

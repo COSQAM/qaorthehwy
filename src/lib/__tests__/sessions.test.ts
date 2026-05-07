@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { formatTime, formatSessionTime } from '../sessions';
+import { formatTime, formatSessionTime, isSessionConfirmed } from '../sessions';
 
 describe('formatTime', () => {
   it('returns null for null/undefined/empty', () => {
@@ -35,5 +35,24 @@ describe('formatSessionTime', () => {
   it('joins start and end with " - " when both are valid', () => {
     const out = formatSessionTime('2026-06-12T09:30:00', '2026-06-12T10:20:00');
     expect(out).toMatch(/^\d{1,2}:\d{2}\s?(AM|PM) - \d{1,2}:\d{2}\s?(AM|PM)$/);
+  });
+});
+
+describe('isSessionConfirmed', () => {
+  it('returns true when isConfirmed is true', () => {
+    expect(isSessionConfirmed({ isConfirmed: true })).toBe(true);
+  });
+
+  it('returns true when isConfirmed is missing', () => {
+    // Service sessions (breaks, lunch) merged from GridSmart don't carry the flag.
+    expect(isSessionConfirmed({})).toBe(true);
+  });
+
+  it('returns true when isConfirmed is undefined', () => {
+    expect(isSessionConfirmed({ isConfirmed: undefined })).toBe(true);
+  });
+
+  it('returns false when isConfirmed is false', () => {
+    expect(isSessionConfirmed({ isConfirmed: false })).toBe(false);
   });
 });

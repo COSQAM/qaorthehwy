@@ -3,8 +3,8 @@ import Layout from "../../layouts/Layout.astro";
 import SpeakerProfileCard from "../../components/SpeakerProfileCard.astro";
 import sessionizeData from "../../data/sessionize.json";
 import { renderDescription } from "../../lib/markdown";
-import { formatSessionTime } from "../../lib/sessions";
-import { speakerSlug, getCoSpeakerIds } from "../../lib/speakers";
+import { formatSessionTime, isSessionConfirmed } from "../../lib/sessions";
+import { speakerSlug, getCoSpeakerIds, isSpeakerConfirmed } from "../../lib/speakers";
 
 const base = import.meta.env.BASE_URL;
 
@@ -16,6 +16,7 @@ type Session = {
   endsAt: string | null;
   roomId: number | null;
   speakers: string[];
+  isConfirmed?: boolean;
 };
 
 type Room = {
@@ -35,19 +36,23 @@ type Speaker = {
 };
 
 export function getStaticPaths() {
-  return sessionizeData.speakers.map((speaker) => ({
-    params: { id: speakerSlug(speaker) },
-    props: { speaker },
-  }));
+  return sessionizeData.speakers
+    .filter((speaker) =>
+      isSpeakerConfirmed(speaker.id, sessionizeData.sessions),
+    )
+    .map((speaker) => ({
+      params: { id: speakerSlug(speaker) },
+      props: { speaker },
+    }));
 }
 
 const { speaker } = Astro.props as { speaker: Speaker };
 const speakers = sessionizeData.speakers as Speaker[];
 const rooms = sessionizeData.rooms as Room[];
 
-const speakerSessions = (sessionizeData.sessions as Session[]).filter(
-  (session) => session.speakers.includes(speaker.id),
-);
+const speakerSessions = (sessionizeData.sessions as Session[])
+  .filter((session) => session.speakers.includes(speaker.id))
+  .filter(isSessionConfirmed);
 
 const coSpeakers = getCoSpeakerIds(speakerSessions, speaker.id)
   .map((id) => speakers.find((s) => s.id === id))

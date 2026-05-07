@@ -21,3 +21,11 @@ export function formatSessionTime(
   if (!start || !end) return "TBA";
   return `${start} - ${end}`;
 }
+
+export interface SessionConfirmation {
+  isConfirmed?: boolean;
+}
+
+export function isSessionConfirmed(session: SessionConfirmation): boolean {
+  return session.isConfirmed !== false;
+}
