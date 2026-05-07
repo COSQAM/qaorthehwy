@@ -1,6 +1,56 @@
 {
   "sessions": [
     {
+      "id": "1172997",
+      "title": "Accessibility testing with Cypress",
+      "description": "The European Accessibility Act began enforcement on June 28, 2025, and the U.S. DOJ's ADA Title II web-app rule has hard compliance dates in 2026/2027.\r\n In this talk, I'll share real examples from projects where catching WCAG issues early saved a lot of time and money compared to fixing them late. \r\nI'll provide examples of testing accessibility using lint rules, component-level accessibility checks (including Storybook), and UI-level validation. I'll also show how I test the real keyboard behavior e2e: TAB order, focus states, common navigation paths.",
+      "startsAt": null,
+      "endsAt": null,
+      "isServiceSession": false,
+      "isPlenumSession": false,
+      "speakers": [
+        "a12c243c-e5e2-4748-a3e6-097c65e2c5c4"
+      ],
+      "categoryItems": [],
+      "questionAnswers": [
+        {
+          "questionId": 111854,
+          "answerValue": "Fixing accessibility late is expensive. In this talk, I’ll share examples from real projects and show how we build early checks: lint rules, component/Storybook validation, UI checks, and Cypress keyboard navigation tests to catch issues before they reach production."
+        }
+      ],
+      "roomId": null,
+      "liveUrl": null,
+      "recordingUrl": null,
+      "status": "Accepted",
+      "isInformed": true,
+      "isConfirmed": false
+    },
+    {
+      "id": "1227446",
+      "title": "Agentic Testing & The Future of Trust",
+      "description": "AI agents are generating more code than ever, but how do you ensure its reliability? Learn why traditional testing fails and how Agentic Testing guarantees trust and scalability in AI-driven systems.",
+      "startsAt": null,
+      "endsAt": null,
+      "isServiceSession": false,
+      "isPlenumSession": false,
+      "speakers": [
+        "497ccbc4-ed0c-4fa2-88dd-a14a07cf07c0"
+      ],
+      "categoryItems": [],
+      "questionAnswers": [
+        {
+          "questionId": 111854,
+          "answerValue": "AI agents are helping teams generate more code than ever before. Even the strongest believers in vibe coding caution against placing blind trust in that code. We are living through the fastest expansion of software creation in history, not because we hired more engineers, but because machines are now building software alongside us.\r\n\r\nThis raises a fundamental challenge. How do you test and trust applications created by LLMs, assembled by multiple AI agents, and deployed by automated systems? The tools we rely on today were not designed for this reality or this speed. Unit tests and code reviews inspect logic and functions, but they were never meant to validate dynamic, evolving behavior. Traditional automation struggles when code is generated and modified continuously, becoming fragile and breaking faster than teams can maintain it. As AI agents become embedded into every layer of software, we are no longer just testing code. We are testing autonomous systems themselves.\r\n\r\nIn this talk, we will explore why trust in AI-generated software can no longer be assumed, and why it must be continuously proven. Agentic Testing, the use of autonomous agents to test autonomous systems, emerges as the only scalable solution. These autonomous agents not only plan, execute, and analyze tests but also adapt and challenge systems the way real users would. Agentic Testing validates behavior, reasoning, and outcomes at the system level, ensuring that AI-driven systems meet real-world expectations.\r\n\r\nDrawing from real-world enterprise deployments and lessons learned building an Agentic Testing platform, this talk will reframe quality assurance as a strategic intelligence layer rather than a release-time checkbox. In the age of AI, trust isn’t just a feature, it’s a continuously earned asset. We’ll discuss how businesses can evolve their testing strategies to stay ahead in this rapidly shifting landscape."
+        }
+      ],
+      "roomId": null,
+      "liveUrl": null,
+      "recordingUrl": null,
+      "status": "Accepted",
+      "isInformed": true,
+      "isConfirmed": true
+    },
+    {
       "id": "1187097",
       "title": "AI Testing Hackathon Workshop",
       "description": "Break the AI Agent RAG Application in 4 Hours - Find the failures before real users ever see them.",
@@ -23,7 +73,7 @@
       "recordingUrl": null,
       "status": "Accepted",
       "isInformed": true,
-      "isConfirmed": false
+      "isConfirmed": true
     },
     {
       "id": "1175077",
@@ -91,6 +141,31 @@
         {
           "questionId": 111854,
           "answerValue": "In today’s rapidly changing environment, teams need to pivot quickly while maintaining quality delivery. This talk explores two often-underutilized levers for team optimization: well-crafted playbooks and tactical Agile tuning."
+        }
+      ],
+      "roomId": null,
+      "liveUrl": null,
+      "recordingUrl": null,
+      "status": "Accepted",
+      "isInformed": true,
+      "isConfirmed": true
+    },
+    {
+      "id": "1220037",
+      "title": "Business Challenges of Testing B.U.C.K.E.Y.E.D. – A Self-Driving AI Bus System",
+      "description": "Updated for 2026! AI is rapidly reshaping Software Quality Assurance and Testing—creating new expectations, risks, and business challenges, especially as organizations begin confronting the complexity of testing strong AI systems.\r\n\r\nIn this dynamic, interactive session, attendees will examine how AI is impacting QA and software testing from the perspective of developers, test engineers, managers, executives, and business owners. Using a realistic but fictitious scenario, participants will serve as members of the Checkpoint Technologies Executive IT Team after being awarded a contract by Imaginary Corporation to test B.U.C.K.E.Y.E.D. — Bus Using Cognitive Knowledge, Engineered to Yield Efficient Driving — a fully autonomous, AI-powered self-driving bus system developed for the state of Ohio.\r\n\r\nBecause the system uses strong AI, with advanced autonomous reasoning, learning, and adaptability, the testing effort presents uniquely complex and high-stakes challenges. Led by Bob Crews, CEO of Checkpoint Technologies, participants will identify ten primary business testing challenges through the eyes of an IT Executive Board, with the goal of ensuring project success, reducing risk, preventing negligence, and protecting both Checkpoint Technologies and Imaginary Corporation.",
+      "startsAt": null,
+      "endsAt": null,
+      "isServiceSession": false,
+      "isPlenumSession": false,
+      "speakers": [
+        "26126c45-7534-47b9-9f8b-3b7b7009e047"
+      ],
+      "categoryItems": [],
+      "questionAnswers": [
+        {
+          "questionId": 111854,
+          "answerValue": "Updated for 2026! AI has created various challenges in the Software Quality Assurance and Testing field, and it’s evolving in an incredible way—but not always as you’d expect. These expectations have altered and created new challenges, especially as organizations begin dealing with testing a strong AI system.\r\n\r\nIn this session, we’ll review areas in which AI has impacted software testing & QA and identify core business challenges as they relate to testing a strong AI system.\r\n\r\nThe specific challenges, and the degree of their disruption, depend upon your role - developer, test engineer, manager, executive, or owner(s)? Utilizing a realistic, but fictitious scenario, this dynamic, interactive presentation/exercise will focus on the early engagement on an AI project and identify ten primary challenges as seen through the eyes of an IT Executive Board.\r\n\r\nNow more than ever, we’re charged not just with delivering innovation, but with safeguarding the lifeblood of the enterprise. In this high-energy, fully immersive exercise, you’ll dive into a gripping, fictitious AI project alongside an IT Executive Board, dissecting the core testing challenges, as they relate to the business, and learning how to conquer them from day one. Buckle up—your mission starts now!\r\n\r\nThe Mission: Attendees will be participating as members of the Checkpoint Technologies Executive IT Team. We have been awarded a prestigious contract by Imaginary Corporation to test their state-of-the-art, fully autonomous self-driving bus system B.U.C.K.E.Y.E.D. (Bus Using Cognitive Knowledge, Engineered to Yield Efficient Driving), developed for the state of Ohio. The AI system is a strong AI, meaning it has a higher level of autonomous reasoning, learning, and adaptability than traditional narrow AI systems. This makes testing uniquely complex and high-stake.\r\n\r\nLed and moderated by Bob Crews, CEO of Checkpoint Technologies, we must identify and provide Imaginary Corp. with a list of our primary business testing challenges. Your goal is to ensure project success, minimize and mitigate risk, and protect Checkpoint Technologies and Imaginary Corporation."
         }
       ],
       "roomId": null,
@@ -182,7 +257,7 @@
       "startsAt": null,
       "endsAt": null,
       "isServiceSession": false,
-      "isPlenumSession": false,
+      "isPlenumSession": true,
       "speakers": [
         "17c299ee-d9fd-4020-b499-2837b2b3a2bf"
       ],
@@ -300,7 +375,7 @@
       "recordingUrl": null,
       "status": "Accepted",
       "isInformed": true,
-      "isConfirmed": false
+      "isConfirmed": true
     },
     {
       "id": "1175500",
@@ -326,6 +401,31 @@
       "status": "Accepted",
       "isInformed": true,
       "isConfirmed": true
+    },
+    {
+      "id": "1154958",
+      "title": "LGTM is not a Strategy",
+      "description": "Pull requests are where quality is won or lost, and too many teams still treat reviews with a rushed \"LGTM\". In this talk, you'll learn a practical, repeatable approach to high-quality PR reviews that balances speed with risk management - covering how to triage changes quickly, review in layers, and write comments that lead to better outcomes without friction.  We'll also show how QA and developers bring complementary lenses to the same review, turning acceptance criteria, scenarios, and observability into shared responsibility instead of production surprises.  You'll leave with a lightweight framework and concrete habits for authors and reviewers that make reviews faster, kinder, and more effective.",
+      "startsAt": null,
+      "endsAt": null,
+      "isServiceSession": false,
+      "isPlenumSession": false,
+      "speakers": [
+        "01782d24-b1aa-4645-a9f5-a15e51bf132c"
+      ],
+      "categoryItems": [],
+      "questionAnswers": [
+        {
+          "questionId": 111854,
+          "answerValue": "Pull requests are where quality is won or lost, and too many teams still treat reviews with a rushed \"LGTM\". In this talk, you'll learn a practical, repeatable approach to high-quality PR reviews that balances speed with risk management - covering how to triage changes quickly, review in layers, and write comments that lead to better outcomes without friction.  We'll also show how QA and developers bring complementary lenses to the same review, turning acceptance criteria, scenarios, and observability into shared responsibility instead of production surprises.  You'll leave with a lightweight framework and concrete habits for authors and reviewers that make reviews faster, kinder, and more effective."
+        }
+      ],
+      "roomId": null,
+      "liveUrl": null,
+      "recordingUrl": null,
+      "status": "Accepted",
+      "isInformed": true,
+      "isConfirmed": false
     },
     {
       "id": "1130073",
@@ -375,7 +475,7 @@
       "recordingUrl": null,
       "status": "Accepted",
       "isInformed": true,
-      "isConfirmed": false
+      "isConfirmed": true
     },
     {
       "id": "1172042",
@@ -400,7 +500,7 @@
       "recordingUrl": null,
       "status": "Accepted",
       "isInformed": true,
-      "isConfirmed": false
+      "isConfirmed": true
     },
     {
       "id": "1174416",
@@ -503,13 +603,38 @@
       "isConfirmed": true
     },
     {
+      "id": "1152366",
+      "title": "The 3 legged stool: AI Won’t Fix Your Agile Problems",
+      "description": "Agile frameworks promise adaptability and speed — but even in the AI and digital age, many teams struggle with unclear roles, brittle dependencies, and communication breakdowns that slow delivery and burn people out. The 3‑legged stool is more than a metaphor— it’s a simple systems model for understanding why agile teams succeed or fail. When roles, collaboration, and communication are balanced, teams are stable and productive. When one “leg” is overloaded, ignored, or missing, the system wobbles — no matter how good your AI is or good the tooling or framework looks on paper.\r\n\r\nIn this session, we’ll explore how the 3‑legged stool analogy can be used as a practical diagnostic and alignment tool across modern agile environments. Drawing on real-world experience working with teams navigating today’s increased complexity — remote work, hybrid structures, and constant delivery pressure — you’ll see how this model helps surface hidden constraints, clarify ownership, and manage dependencies more effectively.\r\n\r\nRather than prescribing yet another framework, this talk focuses on how to create shared understanding between engineers, product, and leadership — so teams can make better decisions inside the frameworks they already use.\r\n\r\nWhether you’re building software, coaching teams, or leading transformation efforts, you’ll leave with a lightweight model you can immediately apply to improve team health, delivery flow, and long-term sustainability.",
+      "startsAt": null,
+      "endsAt": null,
+      "isServiceSession": false,
+      "isPlenumSession": false,
+      "speakers": [
+        "e362ad7d-7818-4eb6-8f64-7acf381afd5c"
+      ],
+      "categoryItems": [],
+      "questionAnswers": [
+        {
+          "questionId": 111854,
+          "answerValue": "Agile frameworks promise adaptability and speed — but even in the AI and digital age, many teams struggle with unclear roles, brittle dependencies, and communication breakdowns that slow delivery and burn people out. \r\n\r\nIn this session, we’ll explore how the 3‑legged stool analogy can be used as a practical diagnostic and alignment tool across modern agile environments. Drawing on real-world experience working with teams navigating today’s increased complexity — remote work, hybrid structures, and constant delivery pressure — you’ll see how this model helps surface hidden constraints, clarify ownership, and manage dependencies more effectively.\r\n\r\nWhether you’re building software, coaching teams, or leading transformation efforts, you’ll leave with a lightweight model you can immediately apply to improve team health, delivery flow, and long-term sustainability."
+        }
+      ],
+      "roomId": null,
+      "liveUrl": null,
+      "recordingUrl": null,
+      "status": "Accepted",
+      "isInformed": true,
+      "isConfirmed": false
+    },
+    {
       "id": "1152668",
       "title": "The Day Testing Died — And Quality Evolved",
       "description": "Twenty years ago, my job was to break software.\r\n\r\nI was trained to think in edge cases, failure paths, and regression suites. If something slipped into production, it meant I missed something.\r\n\r\nBack then, quality meant testing.\r\n\r\nThen the world changed.\r\n\r\nAgile arrived. DevOps arrived. Continuous delivery arrived. And I realized something uncomfortable: quality was never about the test cases. It was about the system behind them.\r\n\r\nAnd now AI has changed the ground again.\r\n\r\nToday, code is written by machines. Tests are generated by copilots. Reviews are assisted by algorithms.\r\n\r\nSo if machines can write the tests…\r\nWho is responsible for trust?\r\n\r\nThat question is why we must evolve — from testers, to quality champions, to AI validation designers.",
       "startsAt": null,
       "endsAt": null,
       "isServiceSession": false,
-      "isPlenumSession": false,
+      "isPlenumSession": true,
       "speakers": [
         "eb3131d6-d052-4c8a-92a7-50308659bff1"
       ],
@@ -753,7 +878,7 @@
       "recordingUrl": null,
       "status": "Accepted",
       "isInformed": true,
-      "isConfirmed": false
+      "isConfirmed": true
     }
   ],
   "speakers": [
@@ -891,6 +1016,43 @@
       "questionAnswers": []
     },
     {
+      "id": "e362ad7d-7818-4eb6-8f64-7acf381afd5c",
+      "firstName": "Aubrey",
+      "lastName": "Wade",
+      "bio": "Aubrey Wade is a seasoned consulting professional, speaker, coach, and blogger with a passion for transforming workplace relationships and driving positive change. Based in Memphis, TN, she specializes in helping organizations improve processes, build strong teams, and guide C-suite leaders in driving company-wide transformation. With a hands-on, results-driven approach, Aubrey isn’t afraid to challenge the status quo to help companies reach their full potential.\r\n\r\nArmed with a degree in Psychology and over 20 years of experience in technology, Aubrey has successfully partnered with multiple Fortune 300 companies to enhance team dynamics, streamline processes, and deliver consistent, successful releases. Her expertise spans organizational transformation, enterprise reporting, and optimizing performance at all levels.\r\n\r\nOutside of her consulting work, Aubrey is a devoted wife, sister, and mother to three daughters, and she enjoys speaking and teaching across the country. Her greatest passion is helping people grow — starting with herself — through personal development, professional coaching, and leadership guidance.",
+      "tagLine": "A Boundary Pushing, Positive Disrupting, Way Maker - I make good trouble",
+      "profilePicture": "https://sessionize.com/image/43a9-400o400o1-LcChVv5qw47vHAgF84rU6g.jpg",
+      "isTopSpeaker": false,
+      "links": [
+        {
+          "title": "LinkedIn",
+          "url": "https://www.linkedin.com/in/11aubreywade/",
+          "linkType": "LinkedIn"
+        },
+        {
+          "title": "Instagram",
+          "url": "https://www.instagram.com//11aubs",
+          "linkType": "Instagram"
+        },
+        {
+          "title": "Blog",
+          "url": "https://www.wadeingthroughlife.com",
+          "linkType": "Blog"
+        },
+        {
+          "title": "Company Website",
+          "url": "https://www.wadeingthroughlife.com",
+          "linkType": "Company_Website"
+        }
+      ],
+      "sessions": [
+        1152366
+      ],
+      "fullName": "Aubrey Wade",
+      "categoryItems": [],
+      "questionAnswers": []
+    },
+    {
       "id": "f2cfff77-e663-4744-bed6-24d17faa8756",
       "firstName": "Barbara",
       "lastName": "Deaton",
@@ -909,6 +1071,33 @@
         1113140
       ],
       "fullName": "Barbara Deaton",
+      "categoryItems": [],
+      "questionAnswers": []
+    },
+    {
+      "id": "26126c45-7534-47b9-9f8b-3b7b7009e047",
+      "firstName": "Bob",
+      "lastName": "Crews",
+      "bio": "Bob Crews, CEO / Founder of Checkpoint Technologies, is an entrepreneur, consultant, and trainer with 38 years of IT experience in full life-cycle development, quality assurance, and software testing with a focus on functional and performance testing. He has assisted organizations such as Harvard University, the FBI, J.P. Morgan Chase, Great American Insurance Company, Nationwide, Wal-Mart, the U.S. Air Force, and the Department of Veterans Affairs in developing teams, processes, and solutions to improve the quality of their applications. Bob has spoken at conferences and universities optimizing QA and testing processing, how AI is impacting the software testing world, functional test automation, and risk analysis. He is exceptionally enthusiastic about the future of IT, software testing, and AI’s place in it!",
+      "tagLine": "CEO / Quality Coach / Testing Veteran",
+      "profilePicture": "https://sessionize.com/image/9162-400o400o1-75DP9L7HaStH69X2JnK4mq.jpg",
+      "isTopSpeaker": false,
+      "links": [
+        {
+          "title": "LinkedIn",
+          "url": "https://www.linkedin.com/in/bob-crews-checkpointech",
+          "linkType": "LinkedIn"
+        },
+        {
+          "title": "Company Website",
+          "url": "https://www.checkpointech.com",
+          "linkType": "Company_Website"
+        }
+      ],
+      "sessions": [
+        1220037
+      ],
+      "fullName": "Bob Crews",
       "categoryItems": [],
       "questionAnswers": []
     },
@@ -1433,6 +1622,33 @@
       "questionAnswers": []
     },
     {
+      "id": "497ccbc4-ed0c-4fa2-88dd-a14a07cf07c0",
+      "firstName": "Mohit",
+      "lastName": "Juneja",
+      "bio": "Mohit Juneja is a revenue and business development executive with over 10 years of experience in Go-To-Market (GTM) and Solution Sales, specializing in building expansive GTM ecosystems on a global scale.\r\n\r\nHe sees synergetic partnerships as the key differentiator between triumph and obsolescence. Whether it's crafting a more intuitive experience for end-users or constructing a robust distribution engine, partnerships play a pivotal role, irrespective of whether you're in an enterprise or startup setting.\r\n\r\nMohit offers a blend of digital transformation leadership and precise program management to deliver impactful results. His approach combines strategic vision with hands-on execution, ensuring transformative initiatives surpass expectations.",
+      "tagLine": "VP, Strategic Sales at TestMu AI",
+      "profilePicture": "https://sessionize.com/image/c9b5-400o400o1-djVCymqKEhZ3ZgHPdoA69.jpg",
+      "isTopSpeaker": false,
+      "links": [
+        {
+          "title": "LinkedIn",
+          "url": "https://www.linkedin.com/in/mohjuneja/",
+          "linkType": "LinkedIn"
+        },
+        {
+          "title": "Company Website",
+          "url": "https://www.testmuai.com",
+          "linkType": "Company_Website"
+        }
+      ],
+      "sessions": [
+        1227446
+      ],
+      "fullName": "Mohit Juneja",
+      "categoryItems": [],
+      "questionAnswers": []
+    },
+    {
       "id": "f227437b-faf5-48cf-81a9-1cfe0d51f7bc",
       "firstName": "Nicole",
       "lastName": "Derr",
@@ -1749,6 +1965,55 @@
         1129517
       ],
       "fullName": "Tina Fletcher",
+      "categoryItems": [],
+      "questionAnswers": []
+    },
+    {
+      "id": "01782d24-b1aa-4645-a9f5-a15e51bf132c",
+      "firstName": "Todd",
+      "lastName": "Nussbaum",
+      "bio": "With a career spanning two and a half decades, Todd has worn nearly every hat in the SDLC—from dev and architect to engineering leader. He is a firm believer that great software requires both a foundation of clean architecture and sensible UI design. Off the clock, Todd can be found tinkering with the newest open source library or AI app, and often trades the keyboard for the sidelines, following his sons' college journeys, timing his daughter’s laps at the pool, and acting as the primary support crew for his wife’s running goals.",
+      "tagLine": "Director, Consulting Services @ CGI",
+      "profilePicture": "https://sessionize.com/image/8109-400o400o1-KCDtRVGszkhVL62gfE6kcy.jpg",
+      "isTopSpeaker": false,
+      "links": [
+        {
+          "title": "LinkedIn",
+          "url": "https://www.linkedin.com/in/tjnussbaum/",
+          "linkType": "LinkedIn"
+        }
+      ],
+      "sessions": [
+        1154958
+      ],
+      "fullName": "Todd Nussbaum",
+      "categoryItems": [],
+      "questionAnswers": []
+    },
+    {
+      "id": "a12c243c-e5e2-4748-a3e6-097c65e2c5c4",
+      "firstName": "Vitaly",
+      "lastName": "Skadorva",
+      "bio": "Vitaly Skadorva is a seasoned Quality Assurance Automation Engineer with 15+ years of experience building test architectures across web and mobile applications. He specializes in test automation frameworks, CI/CD practices, and mentoring upcoming QA engineers. He is the author of “Ultimate Web Automation Testing with Cypress,” and speaks at conferences: ConFoo 2025, QA or the Highway 2025",
+      "tagLine": "QA Lead | SDET",
+      "profilePicture": "https://sessionize.com/image/7c91-400o400o1-smxKMgbgHdoaScB54PyxRM.jpg",
+      "isTopSpeaker": false,
+      "links": [
+        {
+          "title": "LinkedIn",
+          "url": "https://www.linkedin.com/in/vitalyskadorva/",
+          "linkType": "LinkedIn"
+        },
+        {
+          "title": "Blog",
+          "url": "https://vitalyskadorva.com/my-blog",
+          "linkType": "Blog"
+        }
+      ],
+      "sessions": [
+        1172997
+      ],
+      "fullName": "Vitaly Skadorva",
       "categoryItems": [],
       "questionAnswers": []
     },

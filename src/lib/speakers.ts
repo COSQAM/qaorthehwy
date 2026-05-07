@@ -11,6 +11,7 @@ export function speakerSlug(speaker: SpeakerLike) {
 
 export interface SessionLike {
   speakers: string[];
+  isConfirmed?: boolean;
 }
 
 export function getCoSpeakerIds(
@@ -24,4 +25,13 @@ export function getCoSpeakerIds(
         .filter((id) => id !== currentSpeakerId),
     ),
   );
+}
+
+export function isSpeakerConfirmed(
+  speakerId: string,
+  sessions: SessionLike[],
+): boolean {
+  const ownSessions = sessions.filter((s) => s.speakers.includes(speakerId));
+  if (ownSessions.length === 0) return true;
+  return ownSessions.some((s) => s.isConfirmed !== false);
 }
