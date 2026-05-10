@@ -9,6 +9,7 @@ import contextqa from "../assets/images/sponsors/contextqa.png"
 import lighthouse from "../assets/images/sponsors/lighthouse.png"
 import engenious from "../assets/images/sponsors/engenious.svg"
 import abstracta from "../assets/images/sponsors/abstracta.png"
+import technumen from "../assets/images/sponsors/technumen.png"
 
 export interface Sponsor {
   name: string;
@@ -85,5 +86,15 @@ export const sponsorConfig: SponsorTiers = {
     name: "Abstracta",
     logo: abstracta,
     website: "https://www.abstracta.com/",
+  },
+  {
+    name: "Technumen",
+    logo: technumen,
+    website: "https://www.technumen.com/",
+  },
+  {
+    name: "Leapwork",
+    logo: leapwork,
+    website: "https://www.leapwork.com/",
   }],
 };
