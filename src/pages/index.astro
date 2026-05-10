@@ -9,7 +9,7 @@ import Sponsors from "../components/Sponsors.astro";
 import AnnouncementBanner from "../components/AnnouncementBanner.astro";
 import sessionizeData from "../data/sessionize.json";
 import { getSpeakerPhaseConfig } from "../config/speakers";
-import { speakerSlug } from "../lib/speakers";
+import { speakerSlug, isSpeakerConfirmed } from "../lib/speakers";
 import {
   getCallForSpeakersConfig,
   getFeedbackConfig,
@@ -32,18 +32,23 @@ const speakerPhase = getSpeakerPhaseConfig();
 const cfpConfig = getCallForSpeakersConfig();
 const feedbackConfig = getFeedbackConfig();
 
+// Hide speakers whose only sessions are unconfirmed in Sessionize
+const confirmedSpeakers = sessionizeData.speakers.filter((speaker: any) =>
+  isSpeakerConfirmed(speaker.id, sessionizeData.sessions),
+);
+
 // Keynote speakers from Sessionize data
-const keynoteSpeakers = sessionizeData.speakers
+const keynoteSpeakers = confirmedSpeakers
   .filter((speaker: any) => speaker.isTopSpeaker)
   .slice(0, 2);
 
 // Non-keynote speakers for carousel
-const nonKeynoteSpeakers = sessionizeData.speakers.filter(
+const nonKeynoteSpeakers = confirmedSpeakers.filter(
   (speaker: any) => !speaker.isTopSpeaker,
 );
 
 // All speakers from Sessionize
-const allSpeakers = sessionizeData.speakers;
+const allSpeakers = confirmedSpeakers;
 ---
 
 <Layout title="QA or the Highway - Quality Engineering Conference">

@@ -27,7 +27,7 @@ interface SpeakerConfig {
 export const speakerConfig: SpeakerConfig = {
   // ⚡ FEATURE FLAG: Change this to switch speaker visibility
   // Options: 'keynotes-only' | 'partial-lineup' | 'full-lineup'
-  currentPhase: 'partial-lineup',
+  currentPhase: 'full-lineup',
 
   // Phase-specific behavior for speaker sections
   phaseConfig: {

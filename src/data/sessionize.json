@@ -23,7 +23,7 @@
       "recordingUrl": null,
       "status": "Accepted",
       "isInformed": true,
-      "isConfirmed": false
+      "isConfirmed": true
     },
     {
       "id": "1227446",
@@ -425,7 +425,7 @@
       "recordingUrl": null,
       "status": "Accepted",
       "isInformed": true,
-      "isConfirmed": false
+      "isConfirmed": true
     },
     {
       "id": "1130073",
@@ -625,7 +625,7 @@
       "recordingUrl": null,
       "status": "Accepted",
       "isInformed": true,
-      "isConfirmed": false
+      "isConfirmed": true
     },
     {
       "id": "1152668",
@@ -1718,7 +1718,7 @@
       "lastName": "Gadde",
       "bio": "Dasaradha(RAM) Gadde is a IT QA Leader who has been in IT industry for over 24 years with extensive experience in Enterprise End to End product quality and Automation. He Led End to End Testing for Companies like DBI Inc (a.k.a DSW Inc), eClinicalWorks, and various clients for TCS.  He is certified Scrum Master from Scrum alliance, Advanced Test Manager from ISTQB and Oracle Certified Associate. He lives in Delaware, OH with his wife and 2 lovely daughters.",
       "tagLine": "QA Manager from DBI inc aka DSW",
-      "profilePicture": "https://sessionize.com/image/7d4f-400o400o1-aViadm3816aTar4t7GtGRA.jpg",
+      "profilePicture": "https://sessionize.com/image/c5dd-400o400o1-fBN8Y6dAK9wu6cey6UiGi5.jpg",
       "isTopSpeaker": false,
       "links": [
         {
@@ -1996,7 +1996,7 @@
       "lastName": "Skadorva",
       "bio": "Vitaly Skadorva is a seasoned Quality Assurance Automation Engineer with 15+ years of experience building test architectures across web and mobile applications. He specializes in test automation frameworks, CI/CD practices, and mentoring upcoming QA engineers. He is the author of “Ultimate Web Automation Testing with Cypress,” and speaks at conferences: ConFoo 2025, QA or the Highway 2025",
       "tagLine": "QA Lead | SDET",
-      "profilePicture": "https://sessionize.com/image/7c91-400o400o1-smxKMgbgHdoaScB54PyxRM.jpg",
+      "profilePicture": "https://sessionize.com/image/1c64-400o400o1-K5uAxrb9jkb4j5yfLXTzTP.jpg",
       "isTopSpeaker": false,
       "links": [
         {
