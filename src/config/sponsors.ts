@@ -10,6 +10,7 @@ import lighthouse from "../assets/images/sponsors/lighthouse.png"
 import engenious from "../assets/images/sponsors/engenious.svg"
 import abstracta from "../assets/images/sponsors/abstracta.png"
 import technumen from "../assets/images/sponsors/technumen.png"
+import thunders from "../assets/images/sponsors/thunders.png"
 
 export interface Sponsor {
   name: string;
@@ -79,9 +80,18 @@ export const sponsorConfig: SponsorTiers = {
     name: "Qt Group",
     logo: qtgroup,
     website: "https://www.qt.io/",
+  },
+  {
+    name: "Thunders",
+    logo: thunders,
+    website: "https://thunders.ai/",
   }],
   lunch: [],
-  snack: [],
+  snack: [{
+    name: "Thunders",
+    logo: thunders,
+    website: "https://thunders.ai/",
+  }],
   tshirt: [{
     name: "Abstracta",
     logo: abstracta,
