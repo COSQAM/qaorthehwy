@@ -17,6 +17,7 @@ describe('sponsorConfig', () => {
       sponsorConfig.gold,
       sponsorConfig.silver,
       sponsorConfig.tshirt,
+      sponsorConfig.snack,
     ];
 
     nonEmptyTiers.forEach((tier) => {
@@ -48,6 +49,5 @@ describe('sponsorConfig', () => {
 
   it('empty tiers are empty arrays', () => {
     expect(sponsorConfig.lunch).toEqual([]);
-    expect(sponsorConfig.snack).toEqual([]);
   });
 });
