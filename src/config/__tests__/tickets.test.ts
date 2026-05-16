@@ -1,6 +1,5 @@
 import { describe, it, expect, afterEach } from 'vitest';
 import { ticketConfig, getActiveTiers, givebutterCampaign } from '../tickets';
-import type { TicketPhase } from '../tickets';
 
 const originalPhase = ticketConfig.currentPhase;
 
@@ -32,17 +31,6 @@ describe('getActiveTiers', () => {
     expect(fullPrice.id).toBe('fullPrice');
     expect(fullPrice.enabled).toBe(true);
     expect(fullPrice.style).toBe('normal');
-  });
-
-  it('returns 1 tier in last-chance phase', () => {
-    ticketConfig.currentPhase = 'last-chance';
-    const tiers = getActiveTiers();
-    expect(tiers).toHaveLength(1);
-
-    const fullPrice = tiers[0];
-    expect(fullPrice.id).toBe('fullPrice');
-    expect(fullPrice.enabled).toBe(true);
-    expect(fullPrice.style).toBe('highlighted');
   });
 
   it('returns 1 tier in sold-out phase', () => {

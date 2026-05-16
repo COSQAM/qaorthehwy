@@ -1,7 +1,7 @@
 // Ticket feature flag configuration for static site
 // To change ticket states, update the `currentPhase` value and rebuild
 
-export type TicketPhase = 'early-bird' | 'regular' | 'last-chance' | 'sold-out';
+export type TicketPhase = 'early-bird' | 'regular' | 'sold-out';
 export type TicketStyle = 'normal' | 'dimmed' | 'highlighted';
 
 interface TicketTierState {
@@ -41,8 +41,8 @@ export const givebutterCampaign = '7ZPS6Z';
 // Main ticket configuration
 export const ticketConfig: TicketConfig = {
   // ⚡ FEATURE FLAG: Change this to switch ticket states
-  // Options: 'early-bird' | 'regular' | 'last-chance' | 'sold-out'
-  currentPhase: 'early-bird',
+  // Options: 'early-bird' | 'regular' | 'sold-out'
+  currentPhase: 'regular',
 
   // Ticket tier definitions
   tiers: {
@@ -56,7 +56,7 @@ export const ticketConfig: TicketConfig = {
     fullPrice: {
       id: 'fullPrice',
       name: 'Full Price',
-      price: '$129',
+      price: '$139',
       features,
     },
   },
@@ -85,18 +85,6 @@ export const ticketConfig: TicketConfig = {
         visible: true,
         enabled: true,
         style: 'normal',
-      },
-    },
-    'last-chance': {
-      earlyBird: {
-        visible: false,
-        enabled: false,
-        style: 'normal',
-      },
-      fullPrice: {
-        visible: true,
-        enabled: true,
-        style: 'highlighted', // Emphasize urgency
       },
     },
     'sold-out': {
