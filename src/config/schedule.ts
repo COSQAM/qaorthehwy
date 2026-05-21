@@ -19,7 +19,7 @@ interface ScheduleConfig {
 export const scheduleConfig: ScheduleConfig = {
   // ⚡ FEATURE FLAG: Change this to switch schedule visibility
   // Options: 'coming-soon' | 'times-tbd' | 'published'
-  currentPhase: 'times-tbd',
+  currentPhase: 'published',
 
   // Phase-specific behavior for schedule
   phaseConfig: {

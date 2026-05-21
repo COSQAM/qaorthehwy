@@ -1,5 +1,11 @@
 import { describe, it, expect } from 'vitest';
-import { formatTime, formatSessionTime, isSessionConfirmed } from '../sessions';
+import {
+  formatTime,
+  formatSessionTime,
+  isSessionConfirmed,
+  formatDuration,
+  getSessionKind,
+} from '../sessions';
 
 describe('formatTime', () => {
   it('returns null for null/undefined/empty', () => {
@@ -44,7 +50,6 @@ describe('isSessionConfirmed', () => {
   });
 
   it('returns true when isConfirmed is missing', () => {
-    // Service sessions (breaks, lunch) merged from GridSmart don't carry the flag.
     expect(isSessionConfirmed({})).toBe(true);
   });
 
@@ -54,5 +59,79 @@ describe('isSessionConfirmed', () => {
 
   it('returns false when isConfirmed is false', () => {
     expect(isSessionConfirmed({ isConfirmed: false })).toBe(false);
+  });
+
+  it('returns true for service sessions even when isConfirmed is false', () => {
+    // Sessionize sets isConfirmed=false on breaks, lunch, etc. — they have no speaker to confirm.
+    expect(isSessionConfirmed({ isConfirmed: false, isServiceSession: true })).toBe(true);
+  });
+});
+
+describe('formatDuration', () => {
+  it('returns null for invalid start or end', () => {
+    expect(formatDuration(null, '2026-06-12T09:50:00')).toBeNull();
+    expect(formatDuration('2026-06-12T09:00:00', null)).toBeNull();
+    expect(formatDuration('not-a-date', '2026-06-12T09:50:00')).toBeNull();
+  });
+
+  it('returns null when end is not after start', () => {
+    expect(formatDuration('2026-06-12T09:00:00', '2026-06-12T09:00:00')).toBeNull();
+    expect(formatDuration('2026-06-12T09:50:00', '2026-06-12T09:00:00')).toBeNull();
+  });
+
+  it('formats sub-hour durations as "N min"', () => {
+    expect(formatDuration('2026-06-12T09:00:00', '2026-06-12T09:50:00')).toBe('50 min');
+    expect(formatDuration('2026-06-12T08:50:00', '2026-06-12T09:00:00')).toBe('10 min');
+  });
+
+  it('formats exact-hour durations as "Nh"', () => {
+    expect(formatDuration('2026-06-12T09:00:00', '2026-06-12T11:00:00')).toBe('2h');
+    expect(formatDuration('2026-06-12T12:50:00', '2026-06-12T13:50:00')).toBe('1h');
+  });
+
+  it('formats hour+minute durations as "Nh Mmin"', () => {
+    expect(formatDuration('2026-06-12T11:50:00', '2026-06-12T13:00:00')).toBe('1h 10min');
+    expect(formatDuration('2026-06-12T09:00:00', '2026-06-12T12:00:00')).toBe('3h');
+  });
+});
+
+describe('getSessionKind', () => {
+  it('returns "service" for service sessions regardless of other flags', () => {
+    expect(getSessionKind({ isServiceSession: true, isPlenumSession: true })).toBe('service');
+    expect(getSessionKind({
+      isServiceSession: true,
+      startsAt: '2026-06-12T11:50:00',
+      endsAt: '2026-06-12T13:00:00',
+    })).toBe('service');
+  });
+
+  it('returns "keynote" for plenary non-service sessions', () => {
+    expect(getSessionKind({
+      isPlenumSession: true,
+      startsAt: '2026-06-12T08:00:00',
+      endsAt: '2026-06-12T08:50:00',
+    })).toBe('keynote');
+  });
+
+  it('returns "workshop" for non-plenary non-service sessions >= 60 min', () => {
+    expect(getSessionKind({
+      startsAt: '2026-06-12T09:00:00',
+      endsAt: '2026-06-12T12:00:00',
+    })).toBe('workshop');
+    expect(getSessionKind({
+      startsAt: '2026-06-12T12:50:00',
+      endsAt: '2026-06-12T13:50:00',
+    })).toBe('workshop');
+  });
+
+  it('returns "breakout" for sub-hour non-plenary non-service sessions', () => {
+    expect(getSessionKind({
+      startsAt: '2026-06-12T09:00:00',
+      endsAt: '2026-06-12T09:50:00',
+    })).toBe('breakout');
+  });
+
+  it('returns "breakout" when times are missing', () => {
+    expect(getSessionKind({})).toBe('breakout');
   });
 });
