@@ -1,261 +1,29 @@
 {
   "sessions": [
     {
-      "id": "1172997",
-      "title": "Accessibility testing with Cypress",
-      "description": "The European Accessibility Act began enforcement on June 28, 2025, and the U.S. DOJ's ADA Title II web-app rule has hard compliance dates in 2026/2027.\r\n In this talk, I'll share real examples from projects where catching WCAG issues early saved a lot of time and money compared to fixing them late. \r\nI'll provide examples of testing accessibility using lint rules, component-level accessibility checks (including Storybook), and UI-level validation. I'll also show how I test the real keyboard behavior e2e: TAB order, focus states, common navigation paths.",
-      "startsAt": null,
-      "endsAt": null,
-      "isServiceSession": false,
-      "isPlenumSession": false,
-      "speakers": [
-        "a12c243c-e5e2-4748-a3e6-097c65e2c5c4"
-      ],
+      "id": "93adc33b-fa58-4e9b-89cb-8c67a42fd276",
+      "title": "Breakfast & Opening Remarks",
+      "description": null,
+      "startsAt": "2026-06-12T07:00:00",
+      "endsAt": "2026-06-12T08:00:00",
+      "isServiceSession": true,
+      "isPlenumSession": true,
+      "speakers": [],
       "categoryItems": [],
-      "questionAnswers": [
-        {
-          "questionId": 111854,
-          "answerValue": "Fixing accessibility late is expensive. In this talk, I’ll share examples from real projects and show how we build early checks: lint rules, component/Storybook validation, UI checks, and Cypress keyboard navigation tests to catch issues before they reach production."
-        }
-      ],
-      "roomId": null,
+      "questionAnswers": [],
+      "roomId": 84619,
       "liveUrl": null,
       "recordingUrl": null,
-      "status": "Accepted",
-      "isInformed": true,
-      "isConfirmed": true
-    },
-    {
-      "id": "1227446",
-      "title": "Agentic Testing & The Future of Trust",
-      "description": "AI agents are generating more code than ever, but how do you ensure its reliability? Learn why traditional testing fails and how Agentic Testing guarantees trust and scalability in AI-driven systems.",
-      "startsAt": null,
-      "endsAt": null,
-      "isServiceSession": false,
-      "isPlenumSession": false,
-      "speakers": [
-        "497ccbc4-ed0c-4fa2-88dd-a14a07cf07c0"
-      ],
-      "categoryItems": [],
-      "questionAnswers": [
-        {
-          "questionId": 111854,
-          "answerValue": "AI agents are helping teams generate more code than ever before. Even the strongest believers in vibe coding caution against placing blind trust in that code. We are living through the fastest expansion of software creation in history, not because we hired more engineers, but because machines are now building software alongside us.\r\n\r\nThis raises a fundamental challenge. How do you test and trust applications created by LLMs, assembled by multiple AI agents, and deployed by automated systems? The tools we rely on today were not designed for this reality or this speed. Unit tests and code reviews inspect logic and functions, but they were never meant to validate dynamic, evolving behavior. Traditional automation struggles when code is generated and modified continuously, becoming fragile and breaking faster than teams can maintain it. As AI agents become embedded into every layer of software, we are no longer just testing code. We are testing autonomous systems themselves.\r\n\r\nIn this talk, we will explore why trust in AI-generated software can no longer be assumed, and why it must be continuously proven. Agentic Testing, the use of autonomous agents to test autonomous systems, emerges as the only scalable solution. These autonomous agents not only plan, execute, and analyze tests but also adapt and challenge systems the way real users would. Agentic Testing validates behavior, reasoning, and outcomes at the system level, ensuring that AI-driven systems meet real-world expectations.\r\n\r\nDrawing from real-world enterprise deployments and lessons learned building an Agentic Testing platform, this talk will reframe quality assurance as a strategic intelligence layer rather than a release-time checkbox. In the age of AI, trust isn’t just a feature, it’s a continuously earned asset. We’ll discuss how businesses can evolve their testing strategies to stay ahead in this rapidly shifting landscape."
-        }
-      ],
-      "roomId": null,
-      "liveUrl": null,
-      "recordingUrl": null,
-      "status": "Accepted",
-      "isInformed": true,
-      "isConfirmed": true
-    },
-    {
-      "id": "1187097",
-      "title": "AI Testing Hackathon Workshop",
-      "description": "Break the AI Agent RAG Application in 4 Hours - Find the failures before real users ever see them.",
-      "startsAt": null,
-      "endsAt": null,
-      "isServiceSession": false,
-      "isPlenumSession": false,
-      "speakers": [
-        "7a4da457-4a7c-4f69-9645-5474c9cd0401"
-      ],
-      "categoryItems": [],
-      "questionAnswers": [
-        {
-          "questionId": 111854,
-          "answerValue": "This practical hackathon gives students the chance to work like real AI testers. In teams, participants will use Agenta.ai to test the WeOptimize AI system, uncover reliability and safety issues, and present the most important findings to judges.\r\nThis event goes beyond basic prompting. It focuses on one of the most valuable emerging skills in tech: evaluating whether AI applications are trustworthy, safe, and ready for production."
-        }
-      ],
-      "roomId": null,
-      "liveUrl": null,
-      "recordingUrl": null,
-      "status": "Accepted",
-      "isInformed": true,
-      "isConfirmed": true
-    },
-    {
-      "id": "1175077",
-      "title": "AI Testing Isn't One Thing (And Treating It Like It Is Will Bite You)",
-      "description": "Your team shipped an AI feature. Congrats. Now someone asks: how do we test this?\r\n\r\nYou write a test. The output changes. You run it again. Different output. You consider a career in farming.\r\n\r\nHere's the thing nobody tells you upfront: testing AI-powered software isn't one discipline, it's two. And the moment you try to apply one strategy to both, you're in trouble.\r\n\r\nThis talk breaks down the Two-Track Testing Model that every QA engineer building on AI needs to understand. There's the deterministic side, your traditional test pyramid covering infrastructure, routing, logic, and guardrails, and there's the AI evaluation side, where outputs are non-deterministic, pass/fail doesn't exist, and you need a completely different mental model to even know what \"quality\" means.\r\n\r\nWe'll walk through how these two tracks diverge, when they converge, and what it takes to get quality signals from both. You'll leave with a practical framework: the Three Pillars of AI Evaluation (human eval, deterministic checks, and LLM-as-judge), a benchmark-first approach to designing your eval strategy, and a clear picture of how maturity stage changes what you should be testing and how.\r\n\r\nThe fundamentals of our craft haven't changed. The pesticide paradox still applies. Risk-based thinking still applies. You still can't test everything. But the tools, vocabulary, and decision-making are genuinely new, and it's worth getting oriented before you're neck-deep in a chatbot that nobody can evaluate with any confidence.\r\n\r\nThis is the talk I wish existed when I started.",
-      "startsAt": null,
-      "endsAt": null,
-      "isServiceSession": false,
-      "isPlenumSession": false,
-      "speakers": [
-        "a168013e-bb21-4097-ad0b-b7b9118dd449"
-      ],
-      "categoryItems": [],
-      "questionAnswers": [
-        {
-          "questionId": 111854,
-          "answerValue": "If you've ever shipped an AI feature and had no idea how to test it, you're not alone. This talk cuts through the noise with one core idea: AI testing isn't one thing, it's two. You'll walk away with a practical two-track framework that grounds AI evaluation in the QE fundamentals you already know."
-        }
-      ],
-      "roomId": null,
-      "liveUrl": null,
-      "recordingUrl": null,
-      "status": "Accepted",
-      "isInformed": true,
-      "isConfirmed": true
-    },
-    {
-      "id": "1172552",
-      "title": "Awesome Web Testing with Playwright and AI",
-      "description": "Everybody gets frustrated when web apps are broken, but testing them thoroughly doesn't need to be a chore. [Playwright](https://playwright.dev/) together with AI makes testing web apps fun! Playwright offers a slew of nifty features like automatic waiting, mobile emulation, and network interception. Plus, with isolated browser contexts, Playwright tests can set up *much* faster than traditional Web UI tests.\r\n\r\nIn this tutorial, we will automate concise yet robust web app tests for \"BuggyBoard\", a bug tracking web app with Playwright in TypeScript. And we will expedite our test development with the superpowers of AI. Specifically, we will cover:\r\n\r\n1. How to add Playwright to a project\r\n2. How to explore an app with AI assistance and Playwright's MCP\r\n3. How to generate Playwright test code\r\n4. How to context engineer scalable automation patterns\r\n5. How Playwright compares to other browser automation tools like Selenium and Cypress\r\n\r\nBy the end of this session, you'll be empowered to test modern web apps with modern web test tools. You'll also have an example project to be the foundation for your future tests.\r\n\r\n---\r\n\r\nThis year, I am revamping my Playwright content to include AI assisted coding techniques, like using context engineering, agentic analysis, and Playwright's MCP servers.",
-      "startsAt": null,
-      "endsAt": null,
-      "isServiceSession": false,
-      "isPlenumSession": false,
-      "speakers": [
-        "3ec8847f-9f1e-46dd-8b2f-c9d38767f42b"
-      ],
-      "categoryItems": [],
-      "questionAnswers": [
-        {
-          "questionId": 111854,
-          "answerValue": "Everybody gets frustrated when web apps are broken, but testing them thoroughly doesn't need to be a chore. [Playwright](https://playwright.dev/) together with AI makes testing web apps fun! Playwright offers a slew of nifty features like automatic waiting, mobile emulation, and network interception. Plus, with isolated browser contexts, Playwright tests can set up *much* faster than traditional Web UI tests.\r\n\r\nIn this tutorial, we will automate concise yet robust web app tests for \"BuggyBoard\", a bug tracking web app with Playwright in TypeScript. And we will expedite our test development with the superpowers of AI. Specifically, we will cover:\r\n\r\n1. How to add Playwright to a project\r\n2. How to explore an app with AI assistance and Playwright's MCP\r\n3. How to generate Playwright test code\r\n4. How to context engineer scalable automation patterns\r\n5. How Playwright compares to other browser automation tools like Selenium and Cypress\r\n\r\nBy the end of this session, you'll be empowered to test modern web apps with modern web test tools. You'll also have an example project to be the foundation for your future tests."
-        }
-      ],
-      "roomId": null,
-      "liveUrl": null,
-      "recordingUrl": null,
-      "status": "Accepted",
-      "isInformed": true,
-      "isConfirmed": true
-    },
-    {
-      "id": "1134196",
-      "title": "Being Nimble - The next step in Agile Testing Optimization",
-      "description": "We’ll examine how playbooks drive collaboration by ensuring the right stakeholders engage at the right moments throughout the SDLC by turning “who’s in the room” from a variable into a strategic advantage. You’ll learn practical approaches to building playbooks that support nimble pivots without sacrificing quality.\r\nWe’ll also address the reality that every Agile framework has tradeoffs. Rather than debating methodologies, this session focuses on quick diagnostic techniques to identify friction points and practical adjustments that help teams operate more efficiently within their chosen approach.\r\nAttendees will leave with actionable strategies to strengthen team collaboration,  unlock efficiency gains and critical capabilities when adaptability matters most.",
-      "startsAt": null,
-      "endsAt": null,
-      "isServiceSession": false,
-      "isPlenumSession": false,
-      "speakers": [
-        "ef31d301-079f-49d7-8f3f-e049e5396132"
-      ],
-      "categoryItems": [],
-      "questionAnswers": [
-        {
-          "questionId": 111854,
-          "answerValue": "In today’s rapidly changing environment, teams need to pivot quickly while maintaining quality delivery. This talk explores two often-underutilized levers for team optimization: well-crafted playbooks and tactical Agile tuning."
-        }
-      ],
-      "roomId": null,
-      "liveUrl": null,
-      "recordingUrl": null,
-      "status": "Accepted",
-      "isInformed": true,
-      "isConfirmed": true
-    },
-    {
-      "id": "1220037",
-      "title": "Business Challenges of Testing B.U.C.K.E.Y.E.D. – A Self-Driving AI Bus System",
-      "description": "Updated for 2026! AI is rapidly reshaping Software Quality Assurance and Testing—creating new expectations, risks, and business challenges, especially as organizations begin confronting the complexity of testing strong AI systems.\r\n\r\nIn this dynamic, interactive session, attendees will examine how AI is impacting QA and software testing from the perspective of developers, test engineers, managers, executives, and business owners. Using a realistic but fictitious scenario, participants will serve as members of the Checkpoint Technologies Executive IT Team after being awarded a contract by Imaginary Corporation to test B.U.C.K.E.Y.E.D. — Bus Using Cognitive Knowledge, Engineered to Yield Efficient Driving — a fully autonomous, AI-powered self-driving bus system developed for the state of Ohio.\r\n\r\nBecause the system uses strong AI, with advanced autonomous reasoning, learning, and adaptability, the testing effort presents uniquely complex and high-stakes challenges. Led by Bob Crews, CEO of Checkpoint Technologies, participants will identify ten primary business testing challenges through the eyes of an IT Executive Board, with the goal of ensuring project success, reducing risk, preventing negligence, and protecting both Checkpoint Technologies and Imaginary Corporation.",
-      "startsAt": null,
-      "endsAt": null,
-      "isServiceSession": false,
-      "isPlenumSession": false,
-      "speakers": [
-        "26126c45-7534-47b9-9f8b-3b7b7009e047"
-      ],
-      "categoryItems": [],
-      "questionAnswers": [
-        {
-          "questionId": 111854,
-          "answerValue": "Updated for 2026! AI has created various challenges in the Software Quality Assurance and Testing field, and it’s evolving in an incredible way—but not always as you’d expect. These expectations have altered and created new challenges, especially as organizations begin dealing with testing a strong AI system.\r\n\r\nIn this session, we’ll review areas in which AI has impacted software testing & QA and identify core business challenges as they relate to testing a strong AI system.\r\n\r\nThe specific challenges, and the degree of their disruption, depend upon your role - developer, test engineer, manager, executive, or owner(s)? Utilizing a realistic, but fictitious scenario, this dynamic, interactive presentation/exercise will focus on the early engagement on an AI project and identify ten primary challenges as seen through the eyes of an IT Executive Board.\r\n\r\nNow more than ever, we’re charged not just with delivering innovation, but with safeguarding the lifeblood of the enterprise. In this high-energy, fully immersive exercise, you’ll dive into a gripping, fictitious AI project alongside an IT Executive Board, dissecting the core testing challenges, as they relate to the business, and learning how to conquer them from day one. Buckle up—your mission starts now!\r\n\r\nThe Mission: Attendees will be participating as members of the Checkpoint Technologies Executive IT Team. We have been awarded a prestigious contract by Imaginary Corporation to test their state-of-the-art, fully autonomous self-driving bus system B.U.C.K.E.Y.E.D. (Bus Using Cognitive Knowledge, Engineered to Yield Efficient Driving), developed for the state of Ohio. The AI system is a strong AI, meaning it has a higher level of autonomous reasoning, learning, and adaptability than traditional narrow AI systems. This makes testing uniquely complex and high-stake.\r\n\r\nLed and moderated by Bob Crews, CEO of Checkpoint Technologies, we must identify and provide Imaginary Corp. with a list of our primary business testing challenges. Your goal is to ensure project success, minimize and mitigate risk, and protect Checkpoint Technologies and Imaginary Corporation."
-        }
-      ],
-      "roomId": null,
-      "liveUrl": null,
-      "recordingUrl": null,
-      "status": "Accepted",
-      "isInformed": true,
-      "isConfirmed": true
-    },
-    {
-      "id": "1171618",
-      "title": "Collaborate on Your LEGO(R) Vision",
-      "description": "LEGO(R) sets are fun to build, but who has ever attempted to build a complete set without looking at the instructions? In this meeting, attendees will form teams and attempt to build a LEGO(R) set without instructions. Only one person from each team will be able to view the finished product before the team starts building. That person must share their vision with the team, who will attempt to build the LEGO(R) set as close to the instructions as possible without peeking. \r\n\r\nEach group will learn different approaches to collaborate on product development during the meeting to build a set according to a customer's needs. The activity highlights the two Quality Gaps of product development: (1) the gap between what we set out to build and the finished product; and (2) the gap between what customers expect and the finished product. Our goal is to close the two Quality Gaps so we deliver a product on-time & on-budget that customers will love.",
-      "startsAt": null,
-      "endsAt": null,
-      "isServiceSession": false,
-      "isPlenumSession": false,
-      "speakers": [
-        "da1f3c6b-ce55-48df-824c-c6f681f77f8c"
-      ],
-      "categoryItems": [],
-      "questionAnswers": [
-        {
-          "questionId": 111854,
-          "answerValue": "As part of this session, all in attendance will receive a LEGO Classic Building Kit (available in red, green, blue, yellow, or white). I will be providing all the LEGO Creator kits to be used in the session.\r\n\r\n*NOTE: This is a one hour session and I will require tables.\r\n\r\nThe learning outcomes are:\r\n*Teams will learn collaboration techniques to build & test with limited information\r\n*Attendees will learn to approach testing from the perspective of customer needs rather than strict requirements\r\n*Attendees will learn how to question assumptions by breaking down requirements before testing begins\r\n*BONUS: attendees will receive LEGO(R) sets of their own to take home"
-        }
-      ],
-      "roomId": null,
-      "liveUrl": null,
-      "recordingUrl": null,
-      "status": "Accepted",
-      "isInformed": true,
-      "isConfirmed": true
-    },
-    {
-      "id": "1167680",
-      "title": "Decision Records: Understanding Why Those Decisions Were Made!",
-      "description": "Ever stared at a complex system and thought, \"Wait, why was that decision made?!” We’ve all been there – lost in a maze of logic, struggling to track down the root cause of a problem. Decision Records offer a brilliant way to finally unlock that understanding. They’re like having a detailed, searchable log of every decision in your applications – from architectural style to authentication to service discovery and containerization. By capturing these decisions, you build more maintainable, auditable, and, frankly, less frustrating systems. In this session, you will learn how decision records solve problems and will be given ideas of templates that you can implement in your projects today! Let’s ditch the guesswork and start documenting the why – because truly understanding your systems is the key to unlocking its full potential!",
-      "startsAt": null,
-      "endsAt": null,
-      "isServiceSession": false,
-      "isPlenumSession": false,
-      "speakers": [
-        "9bde9de9-7bcb-4077-8087-47bf492a1344"
-      ],
-      "categoryItems": [],
-      "questionAnswers": [
-        {
-          "questionId": 111854,
-          "answerValue": "Ever stared at a complex system and thought, \"Wait, why was that decision made?!” We’ve all been there – lost in a maze of logic, struggling to track down the root cause of a problem. Decision Records offer a brilliant way to finally unlock that understanding. They’re like having a detailed, searchable log of every decision in your applications – from architectural style to authentication to service discovery and containerization. By capturing these decisions, you build more maintainable, auditable, and, frankly, less frustrating systems. In this session, you will learn how decision records solve problems and will be given ideas of templates that you can implement in your projects today! Let’s ditch the guesswork and start documenting the why – because truly understanding your systems is the key to unlocking its full potential!"
-        }
-      ],
-      "roomId": null,
-      "liveUrl": null,
-      "recordingUrl": null,
-      "status": "Accepted",
-      "isInformed": true,
-      "isConfirmed": true
-    },
-    {
-      "id": "1178160",
-      "title": "Deploying and Testing Ephemeral Environments",
-      "description": "Merging code that hasn't been fully tested is one of the biggest reasons teams experience missed release dates and flaky test suites. Why? Merging code often means other developers start their new work based on the newly merged code, changes are queued up for the next release, and the code quickly becomes coupled to other changes. The result is often code freezes, failing test runs, late night release \"parties\", and painful go / no-go meetings where you get pinned between postponing the release or shipping with bugs.\r\n\r\nDeploying to and testing ephemeral environments gives your team the ability to know for certain that the new features are implemented correctly *before committing those features to the release* and *before other developers start depending on the new code*. This approach is more important than ever when working with AI-generated code.\r\n\r\nIn this session, we will cover,\r\n- What ephemeral environments are and why they are so important\r\n- Branching strategies for proper test code management\r\n- Configuring your CI/CD pipeline to automatically deploy feature branches\r\n- How to run end-to-end tests on ephemeral environments\r\n- Strategies for managing databases and test data in ephemeral environments\r\n- Leveraging ephemeral environments to protect your company from AI risks\r\n\r\nKey Takeaways\r\n- Understand the architecture and tooling options for ephemeral environment workflows\r\n- Configure your CI/CD pipeline to deploy and test feature branches in isolation\r\n- Establish quality gates to protect your team from starting with broken code\r\n- Apply these practices to validate AI-generated code before it impacts your team",
-      "startsAt": null,
-      "endsAt": null,
-      "isServiceSession": false,
-      "isPlenumSession": false,
-      "speakers": [
-        "141a6bda-8059-49f3-b207-eeaf29a19808"
-      ],
-      "categoryItems": [],
-      "questionAnswers": [
-        {
-          "questionId": 111854,
-          "answerValue": "This session covers how deploying and testing ephemeral environments lets teams verify new features work correctly\r\nbefore other developers build on top of them, which is especially critical with AI-generated code. \r\n\r\nAttendees will walk away with tips on how to set up CI/CD pipelines to automatically deploy and test feature branches in isolation, establish quality gates, and protect their team from shipping broken code."
-        }
-      ],
-      "roomId": null,
-      "liveUrl": null,
-      "recordingUrl": null,
-      "status": "Accepted",
-      "isInformed": true,
-      "isConfirmed": true
+      "status": null,
+      "isInformed": false,
+      "isConfirmed": false
     },
     {
       "id": "1152189",
       "title": "Ensuring Software Quality in the world of AI Developers",
       "description": "Like it or not, AI agents can now turn a loosely written paragraph of requirements into a pull request that looks production-ready in minutes. That’s impressive — and horrifying. When code is being generated faster than humans can fully internalize it, QA becomes the last line of defense between “seems fine” and a 2 a.m. incident caused by a misunderstood requirement or a bad database migration.\r\n\r\nIn this session, we’ll explore how quality practices must evolve in a world where teams treat AI agents like new junior developers. We’ll talk about strengthening test plans so they validate intent instead of just implementation, expanding automated coverage to catch AI-specific failure modes, and partnering closely with developers whose familiarity with the generated code may be thinner than in years past. We’ll look at redefining code and feature review processes, improving requirement clarity to reduce ambiguity before it becomes defects, documenting our new vibe coded enterprise systems, and adding guardrails so AI-authored changes can’t slip past quality gates unchecked.\r\n\r\nBy the end, you’ll have a clear understanding of the new risks AI introduces — and practical strategies to help your team move fast without letting AI-generated pull requests quietly YOLO their way into prod.",
-      "startsAt": null,
-      "endsAt": null,
+      "startsAt": "2026-06-12T08:00:00",
+      "endsAt": "2026-06-12T08:50:00",
       "isServiceSession": false,
       "isPlenumSession": true,
       "speakers": [
@@ -268,7 +36,7 @@
           "answerValue": "AI agents can now generate production-ready pull requests in minutes — which means quality teams are facing new risks at unprecedented speed. This session explores how QA must evolve when AI becomes a junior developer on the team: strengthening test plans to validate intent, expanding automation to catch AI-specific failure modes, tightening review processes, and adding guardrails that protect production systems. Attendees will leave with practical strategies to help their teams move fast without letting vibe-coded changes quietly slip into prod."
         }
       ],
-      "roomId": null,
+      "roomId": 84619,
       "liveUrl": null,
       "recordingUrl": null,
       "status": "Accepted",
@@ -276,489 +44,29 @@
       "isConfirmed": true
     },
     {
-      "id": "1185386",
-      "title": "From API Contracts to UI Confidence: AI-Driven Quality in CI/CD",
-      "description": "In modern distributed architectures, the most disruptive defects are often the ones that live in the gaps between services. Contract violations—schema drift, breaking API changes, and consumer-provider mismatches—frequently bypass traditional test suites, only to cause catastrophic failures in the UI or downstream services after deployment.\r\n\r\nThis session provides a technical blueprint for bridging the gap between API reliability and UI confidence. We will walk through a practical implementation of containerized CI/CD pipelines that utilize oasdiff and Docker to detect breaking changes before they hit production.\r\n\r\nKey technical takeaways include:\r\n\r\nAutomating the \"Contract-to-UI\" Link: How to ensure UI automation remains stable by catching underlying API shifts early.\r\n\r\nAI-Driven Testing with Schemathesis: Using AI to derive edge cases and boundary tests directly from OpenAPI specs to increase coverage without manual script bloating.\r\n\r\nIntelligent Triage: Implementing AI-assisted failure analysis to interpret pipeline logs and provide plain-language explanations for complex integration failures.\r\n\r\nSecuring the Pipeline: A critical look at security-conscious AI adoption, focusing on data residency and sandboxed execution using enterprise-bounded platforms like Azure OpenAI or AWS Bedrock.",
-      "startsAt": null,
-      "endsAt": null,
-      "isServiceSession": false,
-      "isPlenumSession": false,
-      "speakers": [
-        "a62f1aa4-7ec6-4452-b5e5-317e7bf588dd",
-        "937ea6f9-3f4d-41f1-87b3-94fd1535f86f"
-      ],
-      "categoryItems": [],
-      "questionAnswers": [
-        {
-          "questionId": 111854,
-          "answerValue": "Stop letting \"minor\" API changes break your entire UI. In a world of microservices and rapid deployments, traditional testing often misses the subtle schema drifts that cause the most headaches.\r\n\r\nThis session will deep dive into building a resilient, AI-enhanced CI/CD pipeline. We’ll explore how to move beyond basic integration tests by combining API contract testing with AI-driven automation. You’ll learn how to use tools like oasdiff and Schemathesis to catch breaking changes early, and how to leverage AI for rapid failure triage—all while keeping your architectural data secure.\r\n"
-        }
-      ],
-      "roomId": null,
-      "liveUrl": null,
-      "recordingUrl": null,
-      "status": "Accepted",
-      "isInformed": true,
-      "isConfirmed": true
-    },
-    {
-      "id": "1113140",
-      "title": "From Quality Metrics to Quality Mindset: Building Teams That Own Outcomes",
-      "description": "Software teams often rely on metrics, dashboards, and defined processes to guide quality efforts. While these tools provide important visibility, they don’t automatically create ownership, accountability, or better outcomes. In many cases, teams learn to optimize for the numbers rather than the intent behind them.\r\nThis session explores how quality outcomes are shaped less by tools and processes and more by leadership behaviors and team mindset. Drawing from experience in software testing and people leadership, the talk examines how well-meaning management practices can unintentionally reinforce “check-the-box” behavior, and what leaders can do differently to build teams that truly own quality.\r\n\r\nParticipants will explore:\r\n\r\nWhy quality challenges are often rooted in leadership and communication gaps.\r\nHow metrics can shift from helpful signals to counterproductive targets.\r\nCommon ways leaders unintentionally discourage ownership.\r\nPractical leadership behaviors that promote clarity, accountability, and proactive thinking\r\n\r\nRather than introducing new frameworks or methodologies, this session focuses on small, intentional leadership shifts that can have an outsized impact on team behavior. Attendees will leave with actionable ideas they can apply immediately to move teams from compliance-driven execution to shared ownership of outcomes.",
-      "startsAt": null,
-      "endsAt": null,
-      "isServiceSession": false,
-      "isPlenumSession": false,
-      "speakers": [
-        "f2cfff77-e663-4744-bed6-24d17faa8756"
-      ],
-      "categoryItems": [],
-      "questionAnswers": [
-        {
-          "questionId": 111854,
-          "answerValue": "Quality metrics don’t create quality, people do.  This session explores how leadership behaviors influence team ownership and outcomes, and why even well-intentioned metrics can lead to “check-the-box” behavior.  Attendees will learn practical ways to shift from compliance-driven quality to a mindset where teams take true ownership of their work."
-        }
-      ],
-      "roomId": null,
-      "liveUrl": null,
-      "recordingUrl": null,
-      "status": "Accepted",
-      "isInformed": true,
-      "isConfirmed": true
-    },
-    {
-      "id": "1181951",
-      "title": "How to create a QA or the Highway talk",
-      "description": "This session is aimed at the person who is interested in presenting at a conference like QA or the Highway but needs practical help building their first talk. \r\nUsing examples, suggestions and group feedback, the participant will leave with a step-by-step playbook for what they need to do in order to submit their proposed talk next year. ",
-      "startsAt": null,
-      "endsAt": null,
-      "isServiceSession": false,
-      "isPlenumSession": false,
-      "speakers": [
-        "c00ade17-a3ef-48da-89ce-32be7bf634db"
-      ],
-      "categoryItems": [],
-      "questionAnswers": [
-        {
-          "questionId": 111854,
-          "answerValue": "Have you an idea, suggestion or thought for a QA or the Highway talk but are not sure what to do with it? In this session we'll take that spark and help turn it into a talk you can present. "
-        }
-      ],
-      "roomId": null,
-      "liveUrl": null,
-      "recordingUrl": null,
-      "status": "Accepted",
-      "isInformed": true,
-      "isConfirmed": true
-    },
-    {
-      "id": "1217153",
-      "title": "If AI is Writing the Code, Who’s Guarding the Quality? ",
-      "description": "AI is helping teams rapidly transform the software development lifecycle—from requirements and design to coding and testing. While AI tools offer faster delivery and greater productivity, they also introduce new and often overlooked quality risks. \r\nWithout the right processes and culture in place, AI can amplify existing challenges—leading to increased rework, wasted resources, team burnout, and a loss of trust in delivery outcomes. \r\nIn this interactive session, Jeff Van Fleet and Scott Boyd break down how AI is reshaping the SDLC, where it can introduce hidden risks, and how QA teams can mitigate those risks. \r\nYou’ll assess where your team sits on an AI maturity model, see what the data show about how teams like yours are performing at each stage, and leave with concrete next steps — not theory, but something you can act on tomorrow: \r\nHow AI is impacting each phase of the SDLC—and where it creates the most risk  \r\nThe most common quality issues introduced by AI-generated code  \r\nHow to build reciprocal feedback loops where your team’s domain expertise ensures outputs are repeatable, high-quality, and continuously improved upon by both humans and AI ",
-      "startsAt": null,
-      "endsAt": null,
-      "isServiceSession": false,
-      "isPlenumSession": false,
-      "speakers": [
-        "f41ce9eb-dc5e-4fa1-b45b-db16965582b9",
-        "877ff616-7fb1-4485-982c-771550afc798"
-      ],
-      "categoryItems": [],
-      "questionAnswers": [
-        {
-          "questionId": 111854,
-          "answerValue": "AI is helping teams rapidly transform the software development lifecycle—from requirements and design to coding and testing. While AI tools offer faster delivery and greater productivity, they also introduce new and often overlooked quality risks. \r\nWithout the right processes and culture in place, AI can amplify existing challenges—leading to increased rework, wasted resources, team burnout, and a loss of trust in delivery outcomes. \r\nIn this interactive session, Jeff Van Fleet and Scott Boyd break down how AI is reshaping the SDLC, where it can introduce hidden risks, and how QA teams can mitigate those risks. \r\nYou’ll assess where your team sits on an AI maturity model, see what the data show about how teams like yours are performing at each stage, and leave with concrete next steps — not theory, but something you can act on tomorrow: \r\nHow AI is impacting each phase of the SDLC—and where it creates the most risk  \r\nThe most common quality issues introduced by AI-generated code  \r\nHow to build reciprocal feedback loops where your team’s domain expertise ensures outputs are repeatable, high-quality, and continuously improved upon by both humans and AI "
-        }
-      ],
-      "roomId": null,
-      "liveUrl": null,
-      "recordingUrl": null,
-      "status": "Accepted",
-      "isInformed": true,
-      "isConfirmed": true
-    },
-    {
-      "id": "1175500",
-      "title": "Layoff to Launch",
-      "description": "Losing a job can feel like a dead end, but what if its the start of your ever big chapter ? session covers strategies for turning layoffs and reorgs in to career comebacks, leverage your network, upskill, and pivot in to new opportunities. if you are navigating a layoff or looking to future-proof your career, this session will equip you with practical tools to turn roadblocks in to launchpads. ",
-      "startsAt": null,
-      "endsAt": null,
-      "isServiceSession": false,
-      "isPlenumSession": false,
-      "speakers": [
-        "eeed5814-e7b4-4cf9-8edf-30a531ec0ed1"
-      ],
-      "categoryItems": [],
-      "questionAnswers": [
-        {
-          "questionId": 111854,
-          "answerValue": "Turning Career roadblocks in to comebacks."
-        }
-      ],
-      "roomId": null,
-      "liveUrl": null,
-      "recordingUrl": null,
-      "status": "Accepted",
-      "isInformed": true,
-      "isConfirmed": true
-    },
-    {
-      "id": "1154958",
-      "title": "LGTM is not a Strategy",
-      "description": "Pull requests are where quality is won or lost, and too many teams still treat reviews with a rushed \"LGTM\". In this talk, you'll learn a practical, repeatable approach to high-quality PR reviews that balances speed with risk management - covering how to triage changes quickly, review in layers, and write comments that lead to better outcomes without friction.  We'll also show how QA and developers bring complementary lenses to the same review, turning acceptance criteria, scenarios, and observability into shared responsibility instead of production surprises.  You'll leave with a lightweight framework and concrete habits for authors and reviewers that make reviews faster, kinder, and more effective.",
-      "startsAt": null,
-      "endsAt": null,
-      "isServiceSession": false,
-      "isPlenumSession": false,
-      "speakers": [
-        "01782d24-b1aa-4645-a9f5-a15e51bf132c"
-      ],
-      "categoryItems": [],
-      "questionAnswers": [
-        {
-          "questionId": 111854,
-          "answerValue": "Pull requests are where quality is won or lost, and too many teams still treat reviews with a rushed \"LGTM\". In this talk, you'll learn a practical, repeatable approach to high-quality PR reviews that balances speed with risk management - covering how to triage changes quickly, review in layers, and write comments that lead to better outcomes without friction.  We'll also show how QA and developers bring complementary lenses to the same review, turning acceptance criteria, scenarios, and observability into shared responsibility instead of production surprises.  You'll leave with a lightweight framework and concrete habits for authors and reviewers that make reviews faster, kinder, and more effective."
-        }
-      ],
-      "roomId": null,
-      "liveUrl": null,
-      "recordingUrl": null,
-      "status": "Accepted",
-      "isInformed": true,
-      "isConfirmed": true
-    },
-    {
-      "id": "1130073",
-      "title": "Life after Tech: Rebuilding your Career in the Post-Tech Economy",
-      "description": "An interactive workshop let by a veteran tech industry employee and certified career coach.\r\n\r\nIn this session, we'll:\r\n- Identify your strongest tech skills and how they are transferable to other industries and roles\r\n- Identify what you hope to get out of your relationship with your work\r\n- Identify your target industries and roles and how you might capture them\r\n\r\nAttendees will leave with a plan for what to do now, next and later as they embark on a journey toward their personal  \"Career Nirvana\"\r\n\r\nThis workshop can be run in either 1 hour or 2 hours, the 2 hour version is more in depth and hands-on. \r\n\r\nSpeaker profile: https://docs.google.com/document/d/1cW-RW9_0qRlaDh8MREHUOSmdLPqvnJRoSusQ1lZ1NAM/edit?usp=sharing",
-      "startsAt": null,
-      "endsAt": null,
-      "isServiceSession": false,
-      "isPlenumSession": false,
-      "speakers": [
-        "f227437b-faf5-48cf-81a9-1cfe0d51f7bc"
-      ],
-      "categoryItems": [],
-      "questionAnswers": [
-        {
-          "questionId": 111854,
-          "answerValue": "The tech industry is imploding. More and more of us are competing for fewer and fewer jobs, jobs that are less lucrative, more boring, more stressful, and even more toxic. On top of all of this, jobs that once permitted us to contribute something positive to the world now routinely ask us to ignore our moral compass. It’s time we all take a hard look at the work we are doing, how it’s serving us and our communities, and decide what we’d like to be doing instead.\r\n\r\nIn this interactive session, a long-time tech worker and certified career coach will guide you through the steps necessary to find your path to a new and rewarding career. We’ll identify our strongest and most transferable skills, uncover what we really hope to get out of our relationship with our work, and then look for new careers in different industries that match our abilities and desires.\r\n\r\nYou’ll leave with a clear plan of action for your “Life after Tech”"
-        }
-      ],
-      "roomId": null,
-      "liveUrl": null,
-      "recordingUrl": null,
-      "status": "Accepted",
-      "isInformed": true,
-      "isConfirmed": true
-    },
-    {
-      "id": "1145022",
-      "title": "Making Migrations Safer and Cheaper with AI-powered Testing",
-      "description": "Migrating legacy systems, such as COBOL-based applications to modern technologies are more feasible today thanks to development copilots that accelerate work and reduce costs (Github Copilot, Cursor, etc). However, testing remains a significant hurdle, especially when documentation is missing or outdated (which is the most common scenario), making it hard to verify that the new system behaves the same as the old one. This talk presents a two-track approach designed to help QA teams tackle this challenge in migrations in a more sustainable way: first, a static understanding of the system through code-derived diagrams and second, a dynamic understanding via observability (being able to ask in natural language to the system what’s happening in the backend), acting as a testing copilot.\r\n\r\nA core contribution of the session is the integration of open-source tools we developed for AI agents that assist testers (https://github.com/abstracta/tero) and a set of examples used to demonstrate with practical demos. To elaborate, the static track uses code-derived diagrams (state machines, flow diagrams, and sequence diagrams) generated directly from the codebase to illuminate system behavior without relying on outdated documentation. In addition, the dynamic track introduces observability as a copilot for testers, enabling real-time visibility into backend behavior in production-like conditions and helping testers validate that changes preserve intended behavior even in the absence of perfect docs.\r\n\r\nThe talk emphasizes AI as a friendly ally for testers across roles, not just developers, and avoids overpromising metrics. While formal metrics are still in progress, early signals suggest that this approach can enable more feasible migration projects by optimizing the testing part. As part of the process, we need a validation stage that will combine expert reviews of generated artifacts (diagrams and observability outputs) with cross-checks by peers to ensure coherence and usefulness. \r\n\r\nContribution to the audience\r\nThis talk offers a practical, replicable view on how to address legacy migrations from a QA lens powered by AI, without relying on complete or up-to-date documentation. It promotes an “AI as ally” narrative that fosters collaboration among testers, developers, and stakeholders, and it establishes a clear pathway aiming to reduce costs and delivery times while safeguarding quality and behavioral verification.\r\n\r\nNotes for reviewers\r\nTarget audience: QA managers, test leads, engineering managers, VPs and DevOps leaders involved in migrations.\r\n",
-      "startsAt": null,
-      "endsAt": null,
-      "isServiceSession": false,
-      "isPlenumSession": false,
-      "speakers": [
-        "c21afc82-a118-4469-861a-356a80673ef4"
-      ],
-      "categoryItems": [],
-      "questionAnswers": [
-        {
-          "questionId": 111854,
-          "answerValue": "Migrating legacy systems, such as COBOL-based applications, to modern technologies is more feasible today thanks to development copilots that accelerate work and reduce costs. However, testing remains one of the biggest hurdles, especially when documentation is missing or outdated, making it difficult to verify that the new system behaves like the original.\r\n\r\nThis talk presents two complementary approaches to tackle this problem: a static understanding of the system through code-derived diagrams, and a dynamic understanding through observability, acting as a testing copilot. We introduce open-source tools we built to support AI agents that assist testers, and we demonstrate their use through practical examples and live demos.\r\n\r\nAlthough we are still collecting metrics, early results indicate more viable migration projects and tangible benefits from applying AI to testing. This session reframes AI as a friendly ally for testers—not just developers—supporting legacy migrations where documentation is scarce, obsolete, or absent.\r\n"
-        }
-      ],
-      "roomId": null,
-      "liveUrl": null,
-      "recordingUrl": null,
-      "status": "Accepted",
-      "isInformed": true,
-      "isConfirmed": true
-    },
-    {
-      "id": "1172042",
-      "title": "Playwright+MCP Server+Claude: a powerful trio",
-      "description": "We’ve all heard the hype about Playwright. And the hype about MCP Servers. And even more hype about Claude Code. Now you get to see what all the hype is about. During this session we are going to wire up Claude Code to a Playwright MCP Server in a Playwright test automation project. Then use Claude Code to travel around the web, mapping out pages as it goes. We might even be able to get Claude to create some tests. Will Claude hallucinate? Probably. Will Claude create a bunch of duplicate tests? Probably. Will Claude create a production-ready test automation framework in the short amount of time we have for this session? We’ll find out.",
-      "startsAt": null,
-      "endsAt": null,
-      "isServiceSession": false,
-      "isPlenumSession": false,
-      "speakers": [
-        "da4286dd-d1cd-42c2-a4b2-f3273bee6f26"
-      ],
-      "categoryItems": [],
-      "questionAnswers": [
-        {
-          "questionId": 111854,
-          "answerValue": "We’ve all heard the hype about Playwright. And the hype about MCP Servers. And even more hype about Claude Code. Now you get to see what all the hype is about. During this session we are going to wire up Claude Code to a Playwright MCP Server in a Playwright test automation project. Then use Claude Code to travel around the web, mapping out pages as it goes. We might even be able to get Claude to create some tests. Will Claude hallucinate? Probably. Will Claude create a bunch of duplicate tests? Probably. Will Claude create a production-ready test automation framework in the short amount of time we have for this session? We’ll find out."
-        }
-      ],
-      "roomId": null,
-      "liveUrl": null,
-      "recordingUrl": null,
-      "status": "Accepted",
-      "isInformed": true,
-      "isConfirmed": true
-    },
-    {
-      "id": "1174416",
-      "title": "Rolling the Dice",
-      "description": "One of the hardest challenges in Quality Assurance is deciding when a release is ready. All software has bugs, but was that strange behavior you observed in testing just a fluke, or a sign of something catastrophic?\r\n\r\nThis talk introduces a practical risk assessment framework built around “rolling the dice” on quality. Each situation is modeled as a die, and each potential outcome as one of its faces. This mental model helps attendees visualize uncertainty, understand the range of possibilities, and evaluate the stability of their releases. \r\n\r\nAttendees will learn to identify sources of chaos in their products and focus their testing efforts on high-impact risks, removing negative outcomes from their dice and increasing the odds of a successful release. ",
-      "startsAt": null,
-      "endsAt": null,
-      "isServiceSession": false,
-      "isPlenumSession": false,
-      "speakers": [
-        "5c56e952-8b5b-42c1-b5f1-cae5651483f2"
-      ],
-      "categoryItems": [],
-      "questionAnswers": [
-        {
-          "questionId": 111854,
-          "answerValue": "Shipping software is always a gamble! Was that strange behavior you observed in testing just a fluke, or a sign of something catastrophic?\r\n\r\nIn this session, we’ll explore a practical framework for understanding release risk using a simple metaphor: rolling the dice. By mapping scenarios to probabilities and outcomes, you’ll gain a structured way to reason about uncertainty and prioritize testing efforts.\r\n\r\nYou’ll leave with practical tools to identify high-impact risks, reduce instability, and shift the odds toward a successful launch."
-        }
-      ],
-      "roomId": null,
-      "liveUrl": null,
-      "recordingUrl": null,
-      "status": "Accepted",
-      "isInformed": true,
-      "isConfirmed": true
-    },
-    {
-      "id": "1113292",
-      "title": "Taming the Beast: Testing Non-Deterministic AI Systems with Confidence",
-      "description": "For decades, software testing has relied on a comforting assumption: given the same input, systems should produce the same output. AI-enabled systems break that assumption entirely. Large language models and other AI components generate responses that can vary in structure, tone, and content while still appearing “correct”. \r\n\r\nIn this session, we’ll explore why traditional testing strategies struggle with non-deterministic AI behavior and where they quietly fail. Using real-world examples such as AI chatbots and resume-screening systems, we’ll walk through practical techniques for validating AI outputs without relying on brittle, deterministic assertions. Topics include input variation strategies, semantic similarity analysis, bias detection, and using LLMs responsibly as automated evaluators (aka “LLM-as-a-Judge”). \r\n\r\nAttendees will leave with a clear mental model for testing AI-based systems, concrete patterns they can apply immediately, and guidance on balancing automation, human judgment, and risk. If you’re responsible for the quality of AI-driven features, this talk will help you move from uncertainty to confidence!",
-      "startsAt": null,
-      "endsAt": null,
-      "isServiceSession": false,
-      "isPlenumSession": false,
-      "speakers": [
-        "accac3e4-7691-420c-97d7-fa693c70dc76"
-      ],
-      "categoryItems": [],
-      "questionAnswers": [
-        {
-          "questionId": 111854,
-          "answerValue": "For decades, software testing has relied on a comforting assumption: given the same input, systems should produce the same output. AI-enabled systems break that assumption entirely. Large language models and other AI components generate responses that can vary in structure, tone, and content while still appearing “correct”. \r\n\r\nIn this session, we’ll explore why traditional testing strategies struggle with non-deterministic AI behavior and where they quietly fail. Using real-world examples such as AI chatbots and resume-screening systems, we’ll walk through practical techniques for validating AI outputs without relying on brittle, deterministic assertions. Topics include input variation strategies, semantic similarity analysis, bias detection, and using LLMs responsibly as automated evaluators (aka “LLM-as-a-Judge”). \r\n\r\nAttendees will leave with a clear mental model for testing AI-based systems, concrete patterns they can apply immediately, and guidance on balancing automation, human judgment, and risk. If you’re responsible for the quality of AI-driven features, this talk will help you move from uncertainty to confidence!"
-        }
-      ],
-      "roomId": null,
-      "liveUrl": null,
-      "recordingUrl": null,
-      "status": "Accepted",
-      "isInformed": true,
-      "isConfirmed": true
-    },
-    {
-      "id": "1182968",
-      "title": "Testing the Untestable: A Practical Guide to LLM Quality Assurance",
-      "description": "Your entire QA career has been a lie. Okay, not entirely but everything you know about testing breaks down when the system under test is an LLM.\r\nSame input, different output. No spec to test against. \"Correct\" is subjective. Welcome to AI testing, where assert_equals goes to die.\r\nBut here's the thing: AI still needs QA. It needs it MORE than deterministic systems because the failure modes are weirder, harder to detect, and way more embarrassing when they hit production.\r\nIn this talk, I'll share the AI QA Playbook, a practical framework for testing systems that don't behave the same way twice.\r\nThe five testing pillars you need:\r\n\r\nAccuracy Testing: Building golden datasets when \"correct\" is fuzzy\r\nBias Testing: Counterfactual test design that catches discrimination\r\nHallucination Testing: Detecting confident nonsense before users do\r\nSecurity Testing: Prompt injection, jailbreaks, and data leakage\r\nRegression Testing: What does \"regression\" even mean for AI?\r\n\r\nWhat makes this different:\r\n\r\nReal test data examples, not theory\r\nMetrics that actually work for non-deterministic systems\r\nCI/CD integration patterns\r\nTools you can use today (including my open-source contributions)\r\n\r\nI've spent the last two years figuring out how to do QA for systems that refuse to be predictable. This talk is the playbook I wish existed when I started.",
-      "startsAt": null,
-      "endsAt": null,
-      "isServiceSession": false,
-      "isPlenumSession": false,
-      "speakers": [
-        "620d785b-3e5c-4c81-bee7-5d1be217853b"
-      ],
-      "categoryItems": [],
-      "questionAnswers": [
-        {
-          "questionId": 111854,
-          "answerValue": "Your entire QA career has been a lie. Okay, not entirely but everything you know about testing breaks down when the system under test is an LLM.\r\nSame input, different output. No spec to test against. \"Correct\" is subjective. Welcome to AI testing, where assert_equals goes to die.\r\nBut here's the thing: AI still needs QA. It needs it MORE than deterministic systems because the failure modes are weirder, harder to detect, and way more embarrassing when they hit production.\r\nIn this talk, I'll share the AI QA Playbook, a practical framework for testing systems that don't behave the same way twice.\r\nThe five testing pillars you need:\r\n\r\nAccuracy Testing: Building golden datasets when \"correct\" is fuzzy\r\nBias Testing: Counterfactual test design that catches discrimination\r\nHallucination Testing: Detecting confident nonsense before users do\r\nSecurity Testing: Prompt injection, jailbreaks, and data leakage\r\nRegression Testing: What does \"regression\" even mean for AI?\r\n\r\nWhat makes this different:\r\n\r\nReal test data examples, not theory\r\nMetrics that actually work for non-deterministic systems\r\nCI/CD integration patterns\r\nTools you can use today (including my open-source contributions)\r\n\r\nI've spent the last two years figuring out how to do QA for systems that refuse to be predictable. This talk is the playbook I wish existed when I started."
-        }
-      ],
-      "roomId": null,
-      "liveUrl": null,
-      "recordingUrl": null,
-      "status": "Accepted",
-      "isInformed": true,
-      "isConfirmed": true
-    },
-    {
-      "id": "1174838",
-      "title": "Testing without Ai - How I learned to stop worrying and love QA",
-      "description": "Ai has gone from a curiosity to a \"must have\" technology in less than 4 years and (I grudgingly admit) has gotten significantly better over that time.  We better understand it's capabilities and limitations.  But there is still a lot of hype and anxiety and misconceptions about Ai.\r\n\r\nI will talk about how I went from a technical leadership role developing test automation to a 10x engineer with Ai, to becoming obsolete, redundant, unemployed.  I'll talk about the hardships and stress affected me, the cold hard realities of Ai, and why I believe whatever the end state of Ai adoption, we're going to need more testers and better QA, not less.\r\n\r\nThis is a difficult transition period, but I see cause for optimism.\r\n\r\nI'll talk about what Ai can and cannot do well, what Ai should and should not do, how to help non-technical leadership know the difference, and how you can improve the quality of life and the quality of software with or without Ai.\r\n\r\nP.S. I'm currently working in a position where Ai is forbidden and QA is very important.",
-      "startsAt": null,
-      "endsAt": null,
-      "isServiceSession": false,
-      "isPlenumSession": false,
-      "speakers": [
-        "e7bf64bc-101c-494f-9f51-4bb47552afeb"
-      ],
-      "categoryItems": [],
-      "questionAnswers": [
-        {
-          "questionId": 111854,
-          "answerValue": "Ai has become nearly ubiquitous. You can't live without it -- or so we are told. You will left behind if you don't adopt it. You will be replaced by Ai in 6 months -- we've heard for 2 years now. I don't think so.\r\n\r\nI make the case why the Ai apocalypse isn't nearly as worrying as you think. And what you can do to survive in the wasteland of terminator robots and omniscient supercomputers. And why there is reason for optimism."
-        }
-      ],
-      "roomId": null,
-      "liveUrl": null,
-      "recordingUrl": null,
-      "status": "Accepted",
-      "isInformed": true,
-      "isConfirmed": true
-    },
-    {
-      "id": "1152366",
-      "title": "The 3 legged stool: AI Won’t Fix Your Agile Problems",
-      "description": "Agile frameworks promise adaptability and speed — but even in the AI and digital age, many teams struggle with unclear roles, brittle dependencies, and communication breakdowns that slow delivery and burn people out. The 3‑legged stool is more than a metaphor— it’s a simple systems model for understanding why agile teams succeed or fail. When roles, collaboration, and communication are balanced, teams are stable and productive. When one “leg” is overloaded, ignored, or missing, the system wobbles — no matter how good your AI is or good the tooling or framework looks on paper.\r\n\r\nIn this session, we’ll explore how the 3‑legged stool analogy can be used as a practical diagnostic and alignment tool across modern agile environments. Drawing on real-world experience working with teams navigating today’s increased complexity — remote work, hybrid structures, and constant delivery pressure — you’ll see how this model helps surface hidden constraints, clarify ownership, and manage dependencies more effectively.\r\n\r\nRather than prescribing yet another framework, this talk focuses on how to create shared understanding between engineers, product, and leadership — so teams can make better decisions inside the frameworks they already use.\r\n\r\nWhether you’re building software, coaching teams, or leading transformation efforts, you’ll leave with a lightweight model you can immediately apply to improve team health, delivery flow, and long-term sustainability.",
-      "startsAt": null,
-      "endsAt": null,
-      "isServiceSession": false,
-      "isPlenumSession": false,
-      "speakers": [
-        "e362ad7d-7818-4eb6-8f64-7acf381afd5c"
-      ],
-      "categoryItems": [],
-      "questionAnswers": [
-        {
-          "questionId": 111854,
-          "answerValue": "Agile frameworks promise adaptability and speed — but even in the AI and digital age, many teams struggle with unclear roles, brittle dependencies, and communication breakdowns that slow delivery and burn people out. \r\n\r\nIn this session, we’ll explore how the 3‑legged stool analogy can be used as a practical diagnostic and alignment tool across modern agile environments. Drawing on real-world experience working with teams navigating today’s increased complexity — remote work, hybrid structures, and constant delivery pressure — you’ll see how this model helps surface hidden constraints, clarify ownership, and manage dependencies more effectively.\r\n\r\nWhether you’re building software, coaching teams, or leading transformation efforts, you’ll leave with a lightweight model you can immediately apply to improve team health, delivery flow, and long-term sustainability."
-        }
-      ],
-      "roomId": null,
-      "liveUrl": null,
-      "recordingUrl": null,
-      "status": "Accepted",
-      "isInformed": true,
-      "isConfirmed": true
-    },
-    {
-      "id": "1152668",
-      "title": "The Day Testing Died — And Quality Evolved",
-      "description": "Twenty years ago, my job was to break software.\r\n\r\nI was trained to think in edge cases, failure paths, and regression suites. If something slipped into production, it meant I missed something.\r\n\r\nBack then, quality meant testing.\r\n\r\nThen the world changed.\r\n\r\nAgile arrived. DevOps arrived. Continuous delivery arrived. And I realized something uncomfortable: quality was never about the test cases. It was about the system behind them.\r\n\r\nAnd now AI has changed the ground again.\r\n\r\nToday, code is written by machines. Tests are generated by copilots. Reviews are assisted by algorithms.\r\n\r\nSo if machines can write the tests…\r\nWho is responsible for trust?\r\n\r\nThat question is why we must evolve — from testers, to quality champions, to AI validation designers.",
-      "startsAt": null,
-      "endsAt": null,
-      "isServiceSession": false,
+      "id": "204bfdc6-e634-426f-b170-fb08ede5a4dd",
+      "title": "Coffee Break",
+      "description": null,
+      "startsAt": "2026-06-12T08:50:00",
+      "endsAt": "2026-06-12T09:00:00",
+      "isServiceSession": true,
       "isPlenumSession": true,
-      "speakers": [
-        "eb3131d6-d052-4c8a-92a7-50308659bff1"
-      ],
+      "speakers": [],
       "categoryItems": [],
-      "questionAnswers": [
-        {
-          "questionId": 111854,
-          "answerValue": "Over the past 20 years, quality has evolved from test execution to shared ownership across teams. But AI is accelerating development faster than ever — generating code, tests, and reviews in seconds.\r\n\r\nWhen machines can write the tests, what does quality become?\r\n\r\nIn this keynote, Tatyana Arbouzova traces her journey from tester to quality champion to AI validation designer, and explores how the role of QA must evolve again. As AI reshapes software delivery, traditional metrics like coverage and pass rates are no longer enough.\r\n\r\nQuality in the AI era is about architecting validation systems — designing guardrails, feedback loops, and workflows that ensure trust at scale.\r\n\r\nBecause when development moves faster, only well-designed quality systems keep it safe."
-        }
-      ],
-      "roomId": null,
+      "questionAnswers": [],
+      "roomId": 84619,
       "liveUrl": null,
       "recordingUrl": null,
-      "status": "Accepted",
-      "isInformed": true,
-      "isConfirmed": true
-    },
-    {
-      "id": "1119014",
-      "title": "The Gumshoe Protocol",
-      "description": "It was a dark and stormy night, the kind of night you expect a P0 defect, when the Teams call interrupted my dinner of Cup of Noodles. It was the VP of Customer Success “we have a customer facing problem. We need you and the Gumshoe Team on the case”.\r\n\r\nRoot cause analysis (RCA) is a critical skill for everyone, however, most professionals have never had the opportunity to identify the root cause of a defect before needing to do so in a critical situation. Effective RCA requires all stakeholders to think critically and use their best judgement on the often limited information available. In this workshop, participants will role-play through a real-life scenario and interact with logs, users, and other stakeholders to figure out the root cause before coming together to brainstorm on how we could have prevented the incident. \r\n\r\nJoin the Gumshoe Team of developers, QAs, product professionals, customer support, and project managers to crack the case. ",
-      "startsAt": null,
-      "endsAt": null,
-      "isServiceSession": false,
-      "isPlenumSession": false,
-      "speakers": [
-        "e540d0fc-6d3b-4e34-8e34-ed56e72a5e5f",
-        "97b29c15-84f0-4899-97b8-57ed6d8e390b"
-      ],
-      "categoryItems": [],
-      "questionAnswers": [
-        {
-          "questionId": 111854,
-          "answerValue": "It was a dark and stormy night, the kind of night you expect a P0 defect, when the Teams call interrupted my dinner of Cup of Noodles. It was the VP of Customer Success “we have a customer facing problem. We need you and the Gumshoe Team on the case”.\r\n\r\nRoot cause analysis (RCA) is a critical skill for everyone, however, most professionals have never had the opportunity to identify the root cause of a defect before needing to do so in a critical situation. Effective RCA requires all stakeholders to think critically and use their best judgement on the often limited information available. In this workshop, participants will role-play through a real-life scenario and interact with logs, users, and other stakeholders to figure out the root cause before coming together to brainstorm on how we could have prevented the incident. \r\n\r\nJoin the Gumshoe Team of developers, QAs, product professionals, customer support, and project managers to crack the case. "
-        }
-      ],
-      "roomId": null,
-      "liveUrl": null,
-      "recordingUrl": null,
-      "status": "Accepted",
-      "isInformed": true,
-      "isConfirmed": true
-    },
-    {
-      "id": "1174294",
-      "title": "The Human Advantage: Making Better QA Decisions with AI in the Loop",
-      "description": "As AI becomes a key player in our tools and workflows, testing and testers need to evolve the strategies since the quality still depends on human judgment. This session focuses on the tester’s mindset and the strategies to follow in their personal + professional lives that help QA engineers make better decisions, communicate risk clearly, and build trust in what they deliver\r\n\r\nThis is a practical, human-centered talk on how to become a stronger Quality Assurance professional in an AI-accelerated environment without becoming overly dependent on tools. Focusing on the human aspect of the QA, we’ll explore the mental models and habits that separate “someone who runs tests” from “someone who owns quality.”\r\n\r\nThe key takeaways include - \r\nUsing AI as a test helper, expanding ideas, help debug and write reports, prompt pattens to generate better scenarios\r\nQA mindset shifts for stronger testing - risk-based thinking, systems thinking, and skepticism without becoming adversarial.\r\nCommunication strategies that make QAs more human\r\nPersonal growth strategies that anyone can follow to build confidence and to be resilient \r\nA set of repeatable daily/weekly habits (checklists, journaling prompts, review routines) to build stronger intuition and consistency.\r\n\r\nThis session will be beneficial for Quality Assurance professions in all levels, if you are wondering how the QA roles evolve with AI in the mix, this session is for you. \r\n\r\n\r\n\r\n\r\n\r\n",
-      "startsAt": null,
-      "endsAt": null,
-      "isServiceSession": false,
-      "isPlenumSession": false,
-      "speakers": [
-        "0bc9c4c9-6a57-410a-9928-58c4b8d3e2ba"
-      ],
-      "categoryItems": [],
-      "questionAnswers": [
-        {
-          "questionId": 111854,
-          "answerValue": "As AI becomes a key player in our tools and workflows, testing and testers must evolve—because quality still depends on human judgment. This session focuses on the tester’s mindset and the personal and professional strategies that help QA engineers make better decisions, communicate risk clearly, and build trust in what they deliver. It’s a practical, human-centered talk on becoming a stronger QA professional in an AI-accelerated environment without becoming overly dependent on tools. We’ll cover using AI as a test helper (prompt patterns for better scenarios, debugging, reports), mindset shifts (risk-based/system thinking, healthy skepticism), communication strategies, resilience and confidence-building, and repeatable habits (checklists, journaling, review routines). Skills to focus on. this talk is suitable for all QA levels."
-        }
-      ],
-      "roomId": null,
-      "liveUrl": null,
-      "recordingUrl": null,
-      "status": "Accepted",
-      "isInformed": true,
-      "isConfirmed": true
-    },
-    {
-      "id": "1178124",
-      "title": "The Judgment Gap: Why AI Adoption Without Verification Is Worse Than No AI At All",
-      "description": "Your organization adopted AI. Congratulations — so did everyone else. But here's what the data actually shows: in a pre-registered experiment with 758 consultants, Harvard and BCG found that AI made good work 40% better and bad work 19 percentage points *worse* than working without AI at all. The tool that amplifies expertise also amplifies poor judgment — and the boundary between the two is invisible without training.\r\n\r\nThis isn't a theoretical risk. In our own survey of 571 professionals, 93.9% use AI frequently — but 69.4% spend zero time on advanced capabilities. Microsoft's 300,000-person Copilot rollout found the same pattern: broad adoption clustered at the simplest features, with a measurable productivity dip from weeks 3 through 10 as initial excitement collided with real-world complexity.\r\n\r\nAdoption isn't the hard part anymore. Judgment is.\r\n\r\nIn this session, you'll learn:\r\n- How to identify whether a task falls inside or outside AI's reliability boundary — and why getting this wrong is catastrophic\r\n- A practical verification framework that catches AI failures *before* they reach your clients or production systems\r\n- Why the \"adoption valley\" kills most AI initiatives, and the specific practices that get teams through it\r\n- How to build team-level habits that make AI output trustworthy by default, not by accident\r\n\r\nYou'll leave with concrete processes you can implement Monday morning to close the gap between \"we use AI\" and \"we use AI well.\"",
-      "startsAt": null,
-      "endsAt": null,
-      "isServiceSession": false,
-      "isPlenumSession": false,
-      "speakers": [
-        "d101b2c4-cdb8-4c5e-9c56-86e045b0b2d0"
-      ],
-      "categoryItems": [],
-      "questionAnswers": [
-        {
-          "questionId": 111854,
-          "answerValue": "Your organization adopted AI. So did everyone else. But a pre-registered Harvard/BCG study of 758 consultants found that AI made good work 40% better — and bad work 19 percentage points worse than no AI at all. The tool that amplifies expertise also amplifies poor judgment. And the boundary between the two is invisible without training.\r\n\r\nAdoption isn't the hard part anymore. Judgment is.\r\n\r\nIn this session you'll learn how to identify whether a task falls inside or outside AI's reliability boundary, a practical verification framework that catches failures before they reach clients or production, and the specific practices that get teams through the adoption valley — the measurable productivity dip Microsoft documented across 300,000 Copilot users in weeks 3 through 10.\r\n\r\nYou'll leave with concrete processes you can implement Monday morning to close the gap between \"we use AI\" and \"we use AI well.\""
-        }
-      ],
-      "roomId": null,
-      "liveUrl": null,
-      "recordingUrl": null,
-      "status": "Accepted",
-      "isInformed": true,
-      "isConfirmed": true
-    },
-    {
-      "id": "1129517",
-      "title": "The Quality Horizon: Modern Best Practices and the Art of Constant Adaptation",
-      "description": "When I started my career twenty years ago, software quality basically meant \"no bugs,\" and testing meant executing a finite set of cases. Since then, I’ve watched the concept evolve alongside significant shifts in technology and industry practices.\r\n\r\nBecause these changes have been largely additive, we face an ever-expanding horizon of what \"good\" software looks like.\r\nIn this talk, I offer a definition of modern software quality that incorporates the many expectations accumulated from technological and process trends such as Agile, automated testing, cloud hosting, DevOps, and AI. Drawing on my own painful experiences with neglecting or misunderstanding the evolving dimensions of quality, I’ll share examples of what effective practices can look like.\r\n\r\nTo help you assess how you and your team are doing with respect to this laundry list of things to be responsible for, we will break them down into four key pillars:\r\n- User Value: Building the Right Thing (strategic alignment, risk assessment, measurable impact)\r\n- Product Health: Testing the Things We Can Predict (enabling and executing solid testing strategies)\r\n- Operational Health: Dealing with the Unexpected (observability, recovery, non-derministic behaviour)\r\n- Sustainability: Holistic Stewardship (security, cost, performance, accessibility, maintainability)\r\n\r\nWe’ll cover a series of questions to help you explore and audit each area, followed by a set of prompts to help you determine where the next quality evolution is likely to come from in your context.\r\n\r\nWhile the field may have been simpler when I began, the constant transformation is what has kept it exciting. Fortunately, today it’s easier than ever to learn a new skill that can bring more value to your users and your business. As a final thought, I hope to leave you with the realization that the most important software quality strategy is the willingness to adapt, evolve, and stay curious in an ever-changing landscape.",
-      "startsAt": null,
-      "endsAt": null,
-      "isServiceSession": false,
-      "isPlenumSession": false,
-      "speakers": [
-        "fc04e924-6a1d-4494-8592-1d3e2dde0d3d"
-      ],
-      "categoryItems": [],
-      "questionAnswers": [
-        {
-          "questionId": 111854,
-          "answerValue": "Software quality is not a finite destination, but a moving target influenced by ongoing technological and process shifts (think Agile, DevOps, AI, and more). This talk explores how these trends have created an ever-expanding horizon of responsibility for software teams. I will present a holistic definition of quality that balances predictable testing with operational resilience and long-term sustainability. By describing quality in terms of four strategic pillars, I offer a roadmap for teams to audit their current quality practices and move toward a culture of continuous adaptation and curiosity."
-        }
-      ],
-      "roomId": null,
-      "liveUrl": null,
-      "recordingUrl": null,
-      "status": "Accepted",
-      "isInformed": true,
-      "isConfirmed": true
+      "status": null,
+      "isInformed": false,
+      "isConfirmed": false
     },
     {
       "id": "1176192",
       "title": "The Race to the Top… When Do You Stop?",
       "description": "In many QA organizations, career growth is often equated with becoming a people manager. But what happens when your strengths — and passions — lie elsewhere?\r\nIn this session, we'll share a tale of two testers, metaphorically climbing QA Everest. Using our experiences and lessons learned to help you navigate the decision, \"do I want to manage or do I want to keep testing?\"\r\n\r\nWe'll each share some of our personal journey from QA individual contributor to manager and back again. While you can value the opportunity to lead, you may ultimately realize that the parts of the role that energize you most are mentoring testers, improving quality practices, staying hands-on with testing, and supporting projects through strong organization and communication — not the people-management aspects like performance reviews, HR responsibilities, or navigating formal management structures.\r\n\r\nThis session challenges the idea that you have to keep climbing the mountain toward higher base camps, including management. Instead, it reframes the individual contributor role as a powerful, intentional career choice that brings deep value to teams. We'll discuss the decision points and key characteristics to help you determine where you want to stop on your journey up QA Everest. Then, we'll outline ways QA individuals can advocate for themselves, define success beyond titles, and continue to grow their influence without managing people.\r\n\r\nWhether you’re a tester questioning your next career move, a people manager considering a change, or a leader looking to better support IC career paths, this talk will offer validation, clarity, and practical takeaways.",
-      "startsAt": null,
-      "endsAt": null,
+      "startsAt": "2026-06-12T09:00:00",
+      "endsAt": "2026-06-12T09:50:00",
       "isServiceSession": false,
       "isPlenumSession": false,
       "speakers": [
@@ -772,7 +80,7 @@
           "answerValue": "In many QA organizations, career growth is often equated with becoming a people manager. But what happens when your strengths — and passions — lie elsewhere?\r\nIn this session, we'll share a tale of two testers, metaphorically climbing QA Everest. Using our experiences and lessons learned to help you navigate the decision, \"do I want to manage or do I want to keep testing?\"\r\n\r\nWe'll each share some of our personal journey from QA individual contributor to manager and back again. While you can value the opportunity to lead, you may ultimately realize that the parts of the role that energize you most are mentoring testers, improving quality practices, staying hands-on with testing, and supporting projects through strong organization and communication — not the people-management aspects like performance reviews, HR responsibilities, or navigating formal management structures.\r\n\r\nThis session challenges the idea that you have to keep climbing the mountain toward higher base camps, including management. Instead, it reframes the individual contributor role as a powerful, intentional career choice that brings deep value to teams. We'll discuss the decision points and key characteristics to help you determine where you want to stop on your journey up QA Everest. Then, we'll outline ways QA individuals can advocate for themselves, define success beyond titles, and continue to grow their influence without managing people.\r\n\r\nWhether you’re a tester questioning your next career move, a people manager considering a change, or a leader looking to better support IC career paths, this talk will offer validation, clarity, and practical takeaways."
         }
       ],
-      "roomId": null,
+      "roomId": 73078,
       "liveUrl": null,
       "recordingUrl": null,
       "status": "Accepted",
@@ -780,24 +88,24 @@
       "isConfirmed": true
     },
     {
-      "id": "1183766",
-      "title": "Turbocharge Your Playwright: Capabilities You're Probably Not Using",
-      "description": "Most teams use Playwright to open a browser and click through flows. But Playwright can do so much more — mock APIs, persist authentication, inject custom headers for distributed tracing, and more. In this talk, Kevin goes beyond the basics and explores the capabilities that separate a good Playwright suite from a great one. You'll leave with techniques you can add to your suite the same week.\r\n\r\nThis is not a \"getting started with Playwright\" talk. It's for teams that are already running Playwright tests and want to unlock capabilities they didn't know they had. I'll cover things like persisting authentication state across tests, mocking API responses to isolate your UI layer, injecting traceparent headers for distributed tracing, and intercepting network traffic — all features built into the library that most teams never touch. The goal is to get the audience thinking like testers when they read Playwright's API, spotting features that solve real testing problems rather than just following tutorials.",
-      "startsAt": null,
-      "endsAt": null,
+      "id": "1129517",
+      "title": "The Quality Horizon: Modern Best Practices and the Art of Constant Adaptation",
+      "description": "When I started my career twenty years ago, software quality basically meant \"no bugs,\" and testing meant executing a finite set of cases. Since then, I’ve watched the concept evolve alongside significant shifts in technology and industry practices.\r\n\r\nBecause these changes have been largely additive, we face an ever-expanding horizon of what \"good\" software looks like.\r\nIn this talk, I offer a definition of modern software quality that incorporates the many expectations accumulated from technological and process trends such as Agile, automated testing, cloud hosting, DevOps, and AI. Drawing on my own painful experiences with neglecting or misunderstanding the evolving dimensions of quality, I’ll share examples of what effective practices can look like.\r\n\r\nTo help you assess how you and your team are doing with respect to this laundry list of things to be responsible for, we will break them down into four key pillars:\r\n- User Value: Building the Right Thing (strategic alignment, risk assessment, measurable impact)\r\n- Product Health: Testing the Things We Can Predict (enabling and executing solid testing strategies)\r\n- Operational Health: Dealing with the Unexpected (observability, recovery, non-derministic behaviour)\r\n- Sustainability: Holistic Stewardship (security, cost, performance, accessibility, maintainability)\r\n\r\nWe’ll cover a series of questions to help you explore and audit each area, followed by a set of prompts to help you determine where the next quality evolution is likely to come from in your context.\r\n\r\nWhile the field may have been simpler when I began, the constant transformation is what has kept it exciting. Fortunately, today it’s easier than ever to learn a new skill that can bring more value to your users and your business. As a final thought, I hope to leave you with the realization that the most important software quality strategy is the willingness to adapt, evolve, and stay curious in an ever-changing landscape.",
+      "startsAt": "2026-06-12T09:00:00",
+      "endsAt": "2026-06-12T09:50:00",
       "isServiceSession": false,
       "isPlenumSession": false,
       "speakers": [
-        "30314dcc-99f8-488f-9102-56330d4137aa"
+        "fc04e924-6a1d-4494-8592-1d3e2dde0d3d"
       ],
       "categoryItems": [],
       "questionAnswers": [
         {
           "questionId": 111854,
-          "answerValue": "Most teams use Playwright to open a browser and click through flows. But Playwright can do so much more — mock APIs, persist authentication, inject custom headers for distributed tracing, and more. In this talk, Kevin goes beyond the basics and explores the capabilities that separate a good Playwright suite from a great one. You'll leave with techniques you can add to your suite the same week."
+          "answerValue": "Software quality is not a finite destination, but a moving target influenced by ongoing technological and process shifts (think Agile, DevOps, AI, and more). This talk explores how these trends have created an ever-expanding horizon of responsibility for software teams. I will present a holistic definition of quality that balances predictable testing with operational resilience and long-term sustainability. By describing quality in terms of four strategic pillars, I offer a roadmap for teams to audit their current quality practices and move toward a culture of continuous adaptation and curiosity."
         }
       ],
-      "roomId": null,
+      "roomId": 73079,
       "liveUrl": null,
       "recordingUrl": null,
       "status": "Accepted",
@@ -805,24 +113,24 @@
       "isConfirmed": true
     },
     {
-      "id": "1147079",
-      "title": "Verify, Then Trust: Human Judgement in the Age of Generative AI",
-      "description": "Generative AI is rapidly becoming part of how modern organizations write, evaluate, and make decisions — from drafting content and summarizing data to supporting technical workflows.\r\n\r\nAs these systems become more fluent and convincing, the real challenge is no longer whether AI can produce outputs quickly, but whether humans maintain the skills of verification, discernment, and accountability alongside it.\r\n\r\nVerify, Then Trust offers a grounded, human-centered framework for navigating AI without panic, blind faith, or outsourcing our thinking. This session explores why trust must be earned through validation, especially in environments where accuracy, clarity, and responsibility matter.\r\n\r\nRather than positioning AI as a threat or a replacement, this talk reframes it as a powerful tool that still requires human oversight. Attendees will learn practical habits for staying mentally present, asking better questions, and building norms that keep human judgment meaningfully in the loop.\r\n\r\nThis session is designed for technology professionals, leaders, and teams adapting to AI-enabled work who want to move forward with confidence — without losing critical thinking or responsibility in the process.\r\n\r\nKey themes include:\r\n* Speed vs. correctness in AI-generated outputs\r\n* Why verification is becoming a core professional skill\r\n* The risk of automation complacency\r\n* Practical ways to keep humans accountable and engaged",
-      "startsAt": null,
-      "endsAt": null,
+      "id": "1172552",
+      "title": "Awesome Web Testing with Playwright and AI",
+      "description": "Everybody gets frustrated when web apps are broken, but testing them thoroughly doesn't need to be a chore. [Playwright](https://playwright.dev/) together with AI makes testing web apps fun! Playwright offers a slew of nifty features like automatic waiting, mobile emulation, and network interception. Plus, with isolated browser contexts, Playwright tests can set up *much* faster than traditional Web UI tests.\r\n\r\nIn this tutorial, we will automate concise yet robust web app tests for \"BuggyBoard\", a bug tracking web app with Playwright in TypeScript. And we will expedite our test development with the superpowers of AI. Specifically, we will cover:\r\n\r\n1. How to add Playwright to a project\r\n2. How to explore an app with AI assistance and Playwright's MCP\r\n3. How to generate Playwright test code\r\n4. How to context engineer scalable automation patterns\r\n5. How Playwright compares to other browser automation tools like Selenium and Cypress\r\n\r\nBy the end of this session, you'll be empowered to test modern web apps with modern web test tools. You'll also have an example project to be the foundation for your future tests.\r\n\r\n---\r\n\r\nThis year, I am revamping my Playwright content to include AI assisted coding techniques, like using context engineering, agentic analysis, and Playwright's MCP servers.",
+      "startsAt": "2026-06-12T09:00:00",
+      "endsAt": "2026-06-12T09:50:00",
       "isServiceSession": false,
       "isPlenumSession": false,
       "speakers": [
-        "c261415b-ec1a-42ca-bfb7-b5875db38294"
+        "3ec8847f-9f1e-46dd-8b2f-c9d38767f42b"
       ],
       "categoryItems": [],
       "questionAnswers": [
         {
           "questionId": 111854,
-          "answerValue": "AI tools are moving fast — but trust still requires verification.\r\n\r\nIn this session, Verify, Then Trust explores how professionals can use generative AI effectively while maintaining the essential human skills of critical thinking, judgment, and accountability. Rather than positioning AI as a threat or a replacement, this talk reframes it as a powerful tool that still requires human oversight. \r\n\r\nAttendees will learn practical habits for staying mentally present, asking better questions, and building norms that keep human judgment meaningfully in the loop."
+          "answerValue": "Everybody gets frustrated when web apps are broken, but testing them thoroughly doesn't need to be a chore. [Playwright](https://playwright.dev/) together with AI makes testing web apps fun! Playwright offers a slew of nifty features like automatic waiting, mobile emulation, and network interception. Plus, with isolated browser contexts, Playwright tests can set up *much* faster than traditional Web UI tests.\r\n\r\nIn this tutorial, we will automate concise yet robust web app tests for \"BuggyBoard\", a bug tracking web app with Playwright in TypeScript. And we will expedite our test development with the superpowers of AI. Specifically, we will cover:\r\n\r\n1. How to add Playwright to a project\r\n2. How to explore an app with AI assistance and Playwright's MCP\r\n3. How to generate Playwright test code\r\n4. How to context engineer scalable automation patterns\r\n5. How Playwright compares to other browser automation tools like Selenium and Cypress\r\n\r\nBy the end of this session, you'll be empowered to test modern web apps with modern web test tools. You'll also have an example project to be the foundation for your future tests."
         }
       ],
-      "roomId": null,
+      "roomId": 73080,
       "liveUrl": null,
       "recordingUrl": null,
       "status": "Accepted",
@@ -833,8 +141,8 @@
       "id": "1155732",
       "title": "What is Your Working Genius?",
       "description": "The working genius model is a productivity model developed by Patrick Lencioni with the goal of accomplishing a simple concept: bringing more joy and fulfillment at work! When you and your team understand where your geniuses are and how to (and when not to) use them, it can improve meetings, reduce burnout, and dramatically reduce turbulence in getting projects done. In this session we will review the 6 types of working geniuses and how they bring projects from ideation to implementation. We will discover the hidden cause of burnout and how to keep meetings, including our agile ceremonies, more focused and more productive as a whole, all with the goal of improving your life and team culture, both in and outside of work. (that's right… ALL projects!)",
-      "startsAt": null,
-      "endsAt": null,
+      "startsAt": "2026-06-12T09:00:00",
+      "endsAt": "2026-06-12T09:50:00",
       "isServiceSession": false,
       "isPlenumSession": false,
       "speakers": [
@@ -847,7 +155,395 @@
           "answerValue": "The working genius model is a productivity model developed by Patrick Lencioni with the goal of accomplishing a simple concept: bringing more joy and fulfillment at work! When you and your team understand where your geniuses are and how to (and when not to) use them, it can improve meetings, reduce burnout, and dramatically reduce turbulence in getting projects done. In this session we will review the 6 types of working geniuses and how they bring projects from ideation to implementation. We will discover the hidden cause of burnout and how to keep meetings, including our agile ceremonies, more focused and more productive as a whole, all with the goal of improving your life and team culture, both in and outside of work. (that's right… ALL projects!)"
         }
       ],
-      "roomId": null,
+      "roomId": 84620,
+      "liveUrl": null,
+      "recordingUrl": null,
+      "status": "Accepted",
+      "isInformed": true,
+      "isConfirmed": true
+    },
+    {
+      "id": "1145022",
+      "title": "Making Migrations Safer and Cheaper with AI-powered Testing",
+      "description": "Migrating legacy systems, such as COBOL-based applications to modern technologies are more feasible today thanks to development copilots that accelerate work and reduce costs (Github Copilot, Cursor, etc). However, testing remains a significant hurdle, especially when documentation is missing or outdated (which is the most common scenario), making it hard to verify that the new system behaves the same as the old one. This talk presents a two-track approach designed to help QA teams tackle this challenge in migrations in a more sustainable way: first, a static understanding of the system through code-derived diagrams and second, a dynamic understanding via observability (being able to ask in natural language to the system what’s happening in the backend), acting as a testing copilot.\r\n\r\nA core contribution of the session is the integration of open-source tools we developed for AI agents that assist testers (https://github.com/abstracta/tero) and a set of examples used to demonstrate with practical demos. To elaborate, the static track uses code-derived diagrams (state machines, flow diagrams, and sequence diagrams) generated directly from the codebase to illuminate system behavior without relying on outdated documentation. In addition, the dynamic track introduces observability as a copilot for testers, enabling real-time visibility into backend behavior in production-like conditions and helping testers validate that changes preserve intended behavior even in the absence of perfect docs.\r\n\r\nThe talk emphasizes AI as a friendly ally for testers across roles, not just developers, and avoids overpromising metrics. While formal metrics are still in progress, early signals suggest that this approach can enable more feasible migration projects by optimizing the testing part. As part of the process, we need a validation stage that will combine expert reviews of generated artifacts (diagrams and observability outputs) with cross-checks by peers to ensure coherence and usefulness. \r\n\r\nContribution to the audience\r\nThis talk offers a practical, replicable view on how to address legacy migrations from a QA lens powered by AI, without relying on complete or up-to-date documentation. It promotes an “AI as ally” narrative that fosters collaboration among testers, developers, and stakeholders, and it establishes a clear pathway aiming to reduce costs and delivery times while safeguarding quality and behavioral verification.\r\n\r\nNotes for reviewers\r\nTarget audience: QA managers, test leads, engineering managers, VPs and DevOps leaders involved in migrations.\r\n",
+      "startsAt": "2026-06-12T09:00:00",
+      "endsAt": "2026-06-12T09:50:00",
+      "isServiceSession": false,
+      "isPlenumSession": false,
+      "speakers": [
+        "c21afc82-a118-4469-861a-356a80673ef4"
+      ],
+      "categoryItems": [],
+      "questionAnswers": [
+        {
+          "questionId": 111854,
+          "answerValue": "Migrating legacy systems, such as COBOL-based applications, to modern technologies is more feasible today thanks to development copilots that accelerate work and reduce costs. However, testing remains one of the biggest hurdles, especially when documentation is missing or outdated, making it difficult to verify that the new system behaves like the original.\r\n\r\nThis talk presents two complementary approaches to tackle this problem: a static understanding of the system through code-derived diagrams, and a dynamic understanding through observability, acting as a testing copilot. We introduce open-source tools we built to support AI agents that assist testers, and we demonstrate their use through practical examples and live demos.\r\n\r\nAlthough we are still collecting metrics, early results indicate more viable migration projects and tangible benefits from applying AI to testing. This session reframes AI as a friendly ally for testers—not just developers—supporting legacy migrations where documentation is scarce, obsolete, or absent.\r\n"
+        }
+      ],
+      "roomId": 84621,
+      "liveUrl": null,
+      "recordingUrl": null,
+      "status": "Accepted",
+      "isInformed": true,
+      "isConfirmed": true
+    },
+    {
+      "id": "1167680",
+      "title": "Decision Records: Understanding Why Those Decisions Were Made!",
+      "description": "Ever stared at a complex system and thought, \"Wait, why was that decision made?!” We’ve all been there – lost in a maze of logic, struggling to track down the root cause of a problem. Decision Records offer a brilliant way to finally unlock that understanding. They’re like having a detailed, searchable log of every decision in your applications – from architectural style to authentication to service discovery and containerization. By capturing these decisions, you build more maintainable, auditable, and, frankly, less frustrating systems. In this session, you will learn how decision records solve problems and will be given ideas of templates that you can implement in your projects today! Let’s ditch the guesswork and start documenting the why – because truly understanding your systems is the key to unlocking its full potential!",
+      "startsAt": "2026-06-12T09:00:00",
+      "endsAt": "2026-06-12T09:50:00",
+      "isServiceSession": false,
+      "isPlenumSession": false,
+      "speakers": [
+        "9bde9de9-7bcb-4077-8087-47bf492a1344"
+      ],
+      "categoryItems": [],
+      "questionAnswers": [
+        {
+          "questionId": 111854,
+          "answerValue": "Ever stared at a complex system and thought, \"Wait, why was that decision made?!” We’ve all been there – lost in a maze of logic, struggling to track down the root cause of a problem. Decision Records offer a brilliant way to finally unlock that understanding. They’re like having a detailed, searchable log of every decision in your applications – from architectural style to authentication to service discovery and containerization. By capturing these decisions, you build more maintainable, auditable, and, frankly, less frustrating systems. In this session, you will learn how decision records solve problems and will be given ideas of templates that you can implement in your projects today! Let’s ditch the guesswork and start documenting the why – because truly understanding your systems is the key to unlocking its full potential!"
+        }
+      ],
+      "roomId": 84622,
+      "liveUrl": null,
+      "recordingUrl": null,
+      "status": "Accepted",
+      "isInformed": true,
+      "isConfirmed": true
+    },
+    {
+      "id": "1119014",
+      "title": "The Gumshoe Protocol",
+      "description": "It was a dark and stormy night, the kind of night you expect a P0 defect, when the Teams call interrupted my dinner of Cup of Noodles. It was the VP of Customer Success “we have a customer facing problem. We need you and the Gumshoe Team on the case”.\r\n\r\nRoot cause analysis (RCA) is a critical skill for everyone, however, most professionals have never had the opportunity to identify the root cause of a defect before needing to do so in a critical situation. Effective RCA requires all stakeholders to think critically and use their best judgement on the often limited information available. In this workshop, participants will role-play through a real-life scenario and interact with logs, users, and other stakeholders to figure out the root cause before coming together to brainstorm on how we could have prevented the incident. \r\n\r\nJoin the Gumshoe Team of developers, QAs, product professionals, customer support, and project managers to crack the case. ",
+      "startsAt": "2026-06-12T09:00:00",
+      "endsAt": "2026-06-12T12:00:00",
+      "isServiceSession": false,
+      "isPlenumSession": false,
+      "speakers": [
+        "e540d0fc-6d3b-4e34-8e34-ed56e72a5e5f",
+        "97b29c15-84f0-4899-97b8-57ed6d8e390b"
+      ],
+      "categoryItems": [],
+      "questionAnswers": [
+        {
+          "questionId": 111854,
+          "answerValue": "It was a dark and stormy night, the kind of night you expect a P0 defect, when the Teams call interrupted my dinner of Cup of Noodles. It was the VP of Customer Success “we have a customer facing problem. We need you and the Gumshoe Team on the case”.\r\n\r\nRoot cause analysis (RCA) is a critical skill for everyone, however, most professionals have never had the opportunity to identify the root cause of a defect before needing to do so in a critical situation. Effective RCA requires all stakeholders to think critically and use their best judgement on the often limited information available. In this workshop, participants will role-play through a real-life scenario and interact with logs, users, and other stakeholders to figure out the root cause before coming together to brainstorm on how we could have prevented the incident. \r\n\r\nJoin the Gumshoe Team of developers, QAs, product professionals, customer support, and project managers to crack the case. "
+        }
+      ],
+      "roomId": 84623,
+      "liveUrl": null,
+      "recordingUrl": null,
+      "status": "Accepted",
+      "isInformed": true,
+      "isConfirmed": true
+    },
+    {
+      "id": "1187097",
+      "title": "AI Testing Hackathon Workshop",
+      "description": "Break the AI Agent RAG Application in 4 Hours - Find the failures before real users ever see them.",
+      "startsAt": "2026-06-12T09:00:00",
+      "endsAt": "2026-06-12T11:00:00",
+      "isServiceSession": false,
+      "isPlenumSession": false,
+      "speakers": [
+        "7a4da457-4a7c-4f69-9645-5474c9cd0401"
+      ],
+      "categoryItems": [],
+      "questionAnswers": [
+        {
+          "questionId": 111854,
+          "answerValue": "This practical hackathon gives students the chance to work like real AI testers. In teams, participants will use Agenta.ai to test the WeOptimize AI system, uncover reliability and safety issues, and present the most important findings to judges.\r\nThis event goes beyond basic prompting. It focuses on one of the most valuable emerging skills in tech: evaluating whether AI applications are trustworthy, safe, and ready for production."
+        }
+      ],
+      "roomId": 84737,
+      "liveUrl": null,
+      "recordingUrl": null,
+      "status": "Accepted",
+      "isInformed": true,
+      "isConfirmed": true
+    },
+    {
+      "id": "7eab9c56-7ca8-4f28-b2f2-2c119e1394c9",
+      "title": "Break & Refreshments - 2nd floor, Traditions Room",
+      "description": null,
+      "startsAt": "2026-06-12T09:50:00",
+      "endsAt": "2026-06-12T10:00:00",
+      "isServiceSession": true,
+      "isPlenumSession": true,
+      "speakers": [],
+      "categoryItems": [],
+      "questionAnswers": [],
+      "roomId": 84619,
+      "liveUrl": null,
+      "recordingUrl": null,
+      "status": null,
+      "isInformed": false,
+      "isConfirmed": false
+    },
+    {
+      "id": "1217153",
+      "title": "If AI is Writing the Code, Who’s Guarding the Quality? ",
+      "description": "AI is helping teams rapidly transform the software development lifecycle—from requirements and design to coding and testing. While AI tools offer faster delivery and greater productivity, they also introduce new and often overlooked quality risks. \r\nWithout the right processes and culture in place, AI can amplify existing challenges—leading to increased rework, wasted resources, team burnout, and a loss of trust in delivery outcomes. \r\nIn this interactive session, Jeff Van Fleet and Scott Boyd break down how AI is reshaping the SDLC, where it can introduce hidden risks, and how QA teams can mitigate those risks. \r\nYou’ll assess where your team sits on an AI maturity model, see what the data show about how teams like yours are performing at each stage, and leave with concrete next steps — not theory, but something you can act on tomorrow: \r\nHow AI is impacting each phase of the SDLC—and where it creates the most risk  \r\nThe most common quality issues introduced by AI-generated code  \r\nHow to build reciprocal feedback loops where your team’s domain expertise ensures outputs are repeatable, high-quality, and continuously improved upon by both humans and AI ",
+      "startsAt": "2026-06-12T10:00:00",
+      "endsAt": "2026-06-12T10:50:00",
+      "isServiceSession": false,
+      "isPlenumSession": false,
+      "speakers": [
+        "f41ce9eb-dc5e-4fa1-b45b-db16965582b9",
+        "877ff616-7fb1-4485-982c-771550afc798"
+      ],
+      "categoryItems": [],
+      "questionAnswers": [
+        {
+          "questionId": 111854,
+          "answerValue": "AI is helping teams rapidly transform the software development lifecycle—from requirements and design to coding and testing. While AI tools offer faster delivery and greater productivity, they also introduce new and often overlooked quality risks. \r\nWithout the right processes and culture in place, AI can amplify existing challenges—leading to increased rework, wasted resources, team burnout, and a loss of trust in delivery outcomes. \r\nIn this interactive session, Jeff Van Fleet and Scott Boyd break down how AI is reshaping the SDLC, where it can introduce hidden risks, and how QA teams can mitigate those risks. \r\nYou’ll assess where your team sits on an AI maturity model, see what the data show about how teams like yours are performing at each stage, and leave with concrete next steps — not theory, but something you can act on tomorrow: \r\nHow AI is impacting each phase of the SDLC—and where it creates the most risk  \r\nThe most common quality issues introduced by AI-generated code  \r\nHow to build reciprocal feedback loops where your team’s domain expertise ensures outputs are repeatable, high-quality, and continuously improved upon by both humans and AI "
+        }
+      ],
+      "roomId": 73078,
+      "liveUrl": null,
+      "recordingUrl": null,
+      "status": "Accepted",
+      "isInformed": true,
+      "isConfirmed": true
+    },
+    {
+      "id": "1172042",
+      "title": "Playwright+MCP Server+Claude: a powerful trio",
+      "description": "We’ve all heard the hype about Playwright. And the hype about MCP Servers. And even more hype about Claude Code. Now you get to see what all the hype is about. During this session we are going to wire up Claude Code to a Playwright MCP Server in a Playwright test automation project. Then use Claude Code to travel around the web, mapping out pages as it goes. We might even be able to get Claude to create some tests. Will Claude hallucinate? Probably. Will Claude create a bunch of duplicate tests? Probably. Will Claude create a production-ready test automation framework in the short amount of time we have for this session? We’ll find out.",
+      "startsAt": "2026-06-12T10:00:00",
+      "endsAt": "2026-06-12T10:50:00",
+      "isServiceSession": false,
+      "isPlenumSession": false,
+      "speakers": [
+        "da4286dd-d1cd-42c2-a4b2-f3273bee6f26"
+      ],
+      "categoryItems": [],
+      "questionAnswers": [
+        {
+          "questionId": 111854,
+          "answerValue": "We’ve all heard the hype about Playwright. And the hype about MCP Servers. And even more hype about Claude Code. Now you get to see what all the hype is about. During this session we are going to wire up Claude Code to a Playwright MCP Server in a Playwright test automation project. Then use Claude Code to travel around the web, mapping out pages as it goes. We might even be able to get Claude to create some tests. Will Claude hallucinate? Probably. Will Claude create a bunch of duplicate tests? Probably. Will Claude create a production-ready test automation framework in the short amount of time we have for this session? We’ll find out."
+        }
+      ],
+      "roomId": 73079,
+      "liveUrl": null,
+      "recordingUrl": null,
+      "status": "Accepted",
+      "isInformed": true,
+      "isConfirmed": true
+    },
+    {
+      "id": "1134196",
+      "title": "Being Nimble - The next step in Agile Testing Optimization",
+      "description": "We’ll examine how playbooks drive collaboration by ensuring the right stakeholders engage at the right moments throughout the SDLC by turning “who’s in the room” from a variable into a strategic advantage. You’ll learn practical approaches to building playbooks that support nimble pivots without sacrificing quality.\r\nWe’ll also address the reality that every Agile framework has tradeoffs. Rather than debating methodologies, this session focuses on quick diagnostic techniques to identify friction points and practical adjustments that help teams operate more efficiently within their chosen approach.\r\nAttendees will leave with actionable strategies to strengthen team collaboration,  unlock efficiency gains and critical capabilities when adaptability matters most.",
+      "startsAt": "2026-06-12T10:00:00",
+      "endsAt": "2026-06-12T10:50:00",
+      "isServiceSession": false,
+      "isPlenumSession": false,
+      "speakers": [
+        "ef31d301-079f-49d7-8f3f-e049e5396132"
+      ],
+      "categoryItems": [],
+      "questionAnswers": [
+        {
+          "questionId": 111854,
+          "answerValue": "In today’s rapidly changing environment, teams need to pivot quickly while maintaining quality delivery. This talk explores two often-underutilized levers for team optimization: well-crafted playbooks and tactical Agile tuning."
+        }
+      ],
+      "roomId": 73080,
+      "liveUrl": null,
+      "recordingUrl": null,
+      "status": "Accepted",
+      "isInformed": true,
+      "isConfirmed": true
+    },
+    {
+      "id": "1175500",
+      "title": "Layoff to Launch",
+      "description": "Losing a job can feel like a dead end, but what if its the start of your ever big chapter ? session covers strategies for turning layoffs and reorgs in to career comebacks, leverage your network, upskill, and pivot in to new opportunities. if you are navigating a layoff or looking to future-proof your career, this session will equip you with practical tools to turn roadblocks in to launchpads. ",
+      "startsAt": "2026-06-12T10:00:00",
+      "endsAt": "2026-06-12T10:50:00",
+      "isServiceSession": false,
+      "isPlenumSession": false,
+      "speakers": [
+        "eeed5814-e7b4-4cf9-8edf-30a531ec0ed1"
+      ],
+      "categoryItems": [],
+      "questionAnswers": [
+        {
+          "questionId": 111854,
+          "answerValue": "Turning Career roadblocks in to comebacks."
+        }
+      ],
+      "roomId": 84620,
+      "liveUrl": null,
+      "recordingUrl": null,
+      "status": "Accepted",
+      "isInformed": true,
+      "isConfirmed": true
+    },
+    {
+      "id": "1174416",
+      "title": "Rolling the Dice",
+      "description": "One of the hardest challenges in Quality Assurance is deciding when a release is ready. All software has bugs, but was that strange behavior you observed in testing just a fluke, or a sign of something catastrophic?\r\n\r\nThis talk introduces a practical risk assessment framework built around “rolling the dice” on quality. Each situation is modeled as a die, and each potential outcome as one of its faces. This mental model helps attendees visualize uncertainty, understand the range of possibilities, and evaluate the stability of their releases. \r\n\r\nAttendees will learn to identify sources of chaos in their products and focus their testing efforts on high-impact risks, removing negative outcomes from their dice and increasing the odds of a successful release. ",
+      "startsAt": "2026-06-12T10:00:00",
+      "endsAt": "2026-06-12T10:50:00",
+      "isServiceSession": false,
+      "isPlenumSession": false,
+      "speakers": [
+        "5c56e952-8b5b-42c1-b5f1-cae5651483f2"
+      ],
+      "categoryItems": [],
+      "questionAnswers": [
+        {
+          "questionId": 111854,
+          "answerValue": "Shipping software is always a gamble! Was that strange behavior you observed in testing just a fluke, or a sign of something catastrophic?\r\n\r\nIn this session, we’ll explore a practical framework for understanding release risk using a simple metaphor: rolling the dice. By mapping scenarios to probabilities and outcomes, you’ll gain a structured way to reason about uncertainty and prioritize testing efforts.\r\n\r\nYou’ll leave with practical tools to identify high-impact risks, reduce instability, and shift the odds toward a successful launch."
+        }
+      ],
+      "roomId": 84621,
+      "liveUrl": null,
+      "recordingUrl": null,
+      "status": "Accepted",
+      "isInformed": true,
+      "isConfirmed": true
+    },
+    {
+      "id": "1113292",
+      "title": "Taming the Beast: Testing Non-Deterministic AI Systems with Confidence",
+      "description": "For decades, software testing has relied on a comforting assumption: given the same input, systems should produce the same output. AI-enabled systems break that assumption entirely. Large language models and other AI components generate responses that can vary in structure, tone, and content while still appearing “correct”. \r\n\r\nIn this session, we’ll explore why traditional testing strategies struggle with non-deterministic AI behavior and where they quietly fail. Using real-world examples such as AI chatbots and resume-screening systems, we’ll walk through practical techniques for validating AI outputs without relying on brittle, deterministic assertions. Topics include input variation strategies, semantic similarity analysis, bias detection, and using LLMs responsibly as automated evaluators (aka “LLM-as-a-Judge”). \r\n\r\nAttendees will leave with a clear mental model for testing AI-based systems, concrete patterns they can apply immediately, and guidance on balancing automation, human judgment, and risk. If you’re responsible for the quality of AI-driven features, this talk will help you move from uncertainty to confidence!",
+      "startsAt": "2026-06-12T10:00:00",
+      "endsAt": "2026-06-12T10:50:00",
+      "isServiceSession": false,
+      "isPlenumSession": false,
+      "speakers": [
+        "accac3e4-7691-420c-97d7-fa693c70dc76"
+      ],
+      "categoryItems": [],
+      "questionAnswers": [
+        {
+          "questionId": 111854,
+          "answerValue": "For decades, software testing has relied on a comforting assumption: given the same input, systems should produce the same output. AI-enabled systems break that assumption entirely. Large language models and other AI components generate responses that can vary in structure, tone, and content while still appearing “correct”. \r\n\r\nIn this session, we’ll explore why traditional testing strategies struggle with non-deterministic AI behavior and where they quietly fail. Using real-world examples such as AI chatbots and resume-screening systems, we’ll walk through practical techniques for validating AI outputs without relying on brittle, deterministic assertions. Topics include input variation strategies, semantic similarity analysis, bias detection, and using LLMs responsibly as automated evaluators (aka “LLM-as-a-Judge”). \r\n\r\nAttendees will leave with a clear mental model for testing AI-based systems, concrete patterns they can apply immediately, and guidance on balancing automation, human judgment, and risk. If you’re responsible for the quality of AI-driven features, this talk will help you move from uncertainty to confidence!"
+        }
+      ],
+      "roomId": 84622,
+      "liveUrl": null,
+      "recordingUrl": null,
+      "status": "Accepted",
+      "isInformed": true,
+      "isConfirmed": true
+    },
+    {
+      "id": "ebd195a3-8050-4f1e-8ec3-3adfb8a3e9fa",
+      "title": "Break",
+      "description": null,
+      "startsAt": "2026-06-12T10:50:00",
+      "endsAt": "2026-06-12T11:00:00",
+      "isServiceSession": true,
+      "isPlenumSession": true,
+      "speakers": [],
+      "categoryItems": [],
+      "questionAnswers": [],
+      "roomId": 84619,
+      "liveUrl": null,
+      "recordingUrl": null,
+      "status": null,
+      "isInformed": false,
+      "isConfirmed": false
+    },
+    {
+      "id": "1147079",
+      "title": "Verify, Then Trust: Human Judgement in the Age of Generative AI",
+      "description": "Generative AI is rapidly becoming part of how modern organizations write, evaluate, and make decisions — from drafting content and summarizing data to supporting technical workflows.\r\n\r\nAs these systems become more fluent and convincing, the real challenge is no longer whether AI can produce outputs quickly, but whether humans maintain the skills of verification, discernment, and accountability alongside it.\r\n\r\nVerify, Then Trust offers a grounded, human-centered framework for navigating AI without panic, blind faith, or outsourcing our thinking. This session explores why trust must be earned through validation, especially in environments where accuracy, clarity, and responsibility matter.\r\n\r\nRather than positioning AI as a threat or a replacement, this talk reframes it as a powerful tool that still requires human oversight. Attendees will learn practical habits for staying mentally present, asking better questions, and building norms that keep human judgment meaningfully in the loop.\r\n\r\nThis session is designed for technology professionals, leaders, and teams adapting to AI-enabled work who want to move forward with confidence — without losing critical thinking or responsibility in the process.\r\n\r\nKey themes include:\r\n* Speed vs. correctness in AI-generated outputs\r\n* Why verification is becoming a core professional skill\r\n* The risk of automation complacency\r\n* Practical ways to keep humans accountable and engaged",
+      "startsAt": "2026-06-12T11:00:00",
+      "endsAt": "2026-06-12T11:50:00",
+      "isServiceSession": false,
+      "isPlenumSession": false,
+      "speakers": [
+        "c261415b-ec1a-42ca-bfb7-b5875db38294"
+      ],
+      "categoryItems": [],
+      "questionAnswers": [
+        {
+          "questionId": 111854,
+          "answerValue": "AI tools are moving fast — but trust still requires verification.\r\n\r\nIn this session, Verify, Then Trust explores how professionals can use generative AI effectively while maintaining the essential human skills of critical thinking, judgment, and accountability. Rather than positioning AI as a threat or a replacement, this talk reframes it as a powerful tool that still requires human oversight. \r\n\r\nAttendees will learn practical habits for staying mentally present, asking better questions, and building norms that keep human judgment meaningfully in the loop."
+        }
+      ],
+      "roomId": 73078,
+      "liveUrl": null,
+      "recordingUrl": null,
+      "status": "Accepted",
+      "isInformed": true,
+      "isConfirmed": true
+    },
+    {
+      "id": "1175077",
+      "title": "AI Testing Isn't One Thing (And Treating It Like It Is Will Bite You)",
+      "description": "Your team shipped an AI feature. Congrats. Now someone asks: how do we test this?\r\n\r\nYou write a test. The output changes. You run it again. Different output. You consider a career in farming.\r\n\r\nHere's the thing nobody tells you upfront: testing AI-powered software isn't one discipline, it's two. And the moment you try to apply one strategy to both, you're in trouble.\r\n\r\nThis talk breaks down the Two-Track Testing Model that every QA engineer building on AI needs to understand. There's the deterministic side, your traditional test pyramid covering infrastructure, routing, logic, and guardrails, and there's the AI evaluation side, where outputs are non-deterministic, pass/fail doesn't exist, and you need a completely different mental model to even know what \"quality\" means.\r\n\r\nWe'll walk through how these two tracks diverge, when they converge, and what it takes to get quality signals from both. You'll leave with a practical framework: the Three Pillars of AI Evaluation (human eval, deterministic checks, and LLM-as-judge), a benchmark-first approach to designing your eval strategy, and a clear picture of how maturity stage changes what you should be testing and how.\r\n\r\nThe fundamentals of our craft haven't changed. The pesticide paradox still applies. Risk-based thinking still applies. You still can't test everything. But the tools, vocabulary, and decision-making are genuinely new, and it's worth getting oriented before you're neck-deep in a chatbot that nobody can evaluate with any confidence.\r\n\r\nThis is the talk I wish existed when I started.",
+      "startsAt": "2026-06-12T11:00:00",
+      "endsAt": "2026-06-12T11:50:00",
+      "isServiceSession": false,
+      "isPlenumSession": false,
+      "speakers": [
+        "a168013e-bb21-4097-ad0b-b7b9118dd449"
+      ],
+      "categoryItems": [],
+      "questionAnswers": [
+        {
+          "questionId": 111854,
+          "answerValue": "If you've ever shipped an AI feature and had no idea how to test it, you're not alone. This talk cuts through the noise with one core idea: AI testing isn't one thing, it's two. You'll walk away with a practical two-track framework that grounds AI evaluation in the QE fundamentals you already know."
+        }
+      ],
+      "roomId": 73079,
+      "liveUrl": null,
+      "recordingUrl": null,
+      "status": "Accepted",
+      "isInformed": true,
+      "isConfirmed": true
+    },
+    {
+      "id": "1174838",
+      "title": "Testing without Ai - How I learned to stop worrying and love QA",
+      "description": "Ai has gone from a curiosity to a \"must have\" technology in less than 4 years and (I grudgingly admit) has gotten significantly better over that time.  We better understand it's capabilities and limitations.  But there is still a lot of hype and anxiety and misconceptions about Ai.\r\n\r\nI will talk about how I went from a technical leadership role developing test automation to a 10x engineer with Ai, to becoming obsolete, redundant, unemployed.  I'll talk about the hardships and stress affected me, the cold hard realities of Ai, and why I believe whatever the end state of Ai adoption, we're going to need more testers and better QA, not less.\r\n\r\nThis is a difficult transition period, but I see cause for optimism.\r\n\r\nI'll talk about what Ai can and cannot do well, what Ai should and should not do, how to help non-technical leadership know the difference, and how you can improve the quality of life and the quality of software with or without Ai.\r\n\r\nP.S. I'm currently working in a position where Ai is forbidden and QA is very important.",
+      "startsAt": "2026-06-12T11:00:00",
+      "endsAt": "2026-06-12T11:50:00",
+      "isServiceSession": false,
+      "isPlenumSession": false,
+      "speakers": [
+        "e7bf64bc-101c-494f-9f51-4bb47552afeb"
+      ],
+      "categoryItems": [],
+      "questionAnswers": [
+        {
+          "questionId": 111854,
+          "answerValue": "Ai has become nearly ubiquitous. You can't live without it -- or so we are told. You will left behind if you don't adopt it. You will be replaced by Ai in 6 months -- we've heard for 2 years now. I don't think so.\r\n\r\nI make the case why the Ai apocalypse isn't nearly as worrying as you think. And what you can do to survive in the wasteland of terminator robots and omniscient supercomputers. And why there is reason for optimism."
+        }
+      ],
+      "roomId": 84620,
+      "liveUrl": null,
+      "recordingUrl": null,
+      "status": "Accepted",
+      "isInformed": true,
+      "isConfirmed": true
+    },
+    {
+      "id": "1174294",
+      "title": "The Human Advantage: Making Better QA Decisions with AI in the Loop",
+      "description": "As AI becomes a key player in our tools and workflows, testing and testers need to evolve the strategies since the quality still depends on human judgment. This session focuses on the tester’s mindset and the strategies to follow in their personal + professional lives that help QA engineers make better decisions, communicate risk clearly, and build trust in what they deliver\r\n\r\nThis is a practical, human-centered talk on how to become a stronger Quality Assurance professional in an AI-accelerated environment without becoming overly dependent on tools. Focusing on the human aspect of the QA, we’ll explore the mental models and habits that separate “someone who runs tests” from “someone who owns quality.”\r\n\r\nThe key takeaways include - \r\nUsing AI as a test helper, expanding ideas, help debug and write reports, prompt pattens to generate better scenarios\r\nQA mindset shifts for stronger testing - risk-based thinking, systems thinking, and skepticism without becoming adversarial.\r\nCommunication strategies that make QAs more human\r\nPersonal growth strategies that anyone can follow to build confidence and to be resilient \r\nA set of repeatable daily/weekly habits (checklists, journaling prompts, review routines) to build stronger intuition and consistency.\r\n\r\nThis session will be beneficial for Quality Assurance professions in all levels, if you are wondering how the QA roles evolve with AI in the mix, this session is for you. \r\n\r\n\r\n\r\n\r\n\r\n",
+      "startsAt": "2026-06-12T11:00:00",
+      "endsAt": "2026-06-12T11:50:00",
+      "isServiceSession": false,
+      "isPlenumSession": false,
+      "speakers": [
+        "0bc9c4c9-6a57-410a-9928-58c4b8d3e2ba"
+      ],
+      "categoryItems": [],
+      "questionAnswers": [
+        {
+          "questionId": 111854,
+          "answerValue": "As AI becomes a key player in our tools and workflows, testing and testers must evolve—because quality still depends on human judgment. This session focuses on the tester’s mindset and the personal and professional strategies that help QA engineers make better decisions, communicate risk clearly, and build trust in what they deliver. It’s a practical, human-centered talk on becoming a stronger QA professional in an AI-accelerated environment without becoming overly dependent on tools. We’ll cover using AI as a test helper (prompt patterns for better scenarios, debugging, reports), mindset shifts (risk-based/system thinking, healthy skepticism), communication strategies, resilience and confidence-building, and repeatable habits (checklists, journaling, review routines). Skills to focus on. this talk is suitable for all QA levels."
+        }
+      ],
+      "roomId": 84621,
       "liveUrl": null,
       "recordingUrl": null,
       "status": "Accepted",
@@ -858,8 +554,8 @@
       "id": "1217166",
       "title": "When Regression Testing Holds You Hostage",
       "description": "Is your release cadence for long-lived software bogging down? It’s rarely the result of bad decisions—it’s the cost of success. As systems evolve, they accumulate features, behaviors, and user expectations that make change increasingly complex. In these environments, regressions are not anomalies but a structural reality. Regression testing emerges as the system’s immune response, preserving trust as complexity grows. Over time, however, ever-expanding regression suites slow feedback cycles and unintentionally anchor release velocity.\r\n \r\nThis talk explores test impact analysis (TIA) as a governance model for scaled QA automation. By correlating tests to actual code coverage and using change data to determine impact, TIA introduces precision and policy into regression execution. Instead of relying on blanket “run everything” strategies, teams can make informed, repeatable decisions about what to test, when, and why. Attendees will see how this approach transforms regression testing from a blunt instrument into a sustainable, scalable quality strategy for complex systems.\r\n \r\n You'll learn how to:\r\n \r\n* Recognize why complexity, regressions, and expanding regression suites are inevitable outcomes of successful, long-lived software—and why they demand intentional governance.\r\n* Understand regression gravity as a systemic force that constrains release frequency, feedback loops, and automation scalability.\r\n* Apply test impact analysis principles as a governance mechanism to control regression growth, optimize execution, and maintain confidence at scale.",
-      "startsAt": null,
-      "endsAt": null,
+      "startsAt": "2026-06-12T11:00:00",
+      "endsAt": "2026-06-12T11:50:00",
       "isServiceSession": false,
       "isPlenumSession": false,
       "speakers": [
@@ -873,12 +569,460 @@
           "answerValue": "Is your release cadence for long-lived software bogging down? It’s rarely the result of bad decisions—it’s the cost of success. As systems evolve, they accumulate features, behaviors, and user expectations that make change increasingly complex. In these environments, regressions are not anomalies but a structural reality. Regression testing emerges as the system’s immune response, preserving trust as complexity grows. Over time, however, ever-expanding regression suites slow feedback cycles and unintentionally anchor release velocity.\r\n \r\nThis talk explores test impact analysis (TIA) as a governance model for scaled QA automation. By correlating tests to actual code coverage and using change data to determine impact, TIA introduces precision and policy into regression execution. Instead of relying on blanket “run everything” strategies, teams can make informed, repeatable decisions about what to test, when, and why. Attendees will see how this approach transforms regression testing from a blunt instrument into a sustainable, scalable quality strategy for complex systems.\r\n \r\n You'll learn how to:\r\n \r\n* Recognize why complexity, regressions, and expanding regression suites are inevitable outcomes of successful, long-lived software—and why they demand intentional governance.\r\n* Understand regression gravity as a systemic force that constrains release frequency, feedback loops, and automation scalability.\r\n* Apply test impact analysis principles as a governance mechanism to control regression growth, optimize execution, and maintain confidence at scale."
         }
       ],
-      "roomId": null,
+      "roomId": 84622,
       "liveUrl": null,
       "recordingUrl": null,
       "status": "Accepted",
       "isInformed": true,
       "isConfirmed": true
+    },
+    {
+      "id": "aeddf6ab-79ac-4e10-9dd3-1a4de69c6862",
+      "title": "Lunch",
+      "description": null,
+      "startsAt": "2026-06-12T11:50:00",
+      "endsAt": "2026-06-12T13:00:00",
+      "isServiceSession": true,
+      "isPlenumSession": true,
+      "speakers": [],
+      "categoryItems": [],
+      "questionAnswers": [],
+      "roomId": 84619,
+      "liveUrl": null,
+      "recordingUrl": null,
+      "status": null,
+      "isInformed": false,
+      "isConfirmed": false
+    },
+    {
+      "id": "1181951",
+      "title": "How to create a QA or the Highway talk",
+      "description": "This session is aimed at the person who is interested in presenting at a conference like QA or the Highway but needs practical help building their first talk. \r\nUsing examples, suggestions and group feedback, the participant will leave with a step-by-step playbook for what they need to do in order to submit their proposed talk next year. ",
+      "startsAt": "2026-06-12T12:50:00",
+      "endsAt": "2026-06-12T13:50:00",
+      "isServiceSession": false,
+      "isPlenumSession": false,
+      "speakers": [
+        "c00ade17-a3ef-48da-89ce-32be7bf634db"
+      ],
+      "categoryItems": [],
+      "questionAnswers": [
+        {
+          "questionId": 111854,
+          "answerValue": "Have you an idea, suggestion or thought for a QA or the Highway talk but are not sure what to do with it? In this session we'll take that spark and help turn it into a talk you can present. "
+        }
+      ],
+      "roomId": 84623,
+      "liveUrl": null,
+      "recordingUrl": null,
+      "status": "Accepted",
+      "isInformed": true,
+      "isConfirmed": true
+    },
+    {
+      "id": "1130073",
+      "title": "Life after Tech: Rebuilding your Career in the Post-Tech Economy",
+      "description": "An interactive workshop let by a veteran tech industry employee and certified career coach.\r\n\r\nIn this session, we'll:\r\n- Identify your strongest tech skills and how they are transferable to other industries and roles\r\n- Identify what you hope to get out of your relationship with your work\r\n- Identify your target industries and roles and how you might capture them\r\n\r\nAttendees will leave with a plan for what to do now, next and later as they embark on a journey toward their personal  \"Career Nirvana\"\r\n\r\nThis workshop can be run in either 1 hour or 2 hours, the 2 hour version is more in depth and hands-on. \r\n\r\nSpeaker profile: https://docs.google.com/document/d/1cW-RW9_0qRlaDh8MREHUOSmdLPqvnJRoSusQ1lZ1NAM/edit?usp=sharing",
+      "startsAt": "2026-06-12T12:50:00",
+      "endsAt": "2026-06-12T14:50:00",
+      "isServiceSession": false,
+      "isPlenumSession": false,
+      "speakers": [
+        "f227437b-faf5-48cf-81a9-1cfe0d51f7bc"
+      ],
+      "categoryItems": [],
+      "questionAnswers": [
+        {
+          "questionId": 111854,
+          "answerValue": "The tech industry is imploding. More and more of us are competing for fewer and fewer jobs, jobs that are less lucrative, more boring, more stressful, and even more toxic. On top of all of this, jobs that once permitted us to contribute something positive to the world now routinely ask us to ignore our moral compass. It’s time we all take a hard look at the work we are doing, how it’s serving us and our communities, and decide what we’d like to be doing instead.\r\n\r\nIn this interactive session, a long-time tech worker and certified career coach will guide you through the steps necessary to find your path to a new and rewarding career. We’ll identify our strongest and most transferable skills, uncover what we really hope to get out of our relationship with our work, and then look for new careers in different industries that match our abilities and desires.\r\n\r\nYou’ll leave with a clear plan of action for your “Life after Tech”"
+        }
+      ],
+      "roomId": 84737,
+      "liveUrl": null,
+      "recordingUrl": null,
+      "status": "Accepted",
+      "isInformed": true,
+      "isConfirmed": true
+    },
+    {
+      "id": "1182968",
+      "title": "Testing the Untestable: A Practical Guide to LLM Quality Assurance",
+      "description": "Your entire QA career has been a lie. Okay, not entirely but everything you know about testing breaks down when the system under test is an LLM.\r\nSame input, different output. No spec to test against. \"Correct\" is subjective. Welcome to AI testing, where assert_equals goes to die.\r\nBut here's the thing: AI still needs QA. It needs it MORE than deterministic systems because the failure modes are weirder, harder to detect, and way more embarrassing when they hit production.\r\nIn this talk, I'll share the AI QA Playbook, a practical framework for testing systems that don't behave the same way twice.\r\nThe five testing pillars you need:\r\n\r\nAccuracy Testing: Building golden datasets when \"correct\" is fuzzy\r\nBias Testing: Counterfactual test design that catches discrimination\r\nHallucination Testing: Detecting confident nonsense before users do\r\nSecurity Testing: Prompt injection, jailbreaks, and data leakage\r\nRegression Testing: What does \"regression\" even mean for AI?\r\n\r\nWhat makes this different:\r\n\r\nReal test data examples, not theory\r\nMetrics that actually work for non-deterministic systems\r\nCI/CD integration patterns\r\nTools you can use today (including my open-source contributions)\r\n\r\nI've spent the last two years figuring out how to do QA for systems that refuse to be predictable. This talk is the playbook I wish existed when I started.",
+      "startsAt": "2026-06-12T13:00:00",
+      "endsAt": "2026-06-12T13:50:00",
+      "isServiceSession": false,
+      "isPlenumSession": false,
+      "speakers": [
+        "620d785b-3e5c-4c81-bee7-5d1be217853b"
+      ],
+      "categoryItems": [],
+      "questionAnswers": [
+        {
+          "questionId": 111854,
+          "answerValue": "Your entire QA career has been a lie. Okay, not entirely but everything you know about testing breaks down when the system under test is an LLM.\r\nSame input, different output. No spec to test against. \"Correct\" is subjective. Welcome to AI testing, where assert_equals goes to die.\r\nBut here's the thing: AI still needs QA. It needs it MORE than deterministic systems because the failure modes are weirder, harder to detect, and way more embarrassing when they hit production.\r\nIn this talk, I'll share the AI QA Playbook, a practical framework for testing systems that don't behave the same way twice.\r\nThe five testing pillars you need:\r\n\r\nAccuracy Testing: Building golden datasets when \"correct\" is fuzzy\r\nBias Testing: Counterfactual test design that catches discrimination\r\nHallucination Testing: Detecting confident nonsense before users do\r\nSecurity Testing: Prompt injection, jailbreaks, and data leakage\r\nRegression Testing: What does \"regression\" even mean for AI?\r\n\r\nWhat makes this different:\r\n\r\nReal test data examples, not theory\r\nMetrics that actually work for non-deterministic systems\r\nCI/CD integration patterns\r\nTools you can use today (including my open-source contributions)\r\n\r\nI've spent the last two years figuring out how to do QA for systems that refuse to be predictable. This talk is the playbook I wish existed when I started."
+        }
+      ],
+      "roomId": 73078,
+      "liveUrl": null,
+      "recordingUrl": null,
+      "status": "Accepted",
+      "isInformed": true,
+      "isConfirmed": true
+    },
+    {
+      "id": "1113140",
+      "title": "From Quality Metrics to Quality Mindset: Building Teams That Own Outcomes",
+      "description": "Software teams often rely on metrics, dashboards, and defined processes to guide quality efforts. While these tools provide important visibility, they don’t automatically create ownership, accountability, or better outcomes. In many cases, teams learn to optimize for the numbers rather than the intent behind them.\r\nThis session explores how quality outcomes are shaped less by tools and processes and more by leadership behaviors and team mindset. Drawing from experience in software testing and people leadership, the talk examines how well-meaning management practices can unintentionally reinforce “check-the-box” behavior, and what leaders can do differently to build teams that truly own quality.\r\n\r\nParticipants will explore:\r\n\r\nWhy quality challenges are often rooted in leadership and communication gaps.\r\nHow metrics can shift from helpful signals to counterproductive targets.\r\nCommon ways leaders unintentionally discourage ownership.\r\nPractical leadership behaviors that promote clarity, accountability, and proactive thinking\r\n\r\nRather than introducing new frameworks or methodologies, this session focuses on small, intentional leadership shifts that can have an outsized impact on team behavior. Attendees will leave with actionable ideas they can apply immediately to move teams from compliance-driven execution to shared ownership of outcomes.",
+      "startsAt": "2026-06-12T13:00:00",
+      "endsAt": "2026-06-12T13:50:00",
+      "isServiceSession": false,
+      "isPlenumSession": false,
+      "speakers": [
+        "f2cfff77-e663-4744-bed6-24d17faa8756"
+      ],
+      "categoryItems": [],
+      "questionAnswers": [
+        {
+          "questionId": 111854,
+          "answerValue": "Quality metrics don’t create quality, people do.  This session explores how leadership behaviors influence team ownership and outcomes, and why even well-intentioned metrics can lead to “check-the-box” behavior.  Attendees will learn practical ways to shift from compliance-driven quality to a mindset where teams take true ownership of their work."
+        }
+      ],
+      "roomId": 73079,
+      "liveUrl": null,
+      "recordingUrl": null,
+      "status": "Accepted",
+      "isInformed": true,
+      "isConfirmed": true
+    },
+    {
+      "id": "1178160",
+      "title": "Deploying and Testing Ephemeral Environments",
+      "description": "Merging code that hasn't been fully tested is one of the biggest reasons teams experience missed release dates and flaky test suites. Why? Merging code often means other developers start their new work based on the newly merged code, changes are queued up for the next release, and the code quickly becomes coupled to other changes. The result is often code freezes, failing test runs, late night release \"parties\", and painful go / no-go meetings where you get pinned between postponing the release or shipping with bugs.\r\n\r\nDeploying to and testing ephemeral environments gives your team the ability to know for certain that the new features are implemented correctly *before committing those features to the release* and *before other developers start depending on the new code*. This approach is more important than ever when working with AI-generated code.\r\n\r\nIn this session, we will cover,\r\n- What ephemeral environments are and why they are so important\r\n- Branching strategies for proper test code management\r\n- Configuring your CI/CD pipeline to automatically deploy feature branches\r\n- How to run end-to-end tests on ephemeral environments\r\n- Strategies for managing databases and test data in ephemeral environments\r\n- Leveraging ephemeral environments to protect your company from AI risks\r\n\r\nKey Takeaways\r\n- Understand the architecture and tooling options for ephemeral environment workflows\r\n- Configure your CI/CD pipeline to deploy and test feature branches in isolation\r\n- Establish quality gates to protect your team from starting with broken code\r\n- Apply these practices to validate AI-generated code before it impacts your team",
+      "startsAt": "2026-06-12T13:00:00",
+      "endsAt": "2026-06-12T13:50:00",
+      "isServiceSession": false,
+      "isPlenumSession": false,
+      "speakers": [
+        "141a6bda-8059-49f3-b207-eeaf29a19808"
+      ],
+      "categoryItems": [],
+      "questionAnswers": [
+        {
+          "questionId": 111854,
+          "answerValue": "This session covers how deploying and testing ephemeral environments lets teams verify new features work correctly\r\nbefore other developers build on top of them, which is especially critical with AI-generated code. \r\n\r\nAttendees will walk away with tips on how to set up CI/CD pipelines to automatically deploy and test feature branches in isolation, establish quality gates, and protect their team from shipping broken code."
+        }
+      ],
+      "roomId": 73080,
+      "liveUrl": null,
+      "recordingUrl": null,
+      "status": "Accepted",
+      "isInformed": true,
+      "isConfirmed": true
+    },
+    {
+      "id": "1183766",
+      "title": "Turbocharge Your Playwright: Capabilities You're Probably Not Using",
+      "description": "Most teams use Playwright to open a browser and click through flows. But Playwright can do so much more — mock APIs, persist authentication, inject custom headers for distributed tracing, and more. In this talk, Kevin goes beyond the basics and explores the capabilities that separate a good Playwright suite from a great one. You'll leave with techniques you can add to your suite the same week.\r\n\r\nThis is not a \"getting started with Playwright\" talk. It's for teams that are already running Playwright tests and want to unlock capabilities they didn't know they had. I'll cover things like persisting authentication state across tests, mocking API responses to isolate your UI layer, injecting traceparent headers for distributed tracing, and intercepting network traffic — all features built into the library that most teams never touch. The goal is to get the audience thinking like testers when they read Playwright's API, spotting features that solve real testing problems rather than just following tutorials.",
+      "startsAt": "2026-06-12T13:00:00",
+      "endsAt": "2026-06-12T13:50:00",
+      "isServiceSession": false,
+      "isPlenumSession": false,
+      "speakers": [
+        "30314dcc-99f8-488f-9102-56330d4137aa"
+      ],
+      "categoryItems": [],
+      "questionAnswers": [
+        {
+          "questionId": 111854,
+          "answerValue": "Most teams use Playwright to open a browser and click through flows. But Playwright can do so much more — mock APIs, persist authentication, inject custom headers for distributed tracing, and more. In this talk, Kevin goes beyond the basics and explores the capabilities that separate a good Playwright suite from a great one. You'll leave with techniques you can add to your suite the same week."
+        }
+      ],
+      "roomId": 84620,
+      "liveUrl": null,
+      "recordingUrl": null,
+      "status": "Accepted",
+      "isInformed": true,
+      "isConfirmed": true
+    },
+    {
+      "id": "1178124",
+      "title": "The Judgment Gap: Why AI Adoption Without Verification Is Worse Than No AI At All",
+      "description": "Your organization adopted AI. Congratulations — so did everyone else. But here's what the data actually shows: in a pre-registered experiment with 758 consultants, Harvard and BCG found that AI made good work 40% better and bad work 19 percentage points *worse* than working without AI at all. The tool that amplifies expertise also amplifies poor judgment — and the boundary between the two is invisible without training.\r\n\r\nThis isn't a theoretical risk. In our own survey of 571 professionals, 93.9% use AI frequently — but 69.4% spend zero time on advanced capabilities. Microsoft's 300,000-person Copilot rollout found the same pattern: broad adoption clustered at the simplest features, with a measurable productivity dip from weeks 3 through 10 as initial excitement collided with real-world complexity.\r\n\r\nAdoption isn't the hard part anymore. Judgment is.\r\n\r\nIn this session, you'll learn:\r\n- How to identify whether a task falls inside or outside AI's reliability boundary — and why getting this wrong is catastrophic\r\n- A practical verification framework that catches AI failures *before* they reach your clients or production systems\r\n- Why the \"adoption valley\" kills most AI initiatives, and the specific practices that get teams through it\r\n- How to build team-level habits that make AI output trustworthy by default, not by accident\r\n\r\nYou'll leave with concrete processes you can implement Monday morning to close the gap between \"we use AI\" and \"we use AI well.\"",
+      "startsAt": "2026-06-12T13:00:00",
+      "endsAt": "2026-06-12T13:50:00",
+      "isServiceSession": false,
+      "isPlenumSession": false,
+      "speakers": [
+        "d101b2c4-cdb8-4c5e-9c56-86e045b0b2d0"
+      ],
+      "categoryItems": [],
+      "questionAnswers": [
+        {
+          "questionId": 111854,
+          "answerValue": "Your organization adopted AI. So did everyone else. But a pre-registered Harvard/BCG study of 758 consultants found that AI made good work 40% better — and bad work 19 percentage points worse than no AI at all. The tool that amplifies expertise also amplifies poor judgment. And the boundary between the two is invisible without training.\r\n\r\nAdoption isn't the hard part anymore. Judgment is.\r\n\r\nIn this session you'll learn how to identify whether a task falls inside or outside AI's reliability boundary, a practical verification framework that catches failures before they reach clients or production, and the specific practices that get teams through the adoption valley — the measurable productivity dip Microsoft documented across 300,000 Copilot users in weeks 3 through 10.\r\n\r\nYou'll leave with concrete processes you can implement Monday morning to close the gap between \"we use AI\" and \"we use AI well.\""
+        }
+      ],
+      "roomId": 84621,
+      "liveUrl": null,
+      "recordingUrl": null,
+      "status": "Accepted",
+      "isInformed": true,
+      "isConfirmed": true
+    },
+    {
+      "id": "1227446",
+      "title": "Agentic Testing & The Future of Trust",
+      "description": "AI agents are generating more code than ever, but how do you ensure its reliability? Learn why traditional testing fails and how Agentic Testing guarantees trust and scalability in AI-driven systems.",
+      "startsAt": "2026-06-12T13:00:00",
+      "endsAt": "2026-06-12T13:50:00",
+      "isServiceSession": false,
+      "isPlenumSession": false,
+      "speakers": [
+        "497ccbc4-ed0c-4fa2-88dd-a14a07cf07c0"
+      ],
+      "categoryItems": [],
+      "questionAnswers": [
+        {
+          "questionId": 111854,
+          "answerValue": "AI agents are helping teams generate more code than ever before. Even the strongest believers in vibe coding caution against placing blind trust in that code. We are living through the fastest expansion of software creation in history, not because we hired more engineers, but because machines are now building software alongside us.\r\n\r\nThis raises a fundamental challenge. How do you test and trust applications created by LLMs, assembled by multiple AI agents, and deployed by automated systems? The tools we rely on today were not designed for this reality or this speed. Unit tests and code reviews inspect logic and functions, but they were never meant to validate dynamic, evolving behavior. Traditional automation struggles when code is generated and modified continuously, becoming fragile and breaking faster than teams can maintain it. As AI agents become embedded into every layer of software, we are no longer just testing code. We are testing autonomous systems themselves.\r\n\r\nIn this talk, we will explore why trust in AI-generated software can no longer be assumed, and why it must be continuously proven. Agentic Testing, the use of autonomous agents to test autonomous systems, emerges as the only scalable solution. These autonomous agents not only plan, execute, and analyze tests but also adapt and challenge systems the way real users would. Agentic Testing validates behavior, reasoning, and outcomes at the system level, ensuring that AI-driven systems meet real-world expectations.\r\n\r\nDrawing from real-world enterprise deployments and lessons learned building an Agentic Testing platform, this talk will reframe quality assurance as a strategic intelligence layer rather than a release-time checkbox. In the age of AI, trust isn’t just a feature, it’s a continuously earned asset. We’ll discuss how businesses can evolve their testing strategies to stay ahead in this rapidly shifting landscape."
+        }
+      ],
+      "roomId": 84622,
+      "liveUrl": null,
+      "recordingUrl": null,
+      "status": "Accepted",
+      "isInformed": true,
+      "isConfirmed": true
+    },
+    {
+      "id": "82446344-b8ad-44b9-8ca8-aa9fb8c1b3f2",
+      "title": "Break",
+      "description": null,
+      "startsAt": "2026-06-12T13:50:00",
+      "endsAt": "2026-06-12T14:00:00",
+      "isServiceSession": true,
+      "isPlenumSession": true,
+      "speakers": [],
+      "categoryItems": [],
+      "questionAnswers": [],
+      "roomId": 84619,
+      "liveUrl": null,
+      "recordingUrl": null,
+      "status": null,
+      "isInformed": false,
+      "isConfirmed": false
+    },
+    {
+      "id": "1171618",
+      "title": "Collaborate on Your LEGO(R) Vision",
+      "description": "LEGO(R) sets are fun to build, but who has ever attempted to build a complete set without looking at the instructions? In this meeting, attendees will form teams and attempt to build a LEGO(R) set without instructions. Only one person from each team will be able to view the finished product before the team starts building. That person must share their vision with the team, who will attempt to build the LEGO(R) set as close to the instructions as possible without peeking. \r\n\r\nEach group will learn different approaches to collaborate on product development during the meeting to build a set according to a customer's needs. The activity highlights the two Quality Gaps of product development: (1) the gap between what we set out to build and the finished product; and (2) the gap between what customers expect and the finished product. Our goal is to close the two Quality Gaps so we deliver a product on-time & on-budget that customers will love.",
+      "startsAt": "2026-06-12T13:50:00",
+      "endsAt": "2026-06-12T14:50:00",
+      "isServiceSession": false,
+      "isPlenumSession": false,
+      "speakers": [
+        "da1f3c6b-ce55-48df-824c-c6f681f77f8c"
+      ],
+      "categoryItems": [],
+      "questionAnswers": [
+        {
+          "questionId": 111854,
+          "answerValue": "As part of this session, all in attendance will receive a LEGO Classic Building Kit (available in red, green, blue, yellow, or white). I will be providing all the LEGO Creator kits to be used in the session.\r\n\r\n*NOTE: This is a one hour session and I will require tables.\r\n\r\nThe learning outcomes are:\r\n*Teams will learn collaboration techniques to build & test with limited information\r\n*Attendees will learn to approach testing from the perspective of customer needs rather than strict requirements\r\n*Attendees will learn how to question assumptions by breaking down requirements before testing begins\r\n*BONUS: attendees will receive LEGO(R) sets of their own to take home"
+        }
+      ],
+      "roomId": 84623,
+      "liveUrl": null,
+      "recordingUrl": null,
+      "status": "Accepted",
+      "isInformed": true,
+      "isConfirmed": true
+    },
+    {
+      "id": "1220037",
+      "title": "Business Challenges of Testing B.U.C.K.E.Y.E.D. – A Self-Driving AI Bus System",
+      "description": "Updated for 2026! AI is rapidly reshaping Software Quality Assurance and Testing—creating new expectations, risks, and business challenges, especially as organizations begin confronting the complexity of testing strong AI systems.\r\n\r\nIn this dynamic, interactive session, attendees will examine how AI is impacting QA and software testing from the perspective of developers, test engineers, managers, executives, and business owners. Using a realistic but fictitious scenario, participants will serve as members of the Checkpoint Technologies Executive IT Team after being awarded a contract by Imaginary Corporation to test B.U.C.K.E.Y.E.D. — Bus Using Cognitive Knowledge, Engineered to Yield Efficient Driving — a fully autonomous, AI-powered self-driving bus system developed for the state of Ohio.\r\n\r\nBecause the system uses strong AI, with advanced autonomous reasoning, learning, and adaptability, the testing effort presents uniquely complex and high-stakes challenges. Led by Bob Crews, CEO of Checkpoint Technologies, participants will identify ten primary business testing challenges through the eyes of an IT Executive Board, with the goal of ensuring project success, reducing risk, preventing negligence, and protecting both Checkpoint Technologies and Imaginary Corporation.",
+      "startsAt": "2026-06-12T14:00:00",
+      "endsAt": "2026-06-12T14:50:00",
+      "isServiceSession": false,
+      "isPlenumSession": false,
+      "speakers": [
+        "26126c45-7534-47b9-9f8b-3b7b7009e047"
+      ],
+      "categoryItems": [],
+      "questionAnswers": [
+        {
+          "questionId": 111854,
+          "answerValue": "Updated for 2026! AI has created various challenges in the Software Quality Assurance and Testing field, and it’s evolving in an incredible way—but not always as you’d expect. These expectations have altered and created new challenges, especially as organizations begin dealing with testing a strong AI system.\r\n\r\nIn this session, we’ll review areas in which AI has impacted software testing & QA and identify core business challenges as they relate to testing a strong AI system.\r\n\r\nThe specific challenges, and the degree of their disruption, depend upon your role - developer, test engineer, manager, executive, or owner(s)? Utilizing a realistic, but fictitious scenario, this dynamic, interactive presentation/exercise will focus on the early engagement on an AI project and identify ten primary challenges as seen through the eyes of an IT Executive Board.\r\n\r\nNow more than ever, we’re charged not just with delivering innovation, but with safeguarding the lifeblood of the enterprise. In this high-energy, fully immersive exercise, you’ll dive into a gripping, fictitious AI project alongside an IT Executive Board, dissecting the core testing challenges, as they relate to the business, and learning how to conquer them from day one. Buckle up—your mission starts now!\r\n\r\nThe Mission: Attendees will be participating as members of the Checkpoint Technologies Executive IT Team. We have been awarded a prestigious contract by Imaginary Corporation to test their state-of-the-art, fully autonomous self-driving bus system B.U.C.K.E.Y.E.D. (Bus Using Cognitive Knowledge, Engineered to Yield Efficient Driving), developed for the state of Ohio. The AI system is a strong AI, meaning it has a higher level of autonomous reasoning, learning, and adaptability than traditional narrow AI systems. This makes testing uniquely complex and high-stake.\r\n\r\nLed and moderated by Bob Crews, CEO of Checkpoint Technologies, we must identify and provide Imaginary Corp. with a list of our primary business testing challenges. Your goal is to ensure project success, minimize and mitigate risk, and protect Checkpoint Technologies and Imaginary Corporation."
+        }
+      ],
+      "roomId": 73078,
+      "liveUrl": null,
+      "recordingUrl": null,
+      "status": "Accepted",
+      "isInformed": true,
+      "isConfirmed": true
+    },
+    {
+      "id": "1172997",
+      "title": "Accessibility testing with Cypress",
+      "description": "The European Accessibility Act began enforcement on June 28, 2025, and the U.S. DOJ's ADA Title II web-app rule has hard compliance dates in 2026/2027.\r\n In this talk, I'll share real examples from projects where catching WCAG issues early saved a lot of time and money compared to fixing them late. \r\nI'll provide examples of testing accessibility using lint rules, component-level accessibility checks (including Storybook), and UI-level validation. I'll also show how I test the real keyboard behavior e2e: TAB order, focus states, common navigation paths.",
+      "startsAt": "2026-06-12T14:00:00",
+      "endsAt": "2026-06-12T14:50:00",
+      "isServiceSession": false,
+      "isPlenumSession": false,
+      "speakers": [
+        "a12c243c-e5e2-4748-a3e6-097c65e2c5c4"
+      ],
+      "categoryItems": [],
+      "questionAnswers": [
+        {
+          "questionId": 111854,
+          "answerValue": "Fixing accessibility late is expensive. In this talk, I’ll share examples from real projects and show how we build early checks: lint rules, component/Storybook validation, UI checks, and Cypress keyboard navigation tests to catch issues before they reach production."
+        }
+      ],
+      "roomId": 73079,
+      "liveUrl": null,
+      "recordingUrl": null,
+      "status": "Accepted",
+      "isInformed": true,
+      "isConfirmed": true
+    },
+    {
+      "id": "1154958",
+      "title": "LGTM is not a Strategy",
+      "description": "Pull requests are where quality is won or lost, and too many teams still treat reviews with a rushed \"LGTM\". In this talk, you'll learn a practical, repeatable approach to high-quality PR reviews that balances speed with risk management - covering how to triage changes quickly, review in layers, and write comments that lead to better outcomes without friction.  We'll also show how QA and developers bring complementary lenses to the same review, turning acceptance criteria, scenarios, and observability into shared responsibility instead of production surprises.  You'll leave with a lightweight framework and concrete habits for authors and reviewers that make reviews faster, kinder, and more effective.",
+      "startsAt": "2026-06-12T14:00:00",
+      "endsAt": "2026-06-12T14:50:00",
+      "isServiceSession": false,
+      "isPlenumSession": false,
+      "speakers": [
+        "01782d24-b1aa-4645-a9f5-a15e51bf132c"
+      ],
+      "categoryItems": [],
+      "questionAnswers": [
+        {
+          "questionId": 111854,
+          "answerValue": "Pull requests are where quality is won or lost, and too many teams still treat reviews with a rushed \"LGTM\". In this talk, you'll learn a practical, repeatable approach to high-quality PR reviews that balances speed with risk management - covering how to triage changes quickly, review in layers, and write comments that lead to better outcomes without friction.  We'll also show how QA and developers bring complementary lenses to the same review, turning acceptance criteria, scenarios, and observability into shared responsibility instead of production surprises.  You'll leave with a lightweight framework and concrete habits for authors and reviewers that make reviews faster, kinder, and more effective."
+        }
+      ],
+      "roomId": 73080,
+      "liveUrl": null,
+      "recordingUrl": null,
+      "status": "Accepted",
+      "isInformed": true,
+      "isConfirmed": true
+    },
+    {
+      "id": "1152366",
+      "title": "The 3 legged stool: AI Won’t Fix Your Agile Problems",
+      "description": "Agile frameworks promise adaptability and speed — but even in the AI and digital age, many teams struggle with unclear roles, brittle dependencies, and communication breakdowns that slow delivery and burn people out. The 3‑legged stool is more than a metaphor— it’s a simple systems model for understanding why agile teams succeed or fail. When roles, collaboration, and communication are balanced, teams are stable and productive. When one “leg” is overloaded, ignored, or missing, the system wobbles — no matter how good your AI is or good the tooling or framework looks on paper.\r\n\r\nIn this session, we’ll explore how the 3‑legged stool analogy can be used as a practical diagnostic and alignment tool across modern agile environments. Drawing on real-world experience working with teams navigating today’s increased complexity — remote work, hybrid structures, and constant delivery pressure — you’ll see how this model helps surface hidden constraints, clarify ownership, and manage dependencies more effectively.\r\n\r\nRather than prescribing yet another framework, this talk focuses on how to create shared understanding between engineers, product, and leadership — so teams can make better decisions inside the frameworks they already use.\r\n\r\nWhether you’re building software, coaching teams, or leading transformation efforts, you’ll leave with a lightweight model you can immediately apply to improve team health, delivery flow, and long-term sustainability.",
+      "startsAt": "2026-06-12T14:00:00",
+      "endsAt": "2026-06-12T14:50:00",
+      "isServiceSession": false,
+      "isPlenumSession": false,
+      "speakers": [
+        "e362ad7d-7818-4eb6-8f64-7acf381afd5c"
+      ],
+      "categoryItems": [],
+      "questionAnswers": [
+        {
+          "questionId": 111854,
+          "answerValue": "Agile frameworks promise adaptability and speed — but even in the AI and digital age, many teams struggle with unclear roles, brittle dependencies, and communication breakdowns that slow delivery and burn people out. \r\n\r\nIn this session, we’ll explore how the 3‑legged stool analogy can be used as a practical diagnostic and alignment tool across modern agile environments. Drawing on real-world experience working with teams navigating today’s increased complexity — remote work, hybrid structures, and constant delivery pressure — you’ll see how this model helps surface hidden constraints, clarify ownership, and manage dependencies more effectively.\r\n\r\nWhether you’re building software, coaching teams, or leading transformation efforts, you’ll leave with a lightweight model you can immediately apply to improve team health, delivery flow, and long-term sustainability."
+        }
+      ],
+      "roomId": 84621,
+      "liveUrl": null,
+      "recordingUrl": null,
+      "status": "Accepted",
+      "isInformed": true,
+      "isConfirmed": true
+    },
+    {
+      "id": "1185386",
+      "title": "From API Contracts to UI Confidence: AI-Driven Quality in CI/CD",
+      "description": "In modern distributed architectures, the most disruptive defects are often the ones that live in the gaps between services. Contract violations—schema drift, breaking API changes, and consumer-provider mismatches—frequently bypass traditional test suites, only to cause catastrophic failures in the UI or downstream services after deployment.\r\n\r\nThis session provides a technical blueprint for bridging the gap between API reliability and UI confidence. We will walk through a practical implementation of containerized CI/CD pipelines that utilize oasdiff and Docker to detect breaking changes before they hit production.\r\n\r\nKey technical takeaways include:\r\n\r\nAutomating the \"Contract-to-UI\" Link: How to ensure UI automation remains stable by catching underlying API shifts early.\r\n\r\nAI-Driven Testing with Schemathesis: Using AI to derive edge cases and boundary tests directly from OpenAPI specs to increase coverage without manual script bloating.\r\n\r\nIntelligent Triage: Implementing AI-assisted failure analysis to interpret pipeline logs and provide plain-language explanations for complex integration failures.\r\n\r\nSecuring the Pipeline: A critical look at security-conscious AI adoption, focusing on data residency and sandboxed execution using enterprise-bounded platforms like Azure OpenAI or AWS Bedrock.",
+      "startsAt": "2026-06-12T14:00:00",
+      "endsAt": "2026-06-12T14:50:00",
+      "isServiceSession": false,
+      "isPlenumSession": false,
+      "speakers": [
+        "a62f1aa4-7ec6-4452-b5e5-317e7bf588dd",
+        "937ea6f9-3f4d-41f1-87b3-94fd1535f86f"
+      ],
+      "categoryItems": [],
+      "questionAnswers": [
+        {
+          "questionId": 111854,
+          "answerValue": "Stop letting \"minor\" API changes break your entire UI. In a world of microservices and rapid deployments, traditional testing often misses the subtle schema drifts that cause the most headaches.\r\n\r\nThis session will deep dive into building a resilient, AI-enhanced CI/CD pipeline. We’ll explore how to move beyond basic integration tests by combining API contract testing with AI-driven automation. You’ll learn how to use tools like oasdiff and Schemathesis to catch breaking changes early, and how to leverage AI for rapid failure triage—all while keeping your architectural data secure.\r\n"
+        }
+      ],
+      "roomId": 84622,
+      "liveUrl": null,
+      "recordingUrl": null,
+      "status": "Accepted",
+      "isInformed": true,
+      "isConfirmed": true
+    },
+    {
+      "id": "07715471-675f-4bf4-834d-17220571a369",
+      "title": "Break & Refreshments - 2nd floor, Traditions Room",
+      "description": null,
+      "startsAt": "2026-06-12T14:50:00",
+      "endsAt": "2026-06-12T15:00:00",
+      "isServiceSession": true,
+      "isPlenumSession": true,
+      "speakers": [],
+      "categoryItems": [],
+      "questionAnswers": [],
+      "roomId": 84619,
+      "liveUrl": null,
+      "recordingUrl": null,
+      "status": null,
+      "isInformed": false,
+      "isConfirmed": false
+    },
+    {
+      "id": "1152668",
+      "title": "The Day Testing Died — And Quality Evolved",
+      "description": "Twenty years ago, my job was to break software.\r\n\r\nI was trained to think in edge cases, failure paths, and regression suites. If something slipped into production, it meant I missed something.\r\n\r\nBack then, quality meant testing.\r\n\r\nThen the world changed.\r\n\r\nAgile arrived. DevOps arrived. Continuous delivery arrived. And I realized something uncomfortable: quality was never about the test cases. It was about the system behind them.\r\n\r\nAnd now AI has changed the ground again.\r\n\r\nToday, code is written by machines. Tests are generated by copilots. Reviews are assisted by algorithms.\r\n\r\nSo if machines can write the tests…\r\nWho is responsible for trust?\r\n\r\nThat question is why we must evolve — from testers, to quality champions, to AI validation designers.",
+      "startsAt": "2026-06-12T15:00:00",
+      "endsAt": "2026-06-12T15:50:00",
+      "isServiceSession": false,
+      "isPlenumSession": true,
+      "speakers": [
+        "eb3131d6-d052-4c8a-92a7-50308659bff1"
+      ],
+      "categoryItems": [],
+      "questionAnswers": [
+        {
+          "questionId": 111854,
+          "answerValue": "Over the past 20 years, quality has evolved from test execution to shared ownership across teams. But AI is accelerating development faster than ever — generating code, tests, and reviews in seconds.\r\n\r\nWhen machines can write the tests, what does quality become?\r\n\r\nIn this keynote, Tatyana Arbouzova traces her journey from tester to quality champion to AI validation designer, and explores how the role of QA must evolve again. As AI reshapes software delivery, traditional metrics like coverage and pass rates are no longer enough.\r\n\r\nQuality in the AI era is about architecting validation systems — designing guardrails, feedback loops, and workflows that ensure trust at scale.\r\n\r\nBecause when development moves faster, only well-designed quality systems keep it safe."
+        }
+      ],
+      "roomId": 84619,
+      "liveUrl": null,
+      "recordingUrl": null,
+      "status": "Accepted",
+      "isInformed": true,
+      "isConfirmed": true
+    },
+    {
+      "id": "cd3ddb53-d9ff-453b-8956-f5e5812e2c6a",
+      "title": "Raffle & Closing Remarks",
+      "description": null,
+      "startsAt": "2026-06-12T15:50:00",
+      "endsAt": "2026-06-12T16:00:00",
+      "isServiceSession": true,
+      "isPlenumSession": true,
+      "speakers": [],
+      "categoryItems": [],
+      "questionAnswers": [],
+      "roomId": 84619,
+      "liveUrl": null,
+      "recordingUrl": null,
+      "status": null,
+      "isInformed": false,
+      "isConfirmed": false
     }
   ],
   "speakers": [
@@ -1063,7 +1207,7 @@
       "links": [
         {
           "title": "LinkedIn",
-          "url": "https://www.linkedin.com/in/barbara-deaton-b96291a2/",
+          "url": "https://www.linkedin.com/in/barbara-deaton",
           "linkType": "LinkedIn"
         }
       ],
@@ -2059,5 +2203,51 @@
     }
   ],
   "categories": [],
-  "rooms": []
+  "rooms": [
+    {
+      "id": 73078,
+      "name": "Great Hall 1 & 2",
+      "sort": 0
+    },
+    {
+      "id": 73079,
+      "name": "Great Hall 3",
+      "sort": 1
+    },
+    {
+      "id": 73080,
+      "name": "West Ballroom",
+      "sort": 2
+    },
+    {
+      "id": 84619,
+      "name": "East Ballroom",
+      "sort": 3
+    },
+    {
+      "id": 84620,
+      "name": "Student-Alumni Room",
+      "sort": 4
+    },
+    {
+      "id": 84621,
+      "name": "Interfaith Room",
+      "sort": 5
+    },
+    {
+      "id": 84622,
+      "name": "Cartoon Room",
+      "sort": 6
+    },
+    {
+      "id": 84623,
+      "name": "Senate Chamber",
+      "sort": 7
+    },
+    {
+      "id": 84737,
+      "name": "Sphinx Centennial Leadership Suite",
+      "sort": 8
+    }
+  ]
 }
