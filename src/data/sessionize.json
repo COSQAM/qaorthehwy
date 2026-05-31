@@ -217,7 +217,7 @@
       "title": "The Gumshoe Protocol",
       "description": "It was a dark and stormy night, the kind of night you expect a P0 defect, when the Teams call interrupted my dinner of Cup of Noodles. It was the VP of Customer Success “we have a customer facing problem. We need you and the Gumshoe Team on the case”.\r\n\r\nRoot cause analysis (RCA) is a critical skill for everyone, however, most professionals have never had the opportunity to identify the root cause of a defect before needing to do so in a critical situation. Effective RCA requires all stakeholders to think critically and use their best judgement on the often limited information available. In this workshop, participants will role-play through a real-life scenario and interact with logs, users, and other stakeholders to figure out the root cause before coming together to brainstorm on how we could have prevented the incident. \r\n\r\nJoin the Gumshoe Team of developers, QAs, product professionals, customer support, and project managers to crack the case. ",
       "startsAt": "2026-06-12T09:00:00",
-      "endsAt": "2026-06-12T12:00:00",
+      "endsAt": "2026-06-12T11:00:00",
       "isServiceSession": false,
       "isPlenumSession": false,
       "speakers": [
@@ -240,14 +240,15 @@
     },
     {
       "id": "1187097",
-      "title": "AI Testing Hackathon Workshop",
-      "description": "Break the AI Agent RAG Application in 4 Hours - Find the failures before real users ever see them.",
+      "title": "Breaking GPT & Claude: The AI Red-Team Workshop That Gets You Hired",
+      "description": "Meta AI. OpenAI. Anthropic. They're not just hiring prompt engineers anymore — they're hunting for AI Evaluation Engineers: people who can find where AI breaks before attackers do. It's one of the fastest-growing, highest-paying roles in tech, and almost nobody knows how to get there yet.\r\n\r\nThis 2-hour hands-on workshop is your unfair head start.\r\n\r\nYou'll go behind the curtain of how production AI assistants are actually built — spoiler: it's one model plus a paragraph of rules — and learn exactly how those rules fail. Working against two real-world bots (a healthcare triage assistant and a brokerage chatbot), you'll run live attacks across six frontier models from Meta, OpenAI, and beyond, watching the same technique succeed or fail in real time.\r\n\r\nWhat you'll actually do:\r\n\r\n* Jailbreak AI chatbots using role-play overrides, authority framing, encoded injections, and prompt extraction — then see why some guardrails hold and others crumble\r\n* Run automated red-team evals using the same open-source tooling (promptfoo) used by professional AI safety teams\r\n* Learn why \"technique transfers\" — master one attack pattern and it works across GPT, Claude, Llama, and whatever ships next year\r\n* Understand why cost and latency are safety metrics, not just engineering concerns\r\n\r\nNo prerequisites. No prior AI experience needed. If you can open a terminal, you're ready. Just bring your laptop — everything else runs free in the cloud.\r\n\r\nWhether you're a QA engineer looking to pivot, a developer curious about AI safety, or simply someone who wants to understand what's really going on inside the tools everyone's using — this workshop hands you the skills companies are paying top dollar to find.\r\n\r\nCome break something. Leave knowing how to make it unbreakable.\r\n",
       "startsAt": "2026-06-12T09:00:00",
       "endsAt": "2026-06-12T11:00:00",
       "isServiceSession": false,
       "isPlenumSession": false,
       "speakers": [
-        "7a4da457-4a7c-4f69-9645-5474c9cd0401"
+        "7a4da457-4a7c-4f69-9645-5474c9cd0401",
+        "12498175-9c12-42fe-8327-23b5358c7080"
       ],
       "categoryItems": [],
       "questionAnswers": [
@@ -494,6 +495,27 @@
         }
       ],
       "roomId": 73079,
+      "liveUrl": null,
+      "recordingUrl": null,
+      "status": "Accepted",
+      "isInformed": true,
+      "isConfirmed": true
+    },
+    {
+      "id": "1237663",
+      "title": "Integrated AI: Scaling Quality with Unified Test Stack & AI Agents",
+      "description": "Ever wondered how other QE teams actually use AI in their day-to-day work? We spoke with over 200 organizations to find the answer. While 94% of teams already use AI in software testing, their use cases and ROI vary widely. What seems to matter most is how well they integrate AI within existing workflows.\r\nIn this session, we will share our findings and showcase how companies like Wells Fargo, Nike, General Motors, and Spotify use Unified Test Stack & AI Agents to natively integrate AI and deliver measurable, practical value. We will demonstrate high-impact use cases - such as automated test generation, low-code automation, self-healing execution, accessibility remediation, and auto-generated test failure analysis - that help customers achieve a 10x boost in productivity, a 50% jump in coverage, and a 40% reduction in build failures.\r\n\r\nIf you’re a QA leader, developer, or tester looking to deliver quality at scale, this session will provide a clear, practical view of what’s working—and how to stay ahead as testing enters the AI era",
+      "startsAt": "2026-06-12T11:00:00",
+      "endsAt": "2026-06-12T11:50:00",
+      "isServiceSession": false,
+      "isPlenumSession": false,
+      "speakers": [
+        "97e766e4-4075-47fd-ad86-c42e867f2fce",
+        "4442ef6f-2db4-4d12-bf35-d63156f63898"
+      ],
+      "categoryItems": [],
+      "questionAnswers": [],
+      "roomId": 73080,
       "liveUrl": null,
       "recordingUrl": null,
       "status": "Accepted",
@@ -913,6 +935,26 @@
       "isConfirmed": true
     },
     {
+      "id": "1237664",
+      "title": " From Go-Live Risk to Confidence: Continuous Validation for D365 F&O with AI-Powered Automation",
+      "description": "As organizations roll out Microsoft Dynamics 365 Finance & Operations, ensuring system stability and performance at go-live has never been more critical. Yet many teams still rely on fragile, manual, or script-heavy testing approaches that slow progress and introduce risk.\r\n\r\nIn this session, we’ll explore how leading enterprises are adopting a continuous validation approach to support D365 F&O implementations from testing through go-live and beyond. As a strategic Microsoft partner for test automation, Leapwork enables teams to validate complex, end-to-end business processes across ERP and connected systems without the burden of code.\r\nYou’ll learn how to:\r\nReduce go-live risk with scalable, reliable test automation\r\nEnsure performance readiness across critical workflows\r\nAccelerate testing cycles with a no-code, enterprise-ready platform\r\nExtend validation into the future with AI-powered capabilities\r\nWe’ll also introduce Leapwork AI Studio and how it is pushing the boundaries of efficiency and speed for QA teams, helping organizations move faster while maintaining confidence in every release.\r\n\r\nWhether you’re preparing for a D365 F&O implementation or optimizing an existing environment, this session will provide practical insights to help you move forward with confidence.",
+      "startsAt": "2026-06-12T14:00:00",
+      "endsAt": "2026-06-12T14:50:00",
+      "isServiceSession": false,
+      "isPlenumSession": false,
+      "speakers": [
+        "f9e12169-fe33-4602-8225-e101df4c5327"
+      ],
+      "categoryItems": [],
+      "questionAnswers": [],
+      "roomId": 84620,
+      "liveUrl": null,
+      "recordingUrl": null,
+      "status": "Accepted",
+      "isInformed": true,
+      "isConfirmed": true
+    },
+    {
       "id": "1152366",
       "title": "The 3 legged stool: AI Won’t Fix Your Agile Problems",
       "description": "Agile frameworks promise adaptability and speed — but even in the AI and digital age, many teams struggle with unclear roles, brittle dependencies, and communication breakdowns that slow delivery and burn people out. The 3‑legged stool is more than a metaphor— it’s a simple systems model for understanding why agile teams succeed or fail. When roles, collaboration, and communication are balanced, teams are stable and productive. When one “leg” is overloaded, ignored, or missing, the system wobbles — no matter how good your AI is or good the tooling or framework looks on paper.\r\n\r\nIn this session, we’ll explore how the 3‑legged stool analogy can be used as a practical diagnostic and alignment tool across modern agile environments. Drawing on real-world experience working with teams navigating today’s increased complexity — remote work, hybrid structures, and constant delivery pressure — you’ll see how this model helps surface hidden constraints, clarify ownership, and manage dependencies more effectively.\r\n\r\nRather than prescribing yet another framework, this talk focuses on how to create shared understanding between engineers, product, and leadership — so teams can make better decisions inside the frameworks they already use.\r\n\r\nWhether you’re building software, coaching teams, or leading transformation efforts, you’ll leave with a lightweight model you can immediately apply to improve team health, delivery flow, and long-term sustainability.",
@@ -1064,6 +1106,22 @@
       "questionAnswers": []
     },
     {
+      "id": "97e766e4-4075-47fd-ad86-c42e867f2fce",
+      "firstName": "Akshay",
+      "lastName": "Kumar",
+      "bio": null,
+      "tagLine": "Global Head of Revenue Marketing",
+      "profilePicture": "https://sessionize.com/image/141a-400o400o1-EJNF3yAtUTPr48ANnyQzE5.jpg",
+      "isTopSpeaker": false,
+      "links": [],
+      "sessions": [
+        1237663
+      ],
+      "fullName": "Akshay Kumar",
+      "categoryItems": [],
+      "questionAnswers": []
+    },
+    {
       "id": "fe60844a-68a5-4edd-8d5b-44d892977bcd",
       "firstName": "Alexa",
       "lastName": "Beach",
@@ -1119,6 +1177,28 @@
         1172552
       ],
       "fullName": "Andrew Knight",
+      "categoryItems": [],
+      "questionAnswers": []
+    },
+    {
+      "id": "4442ef6f-2db4-4d12-bf35-d63156f63898",
+      "firstName": "Arpit",
+      "lastName": "Agrawal",
+      "bio": "Arpit leads the Enterprise Solution Engineering team at BrowserStack. He works as a Solutions Architect, helping enterprise customers successfully onboard and adopt the BrowserStack suite of products. His role involves understanding customer requirements, designing scalable testing solutions, and enabling teams to integrate BrowserStack seamlessly into their development and QA workflows.",
+      "tagLine": "Manager, Solution Engineering",
+      "profilePicture": "https://sessionize.com/image/e908-400o400o1-RSoQixqeotAXsWXgUD5i4A.jpg",
+      "isTopSpeaker": false,
+      "links": [
+        {
+          "title": "Company Website",
+          "url": "https://www.browserstack.com/",
+          "linkType": "Company_Website"
+        }
+      ],
+      "sessions": [
+        1237663
+      ],
+      "fullName": "Arpit Agrawal",
       "categoryItems": [],
       "questionAnswers": []
     },
@@ -1242,6 +1322,33 @@
         1220037
       ],
       "fullName": "Bob Crews",
+      "categoryItems": [],
+      "questionAnswers": []
+    },
+    {
+      "id": "f9e12169-fe33-4602-8225-e101df4c5327",
+      "firstName": "Charles",
+      "lastName": "Cedrone",
+      "bio": "Charles Cedrone is an Enterprise Solution Consultant at Leapwork, where he helps organizations transform their approach to software testing through scalable, no-code automation. Based in Boston, Charles works closely with enterprise customers to modernize quality assurance practices, reduce manual effort, and accelerate digital initiatives.\r\nPrior to joining Leapwork, Charles spent several years in consulting, progressing from analyst to principal-level roles. During this time, he led complex technology engagements focused on system implementations, process optimization, and delivery strategy, while managing client relationships and driving alignment across business and IT stakeholders. His experience spans requirements management, project delivery, and data-driven problem solving in large-scale enterprise environments.\r\n",
+      "tagLine": "VP Global Sales Engineering, Leapwork",
+      "profilePicture": "https://sessionize.com/image/8890-400o400o1-pZrWy3FDoPBSQxASyH6UWW.png",
+      "isTopSpeaker": false,
+      "links": [
+        {
+          "title": "LinkedIn",
+          "url": "https://www.linkedin.com/in/charles-cedrone-88284590/",
+          "linkType": "LinkedIn"
+        },
+        {
+          "title": "Company Website",
+          "url": "https://www.leapwork.com/",
+          "linkType": "Company_Website"
+        }
+      ],
+      "sessions": [
+        1237664
+      ],
+      "fullName": "Charles Cedrone",
       "categoryItems": [],
       "questionAnswers": []
     },
@@ -2158,6 +2265,33 @@
         1172997
       ],
       "fullName": "Vitaly Skadorva",
+      "categoryItems": [],
+      "questionAnswers": []
+    },
+    {
+      "id": "12498175-9c12-42fe-8327-23b5358c7080",
+      "firstName": "Vladimir",
+      "lastName": "Tanev",
+      "bio": "As an experienced iOS/macOS engineer with over 9 years in the field, I specialize in developing AI-powered solutions that enhance productivity and streamline workflows. My journey spans across startups and large enterprises, where I've led the development of innovative, user-centric products from Bluetooth-integrated hearing aids to wellness apps powered by on-device AI. \r\n\r\nCurrently, I serve as the Co-Founder & CTO of WeOptimize.ai, where I focus on applying AI to real-world business problems. My work bridges the gap between technical implementation and strategic vision, helping teams ship faster, scale efficiently, and stay ahead of the curve. \r\n\r\nThroughout my career, I've delivered production-grade apps used by thousands of users worldwide. I've also contributed to complex architectural decisions, optimized performance, and enabled sustainable scaling using modular Swift packages, SwiftUI, Combine, async/await, and advanced Apple frameworks. \r\n\r\nMy consulting and mentorship focuses on: \r\n\r\nDeepening expertise in iOS/macOS development\r\nNavigating AI integration: from concept to practical implementation\r\nStructuring modular and maintainable app architectures\r\nLeveraging Swift concurrency, SwiftUI, and Apple's latest technologies\r\nLaunching and scaling AI-based MVPs for startups\r\nPreparing for senior iOS developer and tech lead interviews \r\nWhether you're a developer looking to grow or a founder seeking clarity on AI capabilities, I offer tailored consulting sessions. Use my calendar to book a slot for in-depth discussions on iOS development, AI applications, or product architecture. \r\n\r\nI'm passionate about helping others level up and stay competitive in today's fast-evolving tech landscape.",
+      "tagLine": "AI / iOS Engineer",
+      "profilePicture": "https://sessionize.com/image/1c33-400o400o1-MyyKoQyJVbPdMCekgZhsDo.jpg",
+      "isTopSpeaker": false,
+      "links": [
+        {
+          "title": "LinkedIn",
+          "url": "https://www.linkedin.com/in/vladimir-tanev-16a5abba/",
+          "linkType": "LinkedIn"
+        },
+        {
+          "title": "Company Website",
+          "url": "https://university.engenious.io/",
+          "linkType": "Company_Website"
+        }
+      ],
+      "sessions": [
+        1187097
+      ],
+      "fullName": "Vladimir Tanev",
       "categoryItems": [],
       "questionAnswers": []
     },
