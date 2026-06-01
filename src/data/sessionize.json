@@ -163,21 +163,21 @@
       "isConfirmed": true
     },
     {
-      "id": "1145022",
-      "title": "Making Migrations Safer and Cheaper with AI-powered Testing",
-      "description": "Migrating legacy systems, such as COBOL-based applications to modern technologies are more feasible today thanks to development copilots that accelerate work and reduce costs (Github Copilot, Cursor, etc). However, testing remains a significant hurdle, especially when documentation is missing or outdated (which is the most common scenario), making it hard to verify that the new system behaves the same as the old one. This talk presents a two-track approach designed to help QA teams tackle this challenge in migrations in a more sustainable way: first, a static understanding of the system through code-derived diagrams and second, a dynamic understanding via observability (being able to ask in natural language to the system what’s happening in the backend), acting as a testing copilot.\r\n\r\nA core contribution of the session is the integration of open-source tools we developed for AI agents that assist testers (https://github.com/abstracta/tero) and a set of examples used to demonstrate with practical demos. To elaborate, the static track uses code-derived diagrams (state machines, flow diagrams, and sequence diagrams) generated directly from the codebase to illuminate system behavior without relying on outdated documentation. In addition, the dynamic track introduces observability as a copilot for testers, enabling real-time visibility into backend behavior in production-like conditions and helping testers validate that changes preserve intended behavior even in the absence of perfect docs.\r\n\r\nThe talk emphasizes AI as a friendly ally for testers across roles, not just developers, and avoids overpromising metrics. While formal metrics are still in progress, early signals suggest that this approach can enable more feasible migration projects by optimizing the testing part. As part of the process, we need a validation stage that will combine expert reviews of generated artifacts (diagrams and observability outputs) with cross-checks by peers to ensure coherence and usefulness. \r\n\r\nContribution to the audience\r\nThis talk offers a practical, replicable view on how to address legacy migrations from a QA lens powered by AI, without relying on complete or up-to-date documentation. It promotes an “AI as ally” narrative that fosters collaboration among testers, developers, and stakeholders, and it establishes a clear pathway aiming to reduce costs and delivery times while safeguarding quality and behavioral verification.\r\n\r\nNotes for reviewers\r\nTarget audience: QA managers, test leads, engineering managers, VPs and DevOps leaders involved in migrations.\r\n",
+      "id": "1174294",
+      "title": "The Human Advantage: Making Better QA Decisions with AI in the Loop",
+      "description": "As AI becomes a key player in our tools and workflows, testing and testers need to evolve the strategies since the quality still depends on human judgment. This session focuses on the tester’s mindset and the strategies to follow in their personal + professional lives that help QA engineers make better decisions, communicate risk clearly, and build trust in what they deliver\r\n\r\nThis is a practical, human-centered talk on how to become a stronger Quality Assurance professional in an AI-accelerated environment without becoming overly dependent on tools. Focusing on the human aspect of the QA, we’ll explore the mental models and habits that separate “someone who runs tests” from “someone who owns quality.”\r\n\r\nThe key takeaways include - \r\nUsing AI as a test helper, expanding ideas, help debug and write reports, prompt pattens to generate better scenarios\r\nQA mindset shifts for stronger testing - risk-based thinking, systems thinking, and skepticism without becoming adversarial.\r\nCommunication strategies that make QAs more human\r\nPersonal growth strategies that anyone can follow to build confidence and to be resilient \r\nA set of repeatable daily/weekly habits (checklists, journaling prompts, review routines) to build stronger intuition and consistency.\r\n\r\nThis session will be beneficial for Quality Assurance professions in all levels, if you are wondering how the QA roles evolve with AI in the mix, this session is for you. \r\n\r\n\r\n\r\n\r\n\r\n",
       "startsAt": "2026-06-12T09:00:00",
       "endsAt": "2026-06-12T09:50:00",
       "isServiceSession": false,
       "isPlenumSession": false,
       "speakers": [
-        "c21afc82-a118-4469-861a-356a80673ef4"
+        "0bc9c4c9-6a57-410a-9928-58c4b8d3e2ba"
       ],
       "categoryItems": [],
       "questionAnswers": [
         {
           "questionId": 111854,
-          "answerValue": "Migrating legacy systems, such as COBOL-based applications, to modern technologies is more feasible today thanks to development copilots that accelerate work and reduce costs. However, testing remains one of the biggest hurdles, especially when documentation is missing or outdated, making it difficult to verify that the new system behaves like the original.\r\n\r\nThis talk presents two complementary approaches to tackle this problem: a static understanding of the system through code-derived diagrams, and a dynamic understanding through observability, acting as a testing copilot. We introduce open-source tools we built to support AI agents that assist testers, and we demonstrate their use through practical examples and live demos.\r\n\r\nAlthough we are still collecting metrics, early results indicate more viable migration projects and tangible benefits from applying AI to testing. This session reframes AI as a friendly ally for testers—not just developers—supporting legacy migrations where documentation is scarce, obsolete, or absent.\r\n"
+          "answerValue": "As AI becomes a key player in our tools and workflows, testing and testers must evolve—because quality still depends on human judgment. This session focuses on the tester’s mindset and the personal and professional strategies that help QA engineers make better decisions, communicate risk clearly, and build trust in what they deliver. It’s a practical, human-centered talk on becoming a stronger QA professional in an AI-accelerated environment without becoming overly dependent on tools. We’ll cover using AI as a test helper (prompt patterns for better scenarios, debugging, reports), mindset shifts (risk-based/system thinking, healthy skepticism), communication strategies, resilience and confidence-building, and repeatable habits (checklists, journaling, review routines). Skills to focus on. this talk is suitable for all QA levels."
         }
       ],
       "roomId": 84621,
@@ -452,21 +452,21 @@
       "isConfirmed": false
     },
     {
-      "id": "1147079",
-      "title": "Verify, Then Trust: Human Judgement in the Age of Generative AI",
-      "description": "Generative AI is rapidly becoming part of how modern organizations write, evaluate, and make decisions — from drafting content and summarizing data to supporting technical workflows.\r\n\r\nAs these systems become more fluent and convincing, the real challenge is no longer whether AI can produce outputs quickly, but whether humans maintain the skills of verification, discernment, and accountability alongside it.\r\n\r\nVerify, Then Trust offers a grounded, human-centered framework for navigating AI without panic, blind faith, or outsourcing our thinking. This session explores why trust must be earned through validation, especially in environments where accuracy, clarity, and responsibility matter.\r\n\r\nRather than positioning AI as a threat or a replacement, this talk reframes it as a powerful tool that still requires human oversight. Attendees will learn practical habits for staying mentally present, asking better questions, and building norms that keep human judgment meaningfully in the loop.\r\n\r\nThis session is designed for technology professionals, leaders, and teams adapting to AI-enabled work who want to move forward with confidence — without losing critical thinking or responsibility in the process.\r\n\r\nKey themes include:\r\n* Speed vs. correctness in AI-generated outputs\r\n* Why verification is becoming a core professional skill\r\n* The risk of automation complacency\r\n* Practical ways to keep humans accountable and engaged",
+      "id": "1220037",
+      "title": "Business Challenges of Testing B.U.C.K.E.Y.E.D. – A Self-Driving AI Bus System",
+      "description": "Updated for 2026! AI is rapidly reshaping Software Quality Assurance and Testing—creating new expectations, risks, and business challenges, especially as organizations begin confronting the complexity of testing strong AI systems.\r\n\r\nIn this dynamic, interactive session, attendees will examine how AI is impacting QA and software testing from the perspective of developers, test engineers, managers, executives, and business owners. Using a realistic but fictitious scenario, participants will serve as members of the Checkpoint Technologies Executive IT Team after being awarded a contract by Imaginary Corporation to test B.U.C.K.E.Y.E.D. — Bus Using Cognitive Knowledge, Engineered to Yield Efficient Driving — a fully autonomous, AI-powered self-driving bus system developed for the state of Ohio.\r\n\r\nBecause the system uses strong AI, with advanced autonomous reasoning, learning, and adaptability, the testing effort presents uniquely complex and high-stakes challenges. Led by Bob Crews, CEO of Checkpoint Technologies, participants will identify ten primary business testing challenges through the eyes of an IT Executive Board, with the goal of ensuring project success, reducing risk, preventing negligence, and protecting both Checkpoint Technologies and Imaginary Corporation.",
       "startsAt": "2026-06-12T11:00:00",
       "endsAt": "2026-06-12T11:50:00",
       "isServiceSession": false,
       "isPlenumSession": false,
       "speakers": [
-        "c261415b-ec1a-42ca-bfb7-b5875db38294"
+        "26126c45-7534-47b9-9f8b-3b7b7009e047"
       ],
       "categoryItems": [],
       "questionAnswers": [
         {
           "questionId": 111854,
-          "answerValue": "AI tools are moving fast — but trust still requires verification.\r\n\r\nIn this session, Verify, Then Trust explores how professionals can use generative AI effectively while maintaining the essential human skills of critical thinking, judgment, and accountability. Rather than positioning AI as a threat or a replacement, this talk reframes it as a powerful tool that still requires human oversight. \r\n\r\nAttendees will learn practical habits for staying mentally present, asking better questions, and building norms that keep human judgment meaningfully in the loop."
+          "answerValue": "Updated for 2026! AI has created various challenges in the Software Quality Assurance and Testing field, and it’s evolving in an incredible way—but not always as you’d expect. These expectations have altered and created new challenges, especially as organizations begin dealing with testing a strong AI system.\r\n\r\nIn this session, we’ll review areas in which AI has impacted software testing & QA and identify core business challenges as they relate to testing a strong AI system.\r\n\r\nThe specific challenges, and the degree of their disruption, depend upon your role - developer, test engineer, manager, executive, or owner(s)? Utilizing a realistic, but fictitious scenario, this dynamic, interactive presentation/exercise will focus on the early engagement on an AI project and identify ten primary challenges as seen through the eyes of an IT Executive Board.\r\n\r\nNow more than ever, we’re charged not just with delivering innovation, but with safeguarding the lifeblood of the enterprise. In this high-energy, fully immersive exercise, you’ll dive into a gripping, fictitious AI project alongside an IT Executive Board, dissecting the core testing challenges, as they relate to the business, and learning how to conquer them from day one. Buckle up—your mission starts now!\r\n\r\nThe Mission: Attendees will be participating as members of the Checkpoint Technologies Executive IT Team. We have been awarded a prestigious contract by Imaginary Corporation to test their state-of-the-art, fully autonomous self-driving bus system B.U.C.K.E.Y.E.D. (Bus Using Cognitive Knowledge, Engineered to Yield Efficient Driving), developed for the state of Ohio. The AI system is a strong AI, meaning it has a higher level of autonomous reasoning, learning, and adaptability than traditional narrow AI systems. This makes testing uniquely complex and high-stake.\r\n\r\nLed and moderated by Bob Crews, CEO of Checkpoint Technologies, we must identify and provide Imaginary Corp. with a list of our primary business testing challenges. Your goal is to ensure project success, minimize and mitigate risk, and protect Checkpoint Technologies and Imaginary Corporation."
         }
       ],
       "roomId": 73078,
@@ -477,21 +477,21 @@
       "isConfirmed": true
     },
     {
-      "id": "1175077",
-      "title": "AI Testing Isn't One Thing (And Treating It Like It Is Will Bite You)",
-      "description": "Your team shipped an AI feature. Congrats. Now someone asks: how do we test this?\r\n\r\nYou write a test. The output changes. You run it again. Different output. You consider a career in farming.\r\n\r\nHere's the thing nobody tells you upfront: testing AI-powered software isn't one discipline, it's two. And the moment you try to apply one strategy to both, you're in trouble.\r\n\r\nThis talk breaks down the Two-Track Testing Model that every QA engineer building on AI needs to understand. There's the deterministic side, your traditional test pyramid covering infrastructure, routing, logic, and guardrails, and there's the AI evaluation side, where outputs are non-deterministic, pass/fail doesn't exist, and you need a completely different mental model to even know what \"quality\" means.\r\n\r\nWe'll walk through how these two tracks diverge, when they converge, and what it takes to get quality signals from both. You'll leave with a practical framework: the Three Pillars of AI Evaluation (human eval, deterministic checks, and LLM-as-judge), a benchmark-first approach to designing your eval strategy, and a clear picture of how maturity stage changes what you should be testing and how.\r\n\r\nThe fundamentals of our craft haven't changed. The pesticide paradox still applies. Risk-based thinking still applies. You still can't test everything. But the tools, vocabulary, and decision-making are genuinely new, and it's worth getting oriented before you're neck-deep in a chatbot that nobody can evaluate with any confidence.\r\n\r\nThis is the talk I wish existed when I started.",
+      "id": "1227446",
+      "title": "Agentic Testing & The Future of Trust",
+      "description": "AI agents are generating more code than ever, but how do you ensure its reliability? Learn why traditional testing fails and how Agentic Testing guarantees trust and scalability in AI-driven systems.",
       "startsAt": "2026-06-12T11:00:00",
       "endsAt": "2026-06-12T11:50:00",
       "isServiceSession": false,
       "isPlenumSession": false,
       "speakers": [
-        "a168013e-bb21-4097-ad0b-b7b9118dd449"
+        "497ccbc4-ed0c-4fa2-88dd-a14a07cf07c0"
       ],
       "categoryItems": [],
       "questionAnswers": [
         {
           "questionId": 111854,
-          "answerValue": "If you've ever shipped an AI feature and had no idea how to test it, you're not alone. This talk cuts through the noise with one core idea: AI testing isn't one thing, it's two. You'll walk away with a practical two-track framework that grounds AI evaluation in the QE fundamentals you already know."
+          "answerValue": "AI agents are helping teams generate more code than ever before. Even the strongest believers in vibe coding caution against placing blind trust in that code. We are living through the fastest expansion of software creation in history, not because we hired more engineers, but because machines are now building software alongside us.\r\n\r\nThis raises a fundamental challenge. How do you test and trust applications created by LLMs, assembled by multiple AI agents, and deployed by automated systems? The tools we rely on today were not designed for this reality or this speed. Unit tests and code reviews inspect logic and functions, but they were never meant to validate dynamic, evolving behavior. Traditional automation struggles when code is generated and modified continuously, becoming fragile and breaking faster than teams can maintain it. As AI agents become embedded into every layer of software, we are no longer just testing code. We are testing autonomous systems themselves.\r\n\r\nIn this talk, we will explore why trust in AI-generated software can no longer be assumed, and why it must be continuously proven. Agentic Testing, the use of autonomous agents to test autonomous systems, emerges as the only scalable solution. These autonomous agents not only plan, execute, and analyze tests but also adapt and challenge systems the way real users would. Agentic Testing validates behavior, reasoning, and outcomes at the system level, ensuring that AI-driven systems meet real-world expectations.\r\n\r\nDrawing from real-world enterprise deployments and lessons learned building an Agentic Testing platform, this talk will reframe quality assurance as a strategic intelligence layer rather than a release-time checkbox. In the age of AI, trust isn’t just a feature, it’s a continuously earned asset. We’ll discuss how businesses can evolve their testing strategies to stay ahead in this rapidly shifting landscape."
         }
       ],
       "roomId": 73079,
@@ -523,23 +523,18 @@
       "isConfirmed": true
     },
     {
-      "id": "1174838",
-      "title": "Testing without Ai - How I learned to stop worrying and love QA",
-      "description": "Ai has gone from a curiosity to a \"must have\" technology in less than 4 years and (I grudgingly admit) has gotten significantly better over that time.  We better understand it's capabilities and limitations.  But there is still a lot of hype and anxiety and misconceptions about Ai.\r\n\r\nI will talk about how I went from a technical leadership role developing test automation to a 10x engineer with Ai, to becoming obsolete, redundant, unemployed.  I'll talk about the hardships and stress affected me, the cold hard realities of Ai, and why I believe whatever the end state of Ai adoption, we're going to need more testers and better QA, not less.\r\n\r\nThis is a difficult transition period, but I see cause for optimism.\r\n\r\nI'll talk about what Ai can and cannot do well, what Ai should and should not do, how to help non-technical leadership know the difference, and how you can improve the quality of life and the quality of software with or without Ai.\r\n\r\nP.S. I'm currently working in a position where Ai is forbidden and QA is very important.",
+      "id": "1237664",
+      "title": " From Go-Live Risk to Confidence: Continuous Validation for D365 F&O with AI-Powered Automation",
+      "description": "As organizations roll out Microsoft Dynamics 365 Finance & Operations, ensuring system stability and performance at go-live has never been more critical. Yet many teams still rely on fragile, manual, or script-heavy testing approaches that slow progress and introduce risk.\r\n\r\nIn this session, we’ll explore how leading enterprises are adopting a continuous validation approach to support D365 F&O implementations from testing through go-live and beyond. As a strategic Microsoft partner for test automation, Leapwork enables teams to validate complex, end-to-end business processes across ERP and connected systems without the burden of code.\r\nYou’ll learn how to:\r\nReduce go-live risk with scalable, reliable test automation\r\nEnsure performance readiness across critical workflows\r\nAccelerate testing cycles with a no-code, enterprise-ready platform\r\nExtend validation into the future with AI-powered capabilities\r\nWe’ll also introduce Leapwork AI Studio and how it is pushing the boundaries of efficiency and speed for QA teams, helping organizations move faster while maintaining confidence in every release.\r\n\r\nWhether you’re preparing for a D365 F&O implementation or optimizing an existing environment, this session will provide practical insights to help you move forward with confidence.",
       "startsAt": "2026-06-12T11:00:00",
       "endsAt": "2026-06-12T11:50:00",
       "isServiceSession": false,
       "isPlenumSession": false,
       "speakers": [
-        "e7bf64bc-101c-494f-9f51-4bb47552afeb"
+        "f9e12169-fe33-4602-8225-e101df4c5327"
       ],
       "categoryItems": [],
-      "questionAnswers": [
-        {
-          "questionId": 111854,
-          "answerValue": "Ai has become nearly ubiquitous. You can't live without it -- or so we are told. You will left behind if you don't adopt it. You will be replaced by Ai in 6 months -- we've heard for 2 years now. I don't think so.\r\n\r\nI make the case why the Ai apocalypse isn't nearly as worrying as you think. And what you can do to survive in the wasteland of terminator robots and omniscient supercomputers. And why there is reason for optimism."
-        }
-      ],
+      "questionAnswers": [],
       "roomId": 84620,
       "liveUrl": null,
       "recordingUrl": null,
@@ -548,21 +543,21 @@
       "isConfirmed": true
     },
     {
-      "id": "1174294",
-      "title": "The Human Advantage: Making Better QA Decisions with AI in the Loop",
-      "description": "As AI becomes a key player in our tools and workflows, testing and testers need to evolve the strategies since the quality still depends on human judgment. This session focuses on the tester’s mindset and the strategies to follow in their personal + professional lives that help QA engineers make better decisions, communicate risk clearly, and build trust in what they deliver\r\n\r\nThis is a practical, human-centered talk on how to become a stronger Quality Assurance professional in an AI-accelerated environment without becoming overly dependent on tools. Focusing on the human aspect of the QA, we’ll explore the mental models and habits that separate “someone who runs tests” from “someone who owns quality.”\r\n\r\nThe key takeaways include - \r\nUsing AI as a test helper, expanding ideas, help debug and write reports, prompt pattens to generate better scenarios\r\nQA mindset shifts for stronger testing - risk-based thinking, systems thinking, and skepticism without becoming adversarial.\r\nCommunication strategies that make QAs more human\r\nPersonal growth strategies that anyone can follow to build confidence and to be resilient \r\nA set of repeatable daily/weekly habits (checklists, journaling prompts, review routines) to build stronger intuition and consistency.\r\n\r\nThis session will be beneficial for Quality Assurance professions in all levels, if you are wondering how the QA roles evolve with AI in the mix, this session is for you. \r\n\r\n\r\n\r\n\r\n\r\n",
+      "id": "1145022",
+      "title": "Making Migrations Safer and Cheaper with AI-powered Testing",
+      "description": "Migrating legacy systems, such as COBOL-based applications to modern technologies are more feasible today thanks to development copilots that accelerate work and reduce costs (Github Copilot, Cursor, etc). However, testing remains a significant hurdle, especially when documentation is missing or outdated (which is the most common scenario), making it hard to verify that the new system behaves the same as the old one. This talk presents a two-track approach designed to help QA teams tackle this challenge in migrations in a more sustainable way: first, a static understanding of the system through code-derived diagrams and second, a dynamic understanding via observability (being able to ask in natural language to the system what’s happening in the backend), acting as a testing copilot.\r\n\r\nA core contribution of the session is the integration of open-source tools we developed for AI agents that assist testers (https://github.com/abstracta/tero) and a set of examples used to demonstrate with practical demos. To elaborate, the static track uses code-derived diagrams (state machines, flow diagrams, and sequence diagrams) generated directly from the codebase to illuminate system behavior without relying on outdated documentation. In addition, the dynamic track introduces observability as a copilot for testers, enabling real-time visibility into backend behavior in production-like conditions and helping testers validate that changes preserve intended behavior even in the absence of perfect docs.\r\n\r\nThe talk emphasizes AI as a friendly ally for testers across roles, not just developers, and avoids overpromising metrics. While formal metrics are still in progress, early signals suggest that this approach can enable more feasible migration projects by optimizing the testing part. As part of the process, we need a validation stage that will combine expert reviews of generated artifacts (diagrams and observability outputs) with cross-checks by peers to ensure coherence and usefulness. \r\n\r\nContribution to the audience\r\nThis talk offers a practical, replicable view on how to address legacy migrations from a QA lens powered by AI, without relying on complete or up-to-date documentation. It promotes an “AI as ally” narrative that fosters collaboration among testers, developers, and stakeholders, and it establishes a clear pathway aiming to reduce costs and delivery times while safeguarding quality and behavioral verification.\r\n\r\nNotes for reviewers\r\nTarget audience: QA managers, test leads, engineering managers, VPs and DevOps leaders involved in migrations.\r\n",
       "startsAt": "2026-06-12T11:00:00",
       "endsAt": "2026-06-12T11:50:00",
       "isServiceSession": false,
       "isPlenumSession": false,
       "speakers": [
-        "0bc9c4c9-6a57-410a-9928-58c4b8d3e2ba"
+        "c21afc82-a118-4469-861a-356a80673ef4"
       ],
       "categoryItems": [],
       "questionAnswers": [
         {
           "questionId": 111854,
-          "answerValue": "As AI becomes a key player in our tools and workflows, testing and testers must evolve—because quality still depends on human judgment. This session focuses on the tester’s mindset and the personal and professional strategies that help QA engineers make better decisions, communicate risk clearly, and build trust in what they deliver. It’s a practical, human-centered talk on becoming a stronger QA professional in an AI-accelerated environment without becoming overly dependent on tools. We’ll cover using AI as a test helper (prompt patterns for better scenarios, debugging, reports), mindset shifts (risk-based/system thinking, healthy skepticism), communication strategies, resilience and confidence-building, and repeatable habits (checklists, journaling, review routines). Skills to focus on. this talk is suitable for all QA levels."
+          "answerValue": "Migrating legacy systems, such as COBOL-based applications, to modern technologies is more feasible today thanks to development copilots that accelerate work and reduce costs. However, testing remains one of the biggest hurdles, especially when documentation is missing or outdated, making it difficult to verify that the new system behaves like the original.\r\n\r\nThis talk presents two complementary approaches to tackle this problem: a static understanding of the system through code-derived diagrams, and a dynamic understanding through observability, acting as a testing copilot. We introduce open-source tools we built to support AI agents that assist testers, and we demonstrate their use through practical examples and live demos.\r\n\r\nAlthough we are still collecting metrics, early results indicate more viable migration projects and tangible benefits from applying AI to testing. This session reframes AI as a friendly ally for testers—not just developers—supporting legacy migrations where documentation is scarce, obsolete, or absent.\r\n"
         }
       ],
       "roomId": 84621,
@@ -592,6 +587,27 @@
         }
       ],
       "roomId": 84622,
+      "liveUrl": null,
+      "recordingUrl": null,
+      "status": "Accepted",
+      "isInformed": true,
+      "isConfirmed": true
+    },
+    {
+      "id": "1247362",
+      "title": "Your AI Agent Just Went Rogue: A Live Security Audit of Autonomous AI",
+      "description": "Description:\r\n\r\nAI agents aren't chatbots anymore. They send emails, edit CRM records, run shell commands, browse the web, and remember everything — autonomously, with no human in the loop. That's not a product pitch. That's an attack surface.\r\n\r\nIn this 50-minute session, we crack open a real autonomous sales agent — one with 33 tools, root runtime privilege, and production access to Gmail and HubSpot — and run a live security audit against it using the same methodology Fortune 500 companies use to evaluate AI risk.\r\n\r\nYou'll watch six guardrails break in real time.\r\n\r\nWhat we cover:\r\n\r\nWe start with two cautionary tales: Air Canada, whose AI chatbot created direct legal liability after giving customers wrong refund advice, and Zillow, whose AI pricing model quietly accumulated $500M+ in losses before anyone noticed. These aren't edge cases — they're the playbook for what happens when AI systems ship without proper evaluation.\r\n\r\nThen we go hands-on. Using AIVSS — the AI Vulnerability Scoring System — we walk through ten risk categories every autonomous agent should be tested against, focusing on the three that matter most: Tool Use, Memory, and Autonomy of Action. You'll see exactly how an agent gets tricked into running a shell command it was never supposed to touch, how it can be convinced to draw its own attack map for a bad actor, and how a simple role-swap prompt sends it completely off the rails.\r\n\r\nEvery failure is scored, every vulnerability is traceable, and every fix is actionable.\r\n\r\nYou'll leave with: An understanding of why the gap between what an agent can do and what it should do is your biggest security problem right now\r\n\r\nThe question isn't whether your agent can go rogue. It's whether you'll find out before your users do.\r\n",
+      "startsAt": "2026-06-12T11:00:00",
+      "endsAt": "2026-06-12T12:00:00",
+      "isServiceSession": false,
+      "isPlenumSession": false,
+      "speakers": [
+        "7a4da457-4a7c-4f69-9645-5474c9cd0401",
+        "12498175-9c12-42fe-8327-23b5358c7080"
+      ],
+      "categoryItems": [],
+      "questionAnswers": [],
+      "roomId": 84737,
       "liveUrl": null,
       "recordingUrl": null,
       "status": "Accepted",
@@ -792,21 +808,21 @@
       "isConfirmed": true
     },
     {
-      "id": "1227446",
-      "title": "Agentic Testing & The Future of Trust",
-      "description": "AI agents are generating more code than ever, but how do you ensure its reliability? Learn why traditional testing fails and how Agentic Testing guarantees trust and scalability in AI-driven systems.",
+      "id": "1175077",
+      "title": "AI Testing Isn't One Thing (And Treating It Like It Is Will Bite You)",
+      "description": "Your team shipped an AI feature. Congrats. Now someone asks: how do we test this?\r\n\r\nYou write a test. The output changes. You run it again. Different output. You consider a career in farming.\r\n\r\nHere's the thing nobody tells you upfront: testing AI-powered software isn't one discipline, it's two. And the moment you try to apply one strategy to both, you're in trouble.\r\n\r\nThis talk breaks down the Two-Track Testing Model that every QA engineer building on AI needs to understand. There's the deterministic side, your traditional test pyramid covering infrastructure, routing, logic, and guardrails, and there's the AI evaluation side, where outputs are non-deterministic, pass/fail doesn't exist, and you need a completely different mental model to even know what \"quality\" means.\r\n\r\nWe'll walk through how these two tracks diverge, when they converge, and what it takes to get quality signals from both. You'll leave with a practical framework: the Three Pillars of AI Evaluation (human eval, deterministic checks, and LLM-as-judge), a benchmark-first approach to designing your eval strategy, and a clear picture of how maturity stage changes what you should be testing and how.\r\n\r\nThe fundamentals of our craft haven't changed. The pesticide paradox still applies. Risk-based thinking still applies. You still can't test everything. But the tools, vocabulary, and decision-making are genuinely new, and it's worth getting oriented before you're neck-deep in a chatbot that nobody can evaluate with any confidence.\r\n\r\nThis is the talk I wish existed when I started.",
       "startsAt": "2026-06-12T13:00:00",
       "endsAt": "2026-06-12T13:50:00",
       "isServiceSession": false,
       "isPlenumSession": false,
       "speakers": [
-        "497ccbc4-ed0c-4fa2-88dd-a14a07cf07c0"
+        "a168013e-bb21-4097-ad0b-b7b9118dd449"
       ],
       "categoryItems": [],
       "questionAnswers": [
         {
           "questionId": 111854,
-          "answerValue": "AI agents are helping teams generate more code than ever before. Even the strongest believers in vibe coding caution against placing blind trust in that code. We are living through the fastest expansion of software creation in history, not because we hired more engineers, but because machines are now building software alongside us.\r\n\r\nThis raises a fundamental challenge. How do you test and trust applications created by LLMs, assembled by multiple AI agents, and deployed by automated systems? The tools we rely on today were not designed for this reality or this speed. Unit tests and code reviews inspect logic and functions, but they were never meant to validate dynamic, evolving behavior. Traditional automation struggles when code is generated and modified continuously, becoming fragile and breaking faster than teams can maintain it. As AI agents become embedded into every layer of software, we are no longer just testing code. We are testing autonomous systems themselves.\r\n\r\nIn this talk, we will explore why trust in AI-generated software can no longer be assumed, and why it must be continuously proven. Agentic Testing, the use of autonomous agents to test autonomous systems, emerges as the only scalable solution. These autonomous agents not only plan, execute, and analyze tests but also adapt and challenge systems the way real users would. Agentic Testing validates behavior, reasoning, and outcomes at the system level, ensuring that AI-driven systems meet real-world expectations.\r\n\r\nDrawing from real-world enterprise deployments and lessons learned building an Agentic Testing platform, this talk will reframe quality assurance as a strategic intelligence layer rather than a release-time checkbox. In the age of AI, trust isn’t just a feature, it’s a continuously earned asset. We’ll discuss how businesses can evolve their testing strategies to stay ahead in this rapidly shifting landscape."
+          "answerValue": "If you've ever shipped an AI feature and had no idea how to test it, you're not alone. This talk cuts through the noise with one core idea: AI testing isn't one thing, it's two. You'll walk away with a practical two-track framework that grounds AI evaluation in the QE fundamentals you already know."
         }
       ],
       "roomId": 84622,
@@ -860,21 +876,21 @@
       "isConfirmed": true
     },
     {
-      "id": "1220037",
-      "title": "Business Challenges of Testing B.U.C.K.E.Y.E.D. – A Self-Driving AI Bus System",
-      "description": "Updated for 2026! AI is rapidly reshaping Software Quality Assurance and Testing—creating new expectations, risks, and business challenges, especially as organizations begin confronting the complexity of testing strong AI systems.\r\n\r\nIn this dynamic, interactive session, attendees will examine how AI is impacting QA and software testing from the perspective of developers, test engineers, managers, executives, and business owners. Using a realistic but fictitious scenario, participants will serve as members of the Checkpoint Technologies Executive IT Team after being awarded a contract by Imaginary Corporation to test B.U.C.K.E.Y.E.D. — Bus Using Cognitive Knowledge, Engineered to Yield Efficient Driving — a fully autonomous, AI-powered self-driving bus system developed for the state of Ohio.\r\n\r\nBecause the system uses strong AI, with advanced autonomous reasoning, learning, and adaptability, the testing effort presents uniquely complex and high-stakes challenges. Led by Bob Crews, CEO of Checkpoint Technologies, participants will identify ten primary business testing challenges through the eyes of an IT Executive Board, with the goal of ensuring project success, reducing risk, preventing negligence, and protecting both Checkpoint Technologies and Imaginary Corporation.",
+      "id": "1147079",
+      "title": "Verify, Then Trust: Human Judgement in the Age of Generative AI",
+      "description": "Generative AI is rapidly becoming part of how modern organizations write, evaluate, and make decisions — from drafting content and summarizing data to supporting technical workflows.\r\n\r\nAs these systems become more fluent and convincing, the real challenge is no longer whether AI can produce outputs quickly, but whether humans maintain the skills of verification, discernment, and accountability alongside it.\r\n\r\nVerify, Then Trust offers a grounded, human-centered framework for navigating AI without panic, blind faith, or outsourcing our thinking. This session explores why trust must be earned through validation, especially in environments where accuracy, clarity, and responsibility matter.\r\n\r\nRather than positioning AI as a threat or a replacement, this talk reframes it as a powerful tool that still requires human oversight. Attendees will learn practical habits for staying mentally present, asking better questions, and building norms that keep human judgment meaningfully in the loop.\r\n\r\nThis session is designed for technology professionals, leaders, and teams adapting to AI-enabled work who want to move forward with confidence — without losing critical thinking or responsibility in the process.\r\n\r\nKey themes include:\r\n* Speed vs. correctness in AI-generated outputs\r\n* Why verification is becoming a core professional skill\r\n* The risk of automation complacency\r\n* Practical ways to keep humans accountable and engaged",
       "startsAt": "2026-06-12T14:00:00",
       "endsAt": "2026-06-12T14:50:00",
       "isServiceSession": false,
       "isPlenumSession": false,
       "speakers": [
-        "26126c45-7534-47b9-9f8b-3b7b7009e047"
+        "c261415b-ec1a-42ca-bfb7-b5875db38294"
       ],
       "categoryItems": [],
       "questionAnswers": [
         {
           "questionId": 111854,
-          "answerValue": "Updated for 2026! AI has created various challenges in the Software Quality Assurance and Testing field, and it’s evolving in an incredible way—but not always as you’d expect. These expectations have altered and created new challenges, especially as organizations begin dealing with testing a strong AI system.\r\n\r\nIn this session, we’ll review areas in which AI has impacted software testing & QA and identify core business challenges as they relate to testing a strong AI system.\r\n\r\nThe specific challenges, and the degree of their disruption, depend upon your role - developer, test engineer, manager, executive, or owner(s)? Utilizing a realistic, but fictitious scenario, this dynamic, interactive presentation/exercise will focus on the early engagement on an AI project and identify ten primary challenges as seen through the eyes of an IT Executive Board.\r\n\r\nNow more than ever, we’re charged not just with delivering innovation, but with safeguarding the lifeblood of the enterprise. In this high-energy, fully immersive exercise, you’ll dive into a gripping, fictitious AI project alongside an IT Executive Board, dissecting the core testing challenges, as they relate to the business, and learning how to conquer them from day one. Buckle up—your mission starts now!\r\n\r\nThe Mission: Attendees will be participating as members of the Checkpoint Technologies Executive IT Team. We have been awarded a prestigious contract by Imaginary Corporation to test their state-of-the-art, fully autonomous self-driving bus system B.U.C.K.E.Y.E.D. (Bus Using Cognitive Knowledge, Engineered to Yield Efficient Driving), developed for the state of Ohio. The AI system is a strong AI, meaning it has a higher level of autonomous reasoning, learning, and adaptability than traditional narrow AI systems. This makes testing uniquely complex and high-stake.\r\n\r\nLed and moderated by Bob Crews, CEO of Checkpoint Technologies, we must identify and provide Imaginary Corp. with a list of our primary business testing challenges. Your goal is to ensure project success, minimize and mitigate risk, and protect Checkpoint Technologies and Imaginary Corporation."
+          "answerValue": "AI tools are moving fast — but trust still requires verification.\r\n\r\nIn this session, Verify, Then Trust explores how professionals can use generative AI effectively while maintaining the essential human skills of critical thinking, judgment, and accountability. Rather than positioning AI as a threat or a replacement, this talk reframes it as a powerful tool that still requires human oversight. \r\n\r\nAttendees will learn practical habits for staying mentally present, asking better questions, and building norms that keep human judgment meaningfully in the loop."
         }
       ],
       "roomId": 73078,
@@ -935,18 +951,23 @@
       "isConfirmed": true
     },
     {
-      "id": "1237664",
-      "title": " From Go-Live Risk to Confidence: Continuous Validation for D365 F&O with AI-Powered Automation",
-      "description": "As organizations roll out Microsoft Dynamics 365 Finance & Operations, ensuring system stability and performance at go-live has never been more critical. Yet many teams still rely on fragile, manual, or script-heavy testing approaches that slow progress and introduce risk.\r\n\r\nIn this session, we’ll explore how leading enterprises are adopting a continuous validation approach to support D365 F&O implementations from testing through go-live and beyond. As a strategic Microsoft partner for test automation, Leapwork enables teams to validate complex, end-to-end business processes across ERP and connected systems without the burden of code.\r\nYou’ll learn how to:\r\nReduce go-live risk with scalable, reliable test automation\r\nEnsure performance readiness across critical workflows\r\nAccelerate testing cycles with a no-code, enterprise-ready platform\r\nExtend validation into the future with AI-powered capabilities\r\nWe’ll also introduce Leapwork AI Studio and how it is pushing the boundaries of efficiency and speed for QA teams, helping organizations move faster while maintaining confidence in every release.\r\n\r\nWhether you’re preparing for a D365 F&O implementation or optimizing an existing environment, this session will provide practical insights to help you move forward with confidence.",
+      "id": "1174838",
+      "title": "Testing without Ai - How I learned to stop worrying and love QA",
+      "description": "Ai has gone from a curiosity to a \"must have\" technology in less than 4 years and (I grudgingly admit) has gotten significantly better over that time.  We better understand it's capabilities and limitations.  But there is still a lot of hype and anxiety and misconceptions about Ai.\r\n\r\nI will talk about how I went from a technical leadership role developing test automation to a 10x engineer with Ai, to becoming obsolete, redundant, unemployed.  I'll talk about the hardships and stress affected me, the cold hard realities of Ai, and why I believe whatever the end state of Ai adoption, we're going to need more testers and better QA, not less.\r\n\r\nThis is a difficult transition period, but I see cause for optimism.\r\n\r\nI'll talk about what Ai can and cannot do well, what Ai should and should not do, how to help non-technical leadership know the difference, and how you can improve the quality of life and the quality of software with or without Ai.\r\n\r\nP.S. I'm currently working in a position where Ai is forbidden and QA is very important.",
       "startsAt": "2026-06-12T14:00:00",
       "endsAt": "2026-06-12T14:50:00",
       "isServiceSession": false,
       "isPlenumSession": false,
       "speakers": [
-        "f9e12169-fe33-4602-8225-e101df4c5327"
+        "e7bf64bc-101c-494f-9f51-4bb47552afeb"
       ],
       "categoryItems": [],
-      "questionAnswers": [],
+      "questionAnswers": [
+        {
+          "questionId": 111854,
+          "answerValue": "Ai has become nearly ubiquitous. You can't live without it -- or so we are told. You will left behind if you don't adopt it. You will be replaced by Ai in 6 months -- we've heard for 2 years now. I don't think so.\r\n\r\nI make the case why the Ai apocalypse isn't nearly as worrying as you think. And what you can do to survive in the wasteland of terminator robots and omniscient supercomputers. And why there is reason for optimism."
+        }
+      ],
       "roomId": 84620,
       "liveUrl": null,
       "recordingUrl": null,
@@ -1528,7 +1549,8 @@
         }
       ],
       "sessions": [
-        1187097
+        1187097,
+        1247362
       ],
       "fullName": "Igor Dorovskikh",
       "categoryItems": [],
@@ -2289,7 +2311,8 @@
         }
       ],
       "sessions": [
-        1187097
+        1187097,
+        1247362
       ],
       "fullName": "Vladimir Tanev",
       "categoryItems": [],
