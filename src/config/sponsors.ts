@@ -12,6 +12,7 @@ import abstracta from "../assets/images/sponsors/abstracta.png"
 import technumen from "../assets/images/sponsors/technumen.png"
 import thunders from "../assets/images/sponsors/thunders.png"
 import testgrid from "../assets/images/sponsors/testgrid.png"
+import panaya from "../assets/images/sponsors/panaya.png"
 
 export interface Sponsor {
   name: string;
@@ -91,6 +92,11 @@ export const sponsorConfig: SponsorTiers = {
     name: "TestGrid",
     logo: testgrid,
     website: "https://testgrid.io/",
+  },
+  {
+    name: "Panaya",
+    logo: panaya,
+    website: "https://www.panaya.com/",
   }
   ],
   lunch: [],

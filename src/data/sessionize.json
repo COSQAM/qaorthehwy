@@ -594,6 +594,31 @@
       "isConfirmed": true
     },
     {
+      "id": "1241118",
+      "title": "Pull Over: AI Agent Testing Has Entered the Highway",
+      "description": "AI agents are writing code, making decisions, and shipping features — but who's testing the agents?\r\n\r\nIn this session, Deep Barot, CEO of ContextQA, tackles one of the most pressing challenges in modern software quality: how do you test something that doesn't behave the same way twice? Deep will walk through a live demo focused specifically on evaluating AI agents — from generating meaningful test scenarios to running multi-LLM judge evaluations that give your team real confidence in what's shipping.\r\n\r\nYou'll see how ContextQA approaches evals not as a checkbox, but as a rigorous, repeatable process — using multiple LLM judges to score outputs, surface disagreements, and produce confidence levels your team can actually act on.\r\n\r\nIf your organization is building with AI agents and wondering how to trust what they do, this session gives you a practical, live look at how to bring quality engineering discipline to agentic systems.\r\n\r\nKey Takeaways:\r\n•\tHow to design test scenarios purpose-built for AI agent behavior\r\n•\tWhy single-model evaluation falls short and how multi-LLM judging fills the gap\r\n•\tHow to interpret confidence levels across judges to make informed release decisions\r\n•\tA live look at ContextQA's eval framework in action\r\n",
+      "startsAt": "2026-06-12T11:00:00",
+      "endsAt": "2026-06-12T12:00:00",
+      "isServiceSession": false,
+      "isPlenumSession": false,
+      "speakers": [
+        "17fc9e50-d753-4cb6-bf66-e030ed1d9132"
+      ],
+      "categoryItems": [],
+      "questionAnswers": [
+        {
+          "questionId": 111854,
+          "answerValue": "AI agents are writing code, making decisions, and shipping features — but who's testing the agents?\r\n\r\nIn this session, Deep Barot, CEO of ContextQA, tackles one of the most pressing challenges in modern software quality: how do you test something that doesn't behave the same way twice? Deep will walk through a live demo focused specifically on evaluating AI agents — from generating meaningful test scenarios to running multi-LLM judge evaluations that give your team real confidence in what's shipping.\r\n\r\nYou'll see how ContextQA approaches evals not as a checkbox, but as a rigorous, repeatable process — using multiple LLM judges to score outputs, surface disagreements, and produce confidence levels your team can actually act on.\r\n\r\nIf your organization is building with AI agents and wondering how to trust what they do, this session gives you a practical, live look at how to bring quality engineering discipline to agentic systems.\r\n\r\nKey Takeaways:\r\n•\tHow to design test scenarios purpose-built for AI agent behavior\r\n•\tWhy single-model evaluation falls short and how multi-LLM judging fills the gap\r\n•\tHow to interpret confidence levels across judges to make informed release decisions\r\n•\tA live look at ContextQA's eval framework in action\r\n"
+        }
+      ],
+      "roomId": 84623,
+      "liveUrl": null,
+      "recordingUrl": null,
+      "status": "Accepted",
+      "isInformed": true,
+      "isConfirmed": false
+    },
+    {
       "id": "1247362",
       "title": "Your AI Agent Just Went Rogue: A Live Security Audit of Autonomous AI",
       "description": "Description:\r\n\r\nAI agents aren't chatbots anymore. They send emails, edit CRM records, run shell commands, browse the web, and remember everything — autonomously, with no human in the loop. That's not a product pitch. That's an attack surface.\r\n\r\nIn this 50-minute session, we crack open a real autonomous sales agent — one with 33 tools, root runtime privilege, and production access to Gmail and HubSpot — and run a live security audit against it using the same methodology Fortune 500 companies use to evaluate AI risk.\r\n\r\nYou'll watch six guardrails break in real time.\r\n\r\nWhat we cover:\r\n\r\nWe start with two cautionary tales: Air Canada, whose AI chatbot created direct legal liability after giving customers wrong refund advice, and Zillow, whose AI pricing model quietly accumulated $500M+ in losses before anyone noticed. These aren't edge cases — they're the playbook for what happens when AI systems ship without proper evaluation.\r\n\r\nThen we go hands-on. Using AIVSS — the AI Vulnerability Scoring System — we walk through ten risk categories every autonomous agent should be tested against, focusing on the three that matter most: Tool Use, Memory, and Autonomy of Action. You'll see exactly how an agent gets tricked into running a shell command it was never supposed to touch, how it can be convinced to draw its own attack map for a bad actor, and how a simple role-swap prompt sends it completely off the rails.\r\n\r\nEvery failure is scored, every vulnerability is traceable, and every fix is actionable.\r\n\r\nYou'll leave with: An understanding of why the gap between what an agent can do and what it should do is your biggest security problem right now\r\n\r\nThe question isn't whether your agent can go rogue. It's whether you'll find out before your users do.\r\n",
@@ -1461,6 +1486,38 @@
         1217166
       ],
       "fullName": "David Vano",
+      "categoryItems": [],
+      "questionAnswers": []
+    },
+    {
+      "id": "17fc9e50-d753-4cb6-bf66-e030ed1d9132",
+      "firstName": "Deep",
+      "lastName": "Barot",
+      "bio": "Deep Barot is the founder and CEO of ContextQA, pioneering the next generation of software testing through agentic AI and context-aware automation. He’s built a groundbreaking platform powered by 30+ specialized AI agents that autonomously generate, execute, heal, and optimize tests across web, mobile, Salesforce, and API environments.\r\nDeep’s vision centers on creating truly intelligent testing systems that understand application context rather than simply executing scripts. This approach has attracted enterprise clients including Airlines, BFSI, and Consumer Tech, who rely on ContextQA’s autonomous agents to deliver unprecedented speed and reliability.\r\nScaling a venture-backed company with a distributed large engineering team, Deep is reimagining how software quality is achieved through multi-agent AI systems that collaborate to solve complex testing challenges—fundamentally transforming how enterprises approach quality assurance in an era of rapid development velocity.",
+      "tagLine": "Founder and CEO of ContextQA",
+      "profilePicture": "https://sessionize.com/image/5cf2-400o400o1-WhweFDyyGZMXhN2hQUs4Kt.jpg",
+      "isTopSpeaker": false,
+      "links": [
+        {
+          "title": "X (Twitter)",
+          "url": "https://x.com/ContextQa",
+          "linkType": "Twitter"
+        },
+        {
+          "title": "LinkedIn",
+          "url": "https://www.linkedin.com/in/deepbarot/",
+          "linkType": "LinkedIn"
+        },
+        {
+          "title": "Company Website",
+          "url": "https://contextqa.com/",
+          "linkType": "Company_Website"
+        }
+      ],
+      "sessions": [
+        1241118
+      ],
+      "fullName": "Deep Barot",
       "categoryItems": [],
       "questionAnswers": []
     },
