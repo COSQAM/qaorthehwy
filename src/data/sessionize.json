@@ -62,22 +62,21 @@
       "isConfirmed": false
     },
     {
-      "id": "1176192",
-      "title": "The Race to the Top… When Do You Stop?",
-      "description": "In many QA organizations, career growth is often equated with becoming a people manager. But what happens when your strengths — and passions — lie elsewhere?\r\nIn this session, we'll share a tale of two testers, metaphorically climbing QA Everest. Using our experiences and lessons learned to help you navigate the decision, \"do I want to manage or do I want to keep testing?\"\r\n\r\nWe'll each share some of our personal journey from QA individual contributor to manager and back again. While you can value the opportunity to lead, you may ultimately realize that the parts of the role that energize you most are mentoring testers, improving quality practices, staying hands-on with testing, and supporting projects through strong organization and communication — not the people-management aspects like performance reviews, HR responsibilities, or navigating formal management structures.\r\n\r\nThis session challenges the idea that you have to keep climbing the mountain toward higher base camps, including management. Instead, it reframes the individual contributor role as a powerful, intentional career choice that brings deep value to teams. We'll discuss the decision points and key characteristics to help you determine where you want to stop on your journey up QA Everest. Then, we'll outline ways QA individuals can advocate for themselves, define success beyond titles, and continue to grow their influence without managing people.\r\n\r\nWhether you’re a tester questioning your next career move, a people manager considering a change, or a leader looking to better support IC career paths, this talk will offer validation, clarity, and practical takeaways.",
+      "id": "1126466",
+      "title": "Taming Autonomous Testing and Behavior Models – Mario, Will You Behave?",
+      "description": "How do you test a system with millions of possible states? Traditional test automation follows a simple pattern: write tests that execute predefined steps and verify expected outcomes. But this approach breaks down when the system under test has vast state spaces and complex behaviors that can't be fully covered by manually written tests.\r\n\r\nIn this session, I'll show how I tamed two powerful techniques—autonomous testing and behavior models—using Super Mario Bros. as my test subject. I'll demonstrate:\r\n\r\n1. Autonomous State Space Exploration\r\nHow I used mutation-based input generation and fitness functions to discover paths through complex systems without human guidance. Watch as Mario autonomously navigates and completes levels.\r\n\r\n2. Behavior Models for Validation\r\nHow I defined causal, safety, and bounded liveness properties that validate system correctness frame-by-frame, building models that act as universal correctness oracles.\r\n\r\n3. Combining Both Techniques\r\nThe real power emerges when autonomous exploration meets behavior validation—systematically discovering edge cases while ensuring correctness at every step.\r\n\r\nBy the end of this session, you'll see:\r\n• The difference between traditional test automation and autonomous testing\r\n• How fitness functions guide exploration through complex state spaces\r\n• How to define behavior properties (causal, safety, liveness)\r\n• How to integrate behavior models into autonomous exploration loops\r\n• When these techniques make sense for your own projects\r\n\r\nThis talk is based on a published technical series with open-source code:\r\n• Part 1: https://testflows.com/blog/testing-super-mario-using-a-behavior-model-autonomously-part1/\r\n• Part 2: https://testflows.com/blog/testing-super-mario-using-a-behavior-model-autonomously-part2/",
       "startsAt": "2026-06-12T09:00:00",
       "endsAt": "2026-06-12T09:50:00",
       "isServiceSession": false,
       "isPlenumSession": false,
       "speakers": [
-        "fe60844a-68a5-4edd-8d5b-44d892977bcd",
-        "be614ae7-9376-41e9-9c0d-bc3df923be71"
+        "ea2b662a-c38e-41ed-b080-8982232df3a8"
       ],
       "categoryItems": [],
       "questionAnswers": [
         {
           "questionId": 111854,
-          "answerValue": "In many QA organizations, career growth is often equated with becoming a people manager. But what happens when your strengths — and passions — lie elsewhere?\r\nIn this session, we'll share a tale of two testers, metaphorically climbing QA Everest. Using our experiences and lessons learned to help you navigate the decision, \"do I want to manage or do I want to keep testing?\"\r\n\r\nWe'll each share some of our personal journey from QA individual contributor to manager and back again. While you can value the opportunity to lead, you may ultimately realize that the parts of the role that energize you most are mentoring testers, improving quality practices, staying hands-on with testing, and supporting projects through strong organization and communication — not the people-management aspects like performance reviews, HR responsibilities, or navigating formal management structures.\r\n\r\nThis session challenges the idea that you have to keep climbing the mountain toward higher base camps, including management. Instead, it reframes the individual contributor role as a powerful, intentional career choice that brings deep value to teams. We'll discuss the decision points and key characteristics to help you determine where you want to stop on your journey up QA Everest. Then, we'll outline ways QA individuals can advocate for themselves, define success beyond titles, and continue to grow their influence without managing people.\r\n\r\nWhether you’re a tester questioning your next career move, a people manager considering a change, or a leader looking to better support IC career paths, this talk will offer validation, clarity, and practical takeaways."
+          "answerValue": "How do you test a system with millions of possible states? In this session, we'll tame two powerful techniques—autonomous testing and behavior models—using Super Mario Bros. as our test subject. We'll see how mutation-based input generation enables autonomous state space exploration, how to define causal, safety, and liveness properties for frame-by-frame validation, and how combining these techniques creates a powerful testing approach that discovers edge cases while ensuring correctness throughout. Whether you're testing games, complex workflows, or stateful enterprise systems, you'll walk away with practical knowledge of applying autonomous testing and behavior models."
         }
       ],
       "roomId": 73078,
@@ -1168,28 +1167,6 @@
       "questionAnswers": []
     },
     {
-      "id": "fe60844a-68a5-4edd-8d5b-44d892977bcd",
-      "firstName": "Alexa",
-      "lastName": "Beach",
-      "bio": "Alexa has over 10+ years of experience in advocating for quality throughout various projects. She is passionate about not only testing functionality, but also testing from the perspective of the end-user. Because of her strong belief that testing should be approached as early in the process as possible, she engages in quality advocacy at every stage of the project, from designing the user interface to uncovering and documenting business requirements. Please don’t throw something over the wall at her. \r\n\nWhen she is not working, Alexa enjoys spending time with her family at their lake place or a nearby local winery. If you don’t find her there, she is probably at home snuggled up with her pup and a cup of coffee.",
-      "tagLine": "Sr. Quality Assurance Analyst for Sweetwater",
-      "profilePicture": "https://sessionize.com/image/6166-400o400o1-P6y6vFmZNoBoYX2h9iU56H.jpg",
-      "isTopSpeaker": false,
-      "links": [
-        {
-          "title": "LinkedIn",
-          "url": "https://www.linkedin.com/in/alexa-beach-3152b012b/",
-          "linkType": "LinkedIn"
-        }
-      ],
-      "sessions": [
-        1176192
-      ],
-      "fullName": "Alexa Beach",
-      "categoryItems": [],
-      "questionAnswers": []
-    },
-    {
       "id": "3ec8847f-9f1e-46dd-8b2f-c9d38767f42b",
       "firstName": "Andrew",
       "lastName": "Knight",
@@ -1518,28 +1495,6 @@
         1241118
       ],
       "fullName": "Deep Barot",
-      "categoryItems": [],
-      "questionAnswers": []
-    },
-    {
-      "id": "be614ae7-9376-41e9-9c0d-bc3df923be71",
-      "firstName": "Emma",
-      "lastName": "Clouse",
-      "bio": "Emma studied philosophy and psychology, developing her skills in formal logic and analytics. After earning her Masters in Philosophy, she found that the skills she'd developed were well suited to working in software development. She worked at Epic Systems in Quality Assurance before becoming a Team Lead, responsible for project managing releases of software in the Radiology and Gastroenterology applications, while growing new leaders in the company. She returned to Sweetwater Sound as a QA Tester helping to develop their approach to testing a legacy application. Now, still at Sweetwater, she is a QA Manager invested in growing the QA team responsible for testing many of the internal facing applications.",
-      "tagLine": "Quality Assurance Manager for Sweetwater Sound",
-      "profilePicture": "https://sessionize.com/image/63f5-400o400o1-7Svf4SKfQCeTdSAh5J9tDz.jpg",
-      "isTopSpeaker": false,
-      "links": [
-        {
-          "title": "LinkedIn",
-          "url": "https://www.linkedin.com/in/emma-rae-clouse/",
-          "linkType": "LinkedIn"
-        }
-      ],
-      "sessions": [
-        1176192
-      ],
-      "fullName": "Emma Clouse",
       "categoryItems": [],
       "questionAnswers": []
     },
@@ -2317,6 +2272,38 @@
         1154958
       ],
       "fullName": "Todd Nussbaum",
+      "categoryItems": [],
+      "questionAnswers": []
+    },
+    {
+      "id": "ea2b662a-c38e-41ed-b080-8982232df3a8",
+      "firstName": "Vitaliy",
+      "lastName": "Zakaznikov",
+      "bio": "With extensive experience in testing—from safety-critical systems to databases—Vitaliy Zakaznikov is a QA Manager and Architect at Altinity and is the author of TestFlows testing framework. His background spans testing the QNX real-time operating system at Blackberry QNX, static code analysis tools at Klocwork, and memory chips at Micron Technologies. This experience with complex, stateful systems directly guides his current work on advanced testing techniques such as behavior models and autonomous testing. Vitaliy holds a MEng. degree in Computer Engineering from Boise State University. He is a contributor to the ClickHouse open-source database and leads a team that maintains the largest third-party test suite for it. He enjoys writing blog articles and developing tools that make teaching and using advanced testing techniques easier.",
+      "tagLine": "QA Manager & Architect at Altinity | Author of TestFlows",
+      "profilePicture": "https://sessionize.com/image/ca0d-400o400o1-SZeKzUQnU1gUsTZ4u1nES5.jpg",
+      "isTopSpeaker": false,
+      "links": [
+        {
+          "title": "LinkedIn",
+          "url": "https://linkedin.com/in/vzakaznikov/",
+          "linkType": "LinkedIn"
+        },
+        {
+          "title": "Blog",
+          "url": "https://testflows.com/blog",
+          "linkType": "Blog"
+        },
+        {
+          "title": "Company Website",
+          "url": "https://testflows.com",
+          "linkType": "Company_Website"
+        }
+      ],
+      "sessions": [
+        1126466
+      ],
+      "fullName": "Vitaliy Zakaznikov",
       "categoryItems": [],
       "questionAnswers": []
     },
