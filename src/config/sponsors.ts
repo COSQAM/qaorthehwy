@@ -13,6 +13,7 @@ import technumen from "../assets/images/sponsors/technumen.png"
 import thunders from "../assets/images/sponsors/thunders.png"
 import testgrid from "../assets/images/sponsors/testgrid.png"
 import panaya from "../assets/images/sponsors/panaya.png"
+import flexjet from "../assets/images/sponsors/flexjet.png"
 
 export interface Sponsor {
   name: string;
@@ -97,6 +98,11 @@ export const sponsorConfig: SponsorTiers = {
     name: "Panaya",
     logo: panaya,
     website: "https://www.panaya.com/",
+  },
+  {
+    name: "Flexjet",
+    logo: flexjet,
+    website: "https://www.flexjet.com/",
   }
   ],
   lunch: [],
