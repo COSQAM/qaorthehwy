@@ -627,7 +627,7 @@
       "isPlenumSession": false,
       "speakers": [
         "7a4da457-4a7c-4f69-9645-5474c9cd0401",
-        "12498175-9c12-42fe-8327-23b5358c7080"
+        "fb7b0190-9668-49f3-802d-b313810e2d2c"
       ],
       "categoryItems": [],
       "questionAnswers": [],
@@ -2344,33 +2344,7 @@
       "isTopSpeaker": false,
       "links": [],
       "sessions": [
-        1187097
-      ],
-      "fullName": "Vladimir Tanev",
-      "categoryItems": [],
-      "questionAnswers": []
-    },
-    {
-      "id": "12498175-9c12-42fe-8327-23b5358c7080",
-      "firstName": "Vladimir",
-      "lastName": "Tanev",
-      "bio": "As an experienced iOS/macOS engineer with over 9 years in the field, I specialize in developing AI-powered solutions that enhance productivity and streamline workflows. My journey spans across startups and large enterprises, where I've led the development of innovative, user-centric products from Bluetooth-integrated hearing aids to wellness apps powered by on-device AI. \r\n\r\nCurrently, I serve as the Co-Founder & CTO of WeOptimize.ai, where I focus on applying AI to real-world business problems. My work bridges the gap between technical implementation and strategic vision, helping teams ship faster, scale efficiently, and stay ahead of the curve. \r\n\r\nThroughout my career, I've delivered production-grade apps used by thousands of users worldwide. I've also contributed to complex architectural decisions, optimized performance, and enabled sustainable scaling using modular Swift packages, SwiftUI, Combine, async/await, and advanced Apple frameworks. \r\n\r\nMy consulting and mentorship focuses on: \r\n\r\nDeepening expertise in iOS/macOS development\r\nNavigating AI integration: from concept to practical implementation\r\nStructuring modular and maintainable app architectures\r\nLeveraging Swift concurrency, SwiftUI, and Apple's latest technologies\r\nLaunching and scaling AI-based MVPs for startups\r\nPreparing for senior iOS developer and tech lead interviews \r\nWhether you're a developer looking to grow or a founder seeking clarity on AI capabilities, I offer tailored consulting sessions. Use my calendar to book a slot for in-depth discussions on iOS development, AI applications, or product architecture. \r\n\r\nI'm passionate about helping others level up and stay competitive in today's fast-evolving tech landscape.",
-      "tagLine": "AI / iOS Engineer",
-      "profilePicture": "https://sessionize.com/image/1c33-400o400o1-MyyKoQyJVbPdMCekgZhsDo.jpg",
-      "isTopSpeaker": false,
-      "links": [
-        {
-          "title": "LinkedIn",
-          "url": "https://www.linkedin.com/in/vladimir-tanev-16a5abba/",
-          "linkType": "LinkedIn"
-        },
-        {
-          "title": "Company Website",
-          "url": "https://university.engenious.io/",
-          "linkType": "Company_Website"
-        }
-      ],
-      "sessions": [
+        1187097,
         1247362
       ],
       "fullName": "Vladimir Tanev",
