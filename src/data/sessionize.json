@@ -240,14 +240,14 @@
     {
       "id": "1187097",
       "title": "Breaking GPT & Claude: The AI Red-Team Workshop That Gets You Hired",
-      "description": "Meta AI. OpenAI. Anthropic. They're not just hiring prompt engineers anymore — they're hunting for AI Evaluation Engineers: people who can find where AI breaks before attackers do. It's one of the fastest-growing, highest-paying roles in tech, and almost nobody knows how to get there yet.\r\n\r\nThis 2-hour hands-on workshop is your unfair head start.\r\n\r\nYou'll go behind the curtain of how production AI assistants are actually built — spoiler: it's one model plus a paragraph of rules — and learn exactly how those rules fail. Working against two real-world bots (a healthcare triage assistant and a brokerage chatbot), you'll run live attacks across six frontier models from Meta, OpenAI, and beyond, watching the same technique succeed or fail in real time.\r\n\r\nWhat you'll actually do:\r\n\r\n* Jailbreak AI chatbots using role-play overrides, authority framing, encoded injections, and prompt extraction — then see why some guardrails hold and others crumble\r\n* Run automated red-team evals using the same open-source tooling (promptfoo) used by professional AI safety teams\r\n* Learn why \"technique transfers\" — master one attack pattern and it works across GPT, Claude, Llama, and whatever ships next year\r\n* Understand why cost and latency are safety metrics, not just engineering concerns\r\n\r\nNo prerequisites. No prior AI experience needed. If you can open a terminal, you're ready. Just bring your laptop — everything else runs free in the cloud.\r\n\r\nWhether you're a QA engineer looking to pivot, a developer curious about AI safety, or simply someone who wants to understand what's really going on inside the tools everyone's using — this workshop hands you the skills companies are paying top dollar to find.\r\n\r\nCome break something. Leave knowing how to make it unbreakable.\r\n",
+      "description": "Meta AI. OpenAI. Anthropic. They're not just hiring prompt engineers anymore — they're hunting for AI Evaluation Engineers: people who can find where AI breaks before attackers do. It's one of the fastest-growing, highest-paying roles in tech, and almost nobody knows how to get there yet.\r\n\r\nThis 2-hour hands-on workshop is your unfair head start.\r\n\r\nYou'll go behind the curtain of how production AI assistants are actually built — spoiler: it's one model plus a paragraph of rules — and learn exactly how those rules fail. Working against two real-world bots (a healthcare triage assistant and a brokerage chatbot), you'll run live attacks across six frontier models from Meta, OpenAI, and beyond, watching the same technique succeed or fail in real time.\r\n\r\nWhat you'll actually do:\r\n\r\n* Jailbreak AI chatbots using role-play overrides, authority framing, encoded injections, and prompt extraction — then see why some guardrails hold and others crumble\r\n* Run automated red-team evals using the same open-source tooling (promptfoo) used by professional AI safety teams\r\n* Learn why \"technique transfers\" — master one attack pattern and it works across GPT, Claude, Llama, and whatever ships next year\r\n* Understand why cost and latency are safety metrics, not just engineering concerns\r\n\r\nBring your laptop – everything else runs in the cloud. No prior AI experience needed.\r\n\r\nIn this workshop, you'll use Claude Code – Anthropic's AI assistant, which must be run directly in your computer's terminal. We ask everyone attending to install it beforehand.\r\n\r\nWorkshop Setup Instructions: https://drive.google.com/file/d/1MVOMWtzM7jQd5dGL1nfpPsnk_TJtfNzB/view?usp=drive_link\r\n\r\nWhether you're a QA engineer looking to pivot, a developer curious about AI safety, or simply someone who wants to understand what's really going on inside the tools everyone's using — this workshop hands you the skills companies are paying top dollar to find.\r\n\r\nCome break something. Leave knowing how to make it unbreakable.\r\n",
       "startsAt": "2026-06-12T09:00:00",
       "endsAt": "2026-06-12T11:00:00",
       "isServiceSession": false,
       "isPlenumSession": false,
       "speakers": [
         "7a4da457-4a7c-4f69-9645-5474c9cd0401",
-        "12498175-9c12-42fe-8327-23b5358c7080"
+        "fb7b0190-9668-49f3-802d-b313810e2d2c"
       ],
       "categoryItems": [],
       "questionAnswers": [
@@ -2335,6 +2335,22 @@
       "questionAnswers": []
     },
     {
+      "id": "fb7b0190-9668-49f3-802d-b313810e2d2c",
+      "firstName": "Vladimir",
+      "lastName": "Tanev",
+      "bio": "As an experienced iOS/macOS engineer with over 9 years in the field, I specialize in developing AI-powered solutions that enhance productivity and streamline workflows. My journey spans across startups and large enterprises, where I've led the development of innovative, user-centric products from Bluetooth-integrated hearing aids to wellness apps powered by on-device AI. \r\n\r\nCurrently, I serve as the Co-Founder & CTO of WeOptimize.ai, where I focus on applying AI to real-world business problems. My work bridges the gap between technical implementation and strategic vision, helping teams ship faster, scale efficiently, and stay ahead of the curve. \r\n\r\nThroughout my career, I've delivered production-grade apps used by thousands of users worldwide. I've also contributed to complex architectural decisions, optimized performance, and enabled sustainable scaling using modular Swift packages, SwiftUI, Combine, async/await, and advanced Apple frameworks. \r\n\r\nMy consulting and mentorship focuses on: \r\n\r\nDeepening expertise in iOS/macOS development\r\nNavigating AI integration: from concept to practical implementation\r\nStructuring modular and maintainable app architectures\r\nLeveraging Swift concurrency, SwiftUI, and Apple's latest technologies\r\nLaunching and scaling AI-based MVPs for startups\r\nPreparing for senior iOS developer and tech lead interviews \r\nWhether you're a developer looking to grow or a founder seeking clarity on AI capabilities, I offer tailored consulting sessions. Use my calendar to book a slot for in-depth discussions on iOS development, AI applications, or product architecture. \r\n\r\nI'm passionate about helping others level up and stay competitive in today's fast-evolving tech landscape.",
+      "tagLine": "AI / iOS Engineer",
+      "profilePicture": "https://sessionize.com/image/e416-400o400o1-fsFPPKKW72Bp46tJPHnj6P.jpg",
+      "isTopSpeaker": false,
+      "links": [],
+      "sessions": [
+        1187097
+      ],
+      "fullName": "Vladimir Tanev",
+      "categoryItems": [],
+      "questionAnswers": []
+    },
+    {
       "id": "12498175-9c12-42fe-8327-23b5358c7080",
       "firstName": "Vladimir",
       "lastName": "Tanev",
@@ -2355,7 +2371,6 @@
         }
       ],
       "sessions": [
-        1187097,
         1247362
       ],
       "fullName": "Vladimir Tanev",
