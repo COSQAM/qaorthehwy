@@ -108,7 +108,7 @@ export const sponsorConfig: SponsorTiers = {
   tshirt: [{
     name: "Abstracta",
     logo: abstracta,
-    website: "https://www.abstracta.com/",
+    website: "https://www.abstracta.us/",
   },
   {
     name: "Technumen",
