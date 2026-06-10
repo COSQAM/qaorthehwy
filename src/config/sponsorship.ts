@@ -124,6 +124,7 @@ const sponsorshipTiers: SponsorshipTier[] = [
     id: 'silver',
     name: 'Silver',
     price: 1500,
+    soldOut: true,
     tagline: 'Essential Conference Presence',
     description: 'Entry-level booth placement with logo visibility on website, materials, and social media to connect with attendees.',
     benefits: {
@@ -149,6 +150,7 @@ const sponsorshipTiers: SponsorshipTier[] = [
     id: 'lunch',
     name: 'Lunch Sponsor',
     price: 1500,
+    soldOut: true,
     tagline: 'Captive Audience During Lunch',
     description: 'PowerPoint loop on conference screens in lunch room during the lunch break, ensuring high visibility.',
     benefits: {
@@ -170,6 +172,7 @@ const sponsorshipTiers: SponsorshipTier[] = [
     id: 'tshirt',
     name: 'T-Shirt Sponsor',
     price: 1000,
+    soldOut: true,
     tagline: 'Long-Lasting Brand Impression',
     description: 'Your logo on the back of conference t-shirts worn by all attendees during and after the event.',
     benefits: {
@@ -190,6 +193,7 @@ const sponsorshipTiers: SponsorshipTier[] = [
     id: 'snack',
     name: 'Snack Sponsor',
     price: 500,
+    soldOut: true,
     tagline: 'Affordable High-Traffic Visibility',
     description: 'Color logo on snack signage outside the snack room, capturing attendees during breaks.',
     benefits: {
