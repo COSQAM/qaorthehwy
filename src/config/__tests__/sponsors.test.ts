@@ -38,6 +38,7 @@ describe('sponsorConfig', () => {
       ...sponsorConfig.lunch,
       ...sponsorConfig.snack,
       ...sponsorConfig.tshirt,
+      ...sponsorConfig.lunch
     ];
 
     allSponsors.forEach((sponsor) => {
@@ -45,9 +46,5 @@ describe('sponsorConfig', () => {
         expect(typeof sponsor.website).toBe('string');
       }
     });
-  });
-
-  it('empty tiers are empty arrays', () => {
-    expect(sponsorConfig.lunch).toEqual([]);
   });
 });

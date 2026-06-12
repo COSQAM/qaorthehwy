@@ -14,6 +14,7 @@ import thunders from "../assets/images/sponsors/thunders.png"
 import testgrid from "../assets/images/sponsors/testgrid.png"
 import panaya from "../assets/images/sponsors/panaya.png"
 import flexjet from "../assets/images/sponsors/flexjet.png"
+import encova from "../assets/images/sponsors/encova.png"
 
 export interface Sponsor {
   name: string;
@@ -105,7 +106,11 @@ export const sponsorConfig: SponsorTiers = {
     website: "https://www.flexjet.com/",
   }
   ],
-  lunch: [],
+  lunch: [{
+    name: "Encova",
+    logo: encova,
+    website: "https://www.encova.com/",
+  }],
   snack: [{
     name: "Thunders",
     logo: thunders,
