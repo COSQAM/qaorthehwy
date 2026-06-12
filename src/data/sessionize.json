@@ -238,22 +238,21 @@
       "isConfirmed": true
     },
     {
-      "id": "1187097",
-      "title": "Breaking GPT & Claude: The AI Red-Team Workshop That Gets You Hired",
-      "description": "Meta AI. OpenAI. Anthropic. They're not just hiring prompt engineers anymore — they're hunting for AI Evaluation Engineers: people who can find where AI breaks before attackers do. It's one of the fastest-growing, highest-paying roles in tech, and almost nobody knows how to get there yet.\r\n\r\nThis 2-hour hands-on workshop is your unfair head start.\r\n\r\nYou'll go behind the curtain of how production AI assistants are actually built — spoiler: it's one model plus a paragraph of rules — and learn exactly how those rules fail. Working against two real-world bots (a healthcare triage assistant and a brokerage chatbot), you'll run live attacks across six frontier models from Meta, OpenAI, and beyond, watching the same technique succeed or fail in real time.\r\n\r\nWhat you'll actually do:\r\n\r\n* Jailbreak AI chatbots using role-play overrides, authority framing, encoded injections, and prompt extraction — then see why some guardrails hold and others crumble\r\n* Run automated red-team evals using the same open-source tooling (promptfoo) used by professional AI safety teams\r\n* Learn why \"technique transfers\" — master one attack pattern and it works across GPT, Claude, Llama, and whatever ships next year\r\n* Understand why cost and latency are safety metrics, not just engineering concerns\r\n\r\nBring your laptop – everything else runs in the cloud. No prior AI experience needed.\r\n\r\nIn this workshop, you'll use Claude Code – Anthropic's AI assistant, which must be run directly in your computer's terminal. We ask everyone attending to install it beforehand.\r\n\r\nWorkshop Setup Instructions: https://drive.google.com/file/d/1MVOMWtzM7jQd5dGL1nfpPsnk_TJtfNzB/view?usp=drive_link\r\n\r\nWhether you're a QA engineer looking to pivot, a developer curious about AI safety, or simply someone who wants to understand what's really going on inside the tools everyone's using — this workshop hands you the skills companies are paying top dollar to find.\r\n\r\nCome break something. Leave knowing how to make it unbreakable.\r\n",
+      "id": "1130073",
+      "title": "Life after Tech: Rebuilding your Career in the Post-Tech Economy",
+      "description": "An interactive workshop let by a veteran tech industry employee and certified career coach.\r\n\r\nIn this session, we'll:\r\n- Identify your strongest tech skills and how they are transferable to other industries and roles\r\n- Identify what you hope to get out of your relationship with your work\r\n- Identify your target industries and roles and how you might capture them\r\n\r\nAttendees will leave with a plan for what to do now, next and later as they embark on a journey toward their personal  \"Career Nirvana\"\r\n\r\nThis workshop can be run in either 1 hour or 2 hours, the 2 hour version is more in depth and hands-on. \r\n\r\nSpeaker profile: https://docs.google.com/document/d/1cW-RW9_0qRlaDh8MREHUOSmdLPqvnJRoSusQ1lZ1NAM/edit?usp=sharing",
       "startsAt": "2026-06-12T09:00:00",
       "endsAt": "2026-06-12T11:00:00",
       "isServiceSession": false,
       "isPlenumSession": false,
       "speakers": [
-        "7a4da457-4a7c-4f69-9645-5474c9cd0401",
-        "fb7b0190-9668-49f3-802d-b313810e2d2c"
+        "f227437b-faf5-48cf-81a9-1cfe0d51f7bc"
       ],
       "categoryItems": [],
       "questionAnswers": [
         {
           "questionId": 111854,
-          "answerValue": "This practical hackathon gives students the chance to work like real AI testers. In teams, participants will use Agenta.ai to test the WeOptimize AI system, uncover reliability and safety issues, and present the most important findings to judges.\r\nThis event goes beyond basic prompting. It focuses on one of the most valuable emerging skills in tech: evaluating whether AI applications are trustworthy, safe, and ready for production."
+          "answerValue": "The tech industry is imploding. More and more of us are competing for fewer and fewer jobs, jobs that are less lucrative, more boring, more stressful, and even more toxic. On top of all of this, jobs that once permitted us to contribute something positive to the world now routinely ask us to ignore our moral compass. It’s time we all take a hard look at the work we are doing, how it’s serving us and our communities, and decide what we’d like to be doing instead.\r\n\r\nIn this interactive session, a long-time tech worker and certified career coach will guide you through the steps necessary to find your path to a new and rewarding career. We’ll identify our strongest and most transferable skills, uncover what we really hope to get out of our relationship with our work, and then look for new careers in different industries that match our abilities and desires.\r\n\r\nYou’ll leave with a clear plan of action for your “Life after Tech”"
         }
       ],
       "roomId": 84737,
@@ -484,7 +483,7 @@
       "isServiceSession": false,
       "isPlenumSession": false,
       "speakers": [
-        "497ccbc4-ed0c-4fa2-88dd-a14a07cf07c0"
+        "8c36acb5-a33b-458e-98e9-2c0a07668071"
       ],
       "categoryItems": [],
       "questionAnswers": [
@@ -682,21 +681,22 @@
       "isConfirmed": true
     },
     {
-      "id": "1130073",
-      "title": "Life after Tech: Rebuilding your Career in the Post-Tech Economy",
-      "description": "An interactive workshop let by a veteran tech industry employee and certified career coach.\r\n\r\nIn this session, we'll:\r\n- Identify your strongest tech skills and how they are transferable to other industries and roles\r\n- Identify what you hope to get out of your relationship with your work\r\n- Identify your target industries and roles and how you might capture them\r\n\r\nAttendees will leave with a plan for what to do now, next and later as they embark on a journey toward their personal  \"Career Nirvana\"\r\n\r\nThis workshop can be run in either 1 hour or 2 hours, the 2 hour version is more in depth and hands-on. \r\n\r\nSpeaker profile: https://docs.google.com/document/d/1cW-RW9_0qRlaDh8MREHUOSmdLPqvnJRoSusQ1lZ1NAM/edit?usp=sharing",
+      "id": "1187097",
+      "title": "Breaking GPT & Claude: The AI Red-Team Workshop That Gets You Hired",
+      "description": "Meta AI. OpenAI. Anthropic. They're not just hiring prompt engineers anymore — they're hunting for AI Evaluation Engineers: people who can find where AI breaks before attackers do. It's one of the fastest-growing, highest-paying roles in tech, and almost nobody knows how to get there yet.\r\n\r\nThis 2-hour hands-on workshop is your unfair head start.\r\n\r\nYou'll go behind the curtain of how production AI assistants are actually built — spoiler: it's one model plus a paragraph of rules — and learn exactly how those rules fail. Working against two real-world bots (a healthcare triage assistant and a brokerage chatbot), you'll run live attacks across six frontier models from Meta, OpenAI, and beyond, watching the same technique succeed or fail in real time.\r\n\r\nWhat you'll actually do:\r\n\r\n* Jailbreak AI chatbots using role-play overrides, authority framing, encoded injections, and prompt extraction — then see why some guardrails hold and others crumble\r\n* Run automated red-team evals using the same open-source tooling (promptfoo) used by professional AI safety teams\r\n* Learn why \"technique transfers\" — master one attack pattern and it works across GPT, Claude, Llama, and whatever ships next year\r\n* Understand why cost and latency are safety metrics, not just engineering concerns\r\n\r\nBring your laptop – everything else runs in the cloud. No prior AI experience needed.\r\n\r\nIn this workshop, you'll use Claude Code – Anthropic's AI assistant, which must be run directly in your computer's terminal. We ask everyone attending to install it beforehand.\r\n\r\nWorkshop Setup Instructions: https://drive.google.com/file/d/1MVOMWtzM7jQd5dGL1nfpPsnk_TJtfNzB/view?usp=drive_link\r\n\r\nWhether you're a QA engineer looking to pivot, a developer curious about AI safety, or simply someone who wants to understand what's really going on inside the tools everyone's using — this workshop hands you the skills companies are paying top dollar to find.\r\n\r\nCome break something. Leave knowing how to make it unbreakable.\r\n",
       "startsAt": "2026-06-12T12:50:00",
       "endsAt": "2026-06-12T14:50:00",
       "isServiceSession": false,
       "isPlenumSession": false,
       "speakers": [
-        "f227437b-faf5-48cf-81a9-1cfe0d51f7bc"
+        "7a4da457-4a7c-4f69-9645-5474c9cd0401",
+        "fb7b0190-9668-49f3-802d-b313810e2d2c"
       ],
       "categoryItems": [],
       "questionAnswers": [
         {
           "questionId": 111854,
-          "answerValue": "The tech industry is imploding. More and more of us are competing for fewer and fewer jobs, jobs that are less lucrative, more boring, more stressful, and even more toxic. On top of all of this, jobs that once permitted us to contribute something positive to the world now routinely ask us to ignore our moral compass. It’s time we all take a hard look at the work we are doing, how it’s serving us and our communities, and decide what we’d like to be doing instead.\r\n\r\nIn this interactive session, a long-time tech worker and certified career coach will guide you through the steps necessary to find your path to a new and rewarding career. We’ll identify our strongest and most transferable skills, uncover what we really hope to get out of our relationship with our work, and then look for new careers in different industries that match our abilities and desires.\r\n\r\nYou’ll leave with a clear plan of action for your “Life after Tech”"
+          "answerValue": "This practical hackathon gives students the chance to work like real AI testers. In teams, participants will use Agenta.ai to test the WeOptimize AI system, uncover reliability and safety issues, and present the most important findings to judges.\r\nThis event goes beyond basic prompting. It focuses on one of the most valuable emerging skills in tech: evaluating whether AI applications are trustworthy, safe, and ready for production."
         }
       ],
       "roomId": 84737,
@@ -1535,8 +1535,8 @@
         }
       ],
       "sessions": [
-        1187097,
-        1247362
+        1247362,
+        1187097
       ],
       "fullName": "Igor Dorovskikh",
       "categoryItems": [],
@@ -1881,29 +1881,24 @@
       "questionAnswers": []
     },
     {
-      "id": "497ccbc4-ed0c-4fa2-88dd-a14a07cf07c0",
-      "firstName": "Mohit",
-      "lastName": "Juneja",
-      "bio": "Mohit Juneja is a revenue and business development executive with over 10 years of experience in Go-To-Market (GTM) and Solution Sales, specializing in building expansive GTM ecosystems on a global scale.\r\n\r\nHe sees synergetic partnerships as the key differentiator between triumph and obsolescence. Whether it's crafting a more intuitive experience for end-users or constructing a robust distribution engine, partnerships play a pivotal role, irrespective of whether you're in an enterprise or startup setting.\r\n\r\nMohit offers a blend of digital transformation leadership and precise program management to deliver impactful results. His approach combines strategic vision with hands-on execution, ensuring transformative initiatives surpass expectations.",
-      "tagLine": "VP, Strategic Sales at TestMu AI",
-      "profilePicture": "https://sessionize.com/image/c9b5-400o400o1-djVCymqKEhZ3ZgHPdoA69.jpg",
+      "id": "8c36acb5-a33b-458e-98e9-2c0a07668071",
+      "firstName": "Mudassar",
+      "lastName": "Syed",
+      "bio": "Mudassar Syed is a Solutions Engineering leader at TestMu AI (formerly LambdaTest), where he helps enterprises solve complex quality engineering challenges in an increasingly AI-driven world. Based in the USA, he works at the intersection of AI, automation, and scalable testing systems, enabling teams to build faster while maintaining trust in their software.\r\n\r\nA recognized voice in agentic AI and modern testing practices, Mudassar actively contributes to industry conversations through global events and communities, sharing insights on the future of quality engineering and autonomous testing.\r\n\r\nHis work focuses on redefining how we test intelligent systems—moving beyond traditional automation to evaluate non-deterministic AI behaviors like hallucinations, reasoning accuracy, and real-world reliability. He is particularly passionate about “vibe testing” and next-generation approaches that assess how human-like AI agents truly are in voice and chat interactions.",
+      "tagLine": "Solutions Engineer at TestMu AI",
+      "profilePicture": "https://sessionize.com/image/0aa4-400o400o1-HtxSFbdDqkbNWZvT3qVbov.png",
       "isTopSpeaker": false,
       "links": [
         {
-          "title": "LinkedIn",
-          "url": "https://www.linkedin.com/in/mohjuneja/",
-          "linkType": "LinkedIn"
-        },
-        {
           "title": "Company Website",
-          "url": "https://www.testmuai.com",
+          "url": "https://www.testmuai.com/",
           "linkType": "Company_Website"
         }
       ],
       "sessions": [
         1227446
       ],
-      "fullName": "Mohit Juneja",
+      "fullName": "Mudassar Syed",
       "categoryItems": [],
       "questionAnswers": []
     },
@@ -2318,8 +2313,8 @@
       "isTopSpeaker": false,
       "links": [],
       "sessions": [
-        1187097,
-        1247362
+        1247362,
+        1187097
       ],
       "fullName": "Vladimir Tanev",
       "categoryItems": [],
