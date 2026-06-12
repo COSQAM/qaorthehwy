@@ -212,22 +212,21 @@
       "isConfirmed": true
     },
     {
-      "id": "1119014",
-      "title": "The Gumshoe Protocol",
-      "description": "It was a dark and stormy night, the kind of night you expect a P0 defect, when the Teams call interrupted my dinner of Cup of Noodles. It was the VP of Customer Success “we have a customer facing problem. We need you and the Gumshoe Team on the case”.\r\n\r\nRoot cause analysis (RCA) is a critical skill for everyone, however, most professionals have never had the opportunity to identify the root cause of a defect before needing to do so in a critical situation. Effective RCA requires all stakeholders to think critically and use their best judgement on the often limited information available. In this workshop, participants will role-play through a real-life scenario and interact with logs, users, and other stakeholders to figure out the root cause before coming together to brainstorm on how we could have prevented the incident. \r\n\r\nJoin the Gumshoe Team of developers, QAs, product professionals, customer support, and project managers to crack the case. ",
+      "id": "1181951",
+      "title": "How to create a QA or the Highway talk",
+      "description": "This session is aimed at the person who is interested in presenting at a conference like QA or the Highway but needs practical help building their first talk. \r\nUsing examples, suggestions and group feedback, the participant will leave with a step-by-step playbook for what they need to do in order to submit their proposed talk next year. ",
       "startsAt": "2026-06-12T09:00:00",
-      "endsAt": "2026-06-12T11:00:00",
+      "endsAt": "2026-06-12T10:00:00",
       "isServiceSession": false,
       "isPlenumSession": false,
       "speakers": [
-        "e540d0fc-6d3b-4e34-8e34-ed56e72a5e5f",
-        "97b29c15-84f0-4899-97b8-57ed6d8e390b"
+        "c00ade17-a3ef-48da-89ce-32be7bf634db"
       ],
       "categoryItems": [],
       "questionAnswers": [
         {
           "questionId": 111854,
-          "answerValue": "It was a dark and stormy night, the kind of night you expect a P0 defect, when the Teams call interrupted my dinner of Cup of Noodles. It was the VP of Customer Success “we have a customer facing problem. We need you and the Gumshoe Team on the case”.\r\n\r\nRoot cause analysis (RCA) is a critical skill for everyone, however, most professionals have never had the opportunity to identify the root cause of a defect before needing to do so in a critical situation. Effective RCA requires all stakeholders to think critically and use their best judgement on the often limited information available. In this workshop, participants will role-play through a real-life scenario and interact with logs, users, and other stakeholders to figure out the root cause before coming together to brainstorm on how we could have prevented the incident. \r\n\r\nJoin the Gumshoe Team of developers, QAs, product professionals, customer support, and project managers to crack the case. "
+          "answerValue": "Have you an idea, suggestion or thought for a QA or the Highway talk but are not sure what to do with it? In this session we'll take that spark and help turn it into a talk you can present. "
         }
       ],
       "roomId": 84623,
@@ -656,21 +655,22 @@
       "isConfirmed": false
     },
     {
-      "id": "1181951",
-      "title": "How to create a QA or the Highway talk",
-      "description": "This session is aimed at the person who is interested in presenting at a conference like QA or the Highway but needs practical help building their first talk. \r\nUsing examples, suggestions and group feedback, the participant will leave with a step-by-step playbook for what they need to do in order to submit their proposed talk next year. ",
+      "id": "1119014",
+      "title": "The Gumshoe Protocol",
+      "description": "It was a dark and stormy night, the kind of night you expect a P0 defect, when the Teams call interrupted my dinner of Cup of Noodles. It was the VP of Customer Success “we have a customer facing problem. We need you and the Gumshoe Team on the case”.\r\n\r\nRoot cause analysis (RCA) is a critical skill for everyone, however, most professionals have never had the opportunity to identify the root cause of a defect before needing to do so in a critical situation. Effective RCA requires all stakeholders to think critically and use their best judgement on the often limited information available. In this workshop, participants will role-play through a real-life scenario and interact with logs, users, and other stakeholders to figure out the root cause before coming together to brainstorm on how we could have prevented the incident. \r\n\r\nJoin the Gumshoe Team of developers, QAs, product professionals, customer support, and project managers to crack the case. ",
       "startsAt": "2026-06-12T12:50:00",
-      "endsAt": "2026-06-12T13:50:00",
+      "endsAt": "2026-06-12T14:50:00",
       "isServiceSession": false,
       "isPlenumSession": false,
       "speakers": [
-        "c00ade17-a3ef-48da-89ce-32be7bf634db"
+        "e540d0fc-6d3b-4e34-8e34-ed56e72a5e5f",
+        "97b29c15-84f0-4899-97b8-57ed6d8e390b"
       ],
       "categoryItems": [],
       "questionAnswers": [
         {
           "questionId": 111854,
-          "answerValue": "Have you an idea, suggestion or thought for a QA or the Highway talk but are not sure what to do with it? In this session we'll take that spark and help turn it into a talk you can present. "
+          "answerValue": "It was a dark and stormy night, the kind of night you expect a P0 defect, when the Teams call interrupted my dinner of Cup of Noodles. It was the VP of Customer Success “we have a customer facing problem. We need you and the Gumshoe Team on the case”.\r\n\r\nRoot cause analysis (RCA) is a critical skill for everyone, however, most professionals have never had the opportunity to identify the root cause of a defect before needing to do so in a critical situation. Effective RCA requires all stakeholders to think critically and use their best judgement on the often limited information available. In this workshop, participants will role-play through a real-life scenario and interact with logs, users, and other stakeholders to figure out the root cause before coming together to brainstorm on how we could have prevented the incident. \r\n\r\nJoin the Gumshoe Team of developers, QAs, product professionals, customer support, and project managers to crack the case. "
         }
       ],
       "roomId": 84623,
@@ -873,31 +873,6 @@
       "status": null,
       "isInformed": false,
       "isConfirmed": false
-    },
-    {
-      "id": "1171618",
-      "title": "Collaborate on Your LEGO(R) Vision",
-      "description": "LEGO(R) sets are fun to build, but who has ever attempted to build a complete set without looking at the instructions? In this meeting, attendees will form teams and attempt to build a LEGO(R) set without instructions. Only one person from each team will be able to view the finished product before the team starts building. That person must share their vision with the team, who will attempt to build the LEGO(R) set as close to the instructions as possible without peeking. \r\n\r\nEach group will learn different approaches to collaborate on product development during the meeting to build a set according to a customer's needs. The activity highlights the two Quality Gaps of product development: (1) the gap between what we set out to build and the finished product; and (2) the gap between what customers expect and the finished product. Our goal is to close the two Quality Gaps so we deliver a product on-time & on-budget that customers will love.",
-      "startsAt": "2026-06-12T13:50:00",
-      "endsAt": "2026-06-12T14:50:00",
-      "isServiceSession": false,
-      "isPlenumSession": false,
-      "speakers": [
-        "da1f3c6b-ce55-48df-824c-c6f681f77f8c"
-      ],
-      "categoryItems": [],
-      "questionAnswers": [
-        {
-          "questionId": 111854,
-          "answerValue": "As part of this session, all in attendance will receive a LEGO Classic Building Kit (available in red, green, blue, yellow, or white). I will be providing all the LEGO Creator kits to be used in the session.\r\n\r\n*NOTE: This is a one hour session and I will require tables.\r\n\r\nThe learning outcomes are:\r\n*Teams will learn collaboration techniques to build & test with limited information\r\n*Attendees will learn to approach testing from the perspective of customer needs rather than strict requirements\r\n*Attendees will learn how to question assumptions by breaking down requirements before testing begins\r\n*BONUS: attendees will receive LEGO(R) sets of their own to take home"
-        }
-      ],
-      "roomId": 84623,
-      "liveUrl": null,
-      "recordingUrl": null,
-      "status": "Accepted",
-      "isInformed": true,
-      "isConfirmed": true
     },
     {
       "id": "1167030",
@@ -2103,43 +2078,6 @@
         1152668
       ],
       "fullName": "Tatyana Arbouzova",
-      "categoryItems": [],
-      "questionAnswers": []
-    },
-    {
-      "id": "da1f3c6b-ce55-48df-824c-c6f681f77f8c",
-      "firstName": "Thomas",
-      "lastName": "Haver",
-      "bio": "Thomas is presently serving as a Master Software Engineer. He leads a team of testers, ops engineers, and production support analysts in the adoption of DevOps practices. Previously, he led the enterprise automation support of 73 applications at Huntington National Bank that encompassed testing, metrics & reporting, and data management. Thomas has a background in Physics & Biophysics, with over a decade spent in research science studying fluorescence spectroscopy and microscopy before joining IT.",
-      "tagLine": "Master Software Engineer ",
-      "profilePicture": "https://sessionize.com/image/14f1-400o400o1-6b-ce55-48df-824c-c6f681f77f8c.9e79a9ba-4763-4404-a3db-cccd558f6a08.jpg",
-      "isTopSpeaker": false,
-      "links": [
-        {
-          "title": "X (Twitter)",
-          "url": "https://twitter.com/cogsfun",
-          "linkType": "Twitter"
-        },
-        {
-          "title": "LinkedIn",
-          "url": "https://www.linkedin.com/in/thomas-haver/",
-          "linkType": "LinkedIn"
-        },
-        {
-          "title": "Blog",
-          "url": "https://red-green-refactor.com/",
-          "linkType": "Blog"
-        },
-        {
-          "title": "Company Website",
-          "url": "https://www3.mtb.com/",
-          "linkType": "Company_Website"
-        }
-      ],
-      "sessions": [
-        1171618
-      ],
-      "fullName": "Thomas Haver",
       "categoryItems": [],
       "questionAnswers": []
     },
