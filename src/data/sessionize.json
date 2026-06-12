@@ -530,7 +530,7 @@
       "isServiceSession": false,
       "isPlenumSession": false,
       "speakers": [
-        "f9e12169-fe33-4602-8225-e101df4c5327"
+        "f32b26f0-be65-4286-bc7a-1126d878ff20"
       ],
       "categoryItems": [],
       "questionAnswers": [],
@@ -900,21 +900,21 @@
       "isConfirmed": true
     },
     {
-      "id": "1147079",
-      "title": "Verify, Then Trust: Human Judgement in the Age of Generative AI",
-      "description": "Generative AI is rapidly becoming part of how modern organizations write, evaluate, and make decisions — from drafting content and summarizing data to supporting technical workflows.\r\n\r\nAs these systems become more fluent and convincing, the real challenge is no longer whether AI can produce outputs quickly, but whether humans maintain the skills of verification, discernment, and accountability alongside it.\r\n\r\nVerify, Then Trust offers a grounded, human-centered framework for navigating AI without panic, blind faith, or outsourcing our thinking. This session explores why trust must be earned through validation, especially in environments where accuracy, clarity, and responsibility matter.\r\n\r\nRather than positioning AI as a threat or a replacement, this talk reframes it as a powerful tool that still requires human oversight. Attendees will learn practical habits for staying mentally present, asking better questions, and building norms that keep human judgment meaningfully in the loop.\r\n\r\nThis session is designed for technology professionals, leaders, and teams adapting to AI-enabled work who want to move forward with confidence — without losing critical thinking or responsibility in the process.\r\n\r\nKey themes include:\r\n* Speed vs. correctness in AI-generated outputs\r\n* Why verification is becoming a core professional skill\r\n* The risk of automation complacency\r\n* Practical ways to keep humans accountable and engaged",
+      "id": "1167030",
+      "title": "Testers: Stop Acting like Second-Class Citizens!",
+      "description": "This talk is inspired both by my own personal experience and by observing how many testers view and describe themselves and the work that they do. Too often they either use terms like \"manual testing\" that have strong negative connotations (e.g. menial, unskilled), or go overboard in the other direction with fancy terms and titles (e.g. \"Quality Engineer\") that can cause confusion or conflict if they don't have a firm grasp on how to describe the value they actually provide. Likewise, I believe too many testers settle for substandard tools--in my opinion most of the test tools on the market today would not be tolerated by the average developer.\r\n\r\nMy goal is for this to be an inspirational talk that leaves attendees energized to return to their day jobs with tools to advocate for themselves and their skills.",
       "startsAt": "2026-06-12T14:00:00",
       "endsAt": "2026-06-12T14:50:00",
       "isServiceSession": false,
       "isPlenumSession": false,
       "speakers": [
-        "c261415b-ec1a-42ca-bfb7-b5875db38294"
+        "9a15058f-fdd1-4abe-aa60-401d74a9d797"
       ],
       "categoryItems": [],
       "questionAnswers": [
         {
           "questionId": 111854,
-          "answerValue": "AI tools are moving fast — but trust still requires verification.\r\n\r\nIn this session, Verify, Then Trust explores how professionals can use generative AI effectively while maintaining the essential human skills of critical thinking, judgment, and accountability. Rather than positioning AI as a threat or a replacement, this talk reframes it as a powerful tool that still requires human oversight. \r\n\r\nAttendees will learn practical habits for staying mentally present, asking better questions, and building norms that keep human judgment meaningfully in the loop."
+          "answerValue": "Testers are often treated like second-class citizens. Why? Is it really because testing is less skilled or less \"technical\" than development? Or does this happen in part because testers too often treat THEMSELVES as second-class citizens?\r\n\r\nIn this talk, Caleb will discuss how to advocate for yourself, your skills, and the value you bring to a team as a proud software tester. Takeaways will include:\r\n\r\n* Being able to intelligently describe the technical aspects of what you do--regardless of whether you write code.\r\n* Not settling for substandard tools or techniques that keep you from doing excellent testing.\r\n* Avoiding common misconceptions and poor descriptions of test work that encourage people to view you as \"low value\"."
         }
       ],
       "roomId": 73078,
@@ -922,7 +922,7 @@
       "recordingUrl": null,
       "status": "Accepted",
       "isInformed": true,
-      "isConfirmed": true
+      "isConfirmed": false
     },
     {
       "id": "1172997",
@@ -1226,43 +1226,6 @@
       "questionAnswers": []
     },
     {
-      "id": "c261415b-ec1a-42ca-bfb7-b5875db38294",
-      "firstName": "Ashley René",
-      "lastName": "Casey",
-      "bio": "Ashley René is a speaker, strategist, and founder of Presence Over Pixels, a St. Louis–based company helping people take back control of their time, focus, and relationships in a tech-dominated world. With a background in corporate leadership and a passion for human connection, Ashley René teaches professionals how to set boundaries with their devices, stay present in high-demand environments, and lead with intention - online and off. Her work lives at the intersection of wellness, leadership, and digital culture, offering practical tools for anyone looking to thrive without burning out. When she's not leading workshops or speaking on stages, Ashley René is performing with her band, Bourbon Jury, and actively engaged in the local arts scene of St Louis.\r\n",
-      "tagLine": "Founder, Presence Over Pixels",
-      "profilePicture": "https://sessionize.com/image/b52a-400o400o1-sh6zyP1jkd3aumZtAdSxNw.jpg",
-      "isTopSpeaker": false,
-      "links": [
-        {
-          "title": "LinkedIn",
-          "url": "https://www.linkedin.com/in/ashleyrenecasey/",
-          "linkType": "LinkedIn"
-        },
-        {
-          "title": "Instagram",
-          "url": "https://www.instagram.com/ashleyrenecasey/",
-          "linkType": "Instagram"
-        },
-        {
-          "title": "Blog",
-          "url": "https://presenceoverpixels.com/blog",
-          "linkType": "Blog"
-        },
-        {
-          "title": "Company Website",
-          "url": "https://presenceoverpixels.com/",
-          "linkType": "Company_Website"
-        }
-      ],
-      "sessions": [
-        1147079
-      ],
-      "fullName": "Ashley René Casey",
-      "categoryItems": [],
-      "questionAnswers": []
-    },
-    {
       "id": "e362ad7d-7818-4eb6-8f64-7acf381afd5c",
       "firstName": "Aubrey",
       "lastName": "Wade",
@@ -1349,29 +1312,40 @@
       "questionAnswers": []
     },
     {
-      "id": "f9e12169-fe33-4602-8225-e101df4c5327",
-      "firstName": "Charles",
-      "lastName": "Cedrone",
-      "bio": "Charles Cedrone is an Enterprise Solution Consultant at Leapwork, where he helps organizations transform their approach to software testing through scalable, no-code automation. Based in Boston, Charles works closely with enterprise customers to modernize quality assurance practices, reduce manual effort, and accelerate digital initiatives.\r\nPrior to joining Leapwork, Charles spent several years in consulting, progressing from analyst to principal-level roles. During this time, he led complex technology engagements focused on system implementations, process optimization, and delivery strategy, while managing client relationships and driving alignment across business and IT stakeholders. His experience spans requirements management, project delivery, and data-driven problem solving in large-scale enterprise environments.\r\n",
-      "tagLine": "VP Global Sales Engineering, Leapwork",
-      "profilePicture": "https://sessionize.com/image/8890-400o400o1-pZrWy3FDoPBSQxASyH6UWW.png",
+      "id": "9a15058f-fdd1-4abe-aa60-401d74a9d797",
+      "firstName": "Caleb",
+      "lastName": "Crandall",
+      "bio": "Caleb is a software engineer in test with foundational development skills, having started off his career as a developer. Caleb is a champion for context-driven testing and software testing as a skilled profession. Outside of work, you'll have to do some legwork to find him because he's probably out hiking somewhere.",
+      "tagLine": "Senior Software Engineer in Test",
+      "profilePicture": "https://sessionize.com/image/bfc8-400o400o1-f1znErRizcFUzY6A59nufk.jpg",
       "isTopSpeaker": false,
       "links": [
         {
           "title": "LinkedIn",
-          "url": "https://www.linkedin.com/in/charles-cedrone-88284590/",
+          "url": "https://www.linkedin.com/in/caleb-crandall/",
           "linkType": "LinkedIn"
-        },
-        {
-          "title": "Company Website",
-          "url": "https://www.leapwork.com/",
-          "linkType": "Company_Website"
         }
       ],
       "sessions": [
+        1167030
+      ],
+      "fullName": "Caleb Crandall",
+      "categoryItems": [],
+      "questionAnswers": []
+    },
+    {
+      "id": "f32b26f0-be65-4286-bc7a-1126d878ff20",
+      "firstName": "Charlie",
+      "lastName": "Cedrone",
+      "bio": "Charles Cedrone is an Enterprise Solution Consultant at Leapwork, where he helps organizations transform their approach to software testing through scalable, no-code automation. Based in Boston, Charles works closely with enterprise customers to modernize quality assurance practices, reduce manual effort, and accelerate digital initiatives.\r\n\r\nPrior to joining Leapwork, Charles spent several years in consulting, progressing from analyst to principal-level roles. During this time, he led complex technology engagements focused on system implementations, process optimization, and delivery strategy, while managing client relationships and driving alignment across business and IT stakeholders. His experience spans requirements management, project delivery, and data-driven problem solving in large-scale enterprise environments.",
+      "tagLine": "Enterprise Solution Consultant",
+      "profilePicture": "https://sessionize.com/image/e9b1-400o400o1-RrjGHkpuW8sgoRHBAHXokg.png",
+      "isTopSpeaker": false,
+      "links": [],
+      "sessions": [
         1237664
       ],
-      "fullName": "Charles Cedrone",
+      "fullName": "Charlie Cedrone",
       "categoryItems": [],
       "questionAnswers": []
     },
