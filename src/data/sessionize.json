@@ -1008,7 +1008,7 @@
       "isServiceSession": false,
       "isPlenumSession": false,
       "speakers": [
-        "a62f1aa4-7ec6-4452-b5e5-317e7bf588dd",
+        "d905fd75-d4f0-4725-901b-220c128b9e9d",
         "937ea6f9-3f4d-41f1-87b3-94fd1535f86f"
       ],
       "categoryItems": [],
@@ -1840,14 +1840,20 @@
       "questionAnswers": []
     },
     {
-      "id": "a62f1aa4-7ec6-4452-b5e5-317e7bf588dd",
+      "id": "d905fd75-d4f0-4725-901b-220c128b9e9d",
       "firstName": "Mohini",
       "lastName": "Agarwal",
       "bio": "Mohini Agarwal is a QA and Quality Engineering professional with over 12 years of experience in automation testing, CI/CD pipelines, and API-driven systems. She is passionate about building reliable testing strategies and exploring how AI can enhance modern software quality practices.",
       "tagLine": "Senior Software Test Engineer",
       "profilePicture": "https://sessionize.com/image/be99-400o400o1-DPsgyVLPfKGbbboK9HwxPZ.png",
       "isTopSpeaker": false,
-      "links": [],
+      "links": [
+        {
+          "title": "LinkedIn",
+          "url": "https://www.linkedin.com/in/mohini/",
+          "linkType": "LinkedIn"
+        }
+      ],
       "sessions": [
         1185386
       ],
