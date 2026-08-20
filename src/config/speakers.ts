@@ -1,7 +1,7 @@
 // Speaker feature flag configuration for static site
 // To change speaker visibility, update the `currentPhase` value and rebuild
 
-export type SpeakerPhase = 'keynotes-only' | 'partial-lineup' | 'full-lineup';
+export type SpeakerPhase = 'not-announced' | 'keynotes-only' | 'partial-lineup' | 'full-lineup';
 
 interface SpeakerSectionState {
   visible: boolean;
@@ -26,11 +26,24 @@ interface SpeakerConfig {
 // Main speaker configuration
 export const speakerConfig: SpeakerConfig = {
   // ⚡ FEATURE FLAG: Change this to switch speaker visibility
-  // Options: 'keynotes-only' | 'partial-lineup' | 'full-lineup'
-  currentPhase: 'full-lineup',
+  // Options: 'not-announced' | 'keynotes-only' | 'partial-lineup' | 'full-lineup'
+  currentPhase: 'not-announced',
 
   // Phase-specific behavior for speaker sections
   phaseConfig: {
+    // Pre-announcement: no speakers shown anywhere, speaker detail pages are not built
+    'not-announced': {
+      keynotesSection: {
+        visible: false,
+      },
+      sessionSpeakersCarousel: {
+        visible: false,
+      },
+      speakersPage: {
+        visible: false,
+        message: 'Speakers will be announced soon! Check back later for updates.',
+      },
+    },
     'keynotes-only': {
       keynotesSection: {
         visible: true,

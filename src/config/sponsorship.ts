@@ -1,4 +1,4 @@
-// Sponsorship configuration for QA or the Highway 2026
+// Sponsorship configuration for QA or the Highway 2027
 
 export interface SponsorshipBenefit {
   category: string;
@@ -51,6 +51,8 @@ export interface Resource {
   url: string;
   type: 'pdf' | 'link' | 'signing';
   fileSize?: string;
+  /** Optional direct-download URL, shown as a separate action on the card. */
+  downloadUrl?: string;
 }
 
 export interface SponsorshipConfig {
@@ -61,7 +63,7 @@ export interface SponsorshipConfig {
   benefitCategories: SponsorshipBenefit[];
 }
 
-// Sponsorship Tiers (from SPONSORSHIP 2026.pdf)
+// Sponsorship Tiers (from SPONSORSHIP 2026.pdf — pricing carried forward for 2027)
 const sponsorshipTiers: SponsorshipTier[] = [
   {
     id: 'platinum',
@@ -70,7 +72,6 @@ const sponsorshipTiers: SponsorshipTier[] = [
     tagline: 'Maximum Visibility & Impact',
     description: 'Premium booth location, guaranteed speaking opportunity, and keynote sponsorship for maximum brand exposure.',
     featured: true,
-    soldOut: true,
     benefits: {
       boothLocation: 'Premium location by keynote/lunch entrance',
       boothSize: "10' x 10' booth space with 8' banquet table",
@@ -99,7 +100,6 @@ const sponsorshipTiers: SponsorshipTier[] = [
     tagline: 'High Visibility & Engagement',
     description: 'Centrally located booth with speaking opportunity and extensive brand visibility across all conference materials.',
     featured: true,
-    soldOut: true,
     benefits: {
       boothLocation: 'Centrally located booth placement',
       boothSize: "10' x 10' booth space with 8' banquet table",
@@ -124,7 +124,6 @@ const sponsorshipTiers: SponsorshipTier[] = [
     id: 'silver',
     name: 'Silver',
     price: 1500,
-    soldOut: true,
     tagline: 'Essential Conference Presence',
     description: 'Entry-level booth placement with logo visibility on website, materials, and social media to connect with attendees.',
     benefits: {
@@ -150,7 +149,6 @@ const sponsorshipTiers: SponsorshipTier[] = [
     id: 'lunch',
     name: 'Lunch Sponsor',
     price: 1500,
-    soldOut: true,
     tagline: 'Captive Audience During Lunch',
     description: 'PowerPoint loop on conference screens in lunch room during the lunch break, ensuring high visibility.',
     benefits: {
@@ -172,7 +170,6 @@ const sponsorshipTiers: SponsorshipTier[] = [
     id: 'tshirt',
     name: 'T-Shirt Sponsor',
     price: 1000,
-    soldOut: true,
     tagline: 'Long-Lasting Brand Impression',
     description: 'Your logo on the back of conference t-shirts worn by all attendees during and after the event.',
     benefits: {
@@ -193,7 +190,6 @@ const sponsorshipTiers: SponsorshipTier[] = [
     id: 'snack',
     name: 'Snack Sponsor',
     price: 500,
-    soldOut: true,
     tagline: 'Affordable High-Traffic Visibility',
     description: 'Color logo on snack signage outside the snack room, capturing attendees during breaks.',
     benefits: {
@@ -216,7 +212,6 @@ const sponsorshipTiers: SponsorshipTier[] = [
     price: 'Ask',
     tagline: 'All-Day Brand Exposure',
     description: 'Provide conference lanyards with your company logo, worn by every attendee throughout the entire event.',
-    soldOut: true,
     benefits: {
       logoPlacement: [
         'Small logo on website',
@@ -266,7 +261,7 @@ const faqs: FAQ[] = [
   {
     question: 'What is the deadline for sponsorship commitment?',
     answer:
-      'We accept sponsorships on a rolling basis until all spots are filled. Early commitment ensures better booth placement and maximum marketing visibility. We recommend committing at least 2 months before the conference (by April 12, 2026) to maximize your ROI.',
+      'We accept sponsorships on a rolling basis until all spots are filled. Early commitment ensures better booth placement and maximum marketing visibility. We recommend committing at least 2 months before the conference (by April 11, 2027) to maximize your ROI.',
   },
   {
     question: 'Can I customize my sponsorship package?',
@@ -276,12 +271,12 @@ const faqs: FAQ[] = [
   {
     question: 'What are the payment terms?',
     answer:
-      'Payment is due within 10 days prior to the event date (June 2, 2026). We invoice via PayPal to the email address on record and prefer electronic payment processing. If you need alternate payment arrangements, please contact us at cosqam@gmail.com.',
+      'Payment is due within 10 days prior to the event date (June 1, 2027). We invoice via PayPal to the email address on record and prefer electronic payment processing. If you need alternate payment arrangements, please contact us at cosqam@gmail.com.',
   },
   {
     question: 'What is your refund and cancellation policy?',
     answer:
-      'Full refunds (minus payment processing fees) are available for written cancellations received by May 1, 2026. Cancellations after May 1 are subject to a $200 processing fee. No refunds are available after June 10, 2026.',
+      'Full refunds (minus payment processing fees) are available for written cancellations received by May 1, 2027. Cancellations after May 1 are subject to a $200 processing fee. No refunds are available after June 9, 2027.',
   },
   {
     question: 'What booth materials and setup should I plan for?',
@@ -291,7 +286,7 @@ const faqs: FAQ[] = [
   {
     question: 'When do I need to submit my logo and marketing materials?',
     answer:
-      'Please submit your high-resolution logo (PNG, SVG, or EPS format) within 2 weeks of confirming sponsorship to ensure inclusion in all marketing materials. The final deadline for logo submission is May 15, 2026.',
+      'Please submit your high-resolution logo (PNG, SVG, or EPS format) within 2 weeks of confirming sponsorship to ensure inclusion in all marketing materials. The final deadline for logo submission is May 15, 2027.',
   },
   {
     question: 'How can I measure ROI from my sponsorship?',
@@ -315,27 +310,40 @@ const faqs: FAQ[] = [
   },
 ];
 
-// Downloadable Resources
+// DocuSeal form sponsors use to sign the agreement online.
+// Also linked from the "Become a Sponsor" CTA on the sponsorship page.
+export const docusealAgreementUrl = 'https://docuseal.com/d/hVEmQKbxU3VxVZ';
+
+// Sponsorship Resources
+// For 2027 the prospectus and agreement are view-only Google Docs rather than
+// PDFs served from public/, so they can be updated without a site rebuild.
+//
+// Use the /preview URL, never /edit — /preview renders the doc read-only with no
+// editor chrome, toolbar, or Share/Comment controls. Both docs must stay shared
+// as "Anyone with the link → Viewer" in Drive, or readers hit a request-access page.
+//
+// /preview also hides Google's download menu, so each doc carries an explicit
+// `downloadUrl` using the Docs PDF export endpoint (/export?format=pdf).
 const resources: Resource[] = [
   {
     title: 'Sign Sponsorship Agreement Online',
     description: 'Review and sign the sponsorship agreement digitally — no printing or scanning required',
-    url: 'https://docuseal.com/d/f4ZJWynaiufZo3',
+    url: docusealAgreementUrl,
     type: 'signing',
   },
   {
-    title: 'Sponsorship Prospectus 2026',
+    title: 'Sponsorship Prospectus',
     description: 'Comprehensive overview of all sponsorship tiers, benefits, and conference details',
-    url: '/sponsorship/Sponsorship-Prospectus-2026.pdf',
-    type: 'pdf',
-    fileSize: '714 KB',
+    url: 'https://docs.google.com/document/d/1LclNo8IlPUJDDweEcIyg0-eM0td_7ZdcrAKo2Eaxxgc/preview',
+    type: 'link',
+    downloadUrl: 'https://docs.google.com/document/d/1LclNo8IlPUJDDweEcIyg0-eM0td_7ZdcrAKo2Eaxxgc/export?format=pdf',
   },
   {
-    title: 'Sponsor Agreement PDF',
+    title: 'Sponsor Agreement',
     description: 'Review our standard sponsorship agreement terms and conditions',
-    url: '/sponsorship/Sponsor-Agreement-2026.pdf',
-    type: 'pdf',
-    fileSize: '107 KB',
+    url: 'https://docs.google.com/document/d/1BJ0SR4O0ccsTzusvw5oVsibxSEh84wEaVDpyQ4j6b0A/preview',
+    type: 'link',
+    downloadUrl: 'https://docs.google.com/document/d/1BJ0SR4O0ccsTzusvw5oVsibxSEh84wEaVDpyQ4j6b0A/export?format=pdf',
   },
 ];
 

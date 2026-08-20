@@ -5,6 +5,7 @@ import sessionizeData from "../../data/sessionize.json";
 import { renderDescription } from "../../lib/markdown";
 import { formatSessionTime, isSessionConfirmed } from "../../lib/sessions";
 import { speakerSlug, getCoSpeakerIds, isSpeakerConfirmed } from "../../lib/speakers";
+import { getSpeakerPhaseConfig } from "../../config/speakers";
 
 const base = import.meta.env.BASE_URL;
 
@@ -36,11 +37,14 @@ type Speaker = {
 };
 
 export function getStaticPaths() {
+  // No speaker detail pages until the lineup is announced
+  if (!getSpeakerPhaseConfig().speakersPage.visible) return [];
+
   return sessionizeData.speakers
-    .filter((speaker) =>
+    .filter((speaker: any) =>
       isSpeakerConfirmed(speaker.id, sessionizeData.sessions),
     )
-    .map((speaker) => ({
+    .map((speaker: any) => ({
       params: { id: speakerSlug(speaker) },
       props: { speaker },
     }));

@@ -1,7 +1,7 @@
 # CLAUDE.md
 
 ## Project Overview
-QA or the Highway — a conference website for a Midwest quality engineering conference (June 12, 2026, Columbus, OH). Static site built with Astro, deployed to GitHub Pages at www.qaorthehwy.com.
+QA or the Highway — a conference website for a Midwest quality engineering conference (June 11, 2027, Columbus, OH). Static site built with Astro, deployed to GitHub Pages at www.qaorthehwy.com.
 
 ## Tech Stack
 - **Framework:** Astro 5 (static site generation)

@@ -16,7 +16,7 @@ import {
 } from "../config/announcements";
 
 const conferenceData = {
-  date: "June 12, 2026",
+  date: "June 11, 2027",
   venue: "The Ohio Union",
   location: "Columbus, OH",
   sessionsCount: "32 Sessions",
@@ -76,7 +76,7 @@ const allSpeakers = confirmedSpeakers;
 
   <!-- Call for Speakers Banner -->
   {
-    cfpConfig.enabled && (
+    cfpConfig.enabled && cfpConfig.ctaUrl && (
       <AnnouncementBanner
         title={cfpConfig.title}
         description={cfpConfig.description}
