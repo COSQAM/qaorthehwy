@@ -1,15 +1,14 @@
 name: Fetch Sessionize Data
 
 on:
-  schedule:
-    # Run weekly at 12:00 AM EST on Sunday (5:00 AM UTC on Sunday)
-    - cron: '0 5 * * 0'
-  workflow_dispatch: # Allow manual triggers
-  push:
-    branches:
-      - main
-    paths:
-      - '.github/workflows/fetch-sessionize-data.yml'
+  # Weekly schedule is DISABLED for the 2027 cycle.
+  # The SESSIONIZE_EVENT_ID secret still points at the 2026 event, so an
+  # automatic run would overwrite src/data/sessionize.json with last year's
+  # speakers and sessions. Re-enable once the secret points at the 2027 event.
+  # schedule:
+  #   # Run weekly at 12:00 AM EST on Sunday (5:00 AM UTC on Sunday)
+  #   - cron: '0 5 * * 0'
+  workflow_dispatch: # Manual triggers only
 
 jobs:
   fetch-data:

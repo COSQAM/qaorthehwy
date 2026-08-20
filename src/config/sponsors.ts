@@ -1,20 +1,15 @@
 // Sponsor configuration
-import testmuiai from "../assets/images/sponsors/testmuai.png";
-import browserstack from "../assets/images/sponsors/browserstack.webp";
-import parasoft from "../assets/images/sponsors/parasoft.png"
-import leapwork from "../assets/images/sponsors/leapwork.png"
-import qtgroup from "../assets/images/sponsors/qtgroup.png"
-import checkpoint from "../assets/images/sponsors/checkpoint.png"
-import contextqa from "../assets/images/sponsors/contextqa.png"
-import lighthouse from "../assets/images/sponsors/lighthouse.png"
-import engenious from "../assets/images/sponsors/engenious.svg"
-import abstracta from "../assets/images/sponsors/abstracta.png"
-import technumen from "../assets/images/sponsors/technumen.png"
-import thunders from "../assets/images/sponsors/thunders.png"
-import testgrid from "../assets/images/sponsors/testgrid.png"
-import panaya from "../assets/images/sponsors/panaya.png"
-import flexjet from "../assets/images/sponsors/flexjet.png"
-import encova from "../assets/images/sponsors/encova.png"
+//
+// 2027 cycle: the roster starts empty and fills in as sponsors are confirmed.
+// Sponsors.astro hides any tier with no sponsors, so empty tiers render nothing.
+//
+// To add a sponsor:
+//   1. Drop the logo in src/assets/images/sponsors/
+//   2. Import it here, e.g. import acme from "../assets/images/sponsors/acme.png";
+//   3. Add { name: "Acme", logo: acme, website: "https://acme.com/" } to its tier
+//
+// Logos from previous years are still in src/assets/images/sponsors/ and can be
+// re-imported as those companies renew.
 
 export interface Sponsor {
   name: string;
@@ -32,113 +27,10 @@ export interface SponsorTiers {
 }
 
 export const sponsorConfig: SponsorTiers = {
-  platinum: [{
-    name: "Leapwork",
-    logo: leapwork,
-    website: "https://www.leapwork.com/",
-  },
-  {
-    name: "Context QA",
-    logo: contextqa,
-    website: "https://www.contextqa.com/",
-
-  }
-  ],
-  gold: [{
-    name: "Browserstack",
-    logo: browserstack,
-    website: "https://www.browserstack.com/",
-  },
-  {
-    name: "TestMu AI",
-    logo: testmuiai,
-    website: "https://www.testmuai.com/",
-  },
-  {
-    name: "Checkpoint Technologies",
-    logo: checkpoint,
-    website: "https://checkpointech.com/"
-  },
-  {
-    name: "Parasoft",
-    logo: parasoft,
-    website: "https://www.parasoft.com/",
-  },
-  {
-    name: "Lighthouse Technologies",
-    logo: lighthouse,
-    website: "https://lighthousetechnologies.com/",
-  },
-  {
-    name: "Engenious University",
-    logo: engenious,
-    website: "https://university.engenious.io/",
-  },
-  {
-    name: "Abstracta",
-    logo: abstracta,
-    website: "https://www.abstracta.us/",
-  }
-  ],
-  silver: [{
-    name: "Qt Group",
-    logo: qtgroup,
-    website: "https://www.qt.io/",
-  },
-  {
-    name: "Thunders",
-    logo: thunders,
-    website: "https://thunders.ai/",
-  },
-  {
-    name: "TestGrid",
-    logo: testgrid,
-    website: "https://testgrid.io/",
-  },
-  {
-    name: "Panaya",
-    logo: panaya,
-    website: "https://www.panaya.com/",
-  },
-  {
-    name: "Flexjet",
-    logo: flexjet,
-    website: "https://www.flexjet.com/",
-  }
-  ],
-  lunch: [{
-    name: "Encova",
-    logo: encova,
-    website: "https://www.encova.com/",
-  }],
-  snack: [{
-    name: "Thunders",
-    logo: thunders,
-    website: "https://thunders.ai/",
-  }],
-  tshirt: [{
-    name: "Abstracta",
-    logo: abstracta,
-    website: "https://www.abstracta.us/",
-  },
-  {
-    name: "Technumen",
-    logo: technumen,
-    website: "https://www.technumen.com/",
-  },
-  {
-    name: "Leapwork",
-    logo: leapwork,
-    website: "https://www.leapwork.com/",
-  },
-  {
-    name: "Context QA",
-    logo: contextqa,
-    website: "https://www.contextqa.com/"
-  },
-  {
-    name: "TestMu AI",
-    logo: testmuiai,
-    website: "https://www.testmuai.com/"
-  }]
+  platinum: [],
+  gold: [],
+  silver: [],
+  lunch: [],
+  snack: [],
+  tshirt: [],
 };

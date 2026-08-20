@@ -1,7 +1,7 @@
 // Ticket feature flag configuration for static site
 // To change ticket states, update the `currentPhase` value and rebuild
 
-export type TicketPhase = 'early-bird' | 'regular' | 'sold-out';
+export type TicketPhase = 'not-on-sale' | 'early-bird' | 'regular' | 'sold-out';
 export type TicketStyle = 'normal' | 'dimmed' | 'highlighted';
 
 interface TicketTierState {
@@ -41,8 +41,8 @@ export const givebutterCampaign = '7ZPS6Z';
 // Main ticket configuration
 export const ticketConfig: TicketConfig = {
   // ⚡ FEATURE FLAG: Change this to switch ticket states
-  // Options: 'early-bird' | 'regular' | 'sold-out'
-  currentPhase: 'regular',
+  // Options: 'not-on-sale' | 'early-bird' | 'regular' | 'sold-out'
+  currentPhase: 'not-on-sale',
 
   // Ticket tier definitions
   tiers: {
@@ -51,7 +51,7 @@ export const ticketConfig: TicketConfig = {
       name: 'Early Bird',
       price: '$99',
       features,
-      deadline: 'Ends May 15, 2026', // Update this date as needed
+      deadline: 'Ends May 15, 2027', // Update this date as needed
     },
     fullPrice: {
       id: 'fullPrice',
@@ -63,6 +63,19 @@ export const ticketConfig: TicketConfig = {
 
   // Phase-specific behavior for each tier
   phaseConfig: {
+    // Pre-sale: both tiers previewed, neither purchasable yet
+    'not-on-sale': {
+      earlyBird: {
+        visible: true,
+        enabled: false,
+        style: 'dimmed',
+      },
+      fullPrice: {
+        visible: true,
+        enabled: false,
+        style: 'dimmed',
+      },
+    },
     'early-bird': {
       earlyBird: {
         visible: true,
@@ -113,4 +126,10 @@ export function getActiveTiers() {
       ...currentConfig[id],
     }))
     .filter((tier) => tier.visible);
+}
+
+// Helper to check whether tickets can currently be purchased.
+// Used to swap Givebutter buy buttons for a "coming soon" state site-wide.
+export function areTicketsOnSale() {
+  return ticketConfig.currentPhase !== 'not-on-sale';
 }

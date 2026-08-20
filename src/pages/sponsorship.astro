@@ -9,7 +9,7 @@ import DownloadResources from '../components/sponsorship/DownloadResources.astro
 import SponsorshipFAQ from '../components/sponsorship/SponsorshipFAQ.astro';
 import SponsorshipForm from '../components/sponsorship/SponsorshipForm.astro';
 import SponsorshipImageBreak from '../components/sponsorship/SponsorshipImageBreak.astro';
-import { sponsorshipConfig } from '../config/sponsorship';
+import { sponsorshipConfig, docusealAgreementUrl } from '../config/sponsorship';
 
 import sponsorEngagementImage from '../assets/images/why-attend/IMG_5552.jpg';
 import sponsorNetworkingImage from '../assets/images/why-attend/20250627_122349.jpg';
@@ -20,12 +20,12 @@ import tshirtMockupImage from '../assets/images/tshirt/mock-with-logos.png';
 const { tiers, demographics, faqs, resources, benefitCategories } = sponsorshipConfig;
 ---
 
-<Layout title="Sponsorship Opportunities - QA or the Highway 2026">
+<Layout title="Sponsorship Opportunities - QA or the Highway 2027">
   <main class="bg-textured-light min-h-screen">
     <!-- Hero Section -->
     <PageHeader
       title="Partner With Us"
-      description="Reach 400+ quality engineering professionals and showcase your brand at the Midwest's premier software quality conference on June 12, 2026."
+      description="Reach 400+ quality engineering professionals and showcase your brand at the Midwest's premier software quality conference on June 11, 2027."
     />
 
     <!-- Why Sponsor Section -->
@@ -78,7 +78,7 @@ const { tiers, demographics, faqs, resources, benefitCategories } = sponsorshipC
     <!-- Image Break: T-Shirt Sponsorship -->
     <SponsorshipImageBreak
       image={tshirtMockupImage}
-      alt="QA or the Highway 2026 t-shirt mockup showing front design and back with sponsor logos"
+      alt="QA or the Highway 2027 t-shirt mockup showing front design and back with sponsor logos"
       heading="Your Logo on Every Attendee"
       description="T-shirt sponsors get their logo printed on the back of the official conference tee. This is worn by attendees on the conference day and beyond the conference. It's one of the most visible and lasting sponsorship opportunities we offer."
       expandable
@@ -142,8 +142,9 @@ const { tiers, demographics, faqs, resources, benefitCategories } = sponsorshipC
             Request Information
           </a>
           <a
-            href="https://docuseal.com/d/f4ZJWynaiufZo3"
+            href={docusealAgreementUrl}
             target="_blank"
+            rel="noopener noreferrer"
             class="bg-white text-primary px-10 py-4 rounded-xl text-lg font-bold transition transform hover:scale-105 shadow-lg border-2 border-primary hover:bg-gray-50"
           >
             Become a Sponsor

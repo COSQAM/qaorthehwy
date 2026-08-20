@@ -23,9 +23,11 @@ const allSpeakers = confirmedSpeakers.sort((a: any, b: any) => {
 });
 
 // Filter speakers based on current phase
-const displaySpeakers = speakerPhase.sessionSpeakersCarousel.visible
-  ? allSpeakers
-  : allSpeakers.filter((speaker: any) => speaker.isTopSpeaker);
+const displaySpeakers = !speakerPhase.speakersPage.visible
+  ? []
+  : speakerPhase.sessionSpeakersCarousel.visible
+    ? allSpeakers
+    : allSpeakers.filter((speaker: any) => speaker.isTopSpeaker);
 ---
 
 <Layout title="Speakers - QA or the Highway">

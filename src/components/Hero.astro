@@ -1,5 +1,5 @@
 ---
-import { givebutterCampaign } from "../config/tickets";
+import { givebutterCampaign, areTicketsOnSale } from "../config/tickets";
 
 interface Props {
   date: string;
@@ -11,6 +11,8 @@ interface Props {
 }
 
 const { date, location, venue, attendees, videoSrc } = Astro.props;
+
+const ticketsOnSale = areTicketsOnSale();
 ---
 
 <script>
@@ -70,15 +72,25 @@ const { date, location, venue, attendees, videoSrc } = Astro.props;
           </div>
         </div>
         <div class="w-full max-w-md">
-          <givebutter-button
-            campaign={givebutterCampaign}
-            label="GET TICKETS"
-            background-color="#3148F6"
-            label-color="#FFFFFF"
-            border-radius="8"
-            drop-shadow="true"
-            icon="none"
-          ></givebutter-button>
+          {ticketsOnSale ? (
+            <givebutter-button
+              campaign={givebutterCampaign}
+              label="GET TICKETS"
+              background-color="#3148F6"
+              label-color="#FFFFFF"
+              border-radius="8"
+              drop-shadow="true"
+              icon="none"
+            ></givebutter-button>
+          ) : (
+            <button
+              type="button"
+              disabled
+              class="w-full py-4 px-10 rounded-lg text-lg font-semibold bg-gray-300 text-gray-600 cursor-not-allowed"
+            >
+              TICKETS COMING SOON
+            </button>
+          )}
         </div>
       </div>
 
