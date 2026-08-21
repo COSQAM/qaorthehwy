@@ -317,10 +317,6 @@ const STEP = 620;
 <style>
   .hero-stage {
     position: relative;
-    --pass: #16a34a;
-    --pass-ink: #166534;
-    --skip: #d97706;
-    --skip-ink: #8a5300;
   }
 
   /* ---- headline ---- */
@@ -391,9 +387,9 @@ const STEP = 620;
     height: 100%;
     border-radius: inherit;
     transform-origin: left center;
-    background: var(--pass);
+    background: var(--color-pass);
   }
-  .hero-seg--skip .hero-seg__fill { background: var(--skip); }
+  .hero-seg--skip .hero-seg__fill { background: var(--color-skip); }
 
   @media (prefers-reduced-motion: no-preference) {
     .hero-seg__fill {
@@ -422,10 +418,10 @@ const STEP = 620;
   .hero-cta__pending {
     width: 100%;
     padding: 1rem 2.5rem;
-    border: 2px solid color-mix(in srgb, var(--skip) 32%, transparent);
+    border: 2px solid color-mix(in srgb, var(--color-skip) 32%, transparent);
     border-radius: 8px;
-    background: color-mix(in srgb, var(--skip) 6%, transparent);
-    color: var(--skip-ink);
+    background: color-mix(in srgb, var(--color-skip) 6%, transparent);
+    color: var(--color-skip-ink);
     font-size: 1.125rem;
     font-weight: 600;
     cursor: not-allowed;
@@ -445,13 +441,13 @@ const STEP = 620;
     width: 8px;
     height: 8px;
     border-radius: 999px;
-    background: var(--pass);
+    background: var(--color-pass);
     flex: none;
   }
   .hero-status__state { min-width: 11ch; }
   .hero-status__counts { display: flex; gap: 1rem; }
-  .hero-status__pass { color: var(--pass-ink); font-weight: 600; }
-  .hero-status__skip { color: var(--skip-ink); font-weight: 600; }
+  .hero-status__pass { color: var(--color-pass-ink); font-weight: 600; }
+  .hero-status__skip { color: var(--color-skip-ink); font-weight: 600; }
 
   @media (prefers-reduced-motion: no-preference) {
     .hero-status__dot { animation: hero-pulse 2.4s ease-in-out infinite; }
@@ -478,12 +474,12 @@ const STEP = 620;
   }
   .hero-inspector.is-on { opacity: 1; }
   .hero-inspector.is-pass {
-    outline-color: var(--pass);
-    background: color-mix(in srgb, var(--pass) 6%, transparent);
+    outline-color: var(--color-pass);
+    background: color-mix(in srgb, var(--color-pass) 6%, transparent);
   }
   .hero-inspector.is-skip {
-    outline-color: var(--skip);
-    background: color-mix(in srgb, var(--skip) 6%, transparent);
+    outline-color: var(--color-skip);
+    background: color-mix(in srgb, var(--color-skip) 6%, transparent);
   }
 
   @media (prefers-reduced-motion: no-preference) {
@@ -542,15 +538,15 @@ const STEP = 620;
 
   .hero-inspector__assert {
     background: #ffffff;
-    color: var(--pass-ink);
-    border: 1px solid color-mix(in srgb, var(--pass) 32%, transparent);
+    color: var(--color-pass-ink);
+    border: 1px solid color-mix(in srgb, var(--color-pass) 32%, transparent);
     box-shadow: 0 2px 8px color-mix(in srgb, var(--color-dark) 12%, transparent);
     opacity: 0;
   }
   .hero-inspector__assert.is-on { opacity: 1; }
   .hero-inspector__assert.is-skip {
-    color: var(--skip-ink);
-    border-color: color-mix(in srgb, var(--skip) 38%, transparent);
+    color: var(--color-skip-ink);
+    border-color: color-mix(in srgb, var(--color-skip) 38%, transparent);
   }
   @media (prefers-reduced-motion: no-preference) {
     .hero-inspector__assert { transition: opacity 200ms linear 60ms; }

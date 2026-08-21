@@ -11,6 +11,14 @@
   --color-background-light: #E9E9E9;
   --color-dark: #1C2127;
   --font-sans: ui-sans-serif, system-ui, sans-serif;
+
+  /* Test-runner semantics, shared by the hero and the 404 page */
+  --color-pass: #16a34a;
+  --color-pass-ink: #166534;
+  --color-skip: #d97706;
+  --color-skip-ink: #8a5300;
+  --color-fail: #dc2626;
+  --color-fail-ink: #b91c1c;
 }
 
 body {
