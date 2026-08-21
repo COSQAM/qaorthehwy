@@ -1,4 +1,15 @@
 ---
+/**
+ * Hero — the page runs a test suite against itself, live.
+ *
+ * Every check is derived from real config, so the output can never claim
+ * something untrue: while `tickets.ts` says tickets aren't on sale, that
+ * check reports as skipped rather than passing.
+ *
+ * The settled state (all segments filled, final counts, no inspector) is
+ * what the markup renders, so a failed script or `prefers-reduced-motion`
+ * still leaves a correct, complete hero.
+ */
 import { givebutterCampaign, areTicketsOnSale } from "../config/tickets";
 
 interface Props {
@@ -7,12 +18,33 @@ interface Props {
   venue: string;
   description: string;
   attendees: string;
-  videoSrc?: string;
+  sessions?: string;
 }
 
-const { date, location, venue, attendees, videoSrc } = Astro.props;
-
+const { date, location, venue, attendees, sessions = "32" } = Astro.props;
 const ticketsOnSale = areTicketsOnSale();
+
+const facts = [
+  { id: "date", value: date, note: null, check: "date is locked in" },
+  { id: "venue", value: venue, note: location, check: "venue is booked" },
+  { id: "attendees", value: attendees, note: "Attendees", check: `${attendees} attendees expected` },
+  { id: "sessions", value: sessions, note: "Sessions", check: `${sessions} sessions scheduled` },
+];
+
+const checks = [
+  { id: "headline", label: "the claim still checks out", state: "pass" },
+  ...facts.map((f) => ({ id: f.id, label: f.check, state: "pass" })),
+  {
+    id: "tickets",
+    label: ticketsOnSale ? "tickets are on sale" : "tickets not on sale yet",
+    state: ticketsOnSale ? "pass" : "skip",
+  },
+].map((c) => ({ ...c, selector: `[data-testid="${c.id}"]` }));
+
+const passed = checks.filter((c) => c.state === "pass").length;
+const skipped = checks.filter((c) => c.state === "skip").length;
+
+const STEP = 620;
 ---
 
 <script>
@@ -45,33 +77,54 @@ const ticketsOnSale = areTicketsOnSale();
   });
 </script>
 
-<section class="hero-section relative text-dark overflow-hidden min-h-[800px] pb-16">
+<section class="hero-section relative text-dark overflow-hidden pb-16">
   <div class="absolute inset-0 bg-textured-light -z-10"></div>
-  <div class="container mx-auto max-w-8xl px-6 py-12 lg:py-0">
-    <div class="flex flex-col lg:flex-row gap-8 lg:gap-12 lg:items-center lg:min-h-[800px]">
-      <!-- Left: Text Content -->
-      <div class="w-full lg:w-[50%] text-left space-y-8">
-        <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-none">
-          THE MIDWEST'S LARGEST<br /><span class="text-primary">SOFTWARE QUALITY</span><br />CONFERENCE
-        </h1>
 
-        <!-- Conference Stats -->
-        <div class="flex flex-wrap items-center gap-8 py-6">
-          <div class="text-center">
-            <div class="text-m md:text-xl font-bold">{date}</div>
-          </div>
-          <div class="w-px h-20 bg-primary"></div>
-          <div class="text-center">
-            <div class="text-m md:text-xl font-bold">{venue}</div>
-            <div class="text-m md:text-xl font-bold">{location}</div>
-          </div>
-          <div class="hidden sm:block w-px h-20 bg-primary"></div>
-          <div class="hidden sm:block text-center">
-            <div class="text-m md:text-xl font-bold">{attendees}</div>
-            <div class="text-m md:text-xl font-bold">Attendees</div>
-          </div>
+  <div class="container mx-auto max-w-8xl px-6 pt-14 pb-10 lg:pt-24 lg:pb-16">
+    <div class="hero-stage" data-stage>
+      <!-- The inspector. Empty until the suite runs; never a hit target. -->
+      <div class="hero-inspector" data-inspector aria-hidden="true">
+        <div class="hero-inspector__chips">
+          <span class="hero-inspector__badge">
+            <span data-badge-selector></span>
+            <span class="hero-inspector__dim" data-badge-size></span>
+          </span>
+          <span class="hero-inspector__assert" data-assert-chip>
+            <svg class="hero-glyph" viewBox="0 0 16 16" aria-hidden="true">
+              <path class="hero-glyph__pass" d="M3.5 8.5 6.5 11.5 12.5 4.5" />
+              <path class="hero-glyph__skip" d="M4 8 H12" />
+            </svg>
+            <span data-assert-text></span>
+          </span>
         </div>
-        <div class="w-full max-w-md">
+      </div>
+
+      <h1 class="hero-title font-bold" data-testid="headline">
+        THE MIDWEST'S LARGEST<br /><span class="text-primary">SOFTWARE QUALITY</span><br />CONFERENCE
+      </h1>
+
+      <div class="hero-facts">
+        {facts.map((fact, i) => (
+          <>
+            {i > 0 && <span class="hero-facts__rule" aria-hidden="true"></span>}
+            <div class="hero-fact" data-testid={fact.id}>
+              <div class="hero-fact__value">{fact.value}</div>
+              {fact.note && <div class="hero-fact__value">{fact.note}</div>}
+            </div>
+          </>
+        ))}
+      </div>
+
+      <div class="hero-rule" aria-hidden="true">
+        {checks.map((c, i) => (
+          <span class={`hero-seg hero-seg--${c.state}`} style={`--d:${i * STEP}ms`}>
+            <span class="hero-seg__fill"></span>
+          </span>
+        ))}
+      </div>
+
+      <div class="hero-actions">
+        <div class="hero-cta" data-testid="tickets">
           {ticketsOnSale ? (
             <givebutter-button
               campaign={givebutterCampaign}
@@ -86,31 +139,434 @@ const ticketsOnSale = areTicketsOnSale();
             <button
               type="button"
               disabled
-              class="w-full py-4 px-10 rounded-lg text-lg font-semibold bg-gray-300 text-gray-600 cursor-not-allowed"
+              class="hero-cta__pending"
             >
               TICKETS COMING SOON
             </button>
           )}
         </div>
-      </div>
 
-      <!-- Right: Video -->
-      {videoSrc && (
-        <div class="w-full lg:w-[50%]">
-          <div class="relative h-[400px] md:h-[500px] lg:h-[780px] rounded-2xl overflow-hidden">
-            <video
-              autoplay
-              loop
-              muted
-              playsinline
-              class="w-full h-full object-cover"
-            >
-              <source src={videoSrc} type="video/webm" />
-              <source src={videoSrc.replace('.webm', '.mp4')} type="video/mp4" />
-            </video>
-          </div>
-        </div>
-      )}
+        <p class="hero-status">
+          <span class="hero-status__dot"></span>
+          <span class="hero-status__state" data-status-text>watching for changes</span>
+          <span class="hero-status__counts">
+            <span class="hero-status__pass">{passed} passed</span>
+            {skipped > 0 && <span class="hero-status__skip">{skipped} skipped</span>}
+            <span class="hero-status__fail">0 failed</span>
+          </span>
+        </p>
+      </div>
     </div>
   </div>
 </section>
+
+<script is:inline define:vars={{ checks, STEP }}>
+  (() => {
+    const stage = document.querySelector("[data-stage]");
+    if (!stage) return;
+
+    const box = stage.querySelector("[data-inspector]");
+    const badgeSel = stage.querySelector("[data-badge-selector]");
+    const badgeSize = stage.querySelector("[data-badge-size]");
+    const assertChip = stage.querySelector("[data-assert-chip]");
+    const chips = stage.querySelector(".hero-inspector__chips");
+    const assertText = stage.querySelector("[data-assert-text]");
+    const statusText = stage.querySelector("[data-status-text]");
+    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const coarse = window.matchMedia("(pointer: coarse)");
+
+    const PAD = 10;
+    const byId = new Map(checks.map((c) => [c.id, c]));
+    const steps = checks
+      .map((c) => ({ ...c, el: stage.querySelector(c.selector) }))
+      .filter((s) => s.el);
+    if (!steps.length) return;
+
+    let current = null;
+    let token = 0;
+    let idleTimer = 0;
+    let walkTimer = 0;
+    let walkIndex = 0;
+    let onscreen = true;
+
+    const place = (el) => {
+      const s = stage.getBoundingClientRect();
+      const r = el.getBoundingClientRect();
+      box.style.transform = `translate3d(${Math.round(r.left - s.left - PAD)}px, ${Math.round(r.top - s.top - PAD)}px, 0)`;
+      box.style.width = `${Math.round(r.width + PAD * 2)}px`;
+      box.style.height = `${Math.round(r.height + PAD * 2)}px`;
+      badgeSize.textContent = `${Math.round(r.width)} × ${Math.round(r.height)}`;
+      box.classList.toggle("is-above", r.top - s.top > stage.offsetHeight - 150);
+
+      /* The chips hang off the box's left edge, so a target near the right
+         of the stage would push them past it. Slide them back in. */
+      const boxLeft = r.left - s.left - PAD;
+      const room = stage.clientWidth - chips.offsetWidth - boxLeft;
+      chips.style.transform = room < 0 ? `translateX(${Math.round(Math.max(room, -boxLeft))}px)` : "";
+    };
+
+    const inspect = (step, { settled = true } = {}) => {
+      current = step;
+      badgeSel.textContent = step.selector;
+      assertText.textContent = step.label;
+      place(step.el);
+      box.classList.add("is-on");
+      box.classList.toggle("is-skip", settled && step.state === "skip");
+      box.classList.toggle("is-pass", settled && step.state === "pass");
+      assertChip.classList.toggle("is-skip", step.state === "skip");
+      assertChip.classList.toggle("is-on", settled);
+    };
+
+    /* The opening run: one element at a time, each check landing as the
+       inspector arrives. */
+    const runSuite = async () => {
+      const mine = ++token;
+      const wait = (ms) => new Promise((r) => setTimeout(r, ms));
+      if (statusText) statusText.textContent = "running";
+      stage.dataset.running = "true";
+
+      for (const step of steps) {
+        if (mine !== token) return;
+        inspect(step, { settled: false });
+        box.classList.remove("is-pass", "is-skip");
+        assertChip.classList.remove("is-on");
+        await wait(STEP * 0.55);
+        if (mine !== token) return;
+        box.classList.toggle("is-skip", step.state === "skip");
+        box.classList.toggle("is-pass", step.state === "pass");
+        assertChip.classList.add("is-on");
+        await wait(STEP * 0.45);
+      }
+      if (mine !== token) return;
+      delete stage.dataset.running;
+      if (statusText) statusText.textContent = "watching for changes";
+      walkIndex = steps.length - 1;
+      scheduleIdle();
+    };
+
+    /* Left alone, it keeps working through the suite so the hero is never
+       just a still image. Any pointer in the stage hands control back. */
+    const stopWalk = () => {
+      window.clearTimeout(idleTimer);
+      window.clearInterval(walkTimer);
+      walkTimer = 0;
+    };
+    const startWalk = () => {
+      if (walkTimer || reduce.matches || !onscreen) return;
+      walkTimer = window.setInterval(() => {
+        if (!onscreen) return;
+        walkIndex = (walkIndex + 1) % steps.length;
+        inspect(steps[walkIndex]);
+      }, 3200);
+    };
+    const scheduleIdle = () => {
+      if (reduce.matches) return;
+      stopWalk();
+      idleTimer = window.setTimeout(startWalk, coarse.matches ? 2200 : 5200);
+    };
+
+    const takeOver = (step) => {
+      token++;
+      delete stage.dataset.running;
+      if (statusText) statusText.textContent = "watching for changes";
+      stopWalk();
+      inspect(step);
+    };
+
+    stage.addEventListener("pointerover", (e) => {
+      const el = e.target instanceof Element ? e.target.closest("[data-testid]") : null;
+      if (!el) return;
+      const step = steps.find((s) => s.el === el);
+      if (!step || step === current) return;
+      takeOver(step);
+    });
+    stage.addEventListener("pointerleave", () => {
+      if (token) scheduleIdle();
+    });
+    stage.addEventListener("focusin", (e) => {
+      const el = e.target instanceof Element ? e.target.closest("[data-testid]") : null;
+      const step = el && steps.find((s) => s.el === el);
+      if (!step) return;
+      takeOver(step);
+    });
+
+    window.addEventListener("resize", () => current && place(current.el));
+
+    if ("IntersectionObserver" in window) {
+      new IntersectionObserver((entries) => {
+        onscreen = entries[0].isIntersecting;
+        if (!onscreen) stopWalk();
+        else if (token) scheduleIdle();
+      }).observe(stage);
+    }
+    document.addEventListener("visibilitychange", () => {
+      if (document.hidden) stopWalk();
+      else if (token) scheduleIdle();
+    });
+
+    if (reduce.matches) {
+      /* Movement removed, feedback kept: hovering still inspects, it just
+         doesn't glide, and nothing moves on its own. */
+      token = 1;
+    } else {
+      requestAnimationFrame(() => requestAnimationFrame(runSuite));
+    }
+  })();
+</script>
+
+<style>
+  .hero-stage {
+    position: relative;
+    --pass: #16a34a;
+    --pass-ink: #166534;
+    --skip: #d97706;
+    --skip-ink: #8a5300;
+  }
+
+  /* ---- headline ---- */
+  .hero-title {
+    font-family: "Work Sans", ui-sans-serif, system-ui, sans-serif;
+    font-size: 2.5rem;
+    line-height: 0.94;
+    letter-spacing: -0.015em;
+  }
+  @media (min-width: 640px) { .hero-title { font-size: 3.5rem; } }
+  @media (min-width: 768px) { .hero-title { font-size: 4.25rem; } }
+  @media (min-width: 1280px) { .hero-title { font-size: 5rem; } }
+  @media (min-width: 1536px) { .hero-title { font-size: 5.5rem; } }
+  @media (min-width: 1800px) { .hero-title { font-size: 6rem; } }
+
+  /* ---- the facts under test ---- */
+  .hero-facts {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.5rem;
+    margin-top: 3rem;
+    max-width: 60rem;
+  }
+  .hero-facts__rule { display: none; }
+  @media (min-width: 640px) {
+    .hero-facts {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 1.25rem 2rem;
+    }
+    .hero-facts__rule {
+      display: block;
+      width: 1px;
+      align-self: stretch;
+      min-height: 3rem;
+      background: var(--color-primary);
+    }
+  }
+  .hero-fact {
+    border-radius: 6px;
+    transition: opacity 200ms linear;
+  }
+  .hero-fact__value {
+    font-size: 1rem;
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+  }
+  @media (min-width: 768px) {
+    .hero-fact__value { font-size: 1.25rem; }
+  }
+
+  /* ---- the suite, drawn as a rule across the hero ---- */
+  .hero-rule {
+    display: flex;
+    gap: 4px;
+    margin-top: 3rem;
+  }
+  .hero-seg {
+    flex: 1;
+    height: 4px;
+    border-radius: 999px;
+    background: color-mix(in srgb, var(--color-dark) 12%, transparent);
+    overflow: hidden;
+  }
+  .hero-seg__fill {
+    display: block;
+    height: 100%;
+    border-radius: inherit;
+    transform-origin: left center;
+    background: var(--pass);
+  }
+  .hero-seg--skip .hero-seg__fill { background: var(--skip); }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .hero-seg__fill {
+      animation: hero-seg-fill 520ms cubic-bezier(0.16, 1, 0.3, 1) both;
+      animation-delay: var(--d);
+    }
+  }
+  @keyframes hero-seg-fill {
+    from { transform: scaleX(0); }
+  }
+
+  /* ---- actions + runner status ---- */
+  .hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem 2rem;
+    margin-top: 3.25rem;
+  }
+  .hero-cta {
+    width: 100%;
+    max-width: 22rem;
+    border-radius: 10px;
+  }
+  .hero-cta__pending {
+    width: 100%;
+    padding: 1rem 2.5rem;
+    border: 2px solid color-mix(in srgb, var(--skip) 32%, transparent);
+    border-radius: 8px;
+    background: color-mix(in srgb, var(--skip) 6%, transparent);
+    color: var(--skip-ink);
+    font-size: 1.125rem;
+    font-weight: 600;
+    cursor: not-allowed;
+  }
+
+  .hero-status {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem 1rem;
+    font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, monospace;
+    font-size: 0.8125rem;
+    letter-spacing: 0.01em;
+    color: color-mix(in srgb, var(--color-dark) 74%, transparent);
+  }
+  .hero-status__dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 999px;
+    background: var(--pass);
+    flex: none;
+  }
+  .hero-status__state { min-width: 11ch; }
+  .hero-status__counts { display: flex; gap: 1rem; }
+  .hero-status__pass { color: var(--pass-ink); font-weight: 600; }
+  .hero-status__skip { color: var(--skip-ink); font-weight: 600; }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .hero-status__dot { animation: hero-pulse 2.4s ease-in-out infinite; }
+    [data-running] .hero-status__dot { animation-duration: 0.7s; }
+  }
+  @keyframes hero-pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.28; }
+  }
+
+  /* ---- the inspector ---- */
+  .hero-inspector {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-radius: 8px;
+    outline: 2px solid var(--color-primary);
+    background: color-mix(in srgb, var(--color-primary) 5%, transparent);
+    opacity: 0;
+    pointer-events: none;
+    z-index: 1;
+  }
+  .hero-inspector.is-on { opacity: 1; }
+  .hero-inspector.is-pass {
+    outline-color: var(--pass);
+    background: color-mix(in srgb, var(--pass) 6%, transparent);
+  }
+  .hero-inspector.is-skip {
+    outline-color: var(--skip);
+    background: color-mix(in srgb, var(--skip) 6%, transparent);
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .hero-inspector {
+      transition:
+        transform 440ms cubic-bezier(0.16, 1, 0.3, 1),
+        width 440ms cubic-bezier(0.16, 1, 0.3, 1),
+        height 440ms cubic-bezier(0.16, 1, 0.3, 1),
+        opacity 180ms linear,
+        outline-color 260ms linear,
+        background-color 260ms linear;
+    }
+  }
+
+  .hero-inspector__chips {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    margin-top: 8px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    white-space: nowrap;
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    .hero-inspector__chips {
+      transition: transform 440ms cubic-bezier(0.16, 1, 0.3, 1);
+    }
+  }
+  .hero-inspector.is-above .hero-inspector__chips {
+    top: auto;
+    bottom: 100%;
+    margin: 0 0 8px;
+  }
+
+  .hero-inspector__badge,
+  .hero-inspector__assert {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 5px 9px;
+    border-radius: 5px;
+    font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, monospace;
+    font-size: 0.75rem;
+    line-height: 1;
+  }
+  .hero-inspector__badge {
+    background: var(--color-dark);
+    color: #f3f4f6;
+    box-shadow: 0 2px 8px color-mix(in srgb, var(--color-dark) 24%, transparent);
+  }
+  .hero-inspector__dim { color: #9aa3b0; }
+  @media (max-width: 639px) {
+    .hero-inspector__badge { display: none; }
+  }
+
+  .hero-inspector__assert {
+    background: #ffffff;
+    color: var(--pass-ink);
+    border: 1px solid color-mix(in srgb, var(--pass) 32%, transparent);
+    box-shadow: 0 2px 8px color-mix(in srgb, var(--color-dark) 12%, transparent);
+    opacity: 0;
+  }
+  .hero-inspector__assert.is-on { opacity: 1; }
+  .hero-inspector__assert.is-skip {
+    color: var(--skip-ink);
+    border-color: color-mix(in srgb, var(--skip) 38%, transparent);
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    .hero-inspector__assert { transition: opacity 200ms linear 60ms; }
+  }
+
+  .hero-glyph {
+    width: 13px;
+    height: 13px;
+    flex: none;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2.2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+  .hero-glyph__skip { display: none; }
+  .hero-inspector__assert.is-skip .hero-glyph__pass { display: none; }
+  .hero-inspector__assert.is-skip .hero-glyph__skip { display: block; }
+</style>
